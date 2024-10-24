@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 import { RecoilRoot, useRecoilValue } from "recoil";
 import ClientProvider from "./clientProvider";
 import NavModal from "@/components/common/NavModal";
-import Loading from "@/components/common/loading";
 import Script from "next/script";
+import Loading from "@/components/common/LoadingSpinner";
 
 const notoSansKr = Noto_Sans_KR({
   // preload: true, 기본값
@@ -49,6 +49,7 @@ export default function RootLayout({
       <body className={notoSansKr.className}>
         <ClientProvider>
           <FloatingButton />
+          <Loading />
           <main>
             {children}
           </main>

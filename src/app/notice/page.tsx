@@ -8,8 +8,12 @@ import DropDown from '@/components/common/DropDown';
 import { useEffect, useState } from 'react';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { supabase } from '@/utils/Supabase';
+import { useRecoilState } from 'recoil';
+import { isLoading } from '@/modules/loading';
 
 export default function Notice() {
+
+    const [loading, setLoading] = useRecoilState(isLoading);
 
     const [dropdownValue, setDropdownValue] = useState<{
         title: string,
@@ -142,54 +146,31 @@ export default function Notice() {
     };
 
     useEffect(() => {
-        const specialData = async () => {
-            try {
-                const { data, error } = await supabase
-                    .from('notices')
-                    .select('*')
-                    .eq('is_special', true);
-                if (error) {
-                    throw error;
-                }
-                setSpecialNotice(data);
-            } catch (error) {
-                console.error("Error fetching paginated data from Supabase:", error);
-            }
-        };
-
         const fetchData = async () => {
+            setLoading(true);
+
             try {
-                const { data, error } = await supabase
-                    .from('notices')
-                    .select('*')
-                    .eq('is_special', false)
-                    .range(start, end);
-                if (error) {
-                    throw error;
+                const [special, normal, total] = await Promise.all([
+                    supabase.from('notices').select('*').eq('is_special', true),
+                    supabase.from('notices').select('*').eq('is_special', false).range(start, end),
+                    supabase.from('notices').select('*', { count: 'exact' })
+                ]);
+
+                if (special.error) {
+                    throw special.error;
                 }
-                setNoticeData(data);
+
+                setSpecialNotice(special.data);
+                setNoticeData(normal.data);
+                setTotalCount(total.count);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
+            } finally {
+                setLoading(false);
             }
         };
-
-        const fetchTotalCount = async () => {
-            try {
-                const { count, error } = await supabase
-                    .from('notices')
-                    .select('*', { count: 'exact' });
-                if (error) {
-                    throw error;
-                }
-                setTotalCount(count);
-            } catch (error) {
-                console.error("Error fetching total count from Supabase:", error);
-            }
-        };
-
-        specialData();
+        
         fetchData();
-        fetchTotalCount();
     }, []);
 
     return (
