@@ -2,7 +2,7 @@
 
 import { supabase } from '@/utils/Supabase';
 import './style.css';
-import { onClickRemoveHandler } from '@/utils/RemoveDateHandler';
+import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 
 export default function History(admData: any) {
 

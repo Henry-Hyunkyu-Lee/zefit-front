@@ -5,7 +5,7 @@ import { CorrectProps } from '../History';
 import './style.css';
 import { supabase } from '@/utils/Supabase';
 import { handleImageChange, handleImageDelete } from '@/utils/HandleImage';
-import { onClickRemoveHandler } from '@/utils/RemoveDateHandler';
+import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 import { onClickAddHandler } from '@/utils/AddDataHandler';
 import { onClickUpdateHandler } from '@/utils/UpdateDataHandler';
 

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import './style.css';
 import { supabase } from '@/utils/Supabase';
-import { onClickRemoveHandler } from '@/utils/RemoveDateHandler';
+import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 import { onClickAddHandler } from '@/utils/AddDataHandler';
 import { onClickUpdateHandler } from '@/utils/UpdateDataHandler';
 
