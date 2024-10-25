@@ -2,6 +2,7 @@
 
 /* 상단 배너 스크롤 가이드 */
 .top_banner_scroll_guide {
+    width: 120px;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -9,16 +10,18 @@
     align-items: center;
     gap: 30px;
     position: absolute;
-    left: calc(50% - 46px);
+    left: calc(50% - 60px);
     bottom: 10px;
     color: white;
 }
 
 /* 스크롤 가이드 텍스트 */
 .scroll_guide_text {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     animation: scroll_guide_text_move 1.5s linear infinite forwards;
+    animation-delay: 3s;
+    opacity: 0;
 }
 
 /* 스크롤 가이드 화살표 박스 */
@@ -30,6 +33,8 @@
     gap: -8px;
     font-size: 10px;
     animation: scroll_guide_arrow_move 1.5s linear infinite forwards;
+    animation-delay: 3s;
+    opacity: 0;
 }
 
 

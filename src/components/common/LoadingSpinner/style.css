@@ -1,0 +1,226 @@
+/* 로딩 페이지 css style */
+
+/* 로딩 컨테이너 */
+.loading_container {
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 로딩 스피너 박스 */
+.loading_spinner_box {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    position: relative;
+}
+
+/* 작은 동그라미 */
+.loading_spinner_circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #1d5ba2;
+    animation: loading_spinner_animation 1s linear infinite;
+}
+
+/* 동그라미 위치 설정 */
+.loading_spinner_circle:nth-child(1) {
+    background-color: #1d5ba2;
+}
+
+.loading_spinner_circle:nth-child(2) {
+    animation-delay: 0.2s;
+    background-color: #1c58c9;
+}
+
+.loading_spinner_circle:nth-child(3) {
+    animation-delay: 0.4s;
+    background-color: #82b2e9;
+}
+
+/* 동그라미 그림자 */
+.loading_spinner_shadow {
+    width: 8px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #00000011;
+    position: absolute;
+    bottom: 0;
+}
+
+.loading_spinner_shadow:nth-child(4) {
+    left: 11px;
+    animation: circle_first_shadow_animation 1s linear infinite;
+}
+
+.loading_spinner_shadow:nth-child(5) {
+    left: calc(50% - 4px);
+    animation: circle_second_shadow_animation 1s linear infinite;
+    animation-delay: 0.2s;
+}
+
+.loading_spinner_shadow:nth-child(6) {
+    left: calc(100% - 19px);
+    animation: circle_third_shadow_animation 1s linear infinite;
+    animation-delay: 0.4s;
+}
+
+
+/* 애니메이션 */
+
+/* 로딩 스피너 애니메이션 */
+@keyframes loading_spinner_animation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(30px);
+        height: 30px;
+    }
+
+    55% {
+        transform: translateY(70px);
+        height: 24px;
+    }
+
+    65% {
+        transform: translateY(30px);
+        height: 30px;
+    }
+
+    95% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* 그림자 애니메이션 */
+@keyframes circle_first_shadow_animation {
+    0% {
+        left: 11px;
+        width: 8px;
+        background-color: #00000011;
+    }
+
+    50% {
+        left: 5px;
+        width: 20px;
+        background-color: #0000007d;
+    }
+
+    55% {
+        left: 0;
+        width: 30px;
+        background-color: #000000a7;
+    }
+
+    65% {
+        left: 5px;
+        width: 20px;
+        background-color: #0000007d;
+    }
+
+    95% {
+        left: 11px;
+        width: 8px;
+        background-color: #00000011;
+    }
+
+    100% {
+        left: 11px;
+        width: 8px;
+        background-color: #00000011;
+    }
+}
+
+@keyframes circle_second_shadow_animation {
+    0% {
+        left: calc(50% - 4px);
+        width: 8px;
+        background-color: #00000011;
+    }
+
+    50% {
+        left: calc(50% - 10px);
+        width: 20px;
+        background-color: #0000007d;
+    }
+
+    55% {
+        left: calc(50% - 15px);
+        width: 30px;
+        background-color: #000000a7;
+    }
+
+    65% {
+        left: calc(50% - 10px);
+        width: 20px;
+        background-color: #0000007d;
+    }
+
+    95% {
+        left: calc(50% - 4px);
+        width: 8px;
+        background-color: #00000011;
+    }
+
+    100% {
+        left: calc(50% - 4px);
+        width: 8px;
+        background-color: #00000011;
+    }
+}
+
+@keyframes circle_third_shadow_animation {
+    0% {
+        left: calc(100% - 19px);
+        width: 8px;
+        background-color: #00000011;
+    }
+
+    50% {
+        left: calc(100% - 25px);
+        width: 20px;
+        background-color: #0000007d;
+    }
+
+    55% {
+        left: calc(100% - 30px);
+        width: 30px;
+        background-color: #000000a7;
+    }
+
+    65% {
+        left: calc(100% - 25px);
+        width: 20px;
+        background-color: #0000007d;
+    }
+
+    95% {
+        left: calc(100% - 19px);
+        width: 8px;
+        background-color: #00000011;
+    }
+
+    100% {
+        left: calc(100% - 19px);
+        width: 8px;
+        background-color: #00000011;
+    }
+}
