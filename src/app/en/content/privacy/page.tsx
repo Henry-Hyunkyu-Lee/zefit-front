@@ -1,6 +1,6 @@
 'use client';
 
-import '../../../content/privacy/s'
+import '../../../content/privacy/style.css'
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import MetaTagTitle from '@/utils/MetaTagTitle';
