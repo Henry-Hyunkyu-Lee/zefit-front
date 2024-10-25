@@ -8,17 +8,23 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import MetaTagTitle from "@/utils/MetaTagTitle";
+import serviceJson from "../../../../../public/data/service.json";
 
 export default function Service() {
 
-    const { service }: any = useParams();
+    const { service } = useParams() as { service: string };
+    
+    const findData = serviceJson?.find((item: any) => item?.service === service);
+    const sideTapData = serviceJson?.map((item: any) => item?.service);
+    const tapValue = findData?.content[0]
 
-    const [serviceData, setServiceData] = useState<any>(null);
-    const [serviceTap, setServiceTap] = useState<any>(null);
-    console.log("🚀 ~ Service ~ serviceData:", serviceData);
+    console.log('serviceJson', findData, sideTapData);
 
-    const findData = serviceData?.find((item: any) => item?.service === service);
-    const sideTapData = serviceData?.map((item: any) => item?.service);
+    const [serviceTap, setServiceTap] = useState<any>(tapValue);
+    // console.log("🚀 ~ Service ~ serviceData:", serviceData);
+
+    // const findData = serviceData?.find((item: any) => item?.service === service);
+    
 
     const onClickTapHandler = (param: string) => {
         const tapData = findData?.content.find((item: any) => item.name === param);
@@ -26,21 +32,21 @@ export default function Service() {
     };
 
     useEffect(() => {
-        if (service) {
-            fetch(`/api/inquiry/service/${service}`)
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then((jsonData) => {
-                    const findData = jsonData?.find((item: any) => item?.service === service);
-                    setServiceData(jsonData);
-                    setServiceTap(findData.content[0]);
-                })
-                .catch((error) => console.error("Fetch error:", error));
-        };
+        // if (service) {
+        //     fetch(`/api/inquiry/service/${service}`)
+        //         .then((response) => {
+        //             if (!response.ok) {
+        //                 throw new Error('Network response was not ok');
+        //             }
+        //             return response.json();
+        //         })
+        //         .then((jsonData) => {
+                    
+        //             setServiceData(jsonData);
+        //             setServiceTap(findData.content[0]);
+        //         })
+        //         .catch((error) => console.error("Fetch error:", error));
+        // };
     }, [service]);
 
     return (
@@ -86,7 +92,7 @@ export default function Service() {
                                         onClick={() => onClickTapHandler(item.name)}
                                         style={{
                                             fontWeight: (item.name === serviceTap?.name) ? '700' : '400',
-                                            backgroundColor: (item.name === serviceTap.name) ? '#0055a7' : '#e9e9e9',
+                                            backgroundColor: (item.name === serviceTap?.name) ? '#0055a7' : '#e9e9e9',
                                             color: (item.name === serviceTap?.name) ? '#ffffff' : '#6B6B6B'
                                         }}
                                         className='detail_tap_button'>

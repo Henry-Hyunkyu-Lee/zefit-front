@@ -212,3 +212,17 @@ article {
   color: #1D5BA2;
   user-select: none;
 }
+
+::selection {
+  background-color: #64c5b1;
+  color: #FEFEFE;
+}
+
+::-moz-selection {
+  background-color: #64c5b1;
+  color: #FEFEFE;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}

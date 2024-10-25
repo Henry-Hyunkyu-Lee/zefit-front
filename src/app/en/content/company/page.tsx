@@ -112,11 +112,11 @@ export default function CompanyEN() {
                         </div>
                         <img
                             className='mission_first_image'
-                            src='http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img8.jpg'
+                            src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img8.jpg'
                             alt='미션1' />
                         <img
                             className='mission_second_image'
-                            src='http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img7.jpg'
+                            src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img7.jpg'
                             alt='미션2' />
                     </div>
                 </section>

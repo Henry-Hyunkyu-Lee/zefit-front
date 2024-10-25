@@ -14,8 +14,9 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
     const id = admData?.id;
 
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-    const [inputImg, setInputImg] = useState<any>(null);
+    const [inputImg, setInputImg] = useState<File | null>(null);
     const [noticeInput, setNoticeInput] = useState<any>({
+        image: null,
         isSpecial: false,
         title_kr: '',
         title_en: '',
@@ -40,6 +41,7 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
         if (admData) {
             setPreviewUrl(isUpload ? null : admData?.image);
             setNoticeInput({
+                image: isUpload ? null : admData?.image,
                 isSpecial: isUpload ? false : admData?.is_special,
                 title_kr: isUpload ? '' : admData?.title_kr,
                 title_en: isUpload ? '' : admData?.title_en,

@@ -53,7 +53,7 @@
     top: -33px;
     left: 0;
     z-index: 4;
-    background: url('http://www.zefit.co.kr/theme/basic/assets/images/zefit/wave.png');
+    background: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_wave.png');
     animation: wave 20s linear infinite;
 }
 
@@ -67,7 +67,7 @@
     left: 0;
     z-index: 4;
     opacity: 0.4;
-    background: url('http://www.zefit.co.kr/theme/basic/assets/images/zefit/wave.png');
+    background: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_wave.png');
     animation: reverse_wave 10s linear infinite;
 }
 
@@ -104,7 +104,7 @@
         top: -28px;
         left: 0;
         z-index: 4;
-        background: url('http://www.zefit.co.kr/theme/basic/assets/images/zefit/wave.png');
+        background: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_wave.png');
         animation: wave 20s linear infinite;
     }
     
@@ -117,7 +117,7 @@
         left: 0;
         z-index: 4;
         opacity: 0.4;
-        background: url('http://www.zefit.co.kr/theme/basic/assets/images/zefit/wave.png');
+        background: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_wave.png');
         animation: reverse_wave 10s linear infinite;
     }
 }

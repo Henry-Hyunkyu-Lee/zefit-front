@@ -74,7 +74,7 @@ export default function HomeEN() {
                     </h3>
                     <img
                         className='company_image'
-                        src='http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img1.jpg'
+                        src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img1.jpg'
                         alt='회사소개 이미지' />
                     <ul className='company_link_button_wrapper'>
                         <li className='company_link_button_box'>
@@ -121,7 +121,7 @@ export default function HomeEN() {
                                     <div
                                         className='business_card_image'
                                         style={{
-                                            backgroundImage: 'url(http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img2.jpg)'
+                                            backgroundImage: 'url(https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img2.jpg)'
                                         }} />
                                     <div className='business_card_text_box'>
                                         <strong className='business_card_title'>
@@ -138,7 +138,7 @@ export default function HomeEN() {
                                     <div
                                         className='business_card_image'
                                         style={{
-                                            backgroundImage: 'url(http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img3.jpg)'
+                                            backgroundImage: 'url(https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img3.jpg)'
                                         }} />
                                     <div className='business_card_text_box'>
                                         <strong className='business_card_title'>
@@ -155,7 +155,7 @@ export default function HomeEN() {
                                     <div
                                         className='business_card_image'
                                         style={{
-                                            backgroundImage: 'url(http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img10.jpg)'
+                                            backgroundImage: 'url(https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img10.jpg)'
                                         }} />
                                     <div className='business_card_text_box'>
                                         <strong className='business_card_title'>

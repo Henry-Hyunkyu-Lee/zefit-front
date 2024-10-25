@@ -14,8 +14,9 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
     const id = admData?.id;
 
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-    const [inputImg, setInputImg] = useState<any>(null);
+    const [inputImg, setInputImg] = useState<File | null>(null);
     const [statusInput, setStatusInput] = useState<any>({
+        image: null,
         state: 'partner',
         title_kr: '',
         title_en: ''
@@ -36,6 +37,7 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
         if (admData) {
             setPreviewUrl(isUpload ? null : admData?.image);
             setStatusInput({
+                image: isUpload ? null : admData?.image,
                 state: isUpload ? 'partner' : admData?.state,
                 title_kr: isUpload ? '' : admData?.title_kr,
                 title_en: isUpload ? '' : admData?.title_en

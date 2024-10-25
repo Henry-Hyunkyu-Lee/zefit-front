@@ -73,7 +73,7 @@ export default function AdmHeader({ title }: AdmHeaderProps) {
                                 <button className='adm_header_profile_button'>
                                     <img
                                         className='adm_profile_img'
-                                        src='http://www.zefit.co.kr/theme/basic/img/no_profile.gif'
+                                        src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_no_profile.gif'
                                         alt='프로필 이미지' />
                                 </button>
                             </li>

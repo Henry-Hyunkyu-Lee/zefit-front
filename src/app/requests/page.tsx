@@ -57,7 +57,7 @@ export default function Requests() {
             <section className='requests_page_layout'>
                 <img
                     className='requests_page_background_image'
-                    src='http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_bg.jpg'
+                    src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_bg.jpg'
                     alt='문의하기 배경 이미지' />
                 <div className='background_color_wrapper'>
                     <h2 className='requests_title'>
