@@ -7,10 +7,13 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import MobileHeader from '@/components/common/MobileHeader';
 import { supabase } from '@/utils/Supabase';
+import { useRecoilState } from 'recoil';
+import { isLoading } from '@/modules/loading';
 
 export default function Home() {
 
-    const [isMounted, setIsMounted] = useState(false);
+    const [isMounted, setIsMounted] = useState<boolean>(false);
+    const [loading, setLoading] = useRecoilState(isLoading);
 
     // 뷰포트 반응형
     const isMobile = useMediaQuery({ maxWidth: 1170 });
@@ -21,6 +24,7 @@ export default function Home() {
     // 마운트했을 때 api통신을 통해 파트너 리스트와 서비스 데이터 가져오기
     useEffect(() => {
         setIsMounted(true);
+        setLoading(true);
 
         fetch('/api/inquiry/landing/service')
             .then((response) => {
@@ -45,6 +49,8 @@ export default function Home() {
                 console.log(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
+            } finally {
+                setLoading(false);
             }
         };
 
@@ -90,7 +96,7 @@ export default function Home() {
                     </h3>
                     <img
                         className='company_image'
-                        src='http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img1.jpg'
+                        src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img1.jpg'
                         alt='회사소개 이미지' />
                     <ul className='company_link_button_wrapper'>
                         <li className='company_link_button_box'>
@@ -145,7 +151,7 @@ export default function Home() {
                                     <div
                                         className='business_card_image'
                                         style={{
-                                            backgroundImage: 'url(http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img2.jpg)'
+                                            backgroundImage: 'url(https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img2.jpg)'
                                         }} />
                                     <div className='business_card_text_box'>
                                         <strong className='business_card_title'>
@@ -164,7 +170,7 @@ export default function Home() {
                                     <div
                                         className='business_card_image'
                                         style={{
-                                            backgroundImage: 'url(http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img3.jpg)'
+                                            backgroundImage: 'url(https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img3.jpg)'
                                         }} />
                                     <div className='business_card_text_box'>
                                         <strong className='business_card_title'>
@@ -183,7 +189,7 @@ export default function Home() {
                                     <div
                                         className='business_card_image'
                                         style={{
-                                            backgroundImage: 'url(http://www.zefit.co.kr/theme/basic/assets/images/zefit/main_img10.jpg)'
+                                            backgroundImage: 'url(https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img10.jpg)'
                                         }} />
                                     <div className='business_card_text_box'>
                                         <strong className='business_card_title'>

@@ -14,7 +14,6 @@ export default function FloatingButton() {
 
     const [isScroll, setIsScroll] = useState<string>('stop');
     const [scrollValue, setScrollValue] = useState<number>(window.scrollY);
-    console.log(isScroll, scrollValue);
 
     const onClickScrollTopHandler = () => {
         window.scrollTo({

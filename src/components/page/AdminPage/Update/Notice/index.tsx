@@ -14,9 +14,10 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
     const id = admData?.id;
 
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-    const [inputImg, setInputImg] = useState<any>(null);
+    const [inputImg, setInputImg] = useState<File | null>(null);
     const [noticeInput, setNoticeInput] = useState<any>({
-        isSpecial: false,
+        image: null,
+        is_special: false,
         title_kr: '',
         title_en: '',
         content_kr: '',
@@ -24,7 +25,7 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
         writer_kr: '(주)제핏',
         writer_en: 'Zefit Inc.'
     });
-    const { isSpecial, title_kr, title_en, content_kr, content_en, writer_kr, writer_en } = noticeInput;
+    const { is_special, title_kr, title_en, content_kr, content_en, writer_kr, writer_en } = noticeInput;
 
     console.log(admData, isUpload);
 
@@ -40,7 +41,8 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
         if (admData) {
             setPreviewUrl(isUpload ? null : admData?.image);
             setNoticeInput({
-                isSpecial: isUpload ? false : admData?.is_special,
+                image: isUpload ? null : admData?.image,
+                is_special: isUpload ? false : admData?.is_special,
                 title_kr: isUpload ? '' : admData?.title_kr,
                 title_en: isUpload ? '' : admData?.title_en,
                 content_kr: isUpload ? '' : admData?.content_kr,
@@ -91,25 +93,25 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
                     <td className='input_table_body_room'>
                         <span
                             style={{
-                                color: (isSpecial) ? '#64c5b1' : '#858585',
-                                fontWeight: (isSpecial) ? '700' : '400'
+                                color: (is_special) ? '#64c5b1' : '#858585',
+                                fontWeight: (is_special) ? '700' : '400'
                             }}
-                            onClick={() => setNoticeInput({ ...noticeInput, isSpecial: true })}
+                            onClick={() => setNoticeInput({ ...noticeInput, is_special: true })}
                             className='radio_button_wrapper'>
                             <div className='radio_button_select'>
-                                {(isSpecial) && <div className='radio_button_point' />}
+                                {(is_special) && <div className='radio_button_point' />}
                             </div>
                             중요
                         </span>
                         <span
                             style={{
-                                color: (!isSpecial) ? '#64c5b1' : '#858585',
-                                fontWeight: (!isSpecial) ? '700' : '400'
+                                color: (!is_special) ? '#64c5b1' : '#858585',
+                                fontWeight: (!is_special) ? '700' : '400'
                             }}
-                            onClick={() => setNoticeInput({ ...noticeInput, isSpecial: false })}
+                            onClick={() => setNoticeInput({ ...noticeInput, is_special: false })}
                             className='radio_button_wrapper'>
                             <div className='radio_button_select'>
-                                {(!isSpecial) && <div className='radio_button_point' />}
+                                {(!is_special) && <div className='radio_button_point' />}
                             </div>
                             일반
                         </span>

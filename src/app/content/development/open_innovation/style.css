@@ -57,32 +57,21 @@
 
 /* 카드 스텝 박스 */
 .card_step_box {
-    width: 160px;
+    width: 140px;
     height: 50px;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
-    color: #78B0E5;
+    color: white;
+    background-color: #78B0E5;
     position: absolute;
-    top: -30px;
+    top: -25px;
     left: -1px;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    background-color: white;
-    border: 1px solid;
-    border-radius: 8px 8px 0px 0px;
-}
-
-.card_step_box_text {
-    width: 161px;
-    height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background-color: white;
+    border-radius: 4px;
 }
 
 

@@ -20,7 +20,7 @@ export const handleImageDelete = (
 ) => {
     setInputImg(null);
     setPreviewUrl(null);
-    
+
     // 파일 입력 요소 초기화
     const fileInput = document.getElementById('files') as HTMLInputElement;
     if (fileInput) {
