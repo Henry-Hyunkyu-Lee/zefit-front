@@ -109,6 +109,7 @@
     font-size: 14px;
     transition: all 0.3s;
     border: 1px solid #c2c2c2;
+    background-color: white;
 }
 
 /* 문의하기 input FOCUS효과 */

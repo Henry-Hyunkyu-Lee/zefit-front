@@ -9,22 +9,21 @@ import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import serviceJson from "../../../../../public/data/service.json";
+import { useRecoilState } from "recoil";
+import { isLoading } from "@/modules/loading";
 
 export default function Service() {
 
-    const { service } = useParams() as { service: string };
-    
-    const findData = serviceJson?.find((item: any) => item?.service === service);
-    const sideTapData = serviceJson?.map((item: any) => item?.service);
-    const tapValue = findData?.content[0]
+    const { service }: any = useParams();
 
-    console.log('serviceJson', findData, sideTapData);
+    const [loading, setLoading] = useRecoilState(isLoading);
 
-    const [serviceTap, setServiceTap] = useState<any>(tapValue);
-    // console.log("🚀 ~ Service ~ serviceData:", serviceData);
+    const [serviceData, setServiceData] = useState<any>(null);
+    const [serviceTap, setServiceTap] = useState<any>(null);
+    console.log("🚀 ~ Service ~ serviceData:", serviceData);
 
-    // const findData = serviceData?.find((item: any) => item?.service === service);
-    
+    const findData = serviceData?.find((item: any) => item?.service === service);
+    const sideTapData = serviceData?.map((item: any) => item?.service);
 
     const onClickTapHandler = (param: string) => {
         const tapData = findData?.content.find((item: any) => item.name === param);
@@ -32,21 +31,24 @@ export default function Service() {
     };
 
     useEffect(() => {
-        // if (service) {
-        //     fetch(`/api/inquiry/service/${service}`)
-        //         .then((response) => {
-        //             if (!response.ok) {
-        //                 throw new Error('Network response was not ok');
-        //             }
-        //             return response.json();
-        //         })
-        //         .then((jsonData) => {
-                    
-        //             setServiceData(jsonData);
-        //             setServiceTap(findData.content[0]);
-        //         })
-        //         .catch((error) => console.error("Fetch error:", error));
-        // };
+        setLoading(true);
+        
+        if (service) {
+            fetch(`/api/inquiry/service/${service}`)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then((jsonData) => {
+                    const findData = jsonData?.find((item: any) => item?.service === service);
+                    setServiceData(jsonData);
+                    setServiceTap(findData.content[0]);
+                })
+                .catch((error) => console.error("Fetch error:", error))
+                .finally(() => setLoading(false));
+        };
     }, [service]);
 
     return (
