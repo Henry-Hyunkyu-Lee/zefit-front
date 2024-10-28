@@ -13,7 +13,7 @@ import MetaTagTitle from "@/utils/MetaTagTitle";
 
 export default function OpenInnovationEN() {
 
-    const developmentData = businessNavList[2].list?.map((item: any) => item.id);
+    const developmentData = businessNavList[2].list?.map((item: any) => item.en);
 
     const [innovationData, setInnovationData] = useState<any>(null);
     console.log("🚀 ~ OpenInnovation ~ innovationData:", innovationData)

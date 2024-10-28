@@ -9,17 +9,22 @@ import { useEffect, useRef, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import { businessNavList } from "@/data/navData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
+import { useRecoilState } from "recoil";
+import { isLoading } from "@/modules/loading";
 
 export default function Pipeline() {
 
     const developmentData = businessNavList[2].list?.map((item: any) => item.id);
 
+    const [loading, setLoading] = useRecoilState(isLoading);
     const [pipelineData, setPipelineData] = useState<any>(null);
     const [percent, setPercent] = useState<string[]>(['0%', '0%', '0%']);
     console.log("🚀 ~ Pipeline ~ percent:", percent)
     console.log("🚀 ~ Pipeline ~ pipelineData:", pipelineData)
 
     useEffect(() => {
+        setLoading(true);
+
         fetch('/api/inquiry/pipeline')
             .then((response) => {
                 if (!response.ok) {
@@ -35,7 +40,10 @@ export default function Pipeline() {
                 setTimeout(() => {setPercent(targetPercent);}, 200);
                 // setPercent(targetPercent);
             })
-            .catch((error) => console.error("Fetch error:", error));
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (

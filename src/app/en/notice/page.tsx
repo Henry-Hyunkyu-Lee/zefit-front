@@ -96,7 +96,7 @@ export default function NoticeEN() {
                             className='table_body_lane_wrapper'>
                             <th className='table_header_category_room'>
                                 <div className='special_notice'>
-                                    공지
+                                    Notice
                                 </div>
                             </th>
                             <td className='table_body_special_title_room'>
@@ -216,7 +216,7 @@ export default function NoticeEN() {
                         <button
                             onClick={onSubmitSearchHandler}
                             className='search_button'>
-                            Search
+                            <i className='icon-magnifier'></i>
                         </button>
                     </form>
                     <div className='notice_table_wrapper'>

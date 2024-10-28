@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    animation: opacity_fade_in 1.5s forwards;
 }
 
 /* 서비스 페이지 제목 사이드 바 */

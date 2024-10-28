@@ -49,13 +49,13 @@
 
 /* 검색 버튼 */
 .search_button {
-    width: 140px;
+    min-width: 80px;
     height: 48px;
     border-radius: 6px;
     background-color: #00AEEF;
     outline: none;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     color: white;
     transition: all 0.3s;
@@ -177,18 +177,27 @@
 .table_body_special_title_room {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 40px;
 }
 
 /* 표 바디 제목 스페셜 링크 */
 .special_link_title_room {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
     font-weight: 700;
-    padding-left: 40px;
     transition: all 0.3s;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
     cursor: pointer;
 }
 
@@ -216,7 +225,8 @@
 }
 
 /* 표 바디 특별 공지 및 일반 공지 제목 HOVER효과 */
-.table_body_special_title_room:hover, .table_body_title_room:hover {
+.table_body_special_title_room:hover,
+.table_body_title_room:hover {
     opacity: 0.7;
 }
 
@@ -255,4 +265,92 @@
     cursor: pointer;
     color: #5a5a5a;
     user-select: none;
+}
+
+
+/*=============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .notice_page_container {
+        width: 94%;
+        gap: 20px;
+    }
+
+    .notice_page_searh_bar_container {
+        height: 40px;
+        padding: 0px 10px;
+        gap: 12px;
+    }
+
+    .search_bar {
+        height: 30px;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .search_button {
+        min-width: 40px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .notice_table_count {
+        font-size: 10px;
+    }
+
+    .notice_table_header_wrapper {
+        height: 32px;
+        min-height: 32px;
+    }
+
+    .table_header_category_room {
+        min-width: 80px;
+        font-size: 11px;
+    }
+
+    .table_header_title_room {
+        font-size: 11px;
+    }
+
+    .table_header_etc_room,
+    .table_body_etc_room {
+        min-width: 70px;
+        font-size: 11px;
+    }
+
+    .table_body_lane_wrapper {
+        height: 70px;
+    }
+
+    .special_notice {
+        width: 40px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .table_body_special_title_room {
+        padding-left: 10px;
+    }
+
+    .special_link_title_room {
+        font-size: 11px;
+    }
+
+    .page_count_wrapper {
+        gap: 8px;
+        margin: 16px 0px 30px 0px;
+    }
+
+    .present_page {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        border-radius: 4px;
+    }
+
+    .etc_page {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
 }

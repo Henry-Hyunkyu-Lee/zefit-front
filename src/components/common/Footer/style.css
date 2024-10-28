@@ -72,6 +72,7 @@
 }
 
 
+/*==============================================================*/
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
     .footer_container {
@@ -84,16 +85,16 @@
     }
 
     .footer_link {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .footer_content_wrapper {
         width: 94%;
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .icon-envelope, .icon-earphones {
-        font-size: 10px;
+        font-size: 8px;
         margin-right: 3px;
     }
 
@@ -123,6 +124,7 @@
 }
 
 
+/*==============================================================*/
 /* keyframes 애니메이션 */
 
 /* 웨이브 애니메이션 */

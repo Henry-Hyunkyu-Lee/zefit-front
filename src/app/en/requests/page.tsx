@@ -6,10 +6,18 @@ import PageTap from "@/components/common/PageTap";
 import '../../requests/style.css';
 import { useEffect, useState } from "react";
 import MetaTagTitle from "@/utils/MetaTagTitle";
+import { onClickRequestsHandler } from "@/utils/AddDataHandler";
 
 export default function RequestsEN() {
 
     const [provisionData, setProvisionData] = useState<any>(null);
+    const [requestsInput, setRequestsInput] = useState<any>({
+        name: null,
+        email: null,
+        company: null,
+        title: null,
+        content: null
+    });
     const [check, setCheck] = useState<{
         personal: boolean,
         use: boolean
@@ -17,7 +25,9 @@ export default function RequestsEN() {
         personal: false,
         use: false
     });
+    const { name, email, company, title, content } = requestsInput;
     const { personal, use } = check;
+    console.log('문의 데이터', requestsInput);
 
     const onClickCheckHandler = (e: any, param: string) => {
         e.preventDefault();
@@ -29,10 +39,20 @@ export default function RequestsEN() {
         };
     };
 
-    const onSubmitHandler = (e: any) => {
-        e.preventDefault();
+    const onChangeRequestsHandler = (e: any) => {
+        const { name, value } = e.target;
+        setRequestsInput({
+            ...requestsInput,
+            [name]: value
+        });
     };
 
+    const onSubmitHandler = (e: any) => {
+        e.preventDefault();
+
+        if (!personal || !use) return;
+        onClickRequestsHandler(e, requestsInput);
+    };
     useEffect(() => {
         fetch('/api/inquiry/requests/provision')
             .then((response) => {
@@ -181,7 +201,13 @@ export default function RequestsEN() {
                             </span>
                             I agree to all terms.
                         </button>
-                        <button className='requests_button'>
+                        <button
+                            style={{
+                                backgroundColor: (!personal || !use) ? '#b8b8b8' : '#275F97',
+                                cursor: (!personal || !use) ? 'default' : 'pointer'
+                            }}
+                            className='requests_button'
+                            onClick={onSubmitHandler}>
                             Inquire
                         </button>
                     </form>

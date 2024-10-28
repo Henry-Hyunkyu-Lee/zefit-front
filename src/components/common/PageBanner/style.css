@@ -61,16 +61,18 @@
 
     .page_top_banner_text_box {
         width: 94%;
+        height: 200px;
         left: 3%;
-        top: 10px;
+        top: 60px;
         gap: 4px;
+        align-items: center;
     }
 
     .page_top_banner_title {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     .page_top_banner_sub_title {
-        font-size: 12px;
+        font-size: 16px;
     }
 }

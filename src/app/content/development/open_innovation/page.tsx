@@ -82,7 +82,6 @@ export default function OpenInnovation() {
                             <li key={index} className='card_box'>
                                 <div className='card_step_box'>
                                     step {item?.id}
-                                    
                                 </div>
                                 {/* {(index !== innovationData?.step.length - 1)
                                     && <div className='card_next_step_arrow'>

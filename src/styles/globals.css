@@ -56,6 +56,18 @@
     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('truetype');
 }
 
+@keyframes opacity_fade_in {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+};
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -204,6 +216,7 @@ article {
   font-weight: 700;
   color: #1D5BA2;
   user-select: none;
+  animation: opacity_fade_in 1.5s forwards;
 }
 
 .page_title {
@@ -211,6 +224,7 @@ article {
   font-weight: 700;
   color: #1D5BA2;
   user-select: none;
+  animation: opacity_fade_in 1.5s forwards;
 }
 
 ::selection {
@@ -225,4 +239,10 @@ article {
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 1170px) {
+  .page_left_title, .page_title {
+    font-size: 18px;
+  }
 }
