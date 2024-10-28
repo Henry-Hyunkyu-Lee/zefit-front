@@ -1,0 +1,359 @@
+[
+    {
+        "id": 1,
+        "service": "CNS_FIT",
+        "model": "중추신경계 모델",
+        "model_en": "Central nervous system disease model",
+        "thumbnail": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_CNS_FIT.jpg",
+        "introduce": [
+            "자동화된 운동 측정, 신경형태에 대한 연구 및 복잡한 인지 기능을 포함하는 일련의 신경학적 표현형을 비용 효율적이고 검증된 방식으로 평가할 수 있습니다. 척추동물 중 CNS는 고도로 보존되어 있으며 zebrafish는 투명성 덕분에 생체 내 및 비침습적 마커를 허용합니다. 또한 자손수가 많기 때문에 대량 분석 데이터를 제공할 수 있습니다.",
+            "제핏은 알츠하이머병, 파킨슨병, 간질과 관련 행동과 전기생리학적 변화에 대한 연구 데이터를 제공합니다. CNS-FITTM 플랫폼은 질병을 안정적으로 모델링하여 화합물에 대한 유효성 검증이 가능하도록합니다."
+        ],
+        "introduce_en": [
+            "Neurological phenotypes, including automated locomotion measurements, studies of neural forms, and complex cognitive functions, can be evaluated at an efficient cost and precise data. Among vertebrates, zebrafish is highly conserved in CNS, and allows in-vivo and non-invasive markers due to its transparency. It can also provide analyzed big data because of the large number of offspring.",
+            "Zefit provides research data on Alzheimer’s disease, Parkinson's disease and epilepsy related behaviors and electrophysiological changes. CNS-FITTM platform reliably models diseases, enabling validation of compounds."
+        ],
+        "content": [
+            {
+                "name": "검증 바이오마커 및 표현형",
+                "name_en": "verified biomarkers and phenotypes",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_CNS_FIT2.jpg"
+                ],
+                "info": [
+                    {
+                        "title": "인지능력 및 기억력 분석",
+                        "text": ""
+                    },
+                    {
+                        "title": "운동활동 및 시각적 반응 분석",
+                        "text": "총 이동거리, 움직임 패턴, 명암에 따른 자극 반응 측정합니다."
+                    },
+                    {
+                        "title": "불안유발 분석",
+                        "text": "웰 플레이트 중앙 또는 주변에서 보낸 시간을 기반으로 치어의 불안상태를 평가합니다."
+                    },
+                    {
+                        "title": "경련성 분석",
+                        "text": "전기생리학적인 신호를 측정하여 seizure 신호를 분석하여 경련성을 분석합니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Cognitive and Memory Analysis",
+                        "text": ""
+                    },
+                    {
+                        "title": "Analysis of behavior activity and visual response",
+                        "text": "Total distance, movement patten and stimulus response according to light and shade."
+                    },
+                    {
+                        "title": "Anxiety-induced analysis",
+                        "text": "Evaluate anxiety of larvae based on the time spent in or around the center of well plates."
+                    },
+                    {
+                        "title": "Convulsion analysis",
+                        "text": "Evaluate the convulsion by measuring electrophysiological signals and analyzing seizure events."
+                    }
+                ]
+            },
+            {
+                "name": "중추신경계 모델 서비스",
+                "name_en": "Central Nervous System Model Service",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_CNS_FIT3.jpg"
+                ],
+                "info": [
+                    {
+                        "title": "알츠하이머 모델",
+                        "text": "인간 Aβ가 뇌실에 주입되면 tau 단백질의 인산화로 인해 AD의 특징적인 증상을 유발합니다.\n당사의 알츠하이머 질병 모델은 후보물질에 의한 행동, 타우 단백질 인산화 변화 데이터를 2주 이내 제공하여 약물 발견 시간을 단축합니다."
+                    },
+                    {
+                        "title": "파킨슨병 모델",
+                        "text": "MPTP에 노출되면 제브라피쉬 도파민성 뉴런의 선택적 손실이 유도되어 PD 특징적인 증상을 유발합니다.\n당사의 파킨슨 질병 모델은 후보물질에 의한 행동, dopamine neuron의 변화 데이터를 2주 이내에 제공하여 약물 발견 시간을 단축합니다."
+                    },
+                    {
+                        "title": "뇌전증 모델",
+                        "text": "간질은 뉴런의 과도한 흥분으로 인한 재발성 발작이 특징입니다.\n일반적인 경련제 PTZ에 대한 노출은 제브라피쉬 치어의 경련으로 인한 행동 변화와 전기생리학적 변화가 측정됩니다.\n이 모델을 통해 경련을 방지하는 화합물을 확인할 수 있습니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Alzheimer’s Disease model",
+                        "text": "After human Aβ is injected into ventricle, phosphorylation of the tau protein causes characteristic symptoms of AD.\nOur Alzheimer's disease model reduces drug discovery time within two weeks by providing data on behavior, changes in tau protein phosphorylation."
+                    },
+                    {
+                        "title": "Parkinson’s Disease model",
+                        "text": "Exposure to MPTP induces selective loss of zebrafish dopamine neurons, causing PD characteristic symptoms.\nOur Parkinson's disease model reduces drug discovery time within two weeks by providing data on behavior, changes in dopamine neurons."
+                    },
+                    {
+                        "title": "Epilepsy model",
+                        "text": "Epilepsy is characterized by recurrent seizures caused by excessive excitation of neurons.\nExposure to PTZ causes behavioural and electrophysiological changes in zebrafish larvae.\nThis model allows you to identify compounds that prevent convulsions."
+                    }
+                ]
+            }
+        ]
+    },
+    
+    {
+        "id": 2,
+        "service": "Meta_FIT",
+        "model": "대사질환 모델",
+        "model_en": "Metabolic disease model",
+        "thumbnail": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Meta_FIT.jpg",
+        "introduce": [
+            "Zebrafish는 시상하부에 포함된 식욕 회로, 췌장 및 근육, 간 및 지방 조직과 같이 인슐린에 민감한 기관과 같이 대사에 관련된 모든 기관을 보유하고 있기 때문에 대사 장애를 연구하기에 최적의 모델입니다.",
+            "특히, 제브라피쉬는 포유동물과 고도로 보존된 대사 경로를 공유하며,더 많은 개체에서 통계적으로 유의미한 실험 결과를 얻을 수 있어 좋은 실험 모델입니다."
+        ],
+        "introduce_en": [
+            "Zebrafish is an optimal model for studying metabolic disorders because it has all organs involved in metabolism, such as appetite circuit contained in hypothalamus, pancreas and muscles, and insulin-sensitive organs such as liver and adipose tissue.",
+            "In particular, zebrafish shares highly conserved metabolic pathways with mammals, and is a good experimental model as they can obtain statistically significant experimental results from more individuals."
+        ],
+        "content": [
+            {
+                "name": "급성 알코올성 간 손상 모델",
+                "name_en": "Acute alcoholic steatohepatitis model",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_figure1.jpg",
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_figure2.jpg",
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_figure3.jpg"
+                ],
+                "info": [
+                    {
+                        "title": "급성 알코올성 간 손상 모델",
+                        "text": "알코올에 노출되면 제브라피쉬에 급격한 간손상이 유도됩니다.\n\n당사의 급성 알코올성 간 손상 모델은 2일 이내에 간 수치의 변화 데이터를 제공하여 간 보호 물질 발견 시간을 단축합니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Acute alcoholic steatohepatitis model",
+                        "text": "Alcohol exposure leads to rapid liver damage to zebrafish.\n\nOur model damage provides data on changes in liver levels within two days, accelerating liver protection detection."
+                    }
+                ]
+            },
+            {
+                "name": "비알콜성 지방간 모델(NAFLD/NASH)",
+                "name_en": "Non-alcoholic fatty liver disease model(NAFLD/NASH)",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_figure4.jpeg"
+                ],
+                "info": [
+                    {
+                        "title": "비알콜성 지방간 모델(NAFLD/NASH)",
+                        "text": "NAFLD는 과도한 알코올을 섭취하지 않고 간에 과도한 지방이 축적되는 상태입니다. 지방간은 지방간염 및 간병변으로 진행될 수 있습니다. High fat diet induced NAFLD 모델은 인간에서의 질병 증상을 그대로 재현합니다.\n\n당사의 Meta-FITTM 은 2주 이내에 화합물의 지방 축적 감소 등 효능 데이터를 제공하여 약물 발견 시간을 단축합니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Non-alcoholic fatty liver disease model(NAFLD/NASH)",
+                        "text": "NAFLD is a condition in which excessive fat accumulates in liver without excessive alcohol. Model's liver can progress to fatty hepatitis and liver lesions. High fat diet induced NAFLD model has disease symptoms in humans.\n\nMeta-FITTM reduces drug discovery time by providing efficacy data such as reducing fat accumulation of compounds within two weeks."
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 3,
+        "service": "Onco_FIT",
+        "model": "CDX 생체 내 zebrafish의 암 모델",
+        "model_en": "CDX in-vivo cancer model in zebrafish",
+        "thumbnail": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_oncofit_image.jpg",
+        "introduce": [
+            "Onco-FITTM은 항암제 개발 및 발견의 개발기간을 단축합니다.",
+            "제브라피쉬 유충에 형광 표지된 환자 유래 세포주(CDX)를 이종이식한 질병모델을 사용합니다. 제브라피쉬의 투명성은 종양의 성장 및 전이 과정을 실시간으로 관찰 가능하도록 합니다.",
+            "당사의 Onco-FITTM 5일 이내에 화합물의 종양 성장 및 전이 억제 효능 데이터를 제공하여 약물 발견 시간을 단축합니다."
+        ],
+        "introduce_en": [
+            "Onco-FITTM shortens development period of anticancer drug development and discovery.",
+            "We use a disease model that xenografted heterogeneously patient-derived cell lines (CDXs) fluorescently labeled on zebrafish larvae.",
+            "Transparency of zebrafish enables real-time observation of tumor growth and metastasis.\nOnco-FITTM reduces drug discovery time by providing tumor growth and metastasis inhibitory efficacy data of compounds within 5 days."
+        ],
+        "content": [
+            {
+                "name": "제공 데이터",
+                "name_en": "Provided data",
+                "image": [
+                    
+                ],
+                "info": [
+                    {
+                        "title": "종양 억제",
+                        "text": "1.형광 표지 된 종양 세포는 투명 배아에서 시각화되어\n추적 가능합니다.\n\n2.종양크기를 통해 화합물의 종양 억제 효능을 형광 현미경으로 측정 가능합니다."
+                    },
+                    {
+                        "title": "전이 억제",
+                        "text": "1.배아의 빠른 발달은 미세종양의 빠른 혈관 형성과 전이를 가능 하게합니다\n\n2.전이성 세포는 1차 부위에서 혈관계를 따라 전파되며 이를 통해 세포의 전이성을 확인할 수 있습니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Suppression of Tumor proliferation",
+                        "text": "1.Fluorescently labeled tumor cells are visualized and traceable in transparent embryos.\n\n2.Tumor suppression effect of compounds can be measured with a fluorescence microscope."
+                    },
+                    {
+                        "title": "Suppression of Metastasis",
+                        "text": "1.Rapid development of embryos enables angiogenesis and metastasis of microtumors\n\n2.Metastatic cells propagate along vascular system in the primary site, which can confirm cell metastasis."
+                    }
+                ]
+            },
+            {
+                "name": "물질별 제공 서비스",
+                "name_en": "Service provided by compounds",
+                "image": [
+                    
+                ],
+                "info": [
+                    {
+                        "title": "소분자",
+                        "text": "생체 내 암 모델에서 많은 소분자를 스크리닝하여 추가개발 의사결정과 리드 물질 선택을 위한 최상의 기반을 제공합니다. 우리는 소수성이 강한 화합물, 다양한 유형의 비히클, 전달 경로 및 표적화 요법을 포함하여 다양한 용해도의 화합물에 대한 서비스 경험이 있습니다."
+                    },
+                    {
+                        "title": "고분자",
+                        "text": "우리는 항암치료를 위한 고처리량 스크리닝 서비스를 제공합니다. ADC 또는 항체, 기타 생물학적 제제, 나노입자 전달 시스템 또는 유전자 치료용 벡터와 같은 큰 분자를 개별적으로 또는 조합하여 테스트합니다. 테스트 분자를 종양 세포와 함께 주입하여 종양 내 분자의 안정적이고 재현 가능한 농도를 보장하거나 화합물의 의도된 임상 전달 경로를 재현하기 위해 IV로 주입합니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Small molecule",
+                        "text": "Screening many small molecules from the cancer model, provides best foundation for further development decision-making and lead compounds selection. We have service experience for compounds of varying solubility, including hydrophobic compounds, different types of vehicle, transfer pathways, and targeted therapy."
+                    },
+                    {
+                        "title": "Macromolecule",
+                        "text": "We provide high-throughput screening services for anticancer treatment. And we test large molecules, such as ADC or antibodies, other biological agents, nanoparticle delivery systems, or vectors for gene therapy, individually or in combination. Testing molecules are injected with tumor cells to ensure stable and reproducible concentrations of molecules in tumor or to reproduce intended clinical delivery pathway of compounds by using IV."
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 4,
+        "service": "Gene_FIT",
+        "model": "Gene_FIT",
+        "model_en": "Gene_FIT",
+        "thumbnail": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_gene_image.jpg",
+        "introduce": [
+            "제브라피쉬 모델로 유전자를 비활성화하여 Knock-out lines 제작,",
+            "특정 위치에 DNA 서열을 도입하여 Knock-in lines 제작,",
+            "타겟 유전자의 mRNA가 단백질 합성하는 것을 차단하여 Knock-down lines 제작이 가능합니다."
+        ],
+        "introduce_en": [
+            "It is possible to produce knock-out lines by deactivating genes with zebrafish model,",
+            "to produce knock-out lines by introducing DNA sequences to specific sites,",
+            "and to produce knock-down lines that can detect phenotypes of specific genes."
+        ],
+        "content": [
+            {
+                "name": "Knock-out lines 제작",
+                "name_en": "Knock-out lines production",
+                "image": [
+                    
+                ],
+                "info": [
+                    {
+                        "title": "Knock-out lines 제작",
+                        "text": "CRISPR/Cas9 system을 사용하여 유전자의 CDS 또는 integral regulatory domains을 방해하거나 유전자 크기에 따른 전체 도메인 또는 CDS를 제거할 수 있습니다.\n\n이 기술은 100%에 가까운 높은 효율로 mutagenesis가 가능하고, 높은 성공률의 KO 세대 제작이 가능합니다.\n수요자가 원하는 제브라피쉬 유전자 변형 모델을 맞춤형으로 생성할 수 있습니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Knock-out lines production",
+                        "text": "We can interfere with CDS or integral regulatory domains of genes and remove the entire domain based on a gene size or CDS, using the CRISPR/Cas9 system.\n\nThis technology enables highly efficient mutagenesis of nearly 100%, and enables production of KO generation with a high success rate. You can customize zebrafish genetic modification model you want."
+                    }
+                ]
+            },
+            {
+                "name": "Knock-in lines 제작",
+                "name_en": "Knock-in lines production",
+                "image": [
+                    
+                ],
+                "info": [
+                    {
+                        "title": "Knock-in lines 제작",
+                        "text": "CRISPR/Cas9 system을 사용하여 짧은 뉴클레오타이드 서열(IoxP site, 점 돌연변이, 단백질 tags) 또는 exogenous DNA(변형된 CDS 유전자 또는 reporter 유전자)의 긴 서열을 삽입할 수 있습니다.\n\n이 기술은 mRNA injection으로 인한 유전자 과발현과 달리 제브라피쉬 유전자에서 안정적이고, 영구적인 편집을 유도합니다.\nTol2 transgenesis에 비해 CRISPR/Cas9은 덜 효율적이나, 훨씬 더 정확합니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Knock-in lines production",
+                        "text": "We use CRISPR/Cas9 system in zebrafish and can insert short nucleotide sequences(such as IoxP sites, point mutations, or protein tags) or long sequences of exogenous DNA(such as mutated genes' CDSs or reporter genes)\n\nUnlike gene overexpression due to mRNA injection, this technology induces stable, permanent editing in zebrafish genes.\nCRISPR/Cas9 is less efficient than Tol2 transgenesis, but much more accurate."
+                    }
+                ]
+            },
+            {
+                "name": "Knock-down lines 제작",
+                "name_en": "Knock-down lines production",
+                "image": [
+                    
+                ],
+                "info": [
+                    {
+                        "title": "Knock-down lines 제작",
+                        "text": "morpholino oligonucleotides(MO)를 사용하여 F0에서 KD을 생성할 수 있습니다. Genome DNA를 손상시키지 않으면서 전사된 mRNA를 변경합니다.\n\n이 기술을 활용하면 여러 후보 유전자의 High-throughput screeening이 가능하고,\nKO line 제작 전에 표현형을 미리 확인할 수 있습니다.\n또한, KO 유발 표현형을 세포, 조직 또는 기관 수준에서 detection 할 수 있습니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Knock-down lines production",
+                        "text": "We can generate KD lines at F0 using morpholino oligonucleotides (MO) and change transcribed mRNA without damaging genome DNA.\n\nThis technology enables high-throughput screening of multiple candidate genes.\nYou can check the phenotype in advance before making KO lines\nKO-induced phenotypes can also be detected at the cells, tissues, or organs level."
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 5,
+        "service": "Toxicology",
+        "model": "제브라피쉬 독성 반응",
+        "model_en": "Zebrafish Toxic Response",
+        "thumbnail": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology.jpg",
+        "introduce": [
+            "제브라피쉬의 독성 반응은 생쥐 및 인간의 독성 반응과 매우 유사합니다. 때문에, 환자와 유사한 조건에서 약물의 작용 및 독성을 판단할 수 있습니다.",
+            "제브라피쉬는 물에서 아가미와 피부로 약물을 지속적으로 흡수하기 때문에 체 내 약물 농도를 일정하게 유지가능하고 다른 동물(예: 생쥐)에서의 문제점인 약물의 빠른 대사를 해결합니다.",
+            "세포 배양에서의 독성 반응을 생체 내 독성 반응으로 번역하는 것은 어려움이 많습니다. 당사의 독성 모델은 시험관 내 모델과 생체 내 모델 사이의 틈새를 매워줄 수 있습니다."
+        ],
+        "introduce_en": [
+            "Toxic reaction of zebrafish is very similar to that of mice and humans. Therefore, mode of action and toxicity of compounds can be determined under similar conditions to the patients.",
+            "Zebrafish can maintain a constant drug concentration in the body because it continuously absorbs the drug from the water to gills and skin. And they solve rapid metabolism of the drug, which is a problem in other animals (e.g., mice).",
+            "Translating toxic reactions in cell culture into in-vivo toxic reactions is challenging. Our toxicity model can bridge gap between in-vitro and in-vivo models."
+        ],
+        "content": [
+            {
+                "name": "일반적인 안정성시험",
+                "name_en": "General safety test",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology2.jpg"
+                ],
+                "info": [
+                    
+                ],
+                "info_en": [
+                    
+                ]
+            },
+            {
+                "name": "기관 특이적 안정성시험",
+                "name_en": "Organ-specific safety test",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology3.jpg",
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology4.jpg"
+                ],
+                "info": [
+                    {
+                        "title": "기관 특이적 안정성시험",
+                        "text": "특정 장기 세포(뇌,간,신장,심혈관계 등)에 형광단백질을 발현시켜 다양한 장기에 대한 독성 데이터 제공"
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Organ-specific safety test",
+                        "text": "Fluorescent protein is expressed in zebrafish's specific organ cells(such as brain, liver, kidney, cardiovascular system, etc.) to provide toxicity data for various organs"
+                    }
+                ]
+            }
+        ]
+    }
+]

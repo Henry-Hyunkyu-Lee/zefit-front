@@ -196,7 +196,7 @@ export default function Notice() {
                         <button
                             onClick={onSubmitSearchHandler}
                             className='search_button'>
-                            검색
+                            <i className='icon-magnifier'></i>
                         </button>
                     </form>
                     <div className='notice_table_wrapper'>

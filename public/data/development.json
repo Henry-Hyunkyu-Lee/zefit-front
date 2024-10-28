@@ -1,0 +1,163 @@
+{
+    "pharmaceuticals": {
+        "title": "Drug Discovery Platform",
+        "title_en": "Drug Discovery Platform",
+        "subtitle": "신약후보 물질을 발굴에서 최적화에 이르는 고효율 신약개발 플랫폼을 통해 선도물질 발굴부터 전임상 후보단계의 개발까지 신약개발 기간의 혁신적 단축 '3년 이내 전임상 후보물질 도출' in vivo에서 축적된 데이터를 바탕으로 한 혁신신약 개발 플랫폼 구축",
+        "subtitle_en": "Shorten the drug development period from discovering meaningful candidates to preclinic stage utilizing high-throughput drug development platform covers discovering to optimizing drug candidate. ‘Arranges candidate components within 3-years’ Build an innovative drug discovery platform based on data accumulated in in-vivo.",
+        "step": [
+            {
+                "id": 1,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/pharmaceuticals-img1.png",
+                "title": "기존 CNS 신약개발의 문제점",
+                "title_en": "Existing problems in the CNS drug discovery.",
+                "content": [
+                    "In-vitro에서 in-vivo 간 번역의 어려움",
+                    "BBB 투과율 최적화 과정의 고비용, 저효율화",
+                    "중추신경계 상태변화의 정량적 바이오마커의 부재",
+                    "In vivo 수준의 후보물질 연구 Data 부족"
+                ],
+                "content_en": [
+                    "Difficulty in translating from in-vitro to in-vivo",
+                    "High cost and low efficiency of BBB permeability optimization process.",
+                    "Absence of quantitative biomarkers for CNS changes.",
+                    "Lack of data on candidate materials at in-vivo level"
+                ]
+            },
+            {
+                "id": 2,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/pharmaceuticals-img3.png",
+                "title": "당사의 해결방안",
+                "title_en": "Our solutions",
+                "content": [
+                    "고효율 척추동물모델 제브라피쉬 기반 선도물질발굴 및 최적화",
+                    "바이오 신호(EEG)기반의 정량적 중추신경계 바이오마커 활용",
+                    "In-vivo 수준에서 보이는 후보물질 약리적효과의 빅데이터 보유"
+                ],
+                "content_en": [
+                    "Discovering and optimizing meaningful candidates utilizing highly efficient vertebrate model, Zebrafish.",
+                    "Utilizing quantitative CNS biomarker based on biosignal(EEG)",
+                    "Big data about pharmacological effects of candidates at the in-vivo level"
+                ]
+            },
+            {
+                "id": 3,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/pharmaceuticals-img2.png",
+                "title": "당사의 신약개발 플랫폼",
+                "title_en": "Our drug discovery platform",
+                "content": [
+                    "CNS 질환 대상 물질 스크리닝 플랫폼",
+                    "CNS 질환 대상 물질 therapeutic index 향상 플랫폼",
+                    "CNS 질환 대상 물질 안정성 최적화 플랫폼",
+                    "BBB 약물전달시스템 최적화 플랫폼"
+                ],
+                "content_en": [
+                    "Screening platform for substances related with CNS diseases",
+                    "Therapeutic index improvement platform for substances related with CNS diseases",
+                    "Stability optimization platform for substances related with CNS diseases.",
+                    "Optimization platform for BBB drug transmission system"
+                ]
+            }
+        ]
+    },
+    "pipeline": {
+        "title": "제핏의 신약개발 프로세스 혁신은 효율적인 신약개발이 가능하게 합니다.",
+        "title_en": "Zefit’s innovation in the drug discovery process opens efficient drug development.",
+        "subtitle": "바이오 신호 측정기술, In-vivo 기반 약리효과 빅데이터 등과 같은 고효율 기술을 활용한\n플랫폼을 통해",
+        "subtitle_en": "high efficiency technology platforms such as biosignal acquisition technology,\nBig-data about in-vivo pharmacological effects, etc.",
+        "strongtext": "CNS 신약개발 파이프라인 확보",
+        "strongtext_en": "CNS drug discovery pipeline utilizing",
+        "graph": {
+            "category": [
+                "Target Disease",
+                "Product",
+                "Drug discovery",
+                "Lead Compounds",
+                "Pre-Clinical",
+                "Clinical"
+            ],
+            "target": [
+                {
+                    "id": "Epilepsy",
+                    "product": "ZT-100",
+                    "percent": "60%"
+                },
+                {
+                    "id": "Epilepsy",
+                    "product": "ZT-101",
+                    "percent": "30%"
+                },
+                {
+                    "id": "Parkinson's Disease",
+                    "product": "ZT-200",
+                    "percent": "60%"
+                }
+            ]
+        }
+    },
+    "innovation": {
+        "title": "신약개발 혁신을 위한 신약개발 파이프라인",
+        "title_en": "Drug discovery pipeline for drug development innovation.",
+        "subtitle": [
+            "제핏은 치료제 연구를 위한 오픈 이노베이션에 관심을 갖고 있습니다.\n치료제 연구는 어떠한 분야보다 많은 비용과 시간이 필요합니다.",
+            "제핏은 질환 치료제의 초기 개발과정을 단축시키고 효율화를 위해 노력해온 전문가들입니다.\n제핏이 보유하고 있는 신약개발 플랫폼과 데이터들은 '1년 내 비임상단계 물질확보'를 실현 가능하도록 합니다.",
+            "저희 팀과 기존연구의 한계를 넘어 함께할 파트너를 찾고있습니다."
+        ],
+        "subtitle_en": [
+            "Zefit is interested in open innovation for therapeutic research.\nTherapeutic research requires more money and time than any other fields.",
+            "Zefit is a group of experts who have been working to shorten and streamline the early development process of disease treatment.\nZefit's drug development platform and data enable non-clinical compounds acquisition within a year.",
+            "We are looking for a partner to join with our team beyond the limits of existing research."
+        ],
+        "steptitle": "신약개발 혁신을 위한 신규 바이오마커 개발 파이프라인",
+        "steptitle_en": "New biomarker development pipelines for drug development innovation.",
+        "step": [
+            {
+                "id": 1,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img17.png",
+                "title": "임상에서의 데이터 분석",
+                "title_en": "Analyzing clinical data.",
+                "content": "임상 환자들에서 어떤 표현형 확인되는지를 조사 및 분석합니다. 의사와 함께 임상단계 프로토콜, 약리적 데이터에 대해 논의합니다.",
+                "content_en": "Investigate and analyze what phenotypes are identified in clinical patients. Discuss clinical stage protocols and pharmacological data with doctor."
+            },
+            {
+                "id": 2,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img18.png",
+                "title": "실험모델 선정",
+                "title_en": "Experimental model selection",
+                "content": "약리적 실험에 적합한 실험동물모델에 대해 함께 논의하고 선정합니다.",
+                "content_en": "Discuss and select experimental animal models that are suitable for pharmacological experiments."
+            },
+            {
+                "id": 3,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img19.png",
+                "title": "모델 표현형 확인",
+                "title_en": "Check phenotype of model",
+                "content": "선정한 실험동물모델에서 다양한 진단을 통해 표현형을 분석하고 확인합니다.",
+                "content_en": "Analyze and verify phenotypes through various diagnoses on selected experimental animal model."
+            },
+            {
+                "id": 4,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img20.png",
+                "title": "임상- 실험모델 간의 유사성 확인",
+                "title_en": "Verification similarity between clinical and experimental models.",
+                "content": "선정한 실험동물모델에서의 표현형이 실제 임상 환자들의 증상과 일치하는지를 확인합니다.",
+                "content_en": "Verify that phenotypes in the selected experimental animal model match symptoms in the actual clinical patients."
+            },
+            {
+                "id": 5,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img21.png",
+                "title": "약리학적 연구수행",
+                "title_en": "Conducting pharmacological research",
+                "content": "레퍼런스 약물을 활용하여 약리학적으로 해당 표현형이 질병의 바이오마커로 사용가능한지 확인합니다. ",
+                "content_en": "Pharmacologically, verify that the phenotypes are available as biomarkers for the disease by using reference drugs."
+            },
+            {
+                "id": 6,
+                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img22.png",
+                "title": "바이오 마커 검증",
+                "title_en": "Biomarker Verification",
+                "content": "바이오마커의 재현성 및 정량화 가능여부를 확인하기위해 실험동물모델 실험표본 수를 확대하고, 더 많은 약리학적 검증 및 통계학적 검증을 진행합니다. ",
+                "content_en": "In order to verify reproduction and quantification availability of biomarkers, expansion of experimental animal model samples and multiple pharmacological/statistical verifications are done."
+            }
+        ]
+    }
+}

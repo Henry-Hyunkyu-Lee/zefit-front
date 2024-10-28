@@ -12,7 +12,7 @@ import MetaTagTitle from "@/utils/MetaTagTitle";
 
 export default function PipelineEN() {
 
-    const developmentData = businessNavList[2].list?.map((item: any) => item.id);
+    const developmentData = businessNavList[2].list?.map((item: any) => item.en);
 
     const [pipelineData, setPipelineData] = useState<any>(null);
     const [percent, setPercent] = useState<string[]>(['0%', '0%', '0%']);

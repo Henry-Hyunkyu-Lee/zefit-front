@@ -120,7 +120,7 @@ export default function NewsEN() {
                         <button
                             onClick={onSubmitSearchHandler}
                             className='search_button'>
-                            Search
+                            <i className='icon-magnifier'></i>
                         </button>
                     </form>
                     <div className='notice_table_wrapper'>

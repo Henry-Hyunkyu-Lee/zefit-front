@@ -12,7 +12,7 @@ import MetaTagTitle from "@/utils/MetaTagTitle";
 
 export default function PharmaceuticalsEN() {
 
-    const developmentData = businessNavList[2].list?.map((item: any) => item.id);
+    const developmentData = businessNavList[2].list?.map((item: any) => item.en);
 
     const [pharmaceuticalsData, setPharmaceuticalsData] = useState<any>(null);
     console.log("🚀 ~ Pharmaceuticals ~ pharmaceuticalsData:", pharmaceuticalsData)
@@ -48,7 +48,7 @@ export default function PharmaceuticalsEN() {
                         <div className='top_info_background_box' />
                         <img
                             className='top_info_image'
-                            src='http://www.zefit.co.kr/theme/basic/assets/images/zefit/adult_eeg_system_bg.jpg'
+                            src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_adult_eeg_system_bg.jpg'
                             alt='신약개발기술' />
                         <div className='top_info_content_wrapper'>
                             <div className='top_info_content_box'>

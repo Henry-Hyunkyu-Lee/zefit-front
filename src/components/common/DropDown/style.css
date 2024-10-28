@@ -43,6 +43,7 @@
     overflow: hidden;
     background-color: white;
     border: 1px solid #E0E0E0;
+    box-shadow: 2px 2px 6px 0px #a5a5a53f;
     position: absolute;
     top: 50px;
     left: 0;
@@ -67,4 +68,31 @@
     background-color: #1D5BA2;
     color: #ffffff;
     font-weight: 500;
+}
+
+
+/*=============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .dropdown_button {
+        min-width: 80px;
+        height: 30px;
+        padding: 0px 10px;
+        font-size: 10px;
+    }
+
+    .triangle {
+        width: 10px;
+        height: 6px;
+    }
+
+    .option_wrapper {
+        top: 32px;
+    }
+
+    .option_button {
+        height: 30px;
+        font-size: 9px;
+        padding: 4px 8px;
+    }
 }

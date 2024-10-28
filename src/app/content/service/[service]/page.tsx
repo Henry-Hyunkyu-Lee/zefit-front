@@ -8,10 +8,15 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import MetaTagTitle from "@/utils/MetaTagTitle";
+import serviceJson from "../../../../../public/data/service.json";
+import { useRecoilState } from "recoil";
+import { isLoading } from "@/modules/loading";
 
 export default function Service() {
 
     const { service }: any = useParams();
+
+    const [loading, setLoading] = useRecoilState(isLoading);
 
     const [serviceData, setServiceData] = useState<any>(null);
     const [serviceTap, setServiceTap] = useState<any>(null);
@@ -26,6 +31,8 @@ export default function Service() {
     };
 
     useEffect(() => {
+        setLoading(true);
+        
         if (service) {
             fetch(`/api/inquiry/service/${service}`)
                 .then((response) => {
@@ -39,7 +46,8 @@ export default function Service() {
                     setServiceData(jsonData);
                     setServiceTap(findData.content[0]);
                 })
-                .catch((error) => console.error("Fetch error:", error));
+                .catch((error) => console.error("Fetch error:", error))
+                .finally(() => setLoading(false));
         };
     }, [service]);
 
@@ -86,7 +94,7 @@ export default function Service() {
                                         onClick={() => onClickTapHandler(item.name)}
                                         style={{
                                             fontWeight: (item.name === serviceTap?.name) ? '700' : '400',
-                                            backgroundColor: (item.name === serviceTap.name) ? '#0055a7' : '#e9e9e9',
+                                            backgroundColor: (item.name === serviceTap?.name) ? '#0055a7' : '#e9e9e9',
                                             color: (item.name === serviceTap?.name) ? '#ffffff' : '#6B6B6B'
                                         }}
                                         className='detail_tap_button'>

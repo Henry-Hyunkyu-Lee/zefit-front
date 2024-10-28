@@ -41,6 +41,7 @@
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    box-shadow: 1px 1px 8px 0px #00000080;
 }
 
 /* 상단 설명글 제목 */
@@ -186,9 +187,100 @@
 }
 
 
+/*==============================================================*/
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
     .pharmaceuticals_page_container {
         width: 94%;
+        padding: 40px 0px;
+        gap: 24px;
+    }
+
+    .pharmaceuticals_page_top_info_container {
+        height: 260px;
+    }
+
+    .top_info_content_wrapper {
+        padding: 20px;
+    }
+
+    .top_info_image {
+        width: 80%;
+        height: 70%;
+    }
+
+    .top_info_content_box {
+        width: 100%;
+        height: fit-content;
+        padding: 20px 30px;
+        background-color: white;
+        gap: 16px;
+    }
+
+    .top_info_title {
+        font-size: 16px;
+    }
+
+    .top_info_content {
+        font-size: 12px;
+    }
+
+    .bottom_content_container {
+        height: 1100px;
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        background-color: #F6F6F6;
+    }
+
+    .bottom_content_card_wrapper {
+        width: 94%;
+        gap: 12px;
+    }
+
+    .card_box {
+        max-width: 100%;
+        padding: 12px 6px;
+        gap: 30px;
+        height: 300px;
+        justify-content: center;
+    }
+
+    .card_next_step_arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: auto;
+        bottom: -26px;
+        right: auto;
+        left: calc(50% - 20px);
+        transform: rotate(90deg);
+    }
+
+    .card_box_icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card_box_title {
+        font-size: 18px;
+    }
+
+    .card_text_box {
+        gap: 4px;
+    }
+
+    .card_text_box_lane {
+        gap: 3px;
+    }
+
+    .card_text_box_lane_point {
+        min-width: 2px;
+        height: 2px;
+    }
+
+    .card_text_box_lane_font {
+        font-size: 12px;
     }
 }

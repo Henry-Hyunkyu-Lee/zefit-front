@@ -86,10 +86,25 @@
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
     .page_tap_container {
-        height: 40px;
+        height: 36px;
     }
 
     .page_tap_out_wrapper {
-        width: 100%;
+        width: 94%;
+    }
+
+    .home_button_tap {
+        height: 35px;
+    }
+
+    .home_icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .page_tap_button, .page_tap_click_button {
+        height: 36px;
+        font-size: 10px;
+        padding: 0px 14px;
     }
 }

@@ -64,7 +64,7 @@
     top: 0;
     left: 0;
     z-index: 2;
-    background-image: url('http://www.zefit.co.kr/theme/basic/assets/images/zefit/img-bg1.jpg');
+    background-image: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_img-bg1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -258,6 +258,12 @@
     z-index: 3;
 }
 
+/* 미션 컨텐츠 제목 */
+.mission_content_title {
+    font-size: 16px;
+    color: #1D5BA2;
+}
+
 /* 미션 컨텐츠 부제목 */
 .mission_content_sub_title {
     font-size: 30px;
@@ -300,4 +306,126 @@
     bottom: 0;
     left: 940px;
     z-index: 1;
+}
+
+/* 모바일 카드 박스 */
+.mobile_card_box {
+    width: 260px;
+    height: 260px;
+    border-radius: 100%;
+    position: relative;
+}
+
+
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .company_introduce_container {
+        width: 94%;
+        padding: 40px 0px;
+        gap: 20px;
+    }
+
+    .company_introduce_sub_title {
+        font-size: 16px;
+    }
+
+    .company_center_bar {
+        height: 16px;
+    }
+
+    .introduce_additional_wrapper {
+        gap: 12px;
+    }
+
+    .introduce_additional {
+        font-size: 12px;
+    }
+
+    .different_develop_content_container {
+        padding: 40px 3%;
+        gap: 30px;
+    }
+
+    .different_develop_title_container {
+        gap: 10px;
+    }
+
+    .different_develop_intro_container {
+        height: 1100px;
+    } 
+
+    .different_develop_title {
+        font-size: 18px;
+    }
+
+    .different_develop_sub_title, .different_develop_introduce {
+        font-size: 12px;
+    }
+
+    .shape_wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .hexagon_card_content_container {
+        width: 100%;
+        height: 100%;
+        gap: 12px;
+        position: static;
+    }
+
+    .card_content_top_lane {
+        width: 94%;
+    }
+
+    .card_content_icon {
+        min-width: 50px;
+        height: 50px;
+    }
+
+    .card_content_title {
+        font-size: 14px;
+    }
+
+    .card_content_text {
+        font-size: 12px;
+    }
+
+    .mission_container {
+        height: 400px;
+    }
+
+    .mission_in_wrapper {
+        width: 94%;
+    }
+
+    .mission_content_container {
+        width: 100%;
+        top: 40px;
+        left: 3%;
+    }
+
+    .mission_content_sub_title {
+        font-size: 14px;
+        white-space: initial;
+        margin: 10px 0px 20px 0px;
+    }
+
+    .mission_content_text {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .mission_first_image {
+        width: 160px;
+        height: 160px;
+        left: 25%;
+    }
+
+    .mission_second_image {
+        width: 240px;
+        height: 240px;
+        left: 40%;
+    }
 }

@@ -11,9 +11,11 @@
     bottom: 0;
     z-index: 30;
     background-color: white;
-    display: flex;
+    opacity: 0;
+    display: none;
     justify-content: center;
     align-items: center;
+    transition: all 0.1s;
 }
 
 /* 로딩 스피너 박스 */

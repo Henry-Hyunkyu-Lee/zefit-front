@@ -99,9 +99,9 @@ export default function Admin() {
     // lastLogin 값 확인
     const lastLogin = getLastLoginFromCookie();
 
-    const getLastLoginDateTime = () => {
-        if (lastLogin) {
-            const loginDate = new Date(lastLogin); // ISO 문자열을 Date 객체로 변환
+    const getLastLoginDateTime = (paramData: any) => {
+        if (paramData) {
+            const loginDate = new Date(paramData); // ISO 문자열을 Date 객체로 변환
             const year = loginDate.getFullYear();
             const month = loginDate.getMonth() + 1; // getMonth()는 0부터 시작하므로 1을 더함
             const day = loginDate.getDate();
@@ -109,21 +109,16 @@ export default function Admin() {
             const minutes = loginDate.getMinutes();
             const seconds = loginDate.getSeconds();
 
-            return {
-                year,
-                month,
-                day,
-                hours,
-                minutes,
-                seconds
-            };
+            const timeObj = { year, month, day, hours, minutes, seconds };
+
+            return `${timeObj.year}-${timeObj.month}-${timeObj.day}  ${timeObj.hours}:${timeObj.minutes}:${timeObj.seconds}`;
         } else {
             return null;
         }
     };
 
     // 날짜와 시간 출력
-    const lastLoginDateTime = getLastLoginDateTime();
+    const lastLoginDateTime = getLastLoginDateTime(lastLogin);
 
     if (!lastLogin) {
         // lastLogin 값이 없으면 로그인 페이지로 이동
@@ -176,9 +171,7 @@ export default function Admin() {
                                             </td>
                                             <td className='table_body_content_room'>
                                                 <span className='table_body_content_room_span'>
-                                                    {lastLoginDateTime?.year}-{lastLoginDateTime?.month}-{lastLoginDateTime?.day}
-                                                    &nbsp;&nbsp;
-                                                    {lastLoginDateTime?.hours}:{lastLoginDateTime?.minutes}:{lastLoginDateTime?.seconds}
+                                                    {lastLoginDateTime}
                                                 </span>
                                             </td>
                                         </tr>
@@ -216,7 +209,11 @@ export default function Admin() {
                                                 <tr
                                                     key={idx}
                                                     className='table_body_lane'>
-                                                    <td style={{ color: '#64c5b1' }} className='small_table_body'>
+                                                    <td
+                                                        style={{
+                                                            color: (index === 0) ? '#333333' : '#64c5b1'
+                                                        }}
+                                                        className='small_table_body'>
                                                         {(index === 0) ? data?.name : 'cloudtree'}
                                                     </td>
                                                     <td className='table_body_content_room'>
@@ -229,8 +226,14 @@ export default function Admin() {
                                                             {dataChange(data, index).answer_2}
                                                         </span>
                                                     </td>
-                                                    <td className='medium_table_body'>
-                                                        {data?.created_at.slice(0, 10)}
+                                                    <td
+                                                        style={{
+                                                            fontSize: (index === 0) ? '13px' : '14px'
+                                                        }}
+                                                        className='medium_table_body'>
+                                                        {(index === 0)
+                                                            ? getLastLoginDateTime(data?.created_at)
+                                                            : data?.created_at.slice(0, 10)}
                                                     </td>
                                                 </tr>
                                             )}

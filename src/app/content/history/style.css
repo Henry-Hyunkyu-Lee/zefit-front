@@ -111,3 +111,58 @@
     font-size: 24px;
     white-space: pre-line;
 }
+
+
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .history_page_container {
+        width: 94%;
+        gap: 40px;
+    }
+
+    .history_page_sub_title {
+        font-size: 14px;
+    }
+
+    .history_wrapper {
+        width: 100%;
+        gap: 60px;
+    }
+
+    .timeline_connected_line {
+        left: 61px;
+    }
+
+    .timeline_lane_container {
+        gap: 12px;
+    }
+
+    .timeline_year {
+        min-width: 44px;
+        font-size: 18px;
+    }
+
+    .timeline_point {
+        min-width: 12px;
+        height: 12px;
+        margin-right: 12px;
+        margin-top: 6px;
+    }
+
+    .timeline_month_list {
+        margin-top: 3px;
+        gap: 16px;
+    }
+
+    .timeline_month_lane {
+        gap: 16px;
+    }
+
+    .timeline_month {
+        font-size: 13px;
+    }
+
+    .timeline_month_content {
+        font-size: 13px;
+    }
+}

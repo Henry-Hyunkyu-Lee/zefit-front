@@ -14,7 +14,6 @@ export default function FloatingButton() {
 
     const [isScroll, setIsScroll] = useState<string>('stop');
     const [scrollValue, setScrollValue] = useState<number>(window.scrollY);
-    console.log(isScroll, scrollValue);
 
     const onClickScrollTopHandler = () => {
         window.scrollTo({
@@ -48,14 +47,14 @@ export default function FloatingButton() {
     return (
         <div
             style={{
-                display: ((path?.includes('/adm')) || isMobile) ? 'none' : 'flex'
+                display: ((path?.includes('/adm'))) ? 'none' : 'flex'
             }}
             className='floating_button_container'>
             <a
                 href={(isEnglish) ? '/en/requests' : '/requests'}
                 className='contact_floating_button'>
                 <i
-                    style={{ fontSize: '24px' }}
+                    style={{ fontSize: (isMobile) ? '14px' : '24px' }}
                     className='icon-envelope'></i>
                 Contact
             </a>
@@ -63,7 +62,7 @@ export default function FloatingButton() {
                 onClick={onClickScrollTopHandler}
                 className='scroll_top_floating_button'>
                 <i
-                    style={{ fontSize: '24px' }}
+                    style={{ fontSize: (isMobile) ? '14px' : '24px' }}
                     className='icon-arrow-up'></i>
                 TOP
             </button>
