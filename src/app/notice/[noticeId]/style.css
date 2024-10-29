@@ -67,3 +67,31 @@
     font-size: 20px;
     margin-top: 60px;
 }
+
+
+/*===========================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .notice_detail_page_container {
+        width: 94%;
+        gap: 30px;
+        padding: 40px 0px 60px 0px;
+    }
+
+    .notice_detail_tap_content {
+        font-size: 10px;
+    }
+
+    .notice_detail_tap_button {
+        font-size: 10px;
+    }
+
+    .notice_detail_title {
+        font-size: 16px;
+    }
+
+    .notice_detail_content {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}

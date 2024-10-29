@@ -39,15 +39,15 @@ export default function MobileHeader() {
                     className='mobile_header_logo_box'>
                     <img
                         className='mobile_header_logo'
-                        src='http://www.zefit.co.kr/theme/basic/assets/images/logo-dark.png'
+                        src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_logo-dark.png'
                         alt='모바일 로고' />
                 </a>
                 <img
                     onClick={() => setModalOpen({ ...modalOpen, menu: false, trans: !trans })}
                     className='mobile_button_box'
                     src={(isEng)
-                        ? 'http://www.zefit.co.kr/theme/basic_en/assets/images/flags/4x3/us.svg'
-                        : 'http://www.zefit.co.kr/theme/basic/assets/images/flags/4x3/kr.svg'} />
+                        ? 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_flags/4x3/us.svg'
+                        : 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_flags/4x3/kr.svg'} />
             </nav>
             {(menu)
                 && <ul className='menu_modal_wrapper'>

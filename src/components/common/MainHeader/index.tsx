@@ -85,8 +85,8 @@ export default function MainHeader() {
                                 className='logo'
                                 title='zefit logo'
                                 src={(navOpen || position > 0)
-                                    ? 'http://www.zefit.co.kr/theme/basic/assets/images/logo.png'
-                                    : 'http://www.zefit.co.kr/theme/basic/assets/images/logo-dark.png'}
+                                    ? 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_logo.png'
+                                    : 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_logo-dark.png'}
                                 alt='로고 이미지' />
                         </a>
                     </div>

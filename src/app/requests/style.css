@@ -151,7 +151,7 @@
     position: absolute;
     top: 2px;
     right: 2px;
-    background-image: url('http://www.zefit.co.kr/theme/basic/img/require.png');
+    background-image: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_require.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -231,4 +231,34 @@
 /* 문의하기 버튼 AVTIVE효과 */
 .requests_button:focus {
     background-color: #194481;
+}
+
+
+/*==========================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .requests_page_layout {
+        height: 1500px;
+    }
+
+    .background_color_wrapper {
+        padding: 40px 0px;
+        gap: 24px;
+    }
+
+    .requests_title {
+        font-size: 18px;
+        gap: 8px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    
+    .requests_title_under_bar {
+        width: 50px;
+        height: 2px;
+    }
+
+    .requests_form_content_wrapper {
+        width: 94%;
+    }
 }

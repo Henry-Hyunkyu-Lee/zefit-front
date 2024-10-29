@@ -52,7 +52,7 @@ export default function PageHeader() {
                                 }}
                                 className='logo'
                                 title='zefit logo'
-                                src='http://www.zefit.co.kr/theme/basic/assets/images/logo.png'
+                                src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_logo.png'
                                 alt='로고 이미지' />
                         </a>
                     </div>
