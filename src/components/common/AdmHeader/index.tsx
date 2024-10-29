@@ -21,6 +21,11 @@ export default function AdmHeader({ title }: AdmHeaderProps) {
         setOpenTap(!openTap);
     };
 
+    const onClickLogoutHandler = () => {
+        document.cookie = "lastLogin=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+        window.location.href = "/";
+    };
+
     useEffect(() => {
         if (!tapRef.current) return;
 
@@ -70,16 +75,14 @@ export default function AdmHeader({ title }: AdmHeaderProps) {
                                 </a>
                             </li>
                             <li>
-                                <button className='adm_header_profile_button'>
-                                    <img
-                                        className='adm_profile_img'
-                                        src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_no_profile.gif'
-                                        alt='프로필 이미지' />
-                                </button>
+                                <a
+                                    onClick={onClickLogoutHandler}
+                                    className='adm_header_home_button'>
+                                    <i className='icon-logout'></i>
+                                </a>
                             </li>
                         </div>
                     </ul>
-
                 </nav>
             </div>
             <div className='adm_header_bottom_container'>

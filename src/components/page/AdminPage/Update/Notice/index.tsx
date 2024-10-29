@@ -6,7 +6,7 @@ import './style.css';
 import { supabase } from '@/utils/Supabase';
 import { handleImageChange, handleImageDelete } from '@/utils/HandleImage';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
-import { onClickAddHandler } from '@/utils/AddDataHandler';
+import { onClickAddHandler, uploadFileAndGetUrl } from '@/utils/AddDataHandler';
 import { onClickUpdateHandler } from '@/utils/UpdateDataHandler';
 
 export default function CorrectNotice({ admData, isUpload, setIsUpload }: CorrectProps) {
@@ -35,6 +35,38 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
             ...noticeInput,
             [name]: value
         });
+    };
+
+    const onClickNoticeAdd = async (e: any) => {
+        const isReal = confirm("이대로 추가하시겠습니까?");
+
+        if (isReal) {
+            if (inputImg && previewUrl) {
+                const imageUrl = await uploadFileAndGetUrl(inputImg);
+                if (!imageUrl) return alert('업로드에 실패했습니다.');
+                onClickAddHandler(e, { ...noticeInput, image: imageUrl }, 'notices');
+            } else {
+                onClickAddHandler(e, noticeInput, 'notices');
+            };
+        };
+    };
+
+    const onClickNoticeUpdate = async (e: any) => {
+        const isReal = confirm("수정을 완료하시겠습니까?");
+
+        if (isReal) {
+            if (admData?.image === previewUrl) {
+                onClickUpdateHandler(e, noticeInput, id, 'notices');
+            } else {
+                if (inputImg && previewUrl) {
+                    const imageUrl = await uploadFileAndGetUrl(inputImg);
+                    onClickUpdateHandler(e, { ...noticeInput, image: imageUrl }, id, 'notices');
+                } else {
+                    onClickUpdateHandler(e, noticeInput, id, 'notices');
+                }
+
+            };
+        }
     };
 
     useEffect(() => {
