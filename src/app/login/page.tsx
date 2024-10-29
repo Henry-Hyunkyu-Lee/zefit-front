@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './style.css';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { useRouter } from 'next/navigation';
+import { supabase } from '@/utils/Supabase';
 
 export default function Login() {
 
@@ -11,6 +12,8 @@ export default function Login() {
 
     const zefitId = process.env.NEXT_PUBLIC_MANAGER_ID;
     const zefitPassword = process.env.NEXT_PUBLIC_MANAGER_PASSWORD;
+    const supabaseEmail = process.env.NEXT_PUBLIC_SUPABASE_EMAIL as string;
+    const supabasePassword = process.env.NEXT_PUBLIC_SUPABASE_PASSWORD as string;
 
     const [autoLogin, setAutoLogin] = useState<boolean>(false);
     const [login, setLogin] = useState<any>({
@@ -19,7 +22,7 @@ export default function Login() {
     });
     const { id, password } = login;
 
-    const onChangeLoginHandler =  (e: any) => {
+    const onChangeLoginHandler = (e: any) => {
         const { name, value } = e.target;
         setLogin({
             ...login,
@@ -27,18 +30,32 @@ export default function Login() {
         });
     };
 
-    const onSubmitLoginHandler = (e: any) => {
+    const onSubmitLoginHandler = async (e: any) => {
         e.preventDefault();
         if ((id === zefitId) && (password === zefitPassword)) {
-            alert('로그인에 성공하였습니다.');
-            // 현재 날짜와 시간을 쿠키에 저장
-            const now = new Date();
-            const expirationDate = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 하루 후 만료
-            document.cookie = `lastLogin=${now.toISOString()}; expires=${expirationDate.toUTCString()}; path=/`;
-            router.push('/adm');
+            try {
+                const { data, error } = await supabase.auth.signInWithPassword({
+                    email: supabaseEmail,
+                    password: supabasePassword
+                })
+
+                if (error) {
+                    throw error;
+                };
+
+                console.log(data);
+                alert('로그인에 성공하였습니다.');
+                // 현재 날짜와 시간을 쿠키에 저장
+                const now = new Date();
+                const expirationDate = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 하루 후 만료
+                document.cookie = `lastLogin=${now.toISOString()}; expires=${expirationDate.toUTCString()}; path=/`;
+                router.push('/adm');
+            } catch (error) {
+                console.error("Error fetching data from Supabase:", error);
+            };
         } else {
             alert('아이디 혹은 비밀번호 정보가 일치하지 않습니다.\n다시 입력해주십시오.');
-        }
+        };
     };
 
     const onClickAutoLoginHandler = (e: any) => {
@@ -59,7 +76,7 @@ export default function Login() {
                 className='login_logo_box'>
                 <img
                     className='login_logo'
-                    src='http://www.zefit.co.kr/theme/basic/assets/images/logo-dark.png' />
+                    src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_logo-dark.png' />
             </a>
             <form
                 onSubmit={onSubmitLoginHandler}

@@ -2,31 +2,12 @@
 
 import { supabase } from '@/utils/Supabase';
 import './style.css';
+import { getLastLoginDateTime } from '@/utils/DateTime';
 
 export default function Requests(admData: any) {
 
-    const requestsData = admData.admData;
-
-    const onClickRemoveHandler = (e: any, id: string) => {
-        e.preventDefault();
-
-        const fetchRemove = async () => {
-            try {
-                const { error } = await supabase
-                    .from('inquirys')
-                    .delete()
-                    .eq('id', id);
-
-                if (error) throw error;
-
-                window.location.pathname = '/adm/inquirys';
-            } catch (error) {
-                console.error("Error fetching paginated data from Supabase:", error);
-            }
-        };
-
-        fetchRemove();
-    };
+    const responseData = admData.admData;
+    const resultData = responseData?.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 
     return (
         <div className='adm_content_container'>
@@ -57,7 +38,7 @@ export default function Requests(admData: any) {
                     </tr>
                 </thead>
                 <tbody className='table_body_container'>
-                    {requestsData?.map((item: any, index: number) =>
+                    {resultData?.map((item: any, index: number) =>
                         <tr
                             key={index}
                             className='notice_table_body_lane'>
@@ -80,13 +61,18 @@ export default function Requests(admData: any) {
                                     {item?.content}
                                 </span>
                             </td>
-                            <td style={{ minWidth: '100px' }} className='table_body'>
-                                {item?.created_at}
+                            <td className='tiny_table_body'>
+                                {getLastLoginDateTime(item?.created_at)}
                             </td>
-                            <td style={{ minWidth: '100px' }} className='table_body'>
-                                <a className='table_icon_box'>
-                                    <i className='icon-trash'></i>
+                            <td className='tiny_table_body'>
+                                <a
+                                    href={`/adm/inquirys/${item?.id}`}
+                                    className='table_icon_box'>
+                                    <i className='icon-eye'></i>
                                 </a>
+                                <button className='table_icon_box'>
+                                    <i className='icon-trash'></i>
+                                </button>
                             </td>
                         </tr>
                     )}

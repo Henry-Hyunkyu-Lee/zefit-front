@@ -36,3 +36,18 @@
 .news_detail_link_button:hover {
     box-shadow: 1px 1px 8px 0px hsl(232, 36%, 96%);
 }
+
+
+/*==============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .news_detail_link_button {
+        height: 34px;
+        gap: 16px;
+        padding: 0px 12px;
+    }
+
+    .news_detail_link_button_text {
+        font-size: 12px;
+    }
+}

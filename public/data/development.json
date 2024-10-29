@@ -7,7 +7,7 @@
         "step": [
             {
                 "id": 1,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/pharmaceuticals-img1.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_pharmaceuticals-img1.png",
                 "title": "기존 CNS 신약개발의 문제점",
                 "title_en": "Existing problems in the CNS drug discovery.",
                 "content": [
@@ -25,7 +25,7 @@
             },
             {
                 "id": 2,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/pharmaceuticals-img3.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_pharmaceuticals-img3.png",
                 "title": "당사의 해결방안",
                 "title_en": "Our solutions",
                 "content": [
@@ -41,7 +41,7 @@
             },
             {
                 "id": 3,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/pharmaceuticals-img2.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_pharmaceuticals-img2.png",
                 "title": "당사의 신약개발 플랫폼",
                 "title_en": "Our drug discovery platform",
                 "content": [
@@ -112,7 +112,7 @@
         "step": [
             {
                 "id": 1,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img17.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_i-img17.png",
                 "title": "임상에서의 데이터 분석",
                 "title_en": "Analyzing clinical data.",
                 "content": "임상 환자들에서 어떤 표현형 확인되는지를 조사 및 분석합니다. 의사와 함께 임상단계 프로토콜, 약리적 데이터에 대해 논의합니다.",
@@ -120,7 +120,7 @@
             },
             {
                 "id": 2,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img18.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_i-img18.png",
                 "title": "실험모델 선정",
                 "title_en": "Experimental model selection",
                 "content": "약리적 실험에 적합한 실험동물모델에 대해 함께 논의하고 선정합니다.",
@@ -128,7 +128,7 @@
             },
             {
                 "id": 3,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img19.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_i-img19.png",
                 "title": "모델 표현형 확인",
                 "title_en": "Check phenotype of model",
                 "content": "선정한 실험동물모델에서 다양한 진단을 통해 표현형을 분석하고 확인합니다.",
@@ -136,7 +136,7 @@
             },
             {
                 "id": 4,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img20.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_i-img20.png",
                 "title": "임상- 실험모델 간의 유사성 확인",
                 "title_en": "Verification similarity between clinical and experimental models.",
                 "content": "선정한 실험동물모델에서의 표현형이 실제 임상 환자들의 증상과 일치하는지를 확인합니다.",
@@ -144,7 +144,7 @@
             },
             {
                 "id": 5,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img21.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_i-img21.png",
                 "title": "약리학적 연구수행",
                 "title_en": "Conducting pharmacological research",
                 "content": "레퍼런스 약물을 활용하여 약리학적으로 해당 표현형이 질병의 바이오마커로 사용가능한지 확인합니다. ",
@@ -152,7 +152,7 @@
             },
             {
                 "id": 6,
-                "icon": "http://www.zefit.co.kr/theme/basic/assets/images/zefit/i-img22.png",
+                "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_i-img22.png",
                 "title": "바이오 마커 검증",
                 "title_en": "Biomarker Verification",
                 "content": "바이오마커의 재현성 및 정량화 가능여부를 확인하기위해 실험동물모델 실험표본 수를 확대하고, 더 많은 약리학적 검증 및 통계학적 검증을 진행합니다. ",
