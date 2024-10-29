@@ -12,6 +12,8 @@ export default function Login() {
 
     const zefitId = process.env.NEXT_PUBLIC_MANAGER_ID;
     const zefitPassword = process.env.NEXT_PUBLIC_MANAGER_PASSWORD;
+    const supabaseEmail = process.env.NEXT_PUBLIC_SUPABASE_EMAIL as string;
+    const supabasePassword = process.env.NEXT_PUBLIC_SUPABASE_PASSWORD as string;
 
     const [autoLogin, setAutoLogin] = useState<boolean>(false);
     const [login, setLogin] = useState<any>({
@@ -33,8 +35,8 @@ export default function Login() {
         if ((id === zefitId) && (password === zefitPassword)) {
             try {
                 const { data, error } = await supabase.auth.signInWithPassword({
-                    email: 'someone@email.com',
-                    password: 'scFgykcvhhUmghhJoPMt'
+                    email: supabaseEmail,
+                    password: supabasePassword
                 })
 
                 if (error) {

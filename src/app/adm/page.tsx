@@ -62,11 +62,11 @@ export default function Admin() {
             let admList = [];
             try {
                 const [inquirys, historys, partners, notices, news] = await Promise.all([
-                    supabase.from('inquirys').select('*').order('created_at', { ascending: true }).range(0, 2),
-                    supabase.from('historys').select('*').order('created_at', { ascending: true }).range(0, 2),
-                    supabase.from('partners').select('*').order('created_at', { ascending: true }).range(0, 2),
-                    supabase.from('notices').select('*').order('created_at', { ascending: true }).range(0, 2),
-                    supabase.from('news').select('*').order('created_at', { ascending: true }).range(0, 2)
+                    supabase.from('inquirys').select('*').order('created_at', { ascending: false }).range(0, 2),
+                    supabase.from('historys').select('*').order('created_at', { ascending: false }).range(0, 2),
+                    supabase.from('partners').select('*').order('created_at', { ascending: false }).range(0, 2),
+                    supabase.from('notices').select('*').order('created_at', { ascending: false }).range(0, 2),
+                    supabase.from('news').select('*').order('created_at', { ascending: false }).range(0, 2)
                 ])
                 if (historys.error) {
                     throw historys.error;

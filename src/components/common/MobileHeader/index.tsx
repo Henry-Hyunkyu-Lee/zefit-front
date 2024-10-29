@@ -47,7 +47,7 @@ export default function MobileHeader() {
                     className='mobile_button_box'
                     src={(isEng)
                         ? 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_flags/4x3/us.svg'
-                        : 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_flags/4x3/kr.svg'} />
+                        : 'http://www.zefit.co.kr/theme/basic/assets/images/flags/4x3/kr.svg'} />
             </nav>
             {(menu)
                 && <ul className='menu_modal_wrapper'>

@@ -65,6 +65,11 @@ export default function Requests(admData: any) {
                                 {getLastLoginDateTime(item?.created_at)}
                             </td>
                             <td className='tiny_table_body'>
+                                <a
+                                    href={`/adm/inquirys/${item?.id}`}
+                                    className='table_icon_box'>
+                                    <i className='icon-eye'></i>
+                                </a>
                                 <button className='table_icon_box'>
                                     <i className='icon-trash'></i>
                                 </button>
