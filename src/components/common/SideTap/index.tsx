@@ -20,7 +20,9 @@ export default function SideTap({ tap, content }: SideTapProps) {
 
     const linkControl = (item: string) => {
         if (content === 'development') {
-            const find = businessNavList[2].list?.find((data: any) => data.id === item);
+            const find = (isEnglish)
+                ? businessNavList[2].list?.find((data: any) => data.en === item)
+                : businessNavList[2].list?.find((data: any) => data.id === item);
             const result = find?.en;
             return (isEnglish) ? `/en/content/${content}/${result}` : `/content/${content}/${result}`;
         } else {

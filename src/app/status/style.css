@@ -40,3 +40,23 @@
     height: 90%;
     object-fit: contain;
 }
+
+
+/*=================================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .status_page_container {
+        width: 94%;
+        gap: 20px;
+        padding: 40px 0px;
+    }
+
+    .status_page_content_list {
+        gap: 16px;
+    }
+
+    .status_image_wrapper {
+        width: 100px;
+        height: 140px;
+    }
+}

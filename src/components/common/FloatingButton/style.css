@@ -45,3 +45,29 @@
 .floating_button_icon_box {
     font-size: 26px;
 }
+
+
+/*=============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .floating_button_container {
+        width: 40px;
+        gap: 6px;
+        box-shadow: none;
+    }
+
+    .contact_floating_button {
+        height: 40px;
+        font-size: 8px;
+        border-radius: 100%;
+        box-shadow: 2px 0px 4px 0px #00000080;
+        gap: 0px;
+    }
+
+    .scroll_top_floating_button {
+        height: 40px;
+        font-size: 8px;
+        border-radius: 100%;
+        box-shadow: 2px 0px 4px 0px #00000080;
+    }
+}

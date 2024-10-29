@@ -79,5 +79,38 @@
 @media screen and (max-width: 1170px) {
     .open_Innovation_page_container {
         width: 94%;
+        padding: 40px 0px;
+    }
+
+    .bottom_step_content_container {
+        height: 2200px;
+        padding-top: 40px;
+        gap: 40px;
+    }
+
+    .bottom_step_card_wrapper {
+        width: 94%;
+    }
+
+    .bottom_step_title {
+        font-size: 14px;
+    }
+
+    .card_step_box {
+        width: 90px;
+        height: 36px;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        background-color: #78B0E5;
+        position: absolute;
+        top: -18px;
+        left: calc(50% - 45px);
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        border-radius: 4px;
     }
 }

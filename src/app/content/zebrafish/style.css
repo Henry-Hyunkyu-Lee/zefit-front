@@ -22,7 +22,7 @@
 
 /* 모델 페이지 상단 설명글 제목 */
 .model_page_top_info_title {
-    min-width: 230px;
+    min-width: 240px;
     font-size: 32px;
     font-weight: 700;
     color: #0190D6;
@@ -53,7 +53,7 @@
 .model_page_second_container {
     width: 100%;
     height: 720px;
-    background-image: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_zebrafish_bg.jpg');
+    background-image: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img2.jpg');
     background-position: 100%;
     background-size: 150% 150%;
     background-repeat: no-repeat;
@@ -139,4 +139,73 @@
     text-align: start;
     white-space: pre-line;
     padding-top: 2px;
+}
+
+
+/*===============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .model_page_first_container {
+        width: 94%;
+        padding: 40px 0px;
+    }
+
+    .model_page_top_info_wrapper {
+        gap: 20px;
+    }
+
+    .model_page_top_info_title {
+        font-size: 16px;
+        min-width: 120px;
+    }
+
+    .top_info_content_wrapper {
+        gap: 16px;
+    }
+
+    .top_info_content {
+        font-size: 13px;
+    }
+
+    .model_page_second_container {
+        height: 400px;
+    }
+
+    .model_intro_wrapper {
+        width: 94%;
+        justify-content: center;
+    }
+
+    .model_intro_box {
+        width: 100%;
+        height: 260px;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .model_intro_title {
+        font-size: 16px;
+    }
+
+    .model_intro_content {
+        font-size: 13px;
+    }
+
+    .model_page_third_container {
+        height: 300px;
+    }
+
+    .model_development_intro_wrapper {
+        width: 94%;
+        gap: 20px;
+    }
+
+    .model_development_intro_title {
+        font-size: 16px;
+        min-width: 120px;
+    }
+
+    .model_development_intro_content {
+        font-size: 13px;
+    }
 }
