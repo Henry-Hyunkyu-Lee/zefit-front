@@ -76,7 +76,6 @@ export const uploadFileAndGetUrl = async (imageFile: File | null) => {
     if (!imageFile) return;
 
     const fileName = imageFile.name;
-
     const { data, error } = await supabase.storage
         .from('zefit_public')
         .upload(`${fileName}`, imageFile);

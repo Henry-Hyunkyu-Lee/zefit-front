@@ -18,11 +18,11 @@ export default function Admin() {
     console.log(resultData);
 
     const dataTitleList = [
-        { id: '문의한 글', href: '/adm/inquirys' },
-        { id: '연혁', href: '/adm/historys' },
-        { id: '인증 및 파트너 현황', href: '/adm/partners' },
-        { id: '공지사항', href: '/adm/notices' },
-        { id: '보도자료', href: '/adm/news' }
+        { id: '문의한 글', href: '/adm/inquirys', category: '문의하기' },
+        { id: '연혁', href: '/adm/historys', category: '연혁' },
+        { id: '인증 및 파트너 현황', href: '/adm/partners', category: '인증 & 파트너' },
+        { id: '공지사항', href: '/adm/notices', category: '공지사항' },
+        { id: '보도자료', href: '/adm/news', category: '보도자료' }
     ];
 
     const dataChange = (item: any, index: number) => {
@@ -176,6 +176,9 @@ export default function Admin() {
                                                 <th className='small_table_header'>
                                                     {(index === 0) ? '이름' : '닉네임'}
                                                 </th>
+                                                <th className='small_table_header'>
+                                                    분류
+                                                </th>
                                                 <th style={{ width: '100%' }} className='table_header_text'>
                                                     {dataChange(item, index).step_1}
                                                 </th>
@@ -198,6 +201,11 @@ export default function Admin() {
                                                         }}
                                                         className='small_table_body'>
                                                         {(index === 0) ? data?.name : 'cloudtree'}
+                                                    </td>
+                                                    <td
+                                                        style={{ color: '#64c5b1' }}
+                                                        className='small_table_body'>
+                                                        {dataTitleList[index]?.category}
                                                     </td>
                                                     <td className='table_body_content_room'>
                                                         <span className='table_body_content_room_span'>

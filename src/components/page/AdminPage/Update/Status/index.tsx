@@ -39,6 +39,7 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
         if (isReal) {
             if (inputImg && previewUrl) {
                 const imageUrl = await uploadFileAndGetUrl(inputImg);
+                if (!imageUrl) return alert('업로드에 실패했습니다.');
                 onClickAddHandler(e, { ...statusInput, image: imageUrl }, 'partners');
             } else {
                 onClickAddHandler(e, statusInput, 'partners');
@@ -53,13 +54,13 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
             if (admData?.image === previewUrl) {
                 onClickUpdateHandler(e, statusInput, id, 'partners');
             } else {
-                const imageUrl = await uploadFileAndGetUrl(inputImg);
-                onClickUpdateHandler(
-                    e,
-                    { ...statusInput, image: imageUrl },
-                    id,
-                    'partners'
-                )
+                if (inputImg && previewUrl) {
+                    const imageUrl = await uploadFileAndGetUrl(inputImg);
+                    onClickUpdateHandler(e, { ...statusInput, image: imageUrl }, id, 'partners');
+                } else {
+                    onClickUpdateHandler(e, statusInput, id, 'partners');
+                }
+
             };
         }
     };
