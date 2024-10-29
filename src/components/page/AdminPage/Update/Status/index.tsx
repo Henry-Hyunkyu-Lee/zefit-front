@@ -6,7 +6,7 @@ import './style.css';
 import { supabase } from '@/utils/Supabase';
 import { handleImageChange, handleImageDelete } from '@/utils/HandleImage';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
-import { onClickAddHandler } from '@/utils/AddDataHandler';
+import { onClickAddHandler, uploadFileAndGetUrl } from '@/utils/AddDataHandler';
 import { onClickUpdateHandler } from '@/utils/UpdateDataHandler';
 
 export default function CorrectStatus({ admData, isUpload, setIsUpload }: CorrectProps) {
@@ -31,6 +31,37 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
             ...statusInput,
             [name]: value
         });
+    };
+
+    const onClickStatusAdd = async (e: any) => {
+        const isReal = confirm("이대로 추가하시겠습니까?");
+
+        if (isReal) {
+            if (inputImg && previewUrl) {
+                const imageUrl = await uploadFileAndGetUrl(inputImg);
+                onClickAddHandler(e, { ...statusInput, image: imageUrl }, 'partners');
+            } else {
+                onClickAddHandler(e, statusInput, 'partners');
+            };
+        };
+    };
+
+    const onClickStatusUpdate = async (e: any) => {
+        const isReal = confirm("수정을 완료하시겠습니까?");
+
+        if (isReal) {
+            if (admData?.image === previewUrl) {
+                onClickUpdateHandler(e, statusInput, id, 'partners');
+            } else {
+                const imageUrl = await uploadFileAndGetUrl(inputImg);
+                onClickUpdateHandler(
+                    e,
+                    { ...statusInput, image: imageUrl },
+                    id,
+                    'partners'
+                )
+            };
+        }
     };
 
     useEffect(() => {
@@ -137,20 +168,20 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
                 </tr>
                 <tr style={{ width: '100%' }}>
                     <td className='update_button_container'>
-                    {(isUpload)
+                        {(isUpload)
                             ? <button
-                                onClick={(e) => onClickAddHandler(e, statusInput, 'partners')}
+                                onClick={onClickStatusAdd}
                                 className='update_button'>
                                 추가하기
                             </button>
                             : <button
-                                onClick={(e) => onClickUpdateHandler(e, statusInput, id, 'partners')}
+                                onClick={onClickStatusUpdate}
                                 className='update_button'>
                                 수정 완료
                             </button>}
                         {(!isUpload)
                             && <button
-                            onClick={(e) => onClickRemoveHandler(e, admData, id, 'partners')}
+                                onClick={(e) => onClickRemoveHandler(e, admData, id, 'partners')}
                                 className='update_button'>
                                 삭제
                             </button>}

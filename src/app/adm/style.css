@@ -113,6 +113,19 @@
     align-items: center;
 }
 
+/* 테이블 헤더 LARGE */
+.large_table_header {
+    min-width: 180px;
+    height: 100%;
+    color: white;
+    padding: 12px 30px;
+    border: 1px solid #444e58;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* 테이블 바디 TINY */
 .tiny_table_body {
     min-width: 100px;
@@ -146,6 +159,21 @@
 /* 테이블 바디 MEDIUM */
 .medium_table_body {
     min-width: 140px;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #E7E7E7;
+    font-size: 14px;
+    color: #434343;
+    font-weight: 400;
+    padding: 10px;
+}
+
+/* 테이블 바디 LARGE */
+.large_table_body {
+    min-width: 180px;
     height: 100%;
     display: flex;
     justify-content: start;

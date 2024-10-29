@@ -7,6 +7,7 @@ import AdmScrollTop from '@/components/page/AdminPage/AdmScrollTop';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/utils/Supabase';
+import { getLastLoginDateTime } from '@/utils/DateTime';
 
 export default function Admin() {
 
@@ -61,11 +62,11 @@ export default function Admin() {
             let admList = [];
             try {
                 const [inquirys, historys, partners, notices, news] = await Promise.all([
-                    supabase.from('inquirys').select('*').order('created_at', { ascending: true }).range(0, 2),
-                    supabase.from('historys').select('*').order('created_at', { ascending: true }).range(0, 2),
-                    supabase.from('partners').select('*').order('created_at', { ascending: true }).range(0, 2),
-                    supabase.from('notices').select('*').order('created_at', { ascending: true }).range(0, 2),
-                    supabase.from('news').select('*').order('created_at', { ascending: true }).range(0, 2)
+                    supabase.from('inquirys').select('*').order('created_at', { ascending: false }).range(0, 2),
+                    supabase.from('historys').select('*').order('created_at', { ascending: false }).range(0, 2),
+                    supabase.from('partners').select('*').order('created_at', { ascending: false }).range(0, 2),
+                    supabase.from('notices').select('*').order('created_at', { ascending: false }).range(0, 2),
+                    supabase.from('news').select('*').order('created_at', { ascending: false }).range(0, 2)
                 ])
                 if (historys.error) {
                     throw historys.error;
@@ -98,24 +99,6 @@ export default function Admin() {
 
     // lastLogin 값 확인
     const lastLogin = getLastLoginFromCookie();
-
-    const getLastLoginDateTime = (paramData: any) => {
-        if (paramData) {
-            const loginDate = new Date(paramData); // ISO 문자열을 Date 객체로 변환
-            const year = loginDate.getFullYear();
-            const month = loginDate.getMonth() + 1; // getMonth()는 0부터 시작하므로 1을 더함
-            const day = loginDate.getDate();
-            const hours = loginDate.getHours();
-            const minutes = loginDate.getMinutes();
-            const seconds = loginDate.getSeconds();
-
-            const timeObj = { year, month, day, hours, minutes, seconds };
-
-            return `${timeObj.year}-${timeObj.month}-${timeObj.day}  ${timeObj.hours}:${timeObj.minutes}:${timeObj.seconds}`;
-        } else {
-            return null;
-        }
-    };
 
     // 날짜와 시간 출력
     const lastLoginDateTime = getLastLoginDateTime(lastLogin);
@@ -165,7 +148,7 @@ export default function Admin() {
                                             <td className='small_table_body'>
                                                 <img
                                                     className='manager_icon'
-                                                    src='http://www.zefit.co.kr/theme/basic/img/no_profile.gif'
+                                                    src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_no_profile.gif'
                                                     alt='관리자' />
                                                 관리자
                                             </td>
@@ -199,7 +182,7 @@ export default function Admin() {
                                                 <th style={{ width: '100%' }} className='table_header_text'>
                                                     {dataChange(item, index).step_2}
                                                 </th>
-                                                <th className='medium_table_header'>
+                                                <th className='large_table_header'>
                                                     날짜
                                                 </th>
                                             </tr>
@@ -230,7 +213,7 @@ export default function Admin() {
                                                         style={{
                                                             fontSize: (index === 0) ? '13px' : '14px'
                                                         }}
-                                                        className='medium_table_body'>
+                                                        className='large_table_body'>
                                                         {(index === 0)
                                                             ? getLastLoginDateTime(data?.created_at)
                                                             : data?.created_at.slice(0, 10)}

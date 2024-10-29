@@ -17,7 +17,7 @@ export default function History() {
     const lineRef = useRef<HTMLDivElement>(null);
 
     const [historyData, setHistoryData] = useState<any[]>([]);
-    console.log("🚀 ~ History ~ historyData:", historyData);
+    // console.log("🚀 ~ History ~ historyData:", historyData);
 
     const date = new Date();
     const year = `${date.getFullYear()}`;
@@ -55,7 +55,8 @@ export default function History() {
 
         // content 객체를 배열로 변환
         Object.keys(result).forEach(year => {
-            result[Number(year)].content = Object.values(result[Number(year)].content);
+            result[Number(year)].content = Object.values(result[Number(year)].content)
+                .sort((a: any, b: any) => parseInt(b.created_month) - parseInt(a.created_month)); // 월 순서로 정렬
         });
 
         const resultArray = Object.values(result);
@@ -66,6 +67,7 @@ export default function History() {
     };
 
     const transformedData = transformData(historyData);
+    console.log(transformedData);
 
     useEffect(() => {
         const fetchData = async () => {
