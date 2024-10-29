@@ -33,16 +33,27 @@ export default function HistoryEN() {
                 result[created_year] = {
                     id: item.id, // id 추가
                     created_year: String(created_year),
-                    content: [],
+                    content: {},
                 };
             }
 
-            // 해당 연도에 해당하는 month와 content를 추가
-            result[created_year].content.push({
-                created_month,
-                kr: item.content_kr,
-                en: item.content_en,
-            });
+            // 해당 연도와 월에 해당하는 content를 추가
+            if (!result[created_year].content[created_month]) {
+                result[created_year].content[created_month] = {
+                    created_month,
+                    kr: item.content_kr,
+                    en: item.content_en,
+                };
+            } else {
+                result[created_year].content[created_month].kr += '\n\n' + item.content_kr;
+                result[created_year].content[created_month].en += '\n\n' + item.content_en;
+            }
+        });
+
+        // content 객체를 배열로 변환
+        Object.keys(result).forEach(year => {
+            result[Number(year)].content = Object.values(result[Number(year)].content)
+                .sort((a: any, b: any) => parseInt(b.created_month) - parseInt(a.created_month)); // 월 순서로 정렬
         });
 
         const resultArray = Object.values(result);
