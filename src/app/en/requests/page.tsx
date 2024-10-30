@@ -51,7 +51,7 @@ export default function RequestsEN() {
         e.preventDefault();
 
         if (!personal || !use) return;
-        onClickRequestsHandler(e, { ...requestsInput, status: personal && use }, 'en');
+        onClickRequestsHandler(e, requestsInput, 'en');
     };
     useEffect(() => {
         fetch('/api/inquiry/requests/provision')

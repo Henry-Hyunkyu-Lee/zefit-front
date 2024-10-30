@@ -52,7 +52,7 @@ export default function Requests() {
         e.preventDefault();
 
         if (!personal || !use) return;
-        onClickRequestsHandler(e, { ...requestsInput, status: personal && use }, 'ko');
+        onClickRequestsHandler(e, requestsInput, 'ko');
     };
 
     useEffect(() => {
