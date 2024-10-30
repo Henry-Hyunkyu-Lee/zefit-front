@@ -204,13 +204,18 @@
 /* 표 바디 제목 칸 */
 .table_body_title_room {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
     font-weight: 400;
-    padding-left: 40px;
     transition: all 0.3s;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
     cursor: pointer;
 }
 
@@ -332,7 +337,7 @@
         padding-left: 10px;
     }
 
-    .special_link_title_room {
+    .special_link_title_room, .table_body_title_room {
         font-size: 11px;
     }
 

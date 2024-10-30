@@ -36,6 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  const appKey = process.env.NEXT_PUBLIC_KAKAO_APP_KEY || '';
+
   return (
     <html lang="en">
       <head>
@@ -53,10 +55,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <Script
-            src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_KEY}&libraries=services&autoload=false`}
-            strategy="lazyOnload" // 페이지 로드 이후 스크립트 로드
-          />
         </ClientProvider>
       </body>
     </html>

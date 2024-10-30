@@ -16,10 +16,13 @@ export const handleImageChange = (
 
 export const handleImageDelete = (
     setInputImg: React.Dispatch<React.SetStateAction<any>>,
-    setPreviewUrl: React.Dispatch<React.SetStateAction<string | null>>
+    setPreviewUrl: React.Dispatch<React.SetStateAction<string | null>>,
+    setInput: React.Dispatch<React.SetStateAction<any>>,
+    input: any
 ) => {
     setInputImg(null);
     setPreviewUrl(null);
+    setInput({ ...input, image: null });
 
     // 파일 입력 요소 초기화
     const fileInput = document.getElementById('files') as HTMLInputElement;

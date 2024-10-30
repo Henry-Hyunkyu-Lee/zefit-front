@@ -81,7 +81,7 @@ export default function RequestsDetail({ admData }: CorrectProps) {
                         {title}
                     </td>
                 </tr>
-                <tr style={{ height: '200px' }} className='input_table_body_lane'>
+                <tr className='input_table_body_lane'>
                     <th className='input_table_body_head'>
                         내용
                     </th>
