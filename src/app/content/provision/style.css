@@ -37,3 +37,22 @@
     font-weight: 400;
     line-height: 150%;
 }
+
+
+/*===========================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .provision_page_container {
+        width: 94%;
+        gap: 24px;
+        padding: 40px 0px;
+    }
+
+    .provision_paragraph_title {
+        font-size: 12px;
+    }
+
+    .provision_paragraph_content {
+        font-size: 10px;
+    }
+}
