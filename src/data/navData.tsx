@@ -100,7 +100,7 @@ export const businessNavList: navListType = [
         list: [
             {
                 id: '신약개발기술',
-                en: 'pharmaceuticals',
+                en: 'technology',
                 href: '/content/development/pharmaceuticals',
                 href_en: '/en/content/development/pharmaceuticals'
             },

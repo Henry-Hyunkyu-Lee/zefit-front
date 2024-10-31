@@ -50,7 +50,7 @@
 /* 테이블 헤더 */
 .adm_table_header_container {
     width: 100%;
-    height: 100%;
+    height: 44px;
     background-color: #36404c;
 }
 
@@ -135,8 +135,7 @@
     align-items: center;
     gap: 16px;
     border: 1px solid #E7E7E7;
-    font-size: 14px;
-    color: #434343;
+    font-size: 13px;
     font-weight: 400;
     padding: 10px;
 }
@@ -150,8 +149,7 @@
     align-items: center;
     gap: 16px;
     border: 1px solid #E7E7E7;
-    font-size: 14px;
-    color: #434343;
+    font-size: 13px;
     font-weight: 400;
     padding: 10px;
 }
@@ -165,8 +163,7 @@
     align-items: center;
     gap: 16px;
     border: 1px solid #E7E7E7;
-    font-size: 14px;
-    color: #434343;
+    font-size: 13px;
     font-weight: 400;
     padding: 10px;
 }
@@ -180,8 +177,7 @@
     align-items: center;
     gap: 16px;
     border: 1px solid #E7E7E7;
-    font-size: 14px;
-    color: #434343;
+    font-size: 13px;
     font-weight: 400;
     padding: 10px;
 }

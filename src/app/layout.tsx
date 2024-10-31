@@ -23,6 +23,7 @@ const notoSansKr = Noto_Sans_KR({
 const FloatingButton = dynamic(() => import('../components/common/FloatingButton'), { ssr: false });
 const Loading = dynamic(() => import('../components/common/LoadingSpinner'), { ssr: false });
 const Footer = dynamic(() => import('../components/common/Footer'), { ssr: false });
+const Popup = dynamic(() =>  import('../components/common/Popup'), { ssr: false });
 
 export const metadata: Metadata = {
   title: "제핏",
@@ -35,6 +36,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const appKey = process.env.NEXT_PUBLIC_KAKAO_APP_KEY || '';
 
   return (
     <html lang="en">
@@ -53,10 +56,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <Script
-            src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APP_KEY}&libraries=services&autoload=false`}
-            strategy="lazyOnload" // 페이지 로드 이후 스크립트 로드
-          />
         </ClientProvider>
       </body>
     </html>

@@ -116,7 +116,7 @@
 /* 차별화된 개발 부제목 */
 .different_develop_sub_title {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     color: white;
     text-align: center;
     white-space: pre-line;
@@ -125,7 +125,7 @@
 /* 차별화된 개발 부연 설명 */
 .different_develop_introduce {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
     color: white;
     text-align: center;
     white-space: pre-line;
@@ -209,11 +209,11 @@
 
 /* 카드 내부 내용 */
 .card_content_text {
-    width: 80%;
+    width: 77%;
     flex-wrap: wrap;
     text-align: start;
     white-space: pre-line;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -356,6 +356,7 @@
 
     .different_develop_title {
         font-size: 18px;
+        text-align: center;
     }
 
     .different_develop_sub_title, .different_develop_introduce {

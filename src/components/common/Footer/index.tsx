@@ -52,7 +52,7 @@ export default function Footer() {
                 </nav>
             </h4>
             <p className='footer_content_wrapper'>
-                16, Techno gongwon-ro, Hyeonpung-eup, Dalseong-gun, Daegu, Republic of Korea
+                307, Waryong-ro, Seo-gu, Daegu, Republic of Korea
                 <br />
                 <i className='icon-envelope'></i>
                 info@zefit.co.kr ·&nbsp;&nbsp;

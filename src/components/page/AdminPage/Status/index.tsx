@@ -7,6 +7,7 @@ import './style.css';
 export default function Status(admData: any) {
 
     const statusList = admData?.admData;
+    const resultData = statusList?.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
     const stateObj: { [key: string]: string } = {
         partner: '파트너',
         certification: '인증'
@@ -40,7 +41,7 @@ export default function Status(admData: any) {
                     </tr>
                 </thead>
                 <tbody className='table_body_container'>
-                    {statusList?.map((item: any, index: number) =>
+                    {resultData?.map((item: any, index: number) =>
                         <tr
                             key={index}
                             className='partner_table_body_line'>

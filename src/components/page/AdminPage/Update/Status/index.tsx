@@ -95,7 +95,7 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
                             {(previewUrl)
                                 ? <div className="image_preview_overlay">
                                     <button
-                                        onClick={() => handleImageDelete(setInputImg, setPreviewUrl)}
+                                        onClick={() => handleImageDelete(setInputImg, setPreviewUrl, setStatusInput, statusInput)}
                                         className='image_delete_button'>
                                         <i className='icon-close' />
                                     </button>

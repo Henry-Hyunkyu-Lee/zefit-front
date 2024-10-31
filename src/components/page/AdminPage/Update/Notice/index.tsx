@@ -103,7 +103,7 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
                             {(previewUrl)
                                 ? <div className="image_preview_overlay">
                                     <button
-                                        onClick={() => handleImageDelete(setInputImg, setPreviewUrl)}
+                                        onClick={() => handleImageDelete(setInputImg, setPreviewUrl, setNoticeInput, noticeInput)}
                                         className='image_delete_button'>
                                         <i className='icon-close' />
                                     </button>
@@ -229,12 +229,12 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
                     <td className='update_button_container'>
                         {(isUpload)
                             ? <button
-                                onClick={(e) => onClickAddHandler(e, noticeInput, 'notices')}
+                                onClick={onClickNoticeAdd}
                                 className='update_button'>
                                 추가하기
                             </button>
                             : <button
-                                onClick={(e) => onClickUpdateHandler(e, noticeInput, id, 'notices')}
+                                onClick={onClickNoticeUpdate}
                                 className='update_button'>
                                 수정 완료
                             </button>}

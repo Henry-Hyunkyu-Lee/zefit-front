@@ -6,6 +6,7 @@ import './style.css';
 export default function Notice(admData: any) {
 
     const noticeList = admData.admData;
+    const resultData = noticeList?.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 
     const textChange = (item: string) => {
         return item.replace(/\\n/g, ' ');
@@ -31,9 +32,6 @@ export default function Notice(admData: any) {
                         <th style={{ width: '100%' }} className='table_header_text'>
                             내용(영문)
                         </th>
-                        <th style={{ minWidth: '100px' }} className='table_header_text'>
-                            날짜
-                        </th>
                         <th style={{ minWidth: '120px' }} className='table_header_text'>
                             작성자
                         </th>
@@ -41,12 +39,15 @@ export default function Notice(admData: any) {
                             작성자(영문)
                         </th>
                         <th style={{ minWidth: '100px' }} className='table_header_text'>
+                            날짜
+                        </th>
+                        <th style={{ minWidth: '100px' }} className='table_header_text'>
                             관리
                         </th>
                     </tr>
                 </thead>
                 <tbody className='table_body_container'>
-                    {noticeList?.map((item: any, index: number) =>
+                    {resultData?.map((item: any, index: number) =>
                         <tr
                             key={index}
                             className='table_body_lane'>
@@ -78,14 +79,14 @@ export default function Notice(admData: any) {
                                     {textChange(item?.content_en)}
                                 </span>
                             </td>
-                            <td style={{ minWidth: '100px' }} className='table_body'>
-                                {item?.created_at}
-                            </td>
                             <td style={{ minWidth: '120px' }} className='table_body'>
                                 {item?.writer_kr}
                             </td>
                             <td style={{ minWidth: '140px' }} className='table_body'>
                                 {item?.writer_en}
+                            </td>
+                            <td style={{ minWidth: '100px' }} className='table_body'>
+                                {item?.created_at}
                             </td>
                             <td style={{ minWidth: '100px' }} className='table_body'>
                                 <a

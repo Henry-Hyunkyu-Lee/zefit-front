@@ -47,8 +47,8 @@ export default function Login() {
                 alert('로그인에 성공하였습니다.');
                 // 현재 날짜와 시간을 쿠키에 저장
                 const now = new Date();
-                const expirationDate = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 하루 후 만료
-                document.cookie = `lastLogin=${now.toISOString()}; expires=${expirationDate.toUTCString()}; path=/`;
+                const expirationDate = (autoLogin) ? new Date(9999, 11, 31) : new Date(now.getTime() + 24 * 60 * 60 * 1000); // 하루 후 만료
+                document.cookie = `zf-alv=${now.toISOString()}; expires=${expirationDate.toUTCString()}; path=/`;
                 router.push('/adm');
             } catch (error) {
                 console.error("Error fetching data from Supabase:", error);
@@ -60,12 +60,7 @@ export default function Login() {
 
     const onClickAutoLoginHandler = (e: any) => {
         e.preventDefault();
-        if (!autoLogin) {
-            const result = confirm('예?');
-            if (result) setAutoLogin(true);
-        } else {
-            setAutoLogin(false);
-        };
+        setAutoLogin(!autoLogin);
     };
 
     return (

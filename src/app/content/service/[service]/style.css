@@ -215,6 +215,12 @@
 
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
+    .service_page_container {
+        width: 94%;
+        padding: 40px 0px;
+        gap: 20px;
+    }
+
     .service_page_title {
         font-size: 16px;
         gap: 6px;
@@ -223,5 +229,53 @@
     .service_page_side_bar {
         width: 4px;
         height: 18px;
+    }
+
+    .service_page_info_wrapper {
+        height: fit-content;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        gap: 12px;
+    }
+
+    .service_page_info_box {
+        width: 100%;
+        min-height: 200px;
+        padding: 16px 120px 16px 16px;
+        gap: 12px;
+        position: static;
+        align-items: start;
+    }
+
+    .service_page_info_box_title {
+        font-size: 14px;
+    }
+
+    .service_page_info_box_content {
+        font-size: 11px;
+    }
+
+    .service_info_image {
+        width: 120px;
+        min-width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        top: -40px;
+        right: 0;
+        z-index: 4;
+    }
+
+    .service_page_detail_container {
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .service_page_detail_wrapper {
+        width: 94%;
+    }
+
+    .detail_text_box {
+        width: 94%;
     }
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './style.css';
 import { supabase } from '@/utils/Supabase';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
@@ -25,6 +25,32 @@ export default function RequestsDetail({ admData }: CorrectProps) {
     const title = admData?.title;
     const content = admData?.content;
     console.log(admData);
+
+    const [isCopy, setIsCopy] = useState<boolean>(false);
+    const [isAnswer, setIsAnswer] = useState<boolean>(false);
+
+    const onClickCopyHandler = async (e: any) => {
+        if (isCopy) return;
+        try {
+            await navigator.clipboard.writeText(email);
+            setIsCopy(true);
+        } catch (error) {
+            alert("복사에 실패하였습니다.");
+        };
+    };
+
+    useEffect(() => {
+        if (admData) {
+            setIsAnswer(admData?.status);
+        };
+    }, [admData]);
+
+    const onClickOutHandler = (e: any) => {
+        if (isAnswer === status) return;
+        onClickUpdateHandler(e, { status: isAnswer }, id, 'inquirys');
+    };
+
+    console.log(status, isAnswer);
 
     return (
         <table className='input_table_container'>
@@ -51,6 +77,23 @@ export default function RequestsDetail({ admData }: CorrectProps) {
                     </th>
                     <td className='input_table_body_room'>
                         {email}
+                        <button
+                            style={{
+                                color: (isCopy) ? '#6de290' : '#333333',
+                                cursor: (isCopy) ? 'default' : 'pointer'
+                            }}
+                            onClick={onClickCopyHandler}
+                            className='copy_button'>
+                            {(isCopy)
+                                ? <div className='copy_button_icon'>
+                                    ✔
+                                </div>
+                                : <div className='copy_button_icon'>
+                                    <div className='copy_icon_box' />
+                                    <div className='copy_icon_box' />
+                                </div>}
+                            {(isCopy) ? '복사 완료' : '복사'}
+                        </button>
                     </td>
                 </tr>
                 <tr style={{ height: '80px' }} className='input_table_body_lane'>
@@ -63,14 +106,19 @@ export default function RequestsDetail({ admData }: CorrectProps) {
                 </tr>
                 <tr style={{ height: '80px' }} className='input_table_body_lane'>
                     <th className='input_table_body_head'>
-                        동의 여부
+                        답변 여부
                     </th>
                     <td
                         style={{
-                            color: (status) ? '#333333' : '#919191'
+                            color: (isAnswer) ? '#333333' : '#919191'
                         }}
                         className='input_table_body_room'>
-                        {(status) ? '동의' : '미동의'}
+                        {(isAnswer) ? '답변 완료' : '미답변'}
+                        <button
+                            onClick={() => setIsAnswer(!isAnswer)}
+                            className='answer_button'>
+                            {(!isAnswer) ? '답변 완료 처리' : '미답변 처리'}
+                        </button>
                     </td>
                 </tr>
                 <tr style={{ height: '80px' }} className='input_table_body_lane'>
@@ -81,7 +129,7 @@ export default function RequestsDetail({ admData }: CorrectProps) {
                         {title}
                     </td>
                 </tr>
-                <tr style={{ height: '200px' }} className='input_table_body_lane'>
+                <tr className='input_table_body_lane'>
                     <th className='input_table_body_head'>
                         내용
                     </th>
@@ -90,7 +138,10 @@ export default function RequestsDetail({ admData }: CorrectProps) {
                     </td>
                 </tr>
                 <tr className='update_button_container'>
-                    <a href='/adm/inquirys' className='update_button'>
+                    <a
+                        href='/adm/inquirys'
+                        className='update_button'
+                        onClick={onClickOutHandler}>
                         전체 목록
                     </a>
                 </tr>

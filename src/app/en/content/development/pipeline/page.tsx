@@ -42,7 +42,7 @@ export default function PipelineEN() {
         <article>
             <MetaTagTitle title='Pipeline' ko={false} />
             <PageHeader />
-            <PageBanner pageTitle='pharmaceuticals' />
+            <PageBanner pageTitle='Drug discovery' />
             <PageTap tap='business' />
             <SideTap tap={developmentData} content='development' />
             <div className='page_layout'>

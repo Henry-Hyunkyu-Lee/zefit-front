@@ -48,7 +48,7 @@ export const onClickAddHandler = (e: any, insertData: any, table: string) => {
     };
 };
 
-export const onClickRequestsHandler = (e: any, insertData: any) => {
+export const onClickRequestsHandler = (e: any, insertData: any, path: string) => {
     e.preventDefault();
 
     const isReal = confirm('문의를 남기시겠습니까?');
@@ -62,6 +62,8 @@ export const onClickRequestsHandler = (e: any, insertData: any) => {
                 ]);
 
             if (error) throw error;
+            alert('문의 내용이 전송되었습니다.');
+            window.location.href = (path === 'en') ? '/en' : '/';
         } catch (error) {
             console.error("Error fetching paginated data from Supabase:", error);
         }

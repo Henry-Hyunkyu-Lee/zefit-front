@@ -23,8 +23,10 @@ export default function SideTap({ tap, content }: SideTapProps) {
             const find = (isEnglish)
                 ? businessNavList[2].list?.find((data: any) => data.en === item)
                 : businessNavList[2].list?.find((data: any) => data.id === item);
-            const result = find?.en;
-            return (isEnglish) ? `/en/content/${content}/${result}` : `/content/${content}/${result}`;
+            const resultKo = find?.href;
+            const resultEn = find?.href_en;
+
+            return (isEnglish) ? resultEn : resultKo;
         } else {
             return (isEnglish) ? `/en/content/${content}/${item}` : `/content/${content}/${item}`;
         }
@@ -35,7 +37,7 @@ export default function SideTap({ tap, content }: SideTapProps) {
             if (!sideTapRef.current) return;
             const y = window.scrollY;
             
-            if (y < 600) {
+            if (y < 400) {
                 sideTapRef.current.style.position = 'absolute';
                 sideTapRef.current.style.bottom = 'auto';
                 sideTapRef.current.style.top = '540px';
