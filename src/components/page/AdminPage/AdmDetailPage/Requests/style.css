@@ -1,1 +1,60 @@
 /* 관리자 문의한 글 상세 페이지 */
+
+/* 복사 버튼 */
+.copy_button {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 복사 아이콘 */
+.copy_button_icon {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* 아이콘 박스 */
+.copy_icon_box:nth-child(1) {
+    width: 75%;
+    height: 75%;
+    border: 2px solid;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+}
+
+.copy_icon_box:nth-child(2) {
+    width: 75%;
+    height: 75%;
+    border: 2px solid;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+/* 답변 여부 버튼 */
+.answer_button {
+    padding: 7px 14px;
+    font-size: 14px;
+    border: 1px solid #bfbfbf;
+    background-color: #dadada;
+    transition: all 0.2s;
+    color: #333333;
+}
+
+/* 답변 여부 버튼 HOVER효과 */
+.answer_button:hover {
+    background-color: #e4e4e4;
+}

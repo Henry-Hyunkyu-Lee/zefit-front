@@ -73,7 +73,7 @@ export default function Company() {
                                     ? <li
                                         key={index}
                                         style={{
-                                            backgroundColor: `${item.color}99`
+                                            backgroundColor: `${item.color}`
                                         }}
                                         className='mobile_card_box'>
                                         <div className='hexagon_card_content_container'>
@@ -115,7 +115,7 @@ export default function Company() {
                                             {/* <!-- 육각형을 정의, 배경은 투명, 테두리선 추가 --> */}
                                             <polygon
                                                 points="175,20 315,97.5 315,252.5 175,330 35,252.5 35,97.5"
-                                                style={{ fill: `${item.color}99` }} />
+                                                style={{ fill: `${item.color}` }} />
                                         </svg>
                                         <div className='hexagon_card_content_container'>
                                             <div className='card_content_top_lane'>

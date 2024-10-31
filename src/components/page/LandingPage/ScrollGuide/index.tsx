@@ -2,8 +2,12 @@
 
 import { useEffect, useRef } from 'react';
 import './style.css';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollGuide() {
+
+    const path = usePathname() as string;
+    const isEnglish = path?.includes('/en');
 
     const guideRef = useRef<HTMLDivElement>(null);
     const arrowRef = useRef<HTMLDivElement>(null);
@@ -32,7 +36,7 @@ export default function ScrollGuide() {
     return (
         <span className="top_banner_scroll_guide">
             <div ref={guideRef} className='scroll_guide_text'>
-                아래로 스크롤
+                {(isEnglish) ? 'Scroll Down' : '아래로 스크롤'}
             </div>
             <div ref={arrowRef} className='scroll_guide_arrow_box'>
                 <i className='icon-arrow-down'></i>

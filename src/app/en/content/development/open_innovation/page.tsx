@@ -36,7 +36,7 @@ export default function OpenInnovationEN() {
         <article>
             <MetaTagTitle title='Open Innovation' ko={false} />
             <PageHeader />
-            <PageBanner pageTitle='pharmaceuticals' />
+            <PageBanner pageTitle='Drug discovery' />
             <PageTap tap='business' />
             <SideTap tap={developmentData} content='development' />
             <div className='page_layout'>

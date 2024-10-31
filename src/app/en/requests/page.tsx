@@ -51,7 +51,7 @@ export default function RequestsEN() {
         e.preventDefault();
 
         if (!personal || !use) return;
-        onClickRequestsHandler(e, requestsInput);
+        onClickRequestsHandler(e, requestsInput, 'en');
     };
     useEffect(() => {
         fetch('/api/inquiry/requests/provision')
@@ -91,8 +91,11 @@ export default function RequestsEN() {
                                 </label>
                                 <div className='requests_input_box'>
                                     <input
+                                        name='name'
+                                        value={name}
                                         className='requests_input'
-                                        placeholder='Responsibility' />
+                                        placeholder='Responsibility'
+                                        onChange={onChangeRequestsHandler} />
                                 </div>
                             </div>
                             <div className='requests_input_wrapper'>
@@ -101,8 +104,11 @@ export default function RequestsEN() {
                                 </label>
                                 <div className='requests_input_box'>
                                     <input
+                                        name='email'
+                                        value={email}
                                         className='requests_input'
-                                        placeholder='Email' />
+                                        placeholder='Email'
+                                        onChange={onChangeRequestsHandler} />
                                 </div>
                             </div>
                         </div>
@@ -112,8 +118,11 @@ export default function RequestsEN() {
                             </label>
                             <div className='requests_input_box'>
                                 <input
+                                    name='company'
+                                    value={company}
                                     className='requests_input'
-                                    placeholder='Company Name' />
+                                    placeholder='Company Name'
+                                    onChange={onChangeRequestsHandler} />
                             </div>
                         </div>
                         <div className='requests_input_wrapper'>
@@ -122,8 +131,11 @@ export default function RequestsEN() {
                             </label>
                             <div className='requests_input_box'>
                                 <input
+                                    name='title'
+                                    value={title}
                                     className='requests_input'
-                                    placeholder='Title' />
+                                    placeholder='Title'
+                                    onChange={onChangeRequestsHandler} />
                             </div>
                         </div>
                         <div className='requests_input_wrapper'>
@@ -131,8 +143,11 @@ export default function RequestsEN() {
                                 CONTENT OF INQUIRY*
                             </label>
                             <textarea
+                                name='content'
+                                value={content}
                                 className='requests_textarea'
-                                placeholder='Please enter the content you want to inquire about here.' />
+                                placeholder='Please enter the content you want to inquire about here.'
+                                onChange={onChangeRequestsHandler} />
                         </div>
                         <div className='requests_input_wrapper'>
                             <label className='requests_input_label'>

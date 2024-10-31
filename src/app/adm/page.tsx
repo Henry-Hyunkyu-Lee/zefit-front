@@ -90,7 +90,7 @@ export default function Admin() {
         const cookies = document.cookie.split(';');
         for (let cookie of cookies) {
             const [name, value] = cookie.trim().split('=');
-            if (name === 'lastLogin') {
+            if (name === 'zf-alv') {
                 return value;
             }
         }

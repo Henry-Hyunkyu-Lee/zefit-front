@@ -5,8 +5,12 @@ import '../../../content/zebrafish/style.css';
 import PageBanner from '@/components/common/PageBanner';
 import PageTap from '@/components/common/PageTap';
 import MetaTagTitle from '@/utils/MetaTagTitle';
+import { useMediaQuery } from 'react-responsive';
 
 export default function ZebrafishModelEN() {
+
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
+
     return (
         <article>
             <MetaTagTitle title='Zebrafish' ko={false} />
@@ -35,10 +39,14 @@ export default function ZebrafishModelEN() {
                 <section className='model_page_second_container'>
                     <div className='model_intro_wrapper'>
                         <div className='model_intro_box'>
-                            <h3  style={{ fontSize: '26px' }} className='model_intro_title'>
+                            <h3 
+                                style={{ fontSize: (isMobile) ? '16px' : '26px' }}
+                                className='model_intro_title'>
                                 Zebrafish pre-clinical data use cases
                             </h3>
-                            <p style={{ fontSize: '18px' }} className='model_intro_content'>
+                            <p
+                                style={{ fontSize: (isMobile) ? '13px' : '18px' }}
+                                className='model_intro_content'>
                                 Research at individual and organ level become best strategy to address bottlenecks in drug R&D
                                 According to the FDA report, global pharmaceutical companies, Novartis and Pfizer are reported using Zebrafish to reduce R&D costs by more than 10 million dollars per year.
                                 In addition, FDA IND application were reported as only zebrafish research data in 2019, 2020 and 2021.

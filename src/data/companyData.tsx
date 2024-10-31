@@ -18,7 +18,7 @@ export const companyData = [
         content: '자동화된 실험 장비는 신속한 실험이 가능하도록 하며 편차가 적은 데이터를 확보할 수 있게 합니다.',
         content_en: 'AI based experimental equipment enables rapid and allows for less deviant data.',
         color: '#0190D6',
-        titlecolor: '#004262',
+        titlecolor: '#002a3f',
         textcolor: '#EEF9FF'
     },
     {
@@ -28,8 +28,8 @@ export const companyData = [
         title_en: 'In-vivo big data with pharmacological effects',
         content: 'In-vivo 단계의 화합물 테스트 빅데이터를 확보하고 있으며 이를 기반으로 화합물의 안전성과 유효성을 예측합니다.',
         content_en: 'We have compound test big data of in-vivo stage, and based on this, we predict the safety and efficacy of compounds.',
-        color: '#0055A7',
-        titlecolor: '#00274C',
+        color: '#0065c3',
+        titlecolor: '#00182e',
         textcolor: '#EEF9FF'
     },
 ];

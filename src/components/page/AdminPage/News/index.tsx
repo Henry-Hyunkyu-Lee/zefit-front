@@ -7,6 +7,7 @@ import './style.css';
 export default function News(admData: any) {
 
     const newsList = admData?.admData;
+    const resultData = newsList?.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 
     const textChange = (item: string) => {
         return item.replace(/\\n/g, ' ');
@@ -32,9 +33,6 @@ export default function News(admData: any) {
                         <th style={{ width: '100%' }} className='table_header_text'>
                             내용(영문)
                         </th>
-                        <th className='tiny_table_header'>
-                            날짜
-                        </th>
                         <th className='small_table_header'>
                             작성자
                         </th>
@@ -42,12 +40,15 @@ export default function News(admData: any) {
                             작성자(영문)
                         </th>
                         <th className='tiny_table_header'>
+                            날짜
+                        </th>
+                        <th className='tiny_table_header'>
                             관리
                         </th>
                     </tr>
                 </thead>
                 <tbody className='table_body_container'>
-                    {newsList?.map((item: any, index: number) =>
+                    {resultData?.map((item: any, index: number) =>
                         <tr
                             key={index}
                             className='notice_table_body_lane'>
@@ -79,14 +80,14 @@ export default function News(admData: any) {
                                     {textChange(item?.content_en)}
                                 </span>
                             </td>
-                            <td className='tiny_table_body'>
-                                {item?.created_at}
-                            </td>
                             <td className='small_table_body'>
                                 {item?.writer_kr}
                             </td>
                             <td className='medium_table_body'>
                                 {item?.writer_en}
+                            </td>
+                            <td className='tiny_table_body'>
+                                {item?.created_at}
                             </td>
                             <td className='tiny_table_body'>
                                 <a
