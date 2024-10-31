@@ -7,7 +7,7 @@ import { aboutNavList, businessNavList, communityNavList } from '@/data/navData'
 
 export default function MobileHeader() {
 
-    const path = usePathname();
+    const path = usePathname() as string;
 
     const isEng = path?.includes('/en');
 
@@ -26,8 +26,44 @@ export default function MobileHeader() {
         setDetailNav(item);
     };
 
+    const onClickTransHandler = (e: any, lang: string) => {
+        e.stopPropagation();
+        if (lang === 'en') {
+            if (isEng) return setModalOpen({ ...modalOpen, trans: false });
+            window.location.href = `/en${path}`;
+        } else {
+            if (!isEng) return setModalOpen({ ...modalOpen, trans: false });
+            window.location.href = path?.replace("/en", "");
+        };
+    };
+
     return (
         <header className='mobile_header_container'>
+            {(trans)
+                && <div
+                    onClick={() => setModalOpen({ ...modalOpen, trans: false })}
+                    className='trans_modal_background_container'>
+                    <div className='trans_modal_container'>
+                        <a
+                            onClick={(e: any) => onClickTransHandler(e, 'en')}
+                            className='trans_modal_button'>
+                            <img
+                                className='button_flag_icon'
+                                src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/us.svg'
+                                alt='성조기' />
+                            ENG
+                        </a>
+                        <a
+                            onClick={(e: any) => onClickTransHandler(e, 'ko')}
+                            className='trans_modal_button'>
+                            <img
+                                className='button_flag_icon'
+                                src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/kr.svg'
+                                alt='태극기' />
+                            KOR
+                        </a>
+                    </div>
+                </div>}
             <nav className='mobile_header_wrapper'>
                 <button
                     onClick={() => setModalOpen({ ...modalOpen, menu: !menu, trans: false })}
@@ -46,15 +82,15 @@ export default function MobileHeader() {
                     onClick={() => setModalOpen({ ...modalOpen, menu: false, trans: !trans })}
                     className='mobile_button_box'
                     src={(isEng)
-                        ? 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_flags/4x3/us.svg'
-                        : 'http://www.zefit.co.kr/theme/basic/assets/images/flags/4x3/kr.svg'} />
+                        ? 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/us.svg'
+                        : 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/kr.svg'} />
             </nav>
             {(menu)
                 && <ul className='menu_modal_wrapper'>
                     <li
                         onClick={() => onClickTapHandler('company')}
                         className='menu_modal_lane_wrapper'>
-                        회사소개
+                        {(isEng) ? 'About Us' : '회사소개'}
                         <i style={{ fontSize: '10px' }} className='icon-arrow-right'></i>
                     </li>
                     {(detailNav === 'company')
@@ -62,9 +98,9 @@ export default function MobileHeader() {
                             {aboutNavList?.map((item: any, index: number) =>
                                 <li key={index} style={{ width: '100%' }}>
                                     <a
-                                        href={(isEng) ? `/en${item.href}` : item.href}
+                                        href={(isEng) ? item.href_en : item.href}
                                         className='menu_modal_detail_lane_wrapper'>
-                                        {item.id}
+                                        {(isEng) ? item.id_en : item.id}
                                     </a>
                                 </li>
                             )}
@@ -72,13 +108,13 @@ export default function MobileHeader() {
                     <a
                         href={(isEng) ? '/en/content/zebrafish' : '/content/zebrafish'}
                         className='menu_modal_lane_wrapper'>
-                        모델
+                        {(isEng) ? 'Model' : '모델'}
                         <i style={{ fontSize: '10px' }} className='icon-arrow-right'></i>
                     </a>
                     <li
                         onClick={() => onClickTapHandler('service')}
                         className='menu_modal_lane_wrapper'>
-                        서비스
+                        {(isEng) ? 'Service' : '서비스'}
                         <i style={{ fontSize: '10px' }} className='icon-arrow-right'></i>
                     </li>
                     {(detailNav === 'service')
@@ -86,9 +122,9 @@ export default function MobileHeader() {
                             {businessNavList[1].list?.map((item: any, index: number) =>
                                 <li key={index} style={{ width: '100%' }}>
                                     <a
-                                        href={(isEng) ? `/en${item.href}` : item.href}
+                                        href={(isEng) ? item.href_en : item.href}
                                         className='menu_modal_detail_lane_wrapper'>
-                                        {item.id}
+                                        {(isEng) ? item.en : item.id}
                                     </a>
                                 </li>
                             )}
@@ -96,7 +132,7 @@ export default function MobileHeader() {
                     <li
                         onClick={() => onClickTapHandler('pharmaceuticals')}
                         className='menu_modal_lane_wrapper'>
-                        신약개발
+                        {(isEng) ? 'Drug Discovery' : '신약개발'}
                         <i style={{ fontSize: '10px' }} className='icon-arrow-right'></i>
                     </li>
                     {(detailNav === 'pharmaceuticals')
@@ -104,9 +140,9 @@ export default function MobileHeader() {
                             {businessNavList[2].list?.map((item: any, index: number) =>
                                 <li key={index} style={{ width: '100%' }}>
                                     <a
-                                        href={(isEng) ? `/en${item.href}` : item.href}
+                                        href={(isEng) ? item.href_en : item.href}
                                         className='menu_modal_detail_lane_wrapper'>
-                                        {item.id}
+                                        {(isEng) ? item.en : item.id}
                                     </a>
                                 </li>
                             )}
@@ -114,7 +150,7 @@ export default function MobileHeader() {
                     <li
                         onClick={() => onClickTapHandler('community')}
                         className='menu_modal_lane_wrapper'>
-                        커뮤니티
+                        {(isEng) ? 'Community' : '커뮤니티'}
                         <i style={{ fontSize: '10px' }} className='icon-arrow-right'></i>
                     </li>
                     {(detailNav === 'community')
@@ -122,9 +158,9 @@ export default function MobileHeader() {
                             {communityNavList?.map((item: any, index: number) =>
                                 <li key={index} style={{ width: '100%' }}>
                                     <a
-                                        href={(isEng) ? `/en${item.href}` : item.href}
+                                        href={(isEng) ? item.href_en : item.href}
                                         className='menu_modal_detail_lane_wrapper'>
-                                        {item.id}
+                                        {(isEng) ? item.id_en : item.id}
                                     </a>
                                 </li>
                             )}
@@ -132,7 +168,7 @@ export default function MobileHeader() {
                     <a
                         href={(isEng) ? '/en/requests' : '/requests'}
                         className='menu_modal_lane_wrapper'>
-                        문의하기
+                        {(isEng) ? 'Contact' : '문의하기'}
                         <i style={{ fontSize: '10px' }} className='icon-arrow-right'></i>
                     </a>
                 </ul>}

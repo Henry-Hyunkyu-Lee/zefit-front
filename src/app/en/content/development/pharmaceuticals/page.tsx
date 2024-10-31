@@ -35,7 +35,7 @@ export default function PharmaceuticalsEN() {
         <article>
             <MetaTagTitle title='Technology' ko={false} />
             <PageHeader />
-            <PageBanner pageTitle='pharmaceuticals' />
+            <PageBanner pageTitle='Drug discovery' />
             <PageTap tap='business' />
             <SideTap tap={developmentData} content='development' />
             <div className='page_layout'>

@@ -193,7 +193,7 @@
 
 /* 동의문 체크 박스 */
 .check_box {
-    width: 15px;
+    min-width: 15px;
     height: 15px;
     display: flex;
     justify-content: center;
@@ -238,7 +238,7 @@
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
     .requests_page_layout {
-        height: 1500px;
+        height: 1300px;
     }
 
     .background_color_wrapper {
@@ -260,5 +260,48 @@
 
     .requests_form_content_wrapper {
         width: 94%;
+        gap: 24px;
+    }
+
+    .requests_lane_wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .requests_input_label {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .requests_input {
+        height: 36px;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .requests_textarea {
+        font-size: 12px;
+        padding: 10px;
+        height: 180px;
+    }
+
+    .check_textarea_box {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .check_box_button {
+        font-size: 9px;
+    }
+
+    .check_box {
+        min-width: 10px;
+        height: 10px;
+        border-radius: 2px;
+    }
+
+    .requests_button {
+        height: 36px;
+        font-size: 12px;
     }
 }

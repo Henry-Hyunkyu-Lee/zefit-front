@@ -7,8 +7,12 @@ import PageTap from "@/components/common/PageTap";
 import '../../../content/company/style.css';
 import { companyData } from "@/data/companyData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
+import { useMediaQuery } from "react-responsive";
 
 export default function CompanyEN() {
+
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
+
     return (
         <article>
             <MetaTagTitle title='Overview' ko={false} />
@@ -52,47 +56,69 @@ export default function CompanyEN() {
                         </div>
                         <ul className="shape_wrapper">
                             {companyData?.map((item: any, index: number) =>
-                                <li
-                                    key={index}
-                                    className='hexagon_card_border_box'
-                                    style={{
-                                        marginTop: (index === 1) ? '80px' : '0px'
-                                    }}>
-                                    <svg width="400" height="400" viewBox="0 0 400 400">
-                                        {/* <!-- 육각형을 정의, 배경은 투명, 테두리선 추가 --> */}
-                                        <polygon points="200,20 370,110 370,290 200,380 30,290 30,110"
-                                            style={{
-                                                fill: 'transparent',
-                                                stroke: item.color,
-                                                strokeWidth: 1,
-                                            }} />
-                                    </svg>
-                                    <svg className='hexagon_card' viewBox="0 0 350 350">
-                                        <defs>
-                                            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                                                <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="rgba(255, 255, 255, 0.5)" />
-                                            </filter>
-                                        </defs>
-                                        {/* <!-- 육각형을 정의, 배경은 투명, 테두리선 추가 --> */}
-                                        <polygon
-                                            points="175,20 315,97.5 315,252.5 175,330 35,252.5 35,97.5"
-                                            style={{ fill: `${item.color}99` }} />
-                                    </svg>
-                                    <div className='hexagon_card_content_container'>
-                                        <div className='card_content_top_lane'>
-                                            <img
-                                                className='card_content_icon'
-                                                src={item.icon}
-                                                alt={`${item.id} 아이콘`} />
-                                            <strong className='card_content_title_en' style={{ color: item.titlecolor }}>
-                                                {item.title_en}
-                                            </strong>
+                                (isMobile)
+                                    ? <li
+                                        key={index}
+                                        style={{
+                                            backgroundColor: `${item.color}`
+                                        }}
+                                        className='mobile_card_box'>
+                                        <div className='hexagon_card_content_container'>
+                                            <div className='card_content_top_lane'>
+                                                <img
+                                                    className='card_content_icon'
+                                                    src={item.icon}
+                                                    alt={`${item.id} 아이콘`} />
+                                                <strong className='card_content_title' style={{ color: item.titlecolor }}>
+                                                    {item.title}
+                                                </strong>
+                                            </div>
+                                            <p className='card_content_text' style={{ color: item.textcolor }}>
+                                                {item.content}
+                                            </p>
                                         </div>
-                                        <p className='card_content_text_en' style={{ color: item.textcolor }}>
-                                            {item.content_en}
-                                        </p>
-                                    </div>
-                                </li>
+                                    </li>
+                                    : <li
+                                        key={index}
+                                        className='hexagon_card_border_box'
+                                        style={{
+                                            marginTop: (index === 1) ? '80px' : '0px'
+                                        }}>
+                                        <svg width="400" height="400" viewBox="0 0 400 400">
+                                            {/* <!-- 육각형을 정의, 배경은 투명, 테두리선 추가 --> */}
+                                            <polygon points="200,20 370,110 370,290 200,380 30,290 30,110"
+                                                style={{
+                                                    fill: 'transparent',
+                                                    stroke: item.color,
+                                                    strokeWidth: 1,
+                                                }} />
+                                        </svg>
+                                        <svg className='hexagon_card' viewBox="0 0 350 350">
+                                            <defs>
+                                                <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                                                    <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="rgba(255, 255, 255, 0.5)" />
+                                                </filter>
+                                            </defs>
+                                            {/* <!-- 육각형을 정의, 배경은 투명, 테두리선 추가 --> */}
+                                            <polygon
+                                                points="175,20 315,97.5 315,252.5 175,330 35,252.5 35,97.5"
+                                                style={{ fill: `${item.color}` }} />
+                                        </svg>
+                                        <div className='hexagon_card_content_container'>
+                                            <div className='card_content_top_lane'>
+                                                <img
+                                                    className='card_content_icon'
+                                                    src={item.icon}
+                                                    alt={`${item.id} 아이콘`} />
+                                                <strong className='card_content_title_en' style={{ color: item.titlecolor }}>
+                                                    {item.title_en}
+                                                </strong>
+                                            </div>
+                                            <p className='card_content_text_en' style={{ color: item.textcolor }}>
+                                                {item.content_en}
+                                            </p>
+                                        </div>
+                                    </li>
                             )}
                         </ul>
                     </div>

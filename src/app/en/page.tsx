@@ -8,17 +8,25 @@ import { useEffect, useState } from 'react';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { useMediaQuery } from 'react-responsive';
 import { supabase } from '@/utils/Supabase';
+import { useRecoilState } from 'recoil';
+import { isLoading } from '@/modules/loading';
+import Popup from '@/components/common/Popup';
 
 export default function HomeEN() {
+
+    const [loading, setLoading] = useRecoilState(isLoading);
 
     // 뷰포트 반응형
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const [serviceHref, setServiceHref] = useState<any>(null); // 서비스 첫번째 데이터 state
     const [partner, setPartner] = useState<any[]>([]); // 파트너 리스트 state
+    const [popupData, setPopupData] = useState<any>(null);
 
     // 마운트했을 때 api통신을 통해 파트너 리스트와 서비스 데이터 가져오기
     useEffect(() => {
+        setLoading(true);
+
         fetch('/api/inquiry/landing/service')
             .then((response) => {
                 if (!response.ok) {
@@ -28,6 +36,24 @@ export default function HomeEN() {
             })
             .then((jsonData) => setServiceHref(jsonData))
             .catch((error) => console.error("Fetch error:", error));
+
+        const fetchPopup = async () => {
+            try {
+                const { data, error } = await supabase
+                    .from('notices')
+                    .select('image')
+                    .eq('is_special', true)
+                    .order('created_at', { ascending: false })
+                    .limit(1);
+                if (error) {
+                    throw error;
+                }
+                setPopupData(data);
+                console.log(data);
+            } catch (error) {
+                console.error("Error fetching paginated data from Supabase:", error);
+            };
+        };
 
         const fetchData = async () => {
             try {
@@ -42,14 +68,18 @@ export default function HomeEN() {
                 console.log(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
+            } finally {
+                setLoading(false);
             }
         };
 
+        fetchPopup();
         fetchData();
     }, []);
 
     return (
         <article>
+            <Popup popupData={popupData} />
             <MetaTagTitle title='' ko={false} />
             <MainHeader />
             <section className='landing_top_banner_container'>
@@ -116,8 +146,10 @@ export default function HomeEN() {
                             OUR BUSINESS
                         </h2>
                         <ul className='business_card_wrapper'>
-                            <li>
-                                <a className='business_card_box'>
+                            <li className='business_card_out_wrapper'>
+                                <a
+                                    href='/en/content/zebrafish'
+                                    className='business_card_box'>
                                     <div
                                         className='business_card_image'
                                         style={{
@@ -133,8 +165,10 @@ export default function HomeEN() {
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a className='business_card_box'>
+                            <li className='business_card_out_wrapper'>
+                                <a
+                                    href={`/en/content/service/${serviceHref?.service}`}
+                                    className='business_card_box'>
                                     <div
                                         className='business_card_image'
                                         style={{
@@ -150,8 +184,10 @@ export default function HomeEN() {
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a className='business_card_box'>
+                            <li className='business_card_out_wrapper'>
+                                <a
+                                    href='/en/content/development/pharmaceuticals'
+                                    className='business_card_box'>
                                     <div
                                         className='business_card_image'
                                         style={{
@@ -159,7 +195,7 @@ export default function HomeEN() {
                                         }} />
                                     <div className='business_card_text_box'>
                                         <strong className='business_card_title'>
-                                            Pharmaceuticals
+                                            Drug Dicovery
                                         </strong>
                                         <p className='business_card_content'>
                                             {"innovative drug discovery platform"}

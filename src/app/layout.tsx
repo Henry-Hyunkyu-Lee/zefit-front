@@ -23,6 +23,7 @@ const notoSansKr = Noto_Sans_KR({
 const FloatingButton = dynamic(() => import('../components/common/FloatingButton'), { ssr: false });
 const Loading = dynamic(() => import('../components/common/LoadingSpinner'), { ssr: false });
 const Footer = dynamic(() => import('../components/common/Footer'), { ssr: false });
+const Popup = dynamic(() =>  import('../components/common/Popup'), { ssr: false });
 
 export const metadata: Metadata = {
   title: "제핏",

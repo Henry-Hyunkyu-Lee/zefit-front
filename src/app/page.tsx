@@ -9,10 +9,10 @@ import MobileHeader from '@/components/common/MobileHeader';
 import { supabase } from '@/utils/Supabase';
 import { useRecoilState } from 'recoil';
 import { isLoading } from '@/modules/loading';
+import Popup from '@/components/common/Popup';
 
 export default function Home() {
 
-    const [isMounted, setIsMounted] = useState<boolean>(false);
     const [loading, setLoading] = useRecoilState(isLoading);
 
     // 뷰포트 반응형
@@ -20,10 +20,10 @@ export default function Home() {
 
     const [serviceHref, setServiceHref] = useState<any>(null); // 서비스 첫번째 데이터 state
     const [partner, setPartner] = useState<any[]>([]); // 파트너 리스트 state
+    const [popupData, setPopupData] = useState<any>(null);
 
     // 마운트했을 때 api통신을 통해 파트너 리스트와 서비스 데이터 가져오기
     useEffect(() => {
-        setIsMounted(true);
         setLoading(true);
 
         fetch('/api/inquiry/landing/service')
@@ -35,6 +35,24 @@ export default function Home() {
             })
             .then((jsonData) => setServiceHref(jsonData))
             .catch((error) => console.error("Fetch error:", error));
+
+        const fetchPopup = async () => {
+            try {
+                const { data, error } = await supabase
+                    .from('notices')
+                    .select('image')
+                    .eq('is_special', true)
+                    .order('created_at', { ascending: false })
+                    .limit(1);
+                if (error) {
+                    throw error;
+                }
+                setPopupData(data);
+                console.log(data);
+            } catch (error) {
+                console.error("Error fetching paginated data from Supabase:", error);
+            };
+        };
 
         const fetchData = async () => {
             try {
@@ -51,21 +69,21 @@ export default function Home() {
                 console.error("Error fetching paginated data from Supabase:", error);
             } finally {
                 setLoading(false);
-            }
+            };
         };
 
+        fetchPopup();
         fetchData();
     }, []);
-
-    if (!isMounted) {
-        return null; // 또는 로딩 인디케이터
-    }
 
     return (
         <article>
 
+            {/* 팝업창 */}
+            <Popup popupData={popupData} />
+
             {/* 메인 페이지 헤더 */}
-            {(isMobile) ? <MobileHeader /> : <MainHeader />}
+            <MainHeader />
 
             {/* 상단 배너 */}
             <section className='landing_top_banner_container'>
@@ -193,7 +211,7 @@ export default function Home() {
                                         }} />
                                     <div className='business_card_text_box'>
                                         <strong className='business_card_title'>
-                                            Pharmaceuticals
+                                            Drug Dicovery
                                         </strong>
                                         <p className='business_card_content'>
                                             신약개발 혁신 플랫폼
