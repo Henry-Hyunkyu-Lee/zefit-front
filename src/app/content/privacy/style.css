@@ -72,5 +72,31 @@
 @media screen and (max-width: 1170px) {
     .provacy_page_container {
         width: 94%;
+        gap: 40px;
+        padding: 40px 0px;
+    }
+
+    .provacy_page_out_wrapper {
+        gap: 30px;
+    }
+
+    .provacy_page_content_wrapper {
+        gap: 16px;
+    }
+
+    .provacy_paragraph_title {
+        font-size: 12px;
+    }
+
+    .provacy_paragraph_content {
+        font-size: 10px;
+    }
+
+    .provacy_paragraph_mini_title {
+        font-size: 9px;
+    }
+
+    .provacy_paragraph_mini_content {
+        font-size: 8px;
     }
 }
