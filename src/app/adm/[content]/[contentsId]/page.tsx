@@ -11,6 +11,8 @@ import CorrectHistory from '@/components/page/AdminPage/Update/History';
 import CorrectStatus from '@/components/page/AdminPage/Update/Status';
 import { correctContentConfig } from '@/data/contentConfig';
 import AdmScrollTop from '@/components/page/AdminPage/AdmScrollTop';
+import { isLoading } from '@/modules/loading';
+import { useRecoilState } from 'recoil';
 
 export default function AdmHistoryDetail() {
 
@@ -19,6 +21,7 @@ export default function AdmHistoryDetail() {
 
     const content = path?.split('/')[2];
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [admData, setAdmData] = useState<any>(null);
     const [isUpload, setIsUpload] = useState<boolean>((contentsId === 'update') ? true : false);
     const [isClient, setIsClient] = useState(false);
@@ -31,6 +34,8 @@ export default function AdmHistoryDetail() {
     }, []);
 
     useEffect(() => {
+        setLoading(false);
+
         if (!isUpload) {
             const fetchData = async () => {
                 try {

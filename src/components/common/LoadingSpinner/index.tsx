@@ -28,7 +28,7 @@ export default function Loading() {
             setTimeout(() => {
                 if (!loadRef.current) return;
                 loadRef.current.style.display = 'none';
-            }, 100);
+            }, 300);
         }
     }, [loading]);
 

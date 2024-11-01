@@ -5,8 +5,18 @@ import './style.css';
 import PageBanner from '@/components/common/PageBanner';
 import PageTap from '@/components/common/PageTap';
 import MetaTagTitle from '@/utils/MetaTagTitle';
+import { isLoading } from '@/modules/loading';
+import { useRecoilState } from 'recoil';
+import { useEffect } from 'react';
 
 export default function ZebrafishModel() {
+
+    const [, setLoading] = useRecoilState(isLoading);
+
+    useEffect(() => {
+        setLoading(false);
+    }, []);
+    
     return (
         <article>
             <MetaTagTitle title='제브라피쉬' />

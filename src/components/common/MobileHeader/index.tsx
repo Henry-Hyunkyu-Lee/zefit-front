@@ -33,7 +33,8 @@ export default function MobileHeader() {
             window.location.href = `/en${path}`;
         } else {
             if (!isEng) return setModalOpen({ ...modalOpen, trans: false });
-            window.location.href = path?.replace("/en", "");
+            const transUrl = (path?.split('/en').join('') === '') ? '/' : path?.split('/en').join('');
+            window.location.href = transUrl;
         };
     };
 

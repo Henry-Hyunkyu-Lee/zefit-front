@@ -7,6 +7,8 @@ import PageTap from '@/components/common/PageTap';
 import { useEffect } from 'react';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { useMediaQuery } from 'react-responsive';
+import { isLoading } from '@/modules/loading';
+import { useRecoilState } from 'recoil';
 
 declare global {
     interface Window {
@@ -15,6 +17,8 @@ declare global {
 };
 
 export default function ContactMap() {
+
+    const [, setLoading] = useRecoilState(isLoading);
 
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
@@ -72,6 +76,7 @@ export default function ContactMap() {
         };
 
         mapScript.addEventListener('load', onLoadKakaoMap);
+        setLoading(false);
     }, []);
 
     return (

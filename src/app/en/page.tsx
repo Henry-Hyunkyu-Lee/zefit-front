@@ -4,7 +4,7 @@ import ScrollGuide from '@/components/page/LandingPage/ScrollGuide';
 import '../style.css';
 import './style.css'
 import MainHeader from '@/components/common/MainHeader';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { useMediaQuery } from 'react-responsive';
 import { supabase } from '@/utils/Supabase';
@@ -14,7 +14,18 @@ import Popup from '@/components/common/Popup';
 
 export default function HomeEN() {
 
-    const [loading, setLoading] = useRecoilState(isLoading);
+    const backRef = useRef<HTMLDivElement>(null);
+    const backImage = 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_3551210086_0f617416_20811665.jpg';
+    const img = new Image();
+    const [, setLoading] = useRecoilState(isLoading);
+
+    img.onload = () => {
+        if (!backRef.current) return;
+        backRef.current.style.backgroundImage = `url('${backImage}')`;
+        setLoading(false);
+    };
+
+    img.src = backImage;
 
     // 뷰포트 반응형
     const isMobile = useMediaQuery({ maxWidth: 1170 });
@@ -25,8 +36,6 @@ export default function HomeEN() {
 
     // 마운트했을 때 api통신을 통해 파트너 리스트와 서비스 데이터 가져오기
     useEffect(() => {
-        setLoading(true);
-
         fetch('/api/inquiry/landing/service')
             .then((response) => {
                 if (!response.ok) {
@@ -41,7 +50,7 @@ export default function HomeEN() {
             try {
                 const { data, error } = await supabase
                     .from('notices')
-                    .select('image')
+                    .select('*')
                     .eq('is_special', true)
                     .order('created_at', { ascending: false })
                     .limit(1);
@@ -83,7 +92,7 @@ export default function HomeEN() {
             <MetaTagTitle title='' ko={false} />
             <MainHeader />
             <section className='landing_top_banner_container'>
-                <div className='landing_top_banner' />
+                <div ref={backRef} className='landing_top_banner' />
                 <div className='top_banner_text_box'>
                     <h1 className='top_banner_title'>
                         Greater Value For Your Life
