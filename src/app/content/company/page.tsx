@@ -8,10 +8,18 @@ import './style.css';
 import { companyData } from "@/data/companyData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { useMediaQuery } from "react-responsive";
+import { useRecoilState } from "recoil";
+import { isLoading } from "@/modules/loading";
+import { useEffect } from "react";
 
 export default function Company() {
 
     const isMobile = useMediaQuery({ maxWidth: 1170 });
+    const [, setLoading] = useRecoilState(isLoading);
+
+    useEffect(() => {
+        setLoading(false);
+    }, []);
 
     return (
         <article>

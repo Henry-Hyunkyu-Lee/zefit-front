@@ -38,6 +38,28 @@
 }
 
 
+/*=============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .top_banner_scroll_guide {
+        width: 60px;
+        gap: 24px;
+        left: calc(50% - 30px);
+        bottom: 4px;
+    }
+
+    .scroll_guide_text {
+        font-size: 10px;
+    }
+
+    .scroll_guide_arrow_box {
+        font-size: 8px;
+        gap: -12px;
+    }
+}
+
+
+/*=============================================================*/
 /* 애니메이션 */
 
 /* 스크롤 가이드 텍스트 애니메이션 */

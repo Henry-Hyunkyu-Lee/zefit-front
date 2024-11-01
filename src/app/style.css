@@ -353,7 +353,7 @@
 /* 파트너 소개 링크 로고 */
 .partner_link_logo {
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: contain;
 }
 

@@ -80,7 +80,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background: linear-gradient(to bottom, #C9C9C9, #414141);
+    background: linear-gradient(to top, #C9C9C9, #ffffff);
 }
 
 /* 차별화된 개발 설명 컨텐츠 컨테이너 */
@@ -117,7 +117,7 @@
 .different_develop_sub_title {
     font-size: 20px;
     font-weight: 700;
-    color: white;
+    /* color: white; */
     text-align: center;
     white-space: pre-line;
 }
@@ -126,7 +126,7 @@
 .different_develop_introduce {
     font-size: 18px;
     font-weight: 700;
-    color: white;
+    /* color: white; */
     text-align: center;
     white-space: pre-line;
 }

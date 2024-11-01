@@ -8,11 +8,14 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import MetaTagTitle from "@/utils/MetaTagTitle";
+import { isLoading } from "@/modules/loading";
+import { useRecoilState } from "recoil";
 
 export default function ServiceEN() {
 
     const { service }: any = useParams();
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [serviceData, setServiceData] = useState<any>(null);
     const [serviceTap, setServiceTap] = useState<any>(null);
     console.log("🚀 ~ Service ~ serviceData:", serviceData);
@@ -39,7 +42,10 @@ export default function ServiceEN() {
                     setServiceData(jsonData);
                     setServiceTap(findData.content[0]);
                 })
-                .catch((error) => console.error("Fetch error:", error));
+                .catch((error) => console.error("Fetch error:", error))
+                .finally(() => {
+                    setLoading(false);
+                });
         };
     }, [service]);
 

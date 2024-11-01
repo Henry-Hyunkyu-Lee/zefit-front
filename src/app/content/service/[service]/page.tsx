@@ -16,7 +16,7 @@ export default function Service() {
 
     const { service }: any = useParams();
 
-    const [loading, setLoading] = useRecoilState(isLoading);
+    const [, setLoading] = useRecoilState(isLoading);
 
     const [serviceData, setServiceData] = useState<any>(null);
     const [serviceTap, setServiceTap] = useState<any>(null);
@@ -47,7 +47,9 @@ export default function Service() {
                     setServiceTap(findData.content[0]);
                 })
                 .catch((error) => console.error("Fetch error:", error))
-                .finally(() => setLoading(false));
+                .finally(() => {
+                    setLoading(false);
+                });
         };
     }, [service]);
 

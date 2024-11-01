@@ -9,8 +9,12 @@ import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import { businessNavList } from "@/data/navData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
+import { isLoading } from "@/modules/loading";
+import { useRecoilState } from "recoil";
 
 export default function PharmaceuticalsEN() {
+
+    const [, setLoading] = useRecoilState(isLoading);
 
     const developmentData = businessNavList[2].list?.map((item: any) => item.en);
 
@@ -28,7 +32,10 @@ export default function PharmaceuticalsEN() {
             .then((jsonData) => {
                 setPharmaceuticalsData(jsonData);
             })
-            .catch((error) => console.error("Fetch error:", error));
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (

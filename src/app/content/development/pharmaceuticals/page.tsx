@@ -9,10 +9,13 @@ import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import { businessNavList } from "@/data/navData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
+import { useRecoilState } from "recoil";
+import { isLoading } from "@/modules/loading";
 
 export default function Pharmaceuticals() {
 
     const developmentData = businessNavList[2].list?.map((item: any) => item.id);
+    const [, setLoading] = useRecoilState(isLoading);
 
     const [pharmaceuticalsData, setPharmaceuticalsData] = useState<any>(null);
     console.log("🚀 ~ Pharmaceuticals ~ pharmaceuticalsData:", pharmaceuticalsData)
@@ -28,7 +31,10 @@ export default function Pharmaceuticals() {
             .then((jsonData) => {
                 setPharmaceuticalsData(jsonData);
             })
-            .catch((error) => console.error("Fetch error:", error));
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (

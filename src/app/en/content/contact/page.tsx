@@ -7,9 +7,12 @@ import PageTap from '@/components/common/PageTap';
 import { useEffect, useState } from 'react';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { isLoading } from '@/modules/loading';
+import { useRecoilState } from 'recoil';
 
 export default function ContactMap() {
 
+    const [, setLoading] = useRecoilState(isLoading);
     const googleAppKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY || '';
 
     const [location, setLocation] = useState<any>({
@@ -36,6 +39,8 @@ export default function ContactMap() {
                 }
             } catch (error) {
                 console.error("Geocoding API error:", error);
+            } finally {
+                setLoading(false);
             }
         };
 

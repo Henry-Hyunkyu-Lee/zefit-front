@@ -9,11 +9,14 @@ import { supabase } from '@/utils/Supabase';
 import { useParams } from 'next/navigation';
 import { contentConfig } from '@/data/contentConfig';
 import AdmScrollTop from '@/components/page/AdminPage/AdmScrollTop';
+import { useRecoilState } from 'recoil';
+import { isLoading } from '@/modules/loading';
 
 export default function AdmHistory() {
 
     const { content } = useParams() as { content: string };
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [admData, setAdmData] = useState<any>(null);
     console.log(admData);
 
@@ -32,6 +35,8 @@ export default function AdmHistory() {
                 setAdmData(data);
             } catch (error) {
                 console.error("Error fetching data from Supabase:", error);
+            } finally {
+                setLoading(false);
             };
         };
 

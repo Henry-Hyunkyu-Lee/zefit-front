@@ -8,6 +8,8 @@ import { useEffect, useRef, useState } from 'react';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { supabase } from '@/utils/Supabase';
 import { useMediaQuery } from 'react-responsive';
+import { isLoading } from '@/modules/loading';
+import { useRecoilState } from 'recoil';
 
 export default function History() {
 
@@ -16,6 +18,7 @@ export default function History() {
     const pointRefs = useRef<HTMLDivElement[]>([]);
     const lineRef = useRef<HTMLDivElement>(null);
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [historyData, setHistoryData] = useState<any[]>([]);
     // console.log("🚀 ~ History ~ historyData:", historyData);
 
@@ -81,6 +84,8 @@ export default function History() {
                 setHistoryData(data);
             } catch (error) {
                 console.error("Error fetching data from Supabase:", error);
+            } finally {
+                setLoading(false);
             };
         };
 

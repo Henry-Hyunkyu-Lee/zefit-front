@@ -7,8 +7,12 @@ import '../../requests/style.css';
 import { useEffect, useState } from "react";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { onClickRequestsHandler } from "@/utils/AddDataHandler";
+import { isLoading } from "@/modules/loading";
+import { useRecoilState } from "recoil";
 
 export default function RequestsEN() {
+
+    const [, setLoading] = useRecoilState(isLoading);
 
     const [provisionData, setProvisionData] = useState<any>(null);
     const [requestsInput, setRequestsInput] = useState<any>({
@@ -64,7 +68,10 @@ export default function RequestsEN() {
             .then((jsonData) => {
                 setProvisionData(jsonData);
             })
-            .catch((error) => console.error("Fetch error:", error));
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (

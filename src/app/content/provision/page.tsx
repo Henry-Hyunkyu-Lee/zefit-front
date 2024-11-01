@@ -3,10 +3,13 @@
 import './style.css';
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
+import { isLoading } from '@/modules/loading';
 import { useEffect, useState } from 'react';
+import { useRecoilState } from 'recoil';
 
 export default function Provision() {
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [provisionData, setProvisionData] = useState<any>(null);
 
     useEffect(() => {
@@ -20,7 +23,10 @@ export default function Provision() {
             .then((jsonData) => {
                 setProvisionData(jsonData);
             })
-            .catch((error) => console.error("Fetch error:", error));
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (

@@ -9,8 +9,12 @@ import DropDown from '@/components/common/DropDown';
 import { useEffect, useState } from 'react';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { supabase } from '@/utils/Supabase';
+import { isLoading } from '@/modules/loading';
+import { useRecoilState } from 'recoil';
 
 export default function News() {
+
+    const [, setLoading] = useRecoilState(isLoading);
 
     const [dropdownValue, setDropdownValue] = useState<{
         title: string,
@@ -88,6 +92,8 @@ export default function News() {
                 setTotalCount(count);
             } catch (error) {
                 console.error("Error fetching total count from Supabase:", error);
+            } finally {
+                setLoading(false);
             }
         };
 
