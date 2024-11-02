@@ -6,10 +6,19 @@ import PageBanner from '@/components/common/PageBanner';
 import PageTap from '@/components/common/PageTap';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { useMediaQuery } from 'react-responsive';
+import { isLoading } from '@/modules/loading';
+import { useRecoilState } from 'recoil';
+import { useEffect } from 'react';
 
 export default function ZebrafishModelEN() {
 
+    const [, setLoading] = useRecoilState(isLoading);
+
     const isMobile = useMediaQuery({ maxWidth: 1170 });
+
+    useEffect(() => {
+        setLoading(false);
+    }, []);
 
     return (
         <article>

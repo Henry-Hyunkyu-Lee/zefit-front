@@ -8,11 +8,14 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/utils/Supabase';
 import { getLastLoginDateTime } from '@/utils/DateTime';
+import { useRecoilState } from 'recoil';
+import { isLoading } from '@/modules/loading';
 
 export default function Admin() {
 
     const router = useRouter();
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [resultData, setResultData] = useState<any>();
 
     console.log(resultData);
@@ -80,6 +83,8 @@ export default function Admin() {
                 setResultData(admList);
             } catch (error) {
                 console.error("Error fetching data from Supabase:", error);
+            } finally {
+                setLoading(false);
             };
         };
         fetchData()

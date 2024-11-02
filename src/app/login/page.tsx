@@ -1,10 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './style.css';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/utils/Supabase';
+import { isLoading } from '@/modules/loading';
+import { useRecoilState } from 'recoil';
 
 export default function Login() {
 
@@ -15,6 +17,7 @@ export default function Login() {
     const supabaseEmail = process.env.NEXT_PUBLIC_SUPABASE_EMAIL as string;
     const supabasePassword = process.env.NEXT_PUBLIC_SUPABASE_PASSWORD as string;
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [autoLogin, setAutoLogin] = useState<boolean>(false);
     const [login, setLogin] = useState<any>({
         id: '',
@@ -62,6 +65,10 @@ export default function Login() {
         e.preventDefault();
         setAutoLogin(!autoLogin);
     };
+
+    useEffect(() => {
+        setLoading(false);
+    }, []);
 
     return (
         <article className='login_layout'>

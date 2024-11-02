@@ -13,7 +13,7 @@ import { isLoading } from '@/modules/loading';
 
 export default function Notice() {
 
-    const [loading, setLoading] = useRecoilState(isLoading);
+    const [, setLoading] = useRecoilState(isLoading);
 
     const [dropdownValue, setDropdownValue] = useState<{
         title: string,
@@ -147,8 +147,6 @@ export default function Notice() {
 
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true);
-
             try {
                 const [special, normal, total] = await Promise.all([
                     supabase.from('notices').select('*').eq('is_special', true),

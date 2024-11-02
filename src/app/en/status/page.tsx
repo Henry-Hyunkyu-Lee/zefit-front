@@ -7,9 +7,12 @@ import '../../status/style.css';
 import { useEffect, useState } from "react";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { supabase } from "@/utils/Supabase";
+import { isLoading } from "@/modules/loading";
+import { useRecoilState } from "recoil";
 
 export default function StatusEN() {
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [partner, setPartner] = useState<any[]>([]);
     const [certification, setCertification] = useState<any[]>([]);
     console.log("🚀 ~ Status ~ partner:", partner);
@@ -20,7 +23,8 @@ export default function StatusEN() {
                 const { data, error } = await supabase
                     .from('partners')
                     .select('*')
-                    .eq('state', 'partner');
+                    .eq('state', 'partner')
+                    .order('created_at', { ascending: true });
                 if (error) {
                     throw error;
                 }
@@ -35,13 +39,16 @@ export default function StatusEN() {
                 const { data, error } = await supabase
                     .from('partners')
                     .select('*')
-                    .eq('state', 'certification');
+                    .eq('state', 'certification')
+                    .order('created_at', { ascending: true });
                 if (error) {
                     throw error;
                 }
                 setCertification(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
+            } finally {
+                setLoading(false);
             }
         };
 

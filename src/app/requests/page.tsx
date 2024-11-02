@@ -8,9 +8,12 @@ import { checkArea } from "@/data/checkArea";
 import { useEffect, useState } from "react";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { onClickAddHandler, onClickRequestsHandler } from "@/utils/AddDataHandler";
+import { isLoading } from "@/modules/loading";
+import { useRecoilState } from "recoil";
 
 export default function Requests() {
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [provisionData, setProvisionData] = useState<any>(null);
     const [requestsInput, setRequestsInput] = useState<any>({
         name: null,
@@ -66,7 +69,10 @@ export default function Requests() {
             .then((jsonData) => {
                 setProvisionData(jsonData);
             })
-            .catch((error) => console.error("Fetch error:", error));
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (

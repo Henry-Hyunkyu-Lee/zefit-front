@@ -9,8 +9,12 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { supabase } from "@/utils/Supabase";
+import { isLoading } from "@/modules/loading";
+import { useRecoilState } from "recoil";
 
 export default function NoticeDetailEN() {
+
+    const [, setLoading] = useRecoilState(isLoading);
 
     const { noticeId }: any = useParams();
 
@@ -34,6 +38,8 @@ export default function NoticeDetailEN() {
                     setNoticeData(data[0]);
                 } catch (error) {
                     console.error("Error fetching data from Supabase:", error);
+                } finally {
+                    setLoading(false);
                 };
             };
             fetchData()

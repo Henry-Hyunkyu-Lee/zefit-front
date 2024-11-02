@@ -3,11 +3,14 @@
 import '../../../content/privacy/style.css'
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
+import { isLoading } from '@/modules/loading';
 import MetaTagTitle from '@/utils/MetaTagTitle';
 import { useEffect, useState } from 'react';
+import { useRecoilState } from 'recoil';
 
 export default function PrivacyEN() {
 
+    const [, setLoading] = useRecoilState(isLoading);
     const [privacyData, setPrivacyData] = useState<any>(null);
 
     useEffect(() => {
@@ -21,7 +24,10 @@ export default function PrivacyEN() {
             .then((jsonData) => {
                 setPrivacyData(jsonData);
             })
-            .catch((error) => console.error("Fetch error:", error));
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (

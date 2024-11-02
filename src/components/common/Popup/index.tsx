@@ -1,10 +1,11 @@
 'use client';
 
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import './style.css';
 import { isPopup } from '@/modules/popupModal';
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { isLoading } from '@/modules/loading';
 
 interface PopupProps {
     popupData: any;
@@ -12,15 +13,19 @@ interface PopupProps {
 
 export default function Popup({ popupData }: PopupProps) {
 
+    const loading = useRecoilValue(isLoading);
+
     const path = usePathname() as string;
     const isEnglish = path?.includes('/en');
-    const popupThumnail = (popupData) ? popupData[0]?.image : '';
+    const popupValue = (popupData) ? popupData[0] : null;
     const popupRef = useRef<HTMLDivElement>(null);
     const [popupOpen, setPopupOpen] = useRecoilState(isPopup);
 
     const onClickPopupSetCookie = () => {
         const now = new Date();
-        const expirationDate = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 하루 후 만료
+        const expirationDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0); // 다음 날 자정으로 설정
+        console.log('현재 시간:', now.toISOString());
+        console.log('만료 시간:', expirationDate.toUTCString());
         document.cookie = `zf-pov=${now.toISOString()}; expires=${expirationDate.toUTCString()}; path=/`;
         setPopupOpen(false);
     };
@@ -49,15 +54,27 @@ export default function Popup({ popupData }: PopupProps) {
 
     return (
         <section ref={popupRef} className="popup_container">
-            <img
-                className='popup_thumbnail'
-                src={popupThumnail}
-                alt='팝업 썸네일' />
+            <div className='popup_content_container'>
+                <span className='popup_icon'>
+                    <i className='icon-bell'></i>
+                </span>
+                <strong className='popup_title'>
+                    {(isEnglish) ? popupValue?.title_en : popupValue?.title_kr}
+                </strong>
+                <p className='popup_content'>
+                    {(isEnglish) ? popupValue?.content_en : popupValue?.content_kr}
+                </p>
+                <a
+                    href={(isEnglish) ? `/en/notice/${popupValue?.id}` : `/notice/${popupValue?.id}`}
+                    className='popup_more_button'>
+                    {(isEnglish) ? 'More' : '자세히 보기'}
+                </a>
+            </div>
             <div className='popup_button_wrapper'>
                 <button
                     onClick={onClickPopupSetCookie}
                     className='popup_not_today_button'>
-                    {(isEnglish) ? 'Stop watching today' : '오늘 하루 그만 보기'}
+                    {(isEnglish) ? 'Stop watching today' : '1일 동안 보지 않음'}
                 </button>
                 <button
                     onClick={() => setPopupOpen(false)}

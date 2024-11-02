@@ -16,15 +16,13 @@ export default function Pipeline() {
 
     const developmentData = businessNavList[2].list?.map((item: any) => item.id);
 
-    const [loading, setLoading] = useRecoilState(isLoading);
+    const [, setLoading] = useRecoilState(isLoading);
     const [pipelineData, setPipelineData] = useState<any>(null);
     const [percent, setPercent] = useState<string[]>(['0%', '0%', '0%']);
     console.log("🚀 ~ Pipeline ~ percent:", percent)
     console.log("🚀 ~ Pipeline ~ pipelineData:", pipelineData)
 
     useEffect(() => {
-        setLoading(true);
-
         fetch('/api/inquiry/pipeline')
             .then((response) => {
                 if (!response.ok) {
@@ -37,8 +35,9 @@ export default function Pipeline() {
 
                 setPipelineData(jsonData);
 
-                setTimeout(() => {setPercent(targetPercent);}, 200);
-                // setPercent(targetPercent);
+                setTimeout(() => {
+                    setPercent(targetPercent);
+                }, 200);
             })
             .catch((error) => console.error("Fetch error:", error))
             .finally(() => {

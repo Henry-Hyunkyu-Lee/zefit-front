@@ -1,20 +1,33 @@
 'use client';
 
+import Loading from '@/components/common/LoadingSpinner';
 import '@/styles/not-found.css';
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function NotFoundError() {
+
+    const path = usePathname() as string;
+
+    useEffect(() => {
+        const isEng = path?.includes('/en');
+        window.location.href = (isEng) ? '/en' : '/';
+    }, []);
+
     return (
-        <article className='error_layout'>
-            <svg height="100" width="100">
-                <polygon points="50,25 17,80 82,80" stroke-linejoin="round" style={{ fill: 'none', stroke:'#ff8a00', strokeWidth: '8'}}></polygon>
-                <text x="42" y="74" fill="#ff8a00" font-family="sans-serif" font-weight="900" font-size="42px">!</text>
-            </svg>
-            <h1 className='error_title'>
-                File not found (404 error)
-            </h1>
-            <h2 className='error_sub_title'>
-                {`If you think what you're looking for should be here, please contact\nthe site owner.`}
-            </h2>
-        </article>
+        <div
+            style={{
+                width: '100%',
+                height: '100dvh',
+                backgroundColor: 'white',
+                position: 'fixed',
+                top: '0',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                zIndex: '30'
+            }}>
+            <Loading />
+        </div>
     )
 };
