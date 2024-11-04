@@ -98,7 +98,7 @@ export default function NewsEN() {
 
         fetchData();
         fetchTotalCount();
-    }, []);
+    }, [page]);
 
     return (
         <article>

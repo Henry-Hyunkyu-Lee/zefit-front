@@ -17,3 +17,11 @@
     border-radius: 8px;
     border: 1px solid #b5b5b5;
 }
+
+/*=============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .partner_table_body_line {
+        height: 70px;
+    }
+}

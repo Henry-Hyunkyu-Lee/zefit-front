@@ -157,7 +157,7 @@ export default function ContactMap() {
                             </ul>
                         </div>
                     </div>
-                    <ul className='come_way_wrapper'>
+                    {/* <ul className='come_way_wrapper'>
                         <li className='come_way_columns_lane'>
                             <h3
                                 style={{ backgroundColor: '#fb5852' }}
@@ -226,7 +226,7 @@ export default function ContactMap() {
                                 </p>
                             </div>
                         </li>
-                    </ul>
+                    </ul> */}
                 </section>
             </div>
         </article>

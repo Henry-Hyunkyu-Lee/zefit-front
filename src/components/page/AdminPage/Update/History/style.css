@@ -25,3 +25,20 @@
     padding: 0px 30px;
     cursor: pointer;
 }
+
+
+/*===========================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .update_button_container {
+        gap: 8px;
+        padding: 16px 0px;
+    }
+
+    .update_button {
+        height: 30px;
+        font-size: 10px;
+        border-radius: 4px;
+        padding: 0px 8px;
+    }
+}

@@ -99,7 +99,7 @@ export default function News() {
 
         fetchData();
         fetchTotalCount();
-    }, []);
+    }, [page]);
 
     return (
         <article>

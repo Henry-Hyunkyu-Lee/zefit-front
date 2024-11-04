@@ -6,8 +6,7 @@ import './style.css';
 
 export default function News(admData: any) {
 
-    const newsList = admData?.admData;
-    const resultData = newsList?.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+    const resultData = admData?.admData;
 
     const textChange = (item: string) => {
         return item.replace(/\\n/g, ' ');

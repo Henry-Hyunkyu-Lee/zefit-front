@@ -264,3 +264,117 @@
     height: 30px;
     object-fit: contain;
 }
+
+
+/*=============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .adm_content_wrapper {
+        width: calc(100% - 70px);
+        max-width: calc(100% - 70px);
+        padding: 10px;
+        top: 80px;
+    }
+
+    .adm_content_box {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .adm_content_part_title {
+        font-size: 8px;
+        margin-left: 4px;
+    }
+
+    .adm_table_header_container {
+        height: 28px;
+    }
+
+    .table_header_text {
+        padding: 4px;
+        font-size: 7px;
+    }
+
+    .tiny_table_header {
+        min-width: 40px;
+        padding: 4px;
+        font-size: 7px;
+    }
+
+    .small_table_header {
+        min-width: 45px;
+        padding: 4px;
+        font-size: 7px;
+    }
+
+    .medium_table_header {
+        min-width: 50px;
+        padding: 4px;
+        font-size: 7px;
+    }
+
+    .large_table_header {
+        min-width: 60px;
+        padding: 4px;
+        font-size: 7px;
+    }
+
+    .tiny_table_body {
+        min-width: 40px;
+        gap: 4px;
+        font-size: 9px;
+        padding: 4px;
+        overflow: hidden;
+    }
+
+    .small_table_body {
+        min-width: 45px;
+        gap: 4px;
+        font-size: 9px;
+        padding: 4px;
+        overflow: hidden;
+    }
+
+    .medium_table_body {
+        min-width: 50px;
+        gap: 4px;
+        font-size: 9px;
+        padding: 4px;
+        overflow: hidden;
+    }
+
+    .large_table_body {
+        min-width: 60px;
+        gap: 4px;
+        font-size: 9px;
+        padding: 4px;
+        overflow: hidden;
+    }
+
+    .table_body_lane {
+        height: 34px;
+    }
+
+    .table_body {
+        gap: 4px;
+        font-size: 9px;
+    }
+
+    .table_body_content_room {
+        padding: 4px 2px;
+        font-size: 9px;
+        padding: 0px 6px;
+        overflow: hidden;
+    }
+
+    .full_view_link_button {
+        padding: 4px 6px;
+        font-size: 9px;
+    }
+
+    .manager_icon {
+        width: 8px;
+        height: 8px;
+        object-fit: contain;
+    }
+}

@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import ClientProvider from "./clientProvider";
 import Script from "next/script";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const notoSansKr = Noto_Sans_KR({
   // preload: true, 기본값

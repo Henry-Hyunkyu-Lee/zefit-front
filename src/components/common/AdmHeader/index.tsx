@@ -62,26 +62,19 @@ export default function AdmHeader({ title }: AdmHeaderProps) {
                 <nav className='adm_header_nav_container'>
                     <ul className='adm_header_nav_list'>
                         <li>
-                            <button className='adm_header_menu_button'>
-                                <span className='icon-menu'></span>
-                            </button>
+                            <a
+                                href='/'
+                                className='adm_header_home_button'>
+                                <span className='icon-home'></span>
+                            </a>
                         </li>
-                        <div className='adm_header_right_wrapper'>
-                            <li>
-                                <a
-                                    href='/'
-                                    className='adm_header_home_button'>
-                                    <span className='icon-home'></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    onClick={onClickLogoutHandler}
-                                    className='adm_header_home_button'>
-                                    <i className='icon-logout'></i>
-                                </a>
-                            </li>
-                        </div>
+                        <li>
+                            <a
+                                onClick={onClickLogoutHandler}
+                                className='adm_header_home_button'>
+                                <i className='icon-logout'></i>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
