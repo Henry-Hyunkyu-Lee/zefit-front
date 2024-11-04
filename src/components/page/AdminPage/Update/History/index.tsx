@@ -6,6 +6,7 @@ import { supabase } from '@/utils/Supabase';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 import { onClickAddHandler } from '@/utils/AddDataHandler';
 import { onClickUpdateHandler } from '@/utils/UpdateDataHandler';
+import { useMediaQuery } from 'react-responsive';
 
 export interface CorrectProps {
     admData: any;
@@ -14,6 +15,8 @@ export interface CorrectProps {
 }
 
 export default function CorrectHistory({ admData, isUpload, setIsUpload }: CorrectProps) {
+
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const id = admData?.id
     const date = admData?.created_at;

@@ -28,7 +28,8 @@ export default function AdmHistory() {
             try {
                 const { data, error } = await supabase
                     .from(content)
-                    .select('*');
+                    .select('*')
+                    .order('created_at', { ascending: false });
                 if (error) {
                     throw error;
                 }

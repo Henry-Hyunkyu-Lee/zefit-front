@@ -19,3 +19,13 @@
 .table_icon_box:hover {
     background-color: #5c6876;
 }
+
+/*===========================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .table_icon_box {
+        width: 12px;
+        height: 12px;
+        font-size: 6px;
+    }
+}

@@ -25,3 +25,20 @@
 .adm_top_arrow {
     font-size: 8px;
 }
+
+
+/*===========================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .adm_scroll_top_button {
+        width: 30px;
+        height: 30px;
+        padding: 4px 8px;
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .adm_top_arrow {
+        font-size: 6px;
+    }
+}

@@ -169,7 +169,7 @@ export default function Notice() {
         };
         
         fetchData();
-    }, []);
+    }, [page]);
 
     return (
         <article>

@@ -68,14 +68,15 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     padding: 0px 15px;
+    gap: 10px;
 }
 
 /* 헤더 메뉴 버튼 */
 .adm_header_menu_button {
-    width: 60px;
-    height: 70px;
+    width: 50px;
+    height: 100%;
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -85,18 +86,10 @@
     cursor: pointer;
 }
 
-/* 헤더 우측 버튼 컨테이너 */
-.adm_header_right_wrapper {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 /* 헤더 홈 버튼 */
 .adm_header_home_button {
     width: 50px;
-    height: 70px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,19 +102,11 @@
 /* 헤더 프로필 버튼 */
 .adm_header_profile_button {
     width: 60px;
-    height: 70px;
+    height: 100%;
     display: inline-block;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-/* 프로필 이미지 */
-.adm_profile_img {
-    width: 36px;
-    height: 36px;
-    object-fit: cover;
-    border-radius: 100%;
 }
 
 /* 헤더 사이드 탭 제목 텍스트 */
@@ -246,6 +231,89 @@
 }
 
 
+/*==============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .adm_header_top_container {
+        height: 50px;
+    }
+
+    .adm_header_bottom_container {
+        height: 30px;
+    }
+
+    .adm_header_logo_container {
+        min-width: 70px;
+    }
+
+    .adm_header_logo {
+        font-size: 8px;
+        gap: 4px;
+    }
+
+    .adm_header_menu_button {
+        width: 30px;
+        font-size: 12px;
+    }
+
+    .adm_header_home_button {
+        width: 30px;
+        font-size: 16px;
+    }
+
+    .adm_header_nav_list {
+        padding: 0px 10px;
+    }
+
+    .adm_header_side_title_box {
+        min-width: 70px;
+        font-size: 8px;
+        padding: 8px;
+    }
+
+    .adm_header_page_title {
+        font-size: 10px;
+    }
+
+    .adm_side_tap_container {
+        width: 70px;
+        height: calc(100dvh - 80px);
+        top: 80px;
+    }
+
+    .adm_side_tap_lane {
+        height: 30px;
+        padding: 4px;
+    }
+
+    .adm_side_tap_lane_content_wrap {
+        font-size: 7px;
+        gap: 4px;
+    }
+
+    .adm_side_tap_count {
+        padding: 1px 3px;
+        border-radius: 10px;
+        font-size: 7px;
+    }
+
+    .adm_side_tap_nav_button {
+        width: 100%;
+        height: 24px;
+        min-height: 24px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0px 8px;
+    }
+
+    .adm_side_tap_nav_button_text {
+        font-size: 8px;
+    }
+}
+
+
+/*==============================================================*/
 /* keyframes 애니메이션 */
 
 /* 버튼 클릭 애니메이션 */
