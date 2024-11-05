@@ -15,12 +15,13 @@ export default function History() {
 
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
-    const pointRefs = useRef<HTMLDivElement[]>([]);
-    const lineRef = useRef<HTMLDivElement>(null);
+    // const [visibleItems, setVisibleItems] = useState([]);
+    // const itemRefs = useRef<HTMLDivElement[]>([]);
+    const pointKRRef = useRef<HTMLDivElement[]>([]);
+    const lineKRRef = useRef<HTMLDivElement>(null);
 
     const [, setLoading] = useRecoilState(isLoading);
     const [historyData, setHistoryData] = useState<any[]>([]);
-    // console.log("🚀 ~ History ~ historyData:", historyData);
 
     const date = new Date();
     const year = `${date.getFullYear()}`;
@@ -70,7 +71,6 @@ export default function History() {
     };
 
     const transformedData = transformData(historyData);
-    console.log(transformedData);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -93,34 +93,34 @@ export default function History() {
     }, []);
 
     useEffect(() => {
-        const firstPoint = pointRefs.current[0]?.getBoundingClientRect();
-        const lastPoint = pointRefs.current[pointRefs.current.length - 1]?.getBoundingClientRect();
+        const firstPoint = pointKRRef.current[0]?.getBoundingClientRect();
+        const lastPoint = pointKRRef.current[pointKRRef.current.length - 1]?.getBoundingClientRect();
 
         const top = firstPoint?.top;
         const bottom = lastPoint?.bottom;
 
         const distance = bottom - top;
 
-        if (pointRefs.current.length > 0) {
-            if (lineRef.current) {
-                lineRef.current.style.top = (isMobile) ? `10px` : `23px`;
-                lineRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
+        if (pointKRRef.current.length > 0) {
+            if (lineKRRef.current) {
+                lineKRRef.current.style.top = (isMobile) ? `10px` : `23px`;
+                lineKRRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
             }
         }
 
         const resizeAction = () => {
-            const firstPointM = pointRefs.current[0]?.getBoundingClientRect();
-            const lastPointM = pointRefs.current[pointRefs.current.length - 1]?.getBoundingClientRect();
+            const firstPointM = pointKRRef.current[0]?.getBoundingClientRect();
+            const lastPointM = pointKRRef.current[pointKRRef.current.length - 1]?.getBoundingClientRect();
 
             const top = firstPointM?.top;
             const bottom = lastPointM?.bottom;
 
             const distance = bottom - top;
 
-            if (pointRefs.current.length > 0) {
-                if (lineRef.current) {
-                    lineRef.current.style.top = (isMobile) ? `10px` : `23px`;
-                    lineRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
+            if (pointKRRef.current.length > 0) {
+                if (lineKRRef.current) {
+                    lineKRRef.current.style.top = (isMobile) ? `10px` : `23px`;
+                    lineKRRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
                 }
             }
         };
@@ -131,6 +131,37 @@ export default function History() {
             window.removeEventListener('resize', resizeAction);
         };
     }, [historyData, isMobile]);
+
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //         (entries) => {
+    //             console.log(entries);
+    //             entries.forEach((entry) => {
+    //                 const index = parseInt(entry.target.getAttribute('data-index') as string, 10);
+    //                 if (entry.isIntersecting) {
+    //                     // 화면에 들어온 요소만 추가하기 위해 조건을 확인 후 상태 업데이트
+    //                     setVisibleItems((prevVisibleItems: any) => {
+    //                         if (!prevVisibleItems.includes(index)) {
+    //                             return [...prevVisibleItems, index];
+    //                         }
+    //                         return prevVisibleItems;
+    //                     });
+    //                 }
+    //             });
+    //         },
+    //         {
+    //             threshold: 0.1, // 요소가 10% 보일 때 애니메이션 시작
+    //         }
+    //     );
+
+    //     // 각 요소를 observer에 등록
+    //     itemRefs.current.forEach((ref: any) => {
+    //         if (ref) observer.observe(ref);
+    //     });
+
+    //     // 컴포넌트 언마운트 시 옵저버 해제
+    //     return () => observer.disconnect();
+    // }, []);
 
     return (
         <article>
@@ -149,13 +180,18 @@ export default function History() {
                         </h3>
                     </div>
                     <ul className='history_wrapper'>
-                        <div ref={lineRef} className='timeline_connected_line' />
+                        <div ref={lineKRRef} className='timeline_connected_line' />
                         {transformedData?.map((item: any, index: number) =>
                             <li
                                 key={index}
                                 className='timeline_lane_container'>
                                 <div
+                                    data-index={index}
+                                    // ref={(el: HTMLDivElement | null) => {
+                                    //     if (el) itemRefs.current[index] = el;
+                                    // }}
                                     style={{
+                                        // opacity: (visibleItems.includes(String(index))) ? '1' : '0',
                                         fontWeight: (item?.created_year === year) ? '800' : '600'
                                     }}
                                     className='timeline_year'>
@@ -163,7 +199,7 @@ export default function History() {
                                 </div>
                                 <div
                                     ref={(el: HTMLDivElement | null) => {
-                                        if (el) pointRefs.current[index] = el;
+                                        if (el) pointKRRef.current[index] = el;
                                     }}
                                     className='timeline_point'
                                     style={{

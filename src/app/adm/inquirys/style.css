@@ -1,5 +1,47 @@
 /* 관리자 문의한 글 페이지 css style */
 
+/* 공지사항 테이블 바디 컨텐츠 칸 */
+.notice_table_body_content_room {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 5px;
+    border: 1px solid #E7E7E7;
+    font-size: 12px;
+    font-weight: 400;
+    /* color: #434343; */
+}
+
+/* 공지사항 테이블 바디 내용 텍스트 */
+.notice_table_body_content_room_span {
+    width: 100%;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 공지사항 테이블 라인 */
+.notice_table_body_lane {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+/* 공지사항 테이블 이미지 */
+.notice_thumbnail_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* 답변 완료한 테이블 라인 컨테이너 */
 .answer_table_body_lane {
     width: 100%;
@@ -127,6 +169,16 @@
 /*=============================================================*/
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
+    .notice_table_body_content_room {
+        padding: 4px 2px;
+        font-size: 9px;
+    }
+
+    .notice_table_body_lane {
+        width: 100%;
+        height: 50px;
+    }
+
     .answer_table_body_lane {
         height: 60px;
     }

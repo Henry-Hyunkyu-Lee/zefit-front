@@ -20,6 +20,8 @@ export default function Service() {
 
     const [serviceData, setServiceData] = useState<any>(null);
     const [serviceTap, setServiceTap] = useState<any>(null);
+    const [prevServiceTap, setPrevServiceTap] = useState<any>(null);
+
     console.log("🚀 ~ Service ~ serviceData:", serviceData);
 
     const findData = serviceData?.find((item: any) => item?.service === service);

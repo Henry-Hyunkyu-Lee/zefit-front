@@ -134,7 +134,7 @@ export default function RequestsAdmin() {
                             전체&nbsp;
                             <b className='requests_check_button_highlight'>
                                 {totalCount}
-                            </b> 개의 메세지 / {page} 페이지
+                            </b> 건의 메세지 / {page} 페이지
                         </label>
                         {(checkList.length === 0)
                             ? <button
