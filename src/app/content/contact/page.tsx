@@ -157,6 +157,8 @@ export default function ContactMap() {
                             </ul>
                         </div>
                     </div>
+
+                    {/* 반영안 */}
                     {/* <ul className='come_way_wrapper'>
                         <li className='come_way_columns_lane'>
                             <h3
@@ -227,6 +229,7 @@ export default function ContactMap() {
                             </div>
                         </li>
                     </ul> */}
+                    
                 </section>
             </div>
         </article>

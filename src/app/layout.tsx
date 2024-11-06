@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "../styles/globals.css";
 import ClientProvider from "./clientProvider";
-import Script from "next/script";
 import dynamic from "next/dynamic";
-import Head from "next/head";
 
 const notoSansKr = Noto_Sans_KR({
   // preload: true, 기본값
@@ -24,7 +22,6 @@ const notoSansKr = Noto_Sans_KR({
 const FloatingButton = dynamic(() => import('../components/common/FloatingButton'), { ssr: false });
 const Loading = dynamic(() => import('../components/common/LoadingSpinner'), { ssr: false });
 const Footer = dynamic(() => import('../components/common/Footer'), { ssr: false });
-const Popup = dynamic(() =>  import('../components/common/Popup'), { ssr: false });
 
 export const metadata: Metadata = {
   title: "제핏",
@@ -38,10 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const appKey = process.env.NEXT_PUBLIC_KAKAO_APP_KEY || '';
-
   return (
-    <html lang="en">
+    <html lang="ko">
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />

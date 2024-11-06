@@ -27,6 +27,7 @@ export default function SideTap({ tap, content }: SideTapProps) {
     };
 
     return (
+        // 현재안
         <section className='service_side_tap_container'>
             <ul className='side_tap_list_wrapper'>
                 {tap?.map((item: string, index: number) =>
@@ -46,5 +47,23 @@ export default function SideTap({ tap, content }: SideTapProps) {
                 )}
             </ul>
         </section>
+
+        // 반영안
+        // <section className='service_side_tap_wrapper'>
+        //     <ul className='service_side_tap_list'>
+        //         {tap?.map((item: any, index: number) =>
+        //             <li key={index}>
+        //                 <a
+        //                     href={linkControl(item)}
+        //                     className={
+        //                         (path === linkControl(item))
+        //                             ? 'select_side_tap_button'
+        //                             : 'service_side_tap_button'}>
+        //                     {item}
+        //                 </a>
+        //             </li>
+        //         )}
+        //     </ul>
+        // </section>
     )
 };

@@ -72,6 +72,9 @@
     opacity: 0.2;
 }
 
+/*==============================================================*/
+/* 아래와 번갈아 주석처리하며 비교 */
+/* 현재안 */
 /* 차별화된 개발 설명 그라데이션 배경색 */
 .different_develop_gradient_back {
     width: 100%;
@@ -80,8 +83,21 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background: linear-gradient(to top, #C9C9C9, #ffffff);
+    background: linear-gradient(to bottom, #C9C9C9, #00000080);
 }
+
+/* 반영안 */
+/* 차별화된 개발 설명 그라데이션 배경색 */
+/* .different_develop_gradient_back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(to top, #C9C9C9, #ffffff);
+} */
+/*==============================================================*/
 
 /* 차별화된 개발 설명 컨텐츠 컨테이너 */
 .different_develop_content_container {
@@ -117,7 +133,7 @@
 .different_develop_sub_title {
     font-size: 20px;
     font-weight: 700;
-    /* color: white; */
+    color: white; /* 반영안 일땐 이 부분 주석처리 */
     text-align: center;
     white-space: pre-line;
 }
@@ -126,7 +142,7 @@
 .different_develop_introduce {
     font-size: 18px;
     font-weight: 700;
-    /* color: white; */
+    color: white; /* 반영안 일땐 이 부분 주석처리 */
     text-align: center;
     white-space: pre-line;
 }

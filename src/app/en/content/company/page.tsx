@@ -5,22 +5,34 @@ import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
 import '../../../content/company/style.css';
-import { companyData } from "@/data/companyData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { useMediaQuery } from "react-responsive";
 import { isLoading } from "@/modules/loading";
 import { useRecoilState } from "recoil";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function CompanyEN() {
 
     const [, setLoading] = useRecoilState(isLoading);
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
-    const iconList = ['모델', '빅데이터', '인프라'];
+    const [companyData, setCompanyData] = useState<any>(null);
 
     useEffect(() => {
-        setLoading(false);
+        fetch(`/api/inquiry/company`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then((jsonData) => {
+                setCompanyData(jsonData);
+            })
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (
@@ -118,7 +130,7 @@ export default function CompanyEN() {
                                             <div className='card_content_top_lane'>
                                                 <img
                                                     className='card_content_icon'
-                                                    src={`/icons/회사개요%20${iconList[index]}_black.png`} // 아이콘 교체 필요
+                                                    src={item?.icon}
                                                     alt={`${item.id} 아이콘`} />
                                                 <strong className='card_content_title_en' style={{ color: item.titlecolor }}>
                                                     {item.title_en}

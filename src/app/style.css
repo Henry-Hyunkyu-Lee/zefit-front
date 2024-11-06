@@ -55,7 +55,7 @@
     font-weight: 700;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
     opacity: 0;
-    animation: top_banner_title_fade_in 1.2s 1s forwards;
+    animation: top_banner_title_fade_in 0.8s 0.5s forwards;
 }
 
 /* 상단 배너 부제목 */
@@ -65,7 +65,7 @@
     margin-top: 30px;
     margin-bottom: 10px;
     opacity: 0;
-    animation: top_banner_title_fade_in 1.2s 1.3s forwards;
+    animation: top_banner_title_fade_in 0.8s 0.5s forwards;
 }
 
 /* 전체 콘텐츠 박스 */
@@ -482,7 +482,7 @@
     }
 
     .top_banner_title {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .top_banner_caption {
