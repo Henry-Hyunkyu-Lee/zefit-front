@@ -3,7 +3,7 @@
 /* 파트너 테이블 라인 */
 .partner_table_body_line {
     width: 100%;
-    height: 100px;
+    height: 240px;
     display: flex;
     align-items: center;
     background-color: white;
@@ -11,7 +11,7 @@
 
 /* 테이블 파트너 이미지 */
 .partner_table_image {
-    width: 80%;
+    width: 90%;
     height: 90%;
     object-fit: contain;
     border-radius: 8px;

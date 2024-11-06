@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { CorrectProps } from '../History';
 import './style.css';
-import { supabase } from '@/utils/Supabase';
 import { handleImageChange, handleImageDelete } from '@/utils/HandleImage';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 import { onClickAddHandler, uploadFileAndGetUrl } from '@/utils/AddDataHandler';
@@ -25,8 +24,6 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
         title_en: ''
     });
     const { state, title_kr, title_en } = statusInput;
-
-    console.log(admData, isUpload);
 
     const onChangeInputHandler = (e: any) => {
         const { name, value } = e.target;

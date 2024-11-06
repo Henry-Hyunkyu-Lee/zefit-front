@@ -30,8 +30,6 @@ export default function CorrectNews({ admData, isUpload, setIsUpload }: CorrectP
     });
     const { link, title_kr, title_en, content_kr, content_en, writer_kr, writer_en } = newsInput;
 
-    console.log(admData, isUpload);
-
     const onChangeInputHandler = (e: any) => {
         const { name, value } = e.target;
         setNewsInput({

@@ -55,6 +55,8 @@
     font-size: 38px;
     font-weight: 500;
     color: #00AEEF;
+    /* opacity: 0; */
+    transition: all 0.3s;
 }
 
 /* 타임라인 포인트 */
@@ -89,6 +91,8 @@
     align-items: start;
     margin-top: 12px;
     gap: 40px;
+    /* opacity: 0; */
+    transition: all 0.3s;
 }
 
 /* 타임라인 월별 라인 */

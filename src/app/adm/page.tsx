@@ -22,8 +22,6 @@ export default function Admin() {
     const [, setLoading] = useRecoilState(isLoading);
     const [resultData, setResultData] = useState<any>();
 
-    console.log(resultData);
-
     const dataTitleList = [
         { id: '문의한 글', href: '/adm/inquirys', category: '문의하기' },
         { id: '연혁', href: '/adm/historys', category: '연혁' },

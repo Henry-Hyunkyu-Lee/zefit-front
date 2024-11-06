@@ -12,7 +12,6 @@ export const onClickRemoveHandler = (e: any, admData: any, id: string, table: st
     }
 
     const fetchRemove = async () => {
-        console.log(table, id);
         try {
             const { error } = await supabase
                 .from(table)

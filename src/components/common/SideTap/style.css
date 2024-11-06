@@ -2,8 +2,8 @@
 
 /* 서비스 사이드 탭 컨테이너 */
 .service_side_tap_container {
-    position: absolute;
-    top: 540px;
+    position: fixed;
+    bottom: calc(2% + 180px);
     right: 0;
     z-index: 15;
     transition: all 0.2s;
@@ -29,8 +29,18 @@
 .side_tap_text {
     font-size: 16px;
     font-weight: 500;
-    color: #5757574c;
+    color: #57575780;
     transition: all 0.2s;
+}
+
+/* 선택된 사이드 탭 텍스트 */
+.select_side_tap_text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0190D6;
+    text-shadow:
+        2px 2px 4px #0190D63f,
+        2px 2px 4px #ffffff3f;
 }
 
 /* 사이드 탭 우측 바 컨테이너 */
@@ -45,6 +55,27 @@
 .side_tap_right_bar {
     width: 30px;
     height: 2px;
-    background-color: #5757574c;
+    background-color: #57575780;
     transition: all 0.2s;
+}
+
+/* 선택된 사이드 탭 우측 바 */
+.select_side_tap_right_bar {
+    width: 40px;
+    height: 4px;
+    background-color: #0190D6;
+    box-shadow:
+        2px 2px 4px #0190D63f,
+        2px 2px 4px #ffffff3f;
+}
+
+/* 사이드 탭 라인 컨테이너 HOVER효과: 사이드 탭 텍스트 */
+.side_tap_lane_wrapper:hover .side_tap_text {
+    font-weight: 700;
+    color: #0190D6;
+}
+
+/* 사이드 탭 라인 컨테이너 HOVER효과: 사이드 탭 우측 바 */
+.side_tap_lane_wrapper:hover .side_tap_right_bar {
+    background-color: #0190D6;
 }

@@ -18,7 +18,6 @@ export default function Pharmaceuticals() {
     const [, setLoading] = useRecoilState(isLoading);
 
     const [pharmaceuticalsData, setPharmaceuticalsData] = useState<any>(null);
-    console.log("🚀 ~ Pharmaceuticals ~ pharmaceuticalsData:", pharmaceuticalsData)
 
     useEffect(() => {
         fetch('/api/inquiry/pharmaceuticals')

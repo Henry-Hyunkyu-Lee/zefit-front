@@ -13,8 +13,6 @@ interface PopupProps {
 
 export default function Popup({ popupData }: PopupProps) {
 
-    const loading = useRecoilValue(isLoading);
-
     const path = usePathname() as string;
     const isEnglish = path?.includes('/en');
     const popupValue = (popupData) ? popupData[0] : null;
@@ -24,8 +22,6 @@ export default function Popup({ popupData }: PopupProps) {
     const onClickPopupSetCookie = () => {
         const now = new Date();
         const expirationDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0); // 다음 날 자정으로 설정
-        console.log('현재 시간:', now.toISOString());
-        console.log('만료 시간:', expirationDate.toUTCString());
         document.cookie = `zf-pov=${now.toISOString()}; expires=${expirationDate.toUTCString()}; path=/`;
         setPopupOpen(false);
     };

@@ -20,7 +20,6 @@ export default function OpenInnovation() {
     const developmentData = businessNavList[2].list?.map((item: any) => item.id);
 
     const [innovationData, setInnovationData] = useState<any>(null);
-    console.log("🚀 ~ OpenInnovation ~ innovationData:", innovationData)
 
     useEffect(() => {
         fetch('/api/inquiry/open_innovation')

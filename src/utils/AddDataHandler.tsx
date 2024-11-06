@@ -87,8 +87,6 @@ export const uploadFileAndGetUrl = async (imageFile: File | null) => {
         return null;
     };
 
-    console.log('storage', data);
-
     const { data: urlData } = supabase.storage
         .from('zefit_public')
         .getPublicUrl(`${fileName}`);

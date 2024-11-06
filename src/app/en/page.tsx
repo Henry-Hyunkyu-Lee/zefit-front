@@ -58,7 +58,6 @@ export default function HomeEN() {
                     throw error;
                 }
                 setPopupData(data);
-                console.log(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
             };
@@ -74,7 +73,6 @@ export default function HomeEN() {
                     throw error;
                 }
                 setPartner(data);
-                console.log(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
             } finally {

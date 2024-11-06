@@ -9,15 +9,17 @@ import MetaTagTitle from '@/utils/MetaTagTitle';
 import { supabase } from '@/utils/Supabase';
 import { isLoading } from '@/modules/loading';
 import { useRecoilState } from 'recoil';
+import { useMediaQuery } from 'react-responsive';
 
 export default function HistoryEN() {
+
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const pointRefs = useRef<HTMLDivElement[]>([]);
     const lineRef = useRef<HTMLDivElement>(null);
 
     const [, setLoading] = useRecoilState(isLoading);
     const [historyData, setHistoryData] = useState<any[]>([]);
-    console.log("🚀 ~ History ~ historyData:", historyData);
 
     const date = new Date();
     const year = `${date.getFullYear()}`;
@@ -89,23 +91,44 @@ export default function HistoryEN() {
     }, []);
 
     useEffect(() => {
-        if (pointRefs.current.length > 0) {
-            const firstPoint = pointRefs.current[0].getBoundingClientRect();
-            const lastPoint = pointRefs.current[pointRefs.current.length - 1].getBoundingClientRect();
+        const firstPoint = pointRefs.current[0]?.getBoundingClientRect();
+        const lastPoint = pointRefs.current[pointRefs.current.length - 1]?.getBoundingClientRect();
 
-            const top = firstPoint.top;
-            const bottom = lastPoint.bottom;
+        const top = firstPoint?.top;
+        const bottom = lastPoint?.bottom;
+
+        const distance = bottom - top;
+
+        if (pointRefs.current.length > 0) {
+            if (lineRef.current) {
+                lineRef.current.style.top = (isMobile) ? `10px` : `23px`;
+                lineRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
+            }
+        }
+
+        const resizeAction = () => {
+            const firstPointM = pointRefs.current[0]?.getBoundingClientRect();
+            const lastPointM = pointRefs.current[pointRefs.current.length - 1]?.getBoundingClientRect();
+
+            const top = firstPointM?.top;
+            const bottom = lastPointM?.bottom;
 
             const distance = bottom - top;
 
-            console.log(`첫 번째 포인트와 마지막 포인트 사이의 거리: ${distance}px`);
-
-            if (lineRef.current) {
-                lineRef.current.style.top = `23px`;
-                lineRef.current.style.height = `${distance}px`;
+            if (pointRefs.current.length > 0) {
+                if (lineRef.current) {
+                    lineRef.current.style.top = (isMobile) ? `10px` : `23px`;
+                    lineRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
+                }
             }
-        }
-    }, [historyData]);
+        };
+
+        window.addEventListener('resize', resizeAction);
+
+        return () => {
+            window.removeEventListener('resize', resizeAction);
+        };
+    }, [historyData, isMobile]);
 
     return (
         <article>

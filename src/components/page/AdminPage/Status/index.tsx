@@ -3,23 +3,24 @@
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 import '../History/style.css';
 import './style.css';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Status(admData: any) {
+
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const resultData = admData?.admData;
     const stateObj: { [key: string]: string } = {
         partner: '파트너',
         certification: '인증'
-    }
-
-    console.log(admData);
+    };
 
     return (
         <div className='adm_content_container'>
             <table className='adm_table_container'>
                 <thead className='adm_table_header_container'>
                     <tr className='adm_table_header_box'>
-                        <th className='large_table_header'>
+                        <th style={{ minWidth: (isMobile) ? '70px' : '240px' }} className='large_table_header'>
                             이미지
                         </th>
                         <th className='small_table_header'>
@@ -44,7 +45,7 @@ export default function Status(admData: any) {
                         <tr
                             key={index}
                             className='partner_table_body_line'>
-                            <td className='large_table_body'>
+                            <td style={{ minWidth: (isMobile) ? '70px' : '240px' }} className='large_table_body'>
                                 <img
                                     className='partner_table_image'
                                     src={item?.image}

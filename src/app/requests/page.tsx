@@ -31,7 +31,6 @@ export default function Requests() {
     });
     const { name, email, company, title, content } = requestsInput;
     const { personal, use } = check;
-    console.log('문의 데이터', requestsInput);
 
     const onClickCheckHandler = (e: any, param: string) => {
         e.preventDefault();
