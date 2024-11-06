@@ -130,37 +130,6 @@ export default function History() {
         };
     }, [historyData, isMobile]);
 
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver(
-    //         (entries) => {
-    //             console.log(entries);
-    //             entries.forEach((entry) => {
-    //                 const index = parseInt(entry.target.getAttribute('data-index') as string, 10);
-    //                 if (entry.isIntersecting) {
-    //                     // 화면에 들어온 요소만 추가하기 위해 조건을 확인 후 상태 업데이트
-    //                     setVisibleItems((prevVisibleItems: any) => {
-    //                         if (!prevVisibleItems.includes(index)) {
-    //                             return [...prevVisibleItems, index];
-    //                         }
-    //                         return prevVisibleItems;
-    //                     });
-    //                 }
-    //             });
-    //         },
-    //         {
-    //             threshold: 0.1, // 요소가 10% 보일 때 애니메이션 시작
-    //         }
-    //     );
-
-    //     // 각 요소를 observer에 등록
-    //     itemRefs.current.forEach((ref: any) => {
-    //         if (ref) observer.observe(ref);
-    //     });
-
-    //     // 컴포넌트 언마운트 시 옵저버 해제
-    //     return () => observer.disconnect();
-    // }, []);
-
     return (
         <article>
             <MetaTagTitle title='연혁' />
@@ -184,12 +153,7 @@ export default function History() {
                                 key={index}
                                 className='timeline_lane_container'>
                                 <div
-                                    data-index={index}
-                                    // ref={(el: HTMLDivElement | null) => {
-                                    //     if (el) itemRefs.current[index] = el;
-                                    // }}
                                     style={{
-                                        // opacity: (visibleItems.includes(String(index))) ? '1' : '0',
                                         fontWeight: (item?.created_year === year) ? '800' : '600'
                                     }}
                                     className='timeline_year'>
