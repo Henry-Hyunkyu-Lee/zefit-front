@@ -13,9 +13,7 @@ export default function Status(admData: any) {
     const stateObj: { [key: string]: string } = {
         partner: '파트너',
         certification: '인증'
-    }
-
-    console.log(admData);
+    };
 
     return (
         <div className='adm_content_container'>

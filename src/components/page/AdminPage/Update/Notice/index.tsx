@@ -30,8 +30,6 @@ export default function CorrectNotice({ admData, isUpload, setIsUpload }: Correc
     });
     const { is_special, title_kr, title_en, content_kr, content_en, writer_kr, writer_en } = noticeInput;
 
-    console.log(admData, isUpload);
-
     const onChangeInputHandler = (e: any) => {
         const { name, value } = e.target;
         setNoticeInput({

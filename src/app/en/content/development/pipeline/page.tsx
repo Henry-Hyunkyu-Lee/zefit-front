@@ -19,8 +19,6 @@ export default function PipelineEN() {
     const [, setLoading] = useRecoilState(isLoading);
     const [pipelineData, setPipelineData] = useState<any>(null);
     const [percent, setPercent] = useState<string[]>(['0%', '0%', '0%']);
-    console.log("🚀 ~ Pipeline ~ percent:", percent)
-    console.log("🚀 ~ Pipeline ~ pipelineData:", pipelineData)
 
     useEffect(() => {
         fetch('/api/inquiry/pipeline')

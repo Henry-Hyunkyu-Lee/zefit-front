@@ -18,7 +18,6 @@ export default function NewsDetailEN() {
 
     const [, setLoading] = useRecoilState(isLoading);
     const [newsData, setNewsData] = useState<any>(null);
-    console.log("🚀 ~ NewsDetail ~ newsData:", newsData)
 
     const db_table_name = 'news';
     const sql_query = '*';

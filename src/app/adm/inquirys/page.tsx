@@ -76,7 +76,6 @@ export default function RequestsAdmin() {
             setIsAllCheck(true);
         }
     };
-    console.log(checkList, isAllCheck);
 
     const onClickAnswerHandler = (e: any) => {
         if (!requestsData) return;

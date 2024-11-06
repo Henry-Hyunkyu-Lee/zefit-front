@@ -19,7 +19,6 @@ export default function NoticeDetailEN() {
     const { noticeId }: any = useParams();
 
     const [noticeData, setNoticeData] = useState<any>(null);
-    console.log(noticeData);
 
     const db_table_name = 'notices';
     const sql_query = '*';

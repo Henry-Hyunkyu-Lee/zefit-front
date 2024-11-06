@@ -7,10 +7,6 @@ export default function Notice(admData: any) {
 
     const resultData = admData?.admData;
 
-    const textChange = (item: string) => {
-        return item.replace(/\\n/g, ' ');
-    };
-
     return (
         <div className='adm_content_container'>
             <ul className='notice_table_wrapper'>

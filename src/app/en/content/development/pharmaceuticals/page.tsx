@@ -19,7 +19,6 @@ export default function PharmaceuticalsEN() {
     const developmentData = businessNavList[2].list?.map((item: any) => item.en);
 
     const [pharmaceuticalsData, setPharmaceuticalsData] = useState<any>(null);
-    console.log("🚀 ~ Pharmaceuticals ~ pharmaceuticalsData:", pharmaceuticalsData)
 
     useEffect(() => {
         fetch('/api/inquiry/pharmaceuticals')

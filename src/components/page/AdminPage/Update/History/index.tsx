@@ -30,8 +30,6 @@ export default function CorrectHistory({ admData, isUpload, setIsUpload }: Corre
     });
     const { created_at, content_kr, content_en } = historyInput;
 
-    console.log(admData);
-
     const onChangeInputHandler = (e: any) => {
         const { name, value } = e.target;
         setHistoryInput({

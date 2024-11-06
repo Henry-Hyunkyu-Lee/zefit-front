@@ -18,7 +18,6 @@ export default function ServiceEN() {
     const [, setLoading] = useRecoilState(isLoading);
     const [serviceData, setServiceData] = useState<any>(null);
     const [serviceTap, setServiceTap] = useState<any>(null);
-    console.log("🚀 ~ Service ~ serviceData:", serviceData);
 
     const findData = serviceData?.find((item: any) => item?.service === service);
     const sideTapData = serviceData?.map((item: any) => item?.service);

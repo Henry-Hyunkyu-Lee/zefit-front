@@ -15,8 +15,6 @@ export default function History() {
 
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
-    // const [visibleItems, setVisibleItems] = useState([]);
-    // const itemRefs = useRef<HTMLDivElement[]>([]);
     const pointKRRef = useRef<HTMLDivElement[]>([]);
     const lineKRRef = useRef<HTMLDivElement>(null);
 
@@ -203,8 +201,7 @@ export default function History() {
                                     }}
                                     className='timeline_point'
                                     style={{
-                                        backgroundColor: (item?.created_year === year) ? '#00AEEF' : '#ffffff',
-                                        // marginLeft: (item?.created_year === year) ? '-3px' : '0px'
+                                        backgroundColor: (item?.created_year === year) ? '#00AEEF' : '#ffffff'
                                     }} />
                                 <ul className='timeline_month_list'>
                                     {item?.content.map((mon: any, idx: number) =>

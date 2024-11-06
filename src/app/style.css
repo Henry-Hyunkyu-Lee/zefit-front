@@ -346,14 +346,17 @@
 
 /* 파트너 소개 링크 */
 .partner_link {
-    width: 100%;
+    width: 250px;
     height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 파트너 소개 링크 로고 */
 .partner_link_logo {
     width: 100%;
-    height: 90%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -591,15 +594,18 @@
     .partner_list {
         width: 94%;
         gap: 16px;
+        justify-content: center;
     }
 
     .partner_link_box {
         width: calc((100% - 32px) / 2);
+        max-width: 240px;
         height: 58px;
         border-radius: 4px;
     }
 
     .partner_link {
+        width: 90%;
         height: 48px;
     }
 

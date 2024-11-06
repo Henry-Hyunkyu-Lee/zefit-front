@@ -5,7 +5,6 @@ import './style.css';
 import MainHeader from '@/components/common/MainHeader';
 import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import MobileHeader from '@/components/common/MobileHeader';
 import { supabase } from '@/utils/Supabase';
 import { useRecoilState } from 'recoil';
 import { isLoading } from '@/modules/loading';
@@ -57,7 +56,6 @@ export default function Home() {
                     throw error;
                 }
                 setPopupData(data);
-                console.log(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
             };
@@ -74,7 +72,6 @@ export default function Home() {
                     throw error;
                 }
                 setPartner(data);
-                console.log(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
             };

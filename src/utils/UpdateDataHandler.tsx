@@ -36,7 +36,6 @@ export const onClickUpdateHandler = (e: any, updateData: any, id: string, table:
         }
 
         const fetchUpdate = async () => {
-            console.log(table, id);
             try {
                 const { error } = await supabase
                     .from(table)
