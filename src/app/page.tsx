@@ -83,7 +83,7 @@ export default function Home() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const newOpacity = Math.max(0, 1 - scrollY / (viewPort - 300));
+            const newOpacity = Math.max(0, 1 - scrollY / (viewPort - 450));
             setOpacity(newOpacity);
         };
 

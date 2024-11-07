@@ -17,7 +17,9 @@ export default function HomeEN() {
     const backRef = useRef<HTMLDivElement>(null);
     const backImage = 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_3551210086_0f617416_20811665.jpg';
     const img = new Image();
+    const viewPort = window.innerHeight;
     const [, setLoading] = useRecoilState(isLoading);
+    const [opacity, setOpacity] = useState<number>(1);
 
     img.onload = () => {
         if (!backRef.current) return;
@@ -84,6 +86,20 @@ export default function HomeEN() {
         fetchData();
     }, []);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const newOpacity = Math.max(0, 1 - scrollY / (viewPort - 450));
+            setOpacity(newOpacity);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [viewPort]);
+
     return (
         <article>
             <Popup popupData={popupData} />
@@ -91,7 +107,11 @@ export default function HomeEN() {
             <MainHeader />
             <section className='landing_top_banner_container'>
                 <div ref={backRef} className='landing_top_banner' />
-                <div className='top_banner_text_box'>
+                <div
+                    style={{
+                        opacity: `${opacity}`
+                    }}
+                    className='top_banner_text_box'>
                     <h1 className='top_banner_title'>
                         Greater Value For Your Life
                     </h1>

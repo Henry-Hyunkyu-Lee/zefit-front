@@ -82,7 +82,7 @@ export default function Company() {
                                 차별화된 신약개발 플랫폼
                             </h4>
                             <p className='different_develop_sub_title'>
-                                {'현재 제핏은 국내 유수 연구기관과 제약회사에\n화합물 시험 서비스를 제공하고 있습니다.'}
+                                {'현재 제핏은 국내 우수 연구기관과 제약회사에\n화합물 시험 서비스를 제공하고 있습니다.'}
                             </p>
                             <div className='company_center_bar' />
                             <p className='different_develop_introduce'>
