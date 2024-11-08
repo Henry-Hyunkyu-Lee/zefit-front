@@ -1,5 +1,12 @@
 /* 서비스 페이지 반영안 서비스 세부 탭 컨테이너 css style */
 
+/* 서비스 세부 컨텐츠 외부 박스 */
+.detail_content_out_box {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
 /* 서비스 세부 컨텐츠 박스 */
 .detail_content_box {
     width: 100%;
@@ -11,7 +18,36 @@
     align-items: center;
     gap: 24px;
     box-shadow: 2px 2px 12px 0px #0000004c;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation: service_fade_in 0.5s forwards;
+}
+
+/* 서비스 세부 컨텐츠 박스 이전 */
+.detail_content_box_prev {
+    width: 100%;
+    min-height: 400px;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 2px 2px 12px 0px #0000004c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation: service_fade_out 0.5s forwards;
+}
+
+/* 서비스 세부 컨텐츠 박스 나머지 */
+.detail_content_box_etc {
+    display: none;
 }
 
 /* 서비스 세부 컨텐츠 이미지 컨테이너 */
@@ -19,7 +55,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
     flex-wrap: wrap;
     gap: 16px;
@@ -82,7 +118,7 @@
 }
 
 
-/*=============================================================*/
+/*==============================================================*/
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
     .detail_content_box {
@@ -127,5 +163,28 @@
     .detail_text_content {
         font-size: 10px;
         padding-left: 12px;
+    }
+}
+
+
+/*==============================================================*/
+/* keyframes 애니메이션 */
+@keyframes service_fade_in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes service_fade_out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }

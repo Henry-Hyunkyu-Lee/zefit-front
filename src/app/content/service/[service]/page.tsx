@@ -27,13 +27,15 @@ export default function Service() {
 
     const [serviceData, setServiceData] = useState<any>(null);
     const [serviceTap, setServiceTap] = useState<any>(null);
+    const [present, setPresent] = useState<number>(0);
+    const [prev, setPrev] = useState<number | null>(null);
 
     const findData = serviceData?.find((item: any) => item?.service === service);
     const sideTapData = serviceData?.map((item: any) => item?.service);
 
-    const onClickTapHandler = (param: string) => {
-        const tapData = findData?.content.find((item: any) => item.name === param);
-        setServiceTap(tapData);
+    const onClickTapHandler = (index: number) => {
+        setPresent(index);
+        setPrev(present);
     };
 
     useEffect(() => {
@@ -50,7 +52,7 @@ export default function Service() {
                 .then((jsonData) => {
                     const findData = jsonData?.find((item: any) => item?.service === service);
                     setServiceData(jsonData);
-                    setServiceTap(findData.content[0]);
+                    setServiceTap(findData.content);
                 })
                 .catch((error) => console.error("Fetch error:", error))
                 .finally(() => {
@@ -96,7 +98,9 @@ export default function Service() {
                 <ServiceDetailTap
                     findData={findData}
                     serviceTap={serviceTap}
-                    onClickTapHandler={onClickTapHandler} />
+                    onClickTapHandler={onClickTapHandler}
+                    present={present}
+                    prev={prev} />
             </div>
 
             {/* 반영안 */}
@@ -133,9 +137,9 @@ export default function Service() {
                                     key={index}
                                     className="detail_tap_button_list">
                                     <button
-                                        onClick={() => onClickTapHandler(item.name)}
+                                        onClick={() => onClickTapHandler(index)}
                                         className={
-                                            (item?.name === serviceTap?.name)
+                                            (present === index)
                                                 ? "select_detail_tap_button"
                                                 : "detail_tap_button"
                                         }>
@@ -144,7 +148,10 @@ export default function Service() {
                                 </li>
                             )}
                         </ul>
-                        <TestServiceDetailTap serviceTap={serviceTap} />
+                        <TestServiceDetailTap
+                            serviceTap={serviceTap}
+                            present={present}
+                            prev={prev} />
                     </div>
                 </section>
             </div> */}

@@ -54,6 +54,13 @@
     padding: 18px 32px;
 }
 
+/* 서비스 세부 이미지 외부 컨테이너 */
+.detail_tap_image_out_wrapper {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
 /* 서비스 세부 이미지 컨테이너 */
 .detail_tap_image_wrapper {
     width: 100%;
@@ -80,18 +87,27 @@
     align-items: start;
     padding: 50px 0px 160px 0px;
     background-color: #F6F6F6;
-    position: relative;
 }
 
-/* 서비스 세부 텍스트 컨테이너 박스 */
-.detail_text_wrapper_box {
+/* 서비스 세부 텍스트 컨테이너 이전 */
+.detail_text_wrapper_prev {
     width: 100%;
-    height: 100%;
+    min-height: 454px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 50px 0px 160px 0px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    opacity: 0;
+    animation: service_fade_out 0.5s forwards;
+}
+
+/* 서비스 세부 텍스트 컨테이너 나머지 */
+.detail_text_wrapper_etc {
+    display: none;
 }
 
 /* 서비스 세부 텍스트 박스*/
@@ -211,5 +227,28 @@
     .detail_text_content {
         font-size: 10px;
         padding-left: 8px;
+    }
+}
+
+
+/*==============================================================*/
+/* keyframes 애니메이션 */
+@keyframes service_fade_in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes service_fade_out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }

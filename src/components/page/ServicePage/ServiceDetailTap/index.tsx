@@ -7,6 +7,8 @@ interface ServiceDetailTapProps {
     serviceTap: any;
     findData: any;
     onClickTapHandler: (e: any) => void;
+    present: number;
+    prev: number | null;
     lang?: string;
 };
 
@@ -14,23 +16,31 @@ export default function ServiceDetailTap({
     serviceTap,
     onClickTapHandler,
     findData,
+    present,
+    prev,
     lang = 'ko'
 }: ServiceDetailTapProps) {
 
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
+    const imageList = serviceTap?.map((item: any) => item?.image);
+    const contentListKR = serviceTap?.map((item: any) => item?.info);
+    const contentListEN = serviceTap?.map((item: any) => item?.info_en);
+
+    console.log(imageList, contentListKR, contentListEN);
+
     const imageSizeChanger = (style: string) => {
         if (style === 'width') {
             if (isMobile) {
-                return (serviceTap?.image.length <= 1) ? '90dvw' : 'calc((100dvw / 2) - 10px)'
+                return (imageList[present]?.length <= 1) ? '90dvw' : 'calc((100dvw / 2) - 10px)'
             } else {
-                return (serviceTap?.image.length <= 1) ? '800px' : '500px'
+                return (imageList[present]?.length <= 1) ? '800px' : '500px'
             };
         } else {
             if (isMobile) {
-                return (serviceTap?.image.length <= 1) ? '200px' : '100px'
+                return (imageList[present]?.length <= 1) ? '200px' : '100px'
             } else {
-                return (serviceTap?.image.length <= 1) ? '500px' : '350px'
+                return (imageList[present]?.length <= 1) ? '500px' : '350px'
             };
         };
     };
@@ -44,11 +54,11 @@ export default function ServiceDetailTap({
                             key={index}
                             className='detail_tap_button_list'>
                             <button
-                                onClick={() => onClickTapHandler((lang === 'en') ? item.name_en : item.name)}
+                                onClick={() => onClickTapHandler(index)}
                                 style={{
-                                    fontWeight: (item.name === serviceTap?.name) ? '700' : '400',
-                                    backgroundColor: (item.name === serviceTap?.name) ? '#0055a7' : '#e9e9e9',
-                                    color: (item.name === serviceTap?.name) ? '#ffffff' : '#6B6B6B'
+                                    fontWeight: (present === index) ? '700' : '400',
+                                    backgroundColor: (present === index) ? '#0055a7' : '#e9e9e9',
+                                    color: (present === index) ? '#ffffff' : '#6B6B6B'
                                 }}
                                 className='detail_tap_button'>
                                 {(lang === 'en') ? item.name_en : item.name}
@@ -57,61 +67,61 @@ export default function ServiceDetailTap({
                     )}
                 </ul>
                 <ul className='detail_tap_image_wrapper'>
-                    {serviceTap?.image.map((item: string, index: number) =>
-                        <li key={index}>
-                            <img
-                                style={{
-                                    width: imageSizeChanger('width'),
-                                    height: imageSizeChanger('height')
-                                }}
-                                className='detail_tap_image'
-                                src={item}
-                                alt='CNS-FIT 이미지' />
-                        </li>
-                    )}
+                    {(imageList)
+                        && imageList[present]?.map((item: any, index: number) =>
+                            <li key={index}>
+                                <img
+                                    style={{
+                                        width: imageSizeChanger('width'),
+                                        height: imageSizeChanger('height')
+                                    }}
+                                    className='detail_tap_image'
+                                    src={item}
+                                    alt='CNS-FIT 이미지' />
+                            </li>
+                        )
+                    }
                 </ul>
             </div>
-            {(lang === 'en')
-                ? (serviceTap?.info_en.length > 0)
-                && <div className='detail_text_wrapper'>
-                    <ul className='detail_text_box'>
-                        {serviceTap?.info_en.map((item: any, index: number) =>
+            <div className='detail_text_wrapper'>
+                {(lang === 'en')
+                    ? (serviceTap && serviceTap[present]?.info_en.length > 0)
+                    && <ul className='detail_text_box'>
+                        {serviceTap[present]?.info_en.map((content: any, idx: number) =>
                             <li
-                                key={index}
+                                key={idx}
                                 className='detail_text_lane_box'>
                                 <div className='detail_text_title_box'>
                                     <div className='detail_text_title_point' />
                                     <strong className='detail_text_title'>
-                                        {item.title}
+                                        {content.title}
                                     </strong>
                                 </div>
                                 <p className='detail_text_content'>
-                                    {item.text}
+                                    {content.text}
                                 </p>
                             </li>
                         )}
                     </ul>
-                </div>
-                : (serviceTap?.info.length > 0)
-                && <div className='detail_text_wrapper'>
-                    <ul className='detail_text_box'>
-                        {serviceTap?.info.map((item: any, index: number) =>
+                    : (serviceTap && serviceTap[present]?.info.length > 0)
+                    && <ul className='detail_text_box'>
+                        {serviceTap[present]?.info.map((content: any, idx: number) =>
                             <li
-                                key={index}
+                                key={idx}
                                 className='detail_text_lane_box'>
                                 <div className='detail_text_title_box'>
                                     <div className='detail_text_title_point' />
                                     <strong className='detail_text_title'>
-                                        {item.title}
+                                        {content.title}
                                     </strong>
                                 </div>
                                 <p className='detail_text_content'>
-                                    {item.text}
+                                    {content.text}
                                 </p>
                             </li>
                         )}
-                    </ul>
-                </div>}
+                    </ul>}
+            </div>
         </section>
     )
 };
