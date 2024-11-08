@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { CorrectProps } from '../History';
 import './style.css';
-import { supabase } from '@/utils/Supabase';
 import { handleImageChange, handleImageDelete } from '@/utils/HandleImage';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 import { onClickAddHandler, uploadFileAndGetUrl } from '@/utils/AddDataHandler';

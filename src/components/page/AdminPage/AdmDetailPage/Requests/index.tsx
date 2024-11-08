@@ -2,9 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import './style.css';
-import { supabase } from '@/utils/Supabase';
-import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
-import { onClickAddHandler } from '@/utils/AddDataHandler';
 import { onClickUpdateHandler } from '@/utils/UpdateDataHandler';
 import { getLastLoginDateTime } from '@/utils/DateTime';
 import { CopyToClipboard } from 'react-copy-to-clipboard';

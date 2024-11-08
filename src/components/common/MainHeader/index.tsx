@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import './style.css';
 import { usePathname } from 'next/navigation';
-import { aboutNavList, businessNavList } from '@/data/navData';
 import NavModal from '../NavModal';
 import { useMediaQuery } from 'react-responsive';
 import MobileHeader from '../MobileHeader';

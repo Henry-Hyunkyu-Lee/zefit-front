@@ -5,7 +5,7 @@ import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
 import '../../../../content/service/[service]/style.css';
 import '../../../../content/development/pipeline/style.css';
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import { businessNavList } from "@/data/navData";
 import MetaTagTitle from "@/utils/MetaTagTitle";

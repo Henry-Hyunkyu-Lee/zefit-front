@@ -1,6 +1,9 @@
+'use client';
+
 import { usePathname } from 'next/navigation';
 import './style.css';
 import { businessNavList } from '@/data/navData';
+import { useEffect, useRef, useState } from 'react';
 
 interface SideTapProps {
     tap: any;
@@ -9,8 +12,14 @@ interface SideTapProps {
 
 export default function SideTap({ tap, content }: SideTapProps) {
 
+    const viewPort = window.innerHeight;
+
     const path = usePathname();
     const isEnglish = path?.includes('/en');
+
+    const sideTapRef = useRef<HTMLDivElement>(null);
+
+    const [offset, setOffset] = useState(0);
 
     const linkControl = (item: string) => {
         if (content === 'development') {
@@ -26,9 +35,28 @@ export default function SideTap({ tap, content }: SideTapProps) {
         }
     };
 
+    useEffect(() => {
+        const scrollEvent = () => {
+            setOffset(window.scrollY);  // 스크롤 속도 조정
+        };
+
+        window.addEventListener('scroll', scrollEvent);
+
+        return () => {
+            window.removeEventListener('scroll', scrollEvent);
+        };
+    }, []);
+
     return (
         // 현재안
-        <section className='service_side_tap_container'>
+        <section
+            ref={sideTapRef}
+            style={{
+                position: 'absolute',
+                top: `${(viewPort - 360) + offset}px`,
+                transition: 'top 0.2s ease-out',
+            }}
+            className='service_side_tap_container'>
             <ul className='side_tap_list_wrapper'>
                 {tap?.map((item: string, index: number) =>
                     <li key={index}>

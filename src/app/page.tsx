@@ -4,7 +4,6 @@ import ScrollGuide from '@/components/page/LandingPage/ScrollGuide';
 import './style.css';
 import MainHeader from '@/components/common/MainHeader';
 import { useEffect, useRef, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { supabase } from '@/utils/Supabase';
 import { useRecoilState } from 'recoil';
 import { isLoading } from '@/modules/loading';

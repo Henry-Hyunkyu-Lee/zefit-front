@@ -24,10 +24,6 @@ export default function ServiceDetailTap({
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const imageList = serviceTap?.map((item: any) => item?.image);
-    const contentListKR = serviceTap?.map((item: any) => item?.info);
-    const contentListEN = serviceTap?.map((item: any) => item?.info_en);
-
-    console.log(imageList, contentListKR, contentListEN);
 
     const imageSizeChanger = (style: string) => {
         if (style === 'width') {

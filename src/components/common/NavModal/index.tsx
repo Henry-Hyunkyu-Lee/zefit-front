@@ -1,8 +1,6 @@
 'use client';
 
-import { useRecoilState } from 'recoil';
 import './style.css';
-import { navModalOpen } from '@/modules/navModal';
 import { useEffect, useRef } from 'react';
 import { aboutNavList, businessNavList, communityNavList } from '@/data/navData';
 

@@ -11,7 +11,6 @@ import { getLastLoginDateTime } from '@/utils/DateTime';
 import { useRecoilState } from 'recoil';
 import { isLoading } from '@/modules/loading';
 import { useMediaQuery } from 'react-responsive';
-import Head from 'next/head';
 
 export default function Admin() {
 

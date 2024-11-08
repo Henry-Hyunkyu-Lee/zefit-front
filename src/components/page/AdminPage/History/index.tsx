@@ -1,6 +1,5 @@
 'use client';
 
-import { supabase } from '@/utils/Supabase';
 import './style.css';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import './style.css';
 import { useRecoilState } from 'recoil';
 import { admNavModalOpen } from '@/modules/navModal';

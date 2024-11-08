@@ -236,6 +236,12 @@ export default function RequestsAdmin() {
                         </tbody>
                     </table>
                     <div className='requests_page_number_wrapper'>
+                        {(pageCount > 1)
+                            && <button
+                                onClick={() => setPageCount(prev => prev - 1)}
+                                className='default_page_number'>
+                                <i className='icon-arrow-left'></i>
+                            </button>}
                         {pageList?.map((item: number, index: number) =>
                             <button
                                 onClick={() => onClickPageHandler(item)}
@@ -244,6 +250,12 @@ export default function RequestsAdmin() {
                                 {item}
                             </button>
                         )}
+                        {(pageList?.length >= 5)
+                            && <button
+                                onClick={() => setPageCount(prev => prev + 1)}
+                                className='default_page_number'>
+                                <i className='icon-arrow-right'></i>
+                            </button>}
                     </div>
                 </div >
             </section>

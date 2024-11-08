@@ -1,6 +1,5 @@
 'use client';
 
-import MainHeader from "@/components/common/MainHeader";
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
