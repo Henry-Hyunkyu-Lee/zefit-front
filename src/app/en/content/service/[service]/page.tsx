@@ -99,24 +99,24 @@ export default function ServiceEN() {
 
             {/* 반영안 */}
             {/* <div className="page_layout">
-                <section className='service_page_container'>
-                    <h2 className='service_page_title'>
-                        <div className='service_page_side_bar' />
+                <section className='service_page_container2'>
+                    <h2 className='service_page_title2'>
+                        <div className='service_page_side_bar2' />
                         {service}
                     </h2>
-                    <div className='service_page_info_wrapper'>
+                    <div className='service_page_info_wrapper2'>
                         <img
-                            className='service_info_image'
+                            className='service_info_image2'
                             src={findData?.thumbnail}
                             alt={findData?.service} />
-                        <div className='service_page_info_box'>
-                            <h3 className='service_page_info_box_title'>
+                        <div className='service_page_info_box2'>
+                            <h3 className='service_page_info_box_title2'>
                                 {findData?.model_en}
                             </h3>
                             {findData?.introduce_en.map((item: string, index: number) =>
                                 <p
                                     key={index}
-                                    className='service_page_info_box_content'>
+                                    className='service_page_info_box_content2'>
                                     {item}
                                 </p>
                             )}

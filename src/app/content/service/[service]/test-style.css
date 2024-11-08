@@ -1,7 +1,7 @@
 /* 서비스 페이지 반영안 css style */
 
 /* 서비스 페이지 컨테이너 */
-.service_page_container {
+.service_page_container2 {
     width: 1170px;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
 }
 
 /* 서비스 페이지 제목 */
-.service_page_title {
+.service_page_title2 {
     font-size: 32px;
     font-weight: 700;
     display: flex;
@@ -22,21 +22,21 @@
 }
 
 /* 서비스 페이지 제목 사이드 바 */
-.service_page_side_bar {
+.service_page_side_bar2 {
     width: 8px;
     height: 30px;
     background: linear-gradient(to bottom, #00AEEF, #006489);
 }
 
 /* 서비스 페이지 설명글 컨테이너 */
-.service_page_info_wrapper {
+.service_page_info_wrapper2 {
     width: 100%;
     height: 450px;
     position: relative;
 }
 
 /* 서비스 설명글 박스 */
-.service_page_info_box {
+.service_page_info_box2 {
     width: 600px;
     min-height: 400px;
     display: flex;
@@ -55,13 +55,13 @@
 }
 
 /* 서비스 설명글 박스 제목 */
-.service_page_info_box_title {
+.service_page_info_box_title2 {
     font-size: 28px;
     font-weight: 700;
 }
 
 /* 서비스 설명글 박스 내용 */
-.service_page_info_box_content {
+.service_page_info_box_content2 {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
@@ -70,7 +70,7 @@
 }
 
 /* 서비스 설명글 이미지 */
-.service_info_image {
+.service_info_image2 {
     width: 600px;
     height: 400px;
     object-fit: cover;
@@ -158,13 +158,13 @@
 /*===========================================================*/
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
-    .service_page_container {
+    .service_page_container2 {
         width: 94%;
+        padding: 40px 0px;
         gap: 20px;
-        padding: 30px 0px;
     }
 
-    .service_page_title {
+    .service_page_title2 {
         font-size: 18px;
         font-weight: 700;
         display: flex;
@@ -173,37 +173,37 @@
         animation: opacity_fade_in 1.5s forwards;
     }
     
-    .service_page_side_bar {
+    .service_page_side_bar2 {
         width: 4px;
         height: 18px;
         background: linear-gradient(to bottom, #00AEEF, #006489);
     }
 
-    .service_page_info_wrapper {
+    .service_page_info_wrapper2 {
         height: fit-content;
         display: flex;
         flex-direction: column;
         gap: 24px;
     }
 
-    .service_page_info_box {
+    .service_page_info_box2 {
         width: 100%;
-        min-height: 100px;
+        min-height: 200px;
         padding: 10px 20px 15px 20px;
         border-bottom: 4px solid #1D5BA2;
         gap: 12px;
         position: static;
     }
 
-    .service_page_info_box_title {
+    .service_page_info_box_title2 {
         font-size: 16px;
     }
     
-    .service_page_info_box_content {
+    .service_page_info_box_content2 {
         font-size: 10px;
     }
 
-    .service_info_image {
+    .service_info_image2 {
         width: 100%;
         height: 200px;
         position: static;
