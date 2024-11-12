@@ -4,6 +4,7 @@ import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
 import '../../../../content/service/[service]/style.css';
+// import '../../../../content/service/[service]/test-style.css'; // 반영안을 보고 싶으면 이 라인의 주석을 해제
 import '../../../../content/development/pharmaceuticals/style.css';
 import '../../../../content/development/open_innovation/style.css';
 import { useEffect, useState } from "react";
@@ -20,7 +21,6 @@ export default function OpenInnovationEN() {
     const developmentData = businessNavList[2].list?.map((item: any) => item.en);
 
     const [innovationData, setInnovationData] = useState<any>(null);
-    console.log("🚀 ~ OpenInnovation ~ innovationData:", innovationData)
 
     useEffect(() => {
         fetch('/api/inquiry/open_innovation')
@@ -47,9 +47,9 @@ export default function OpenInnovationEN() {
             <PageTap tap='business' />
             <SideTap tap={developmentData} content='development' />
             <div className='page_layout'>
-                <section className='open_Innovation_page_container'>
 
-                    {/* 서비스 페이지 style 사용 */}
+                {/* 현재안 */}
+                <section className='open_Innovation_page_container'>
                     <h2 className='service_page_title'>
                         <div className='service_page_side_bar' />
                         Open Innovation
@@ -78,6 +78,34 @@ export default function OpenInnovationEN() {
                         </div>
                     </div>
                 </section>
+
+                {/* 반영안 */}
+                {/* <section className='service_page_container2'>
+                    <h2 className='service_page_title2'>
+                        <div className='service_page_side_bar2' />
+                        Open Innovation
+                    </h2>
+                    <div className='service_page_info_wrapper2'>
+                        <img
+                            className='service_info_image2'
+                            src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_adult_eeg_system_bg.jpg'
+                            alt='신약개발기술' />
+                        <div className='service_page_info_box2'>
+                            <h3 className='service_page_info_box_title2'>
+                                {innovationData?.title_en}
+                            </h3>
+                            <div className='open_Innovation_page_top_info_wrapper'>
+                                {innovationData?.subtitle_en.map((item: string, index: number) =>
+                                    <p
+                                        key={index}
+                                        className='service_page_info_box_content2'>
+                                        {item}
+                                    </p>)}
+                            </div>
+                        </div>
+                    </div>
+                </section> */}
+
                 <div className='bottom_step_content_container'>
                     <h3 className='bottom_step_title'>
                         {innovationData?.steptitle_en}

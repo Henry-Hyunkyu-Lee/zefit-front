@@ -1,9 +1,10 @@
 /* 서비스 페이지 사이드 탭 css style */
 
+/* 현재안 */
 /* 서비스 사이드 탭 컨테이너 */
 .service_side_tap_container {
     position: absolute;
-    top: 540px;
+    bottom: calc(2% + 180px);
     right: 0;
     z-index: 15;
     transition: all 0.2s;
@@ -29,8 +30,18 @@
 .side_tap_text {
     font-size: 16px;
     font-weight: 500;
-    color: #5757574c;
+    color: #57575780;
     transition: all 0.2s;
+}
+
+/* 선택된 사이드 탭 텍스트 */
+.select_side_tap_text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0190D6;
+    text-shadow:
+        2px 2px 4px #0190D63f,
+        2px 2px 4px #ffffff3f;
 }
 
 /* 사이드 탭 우측 바 컨테이너 */
@@ -45,6 +56,114 @@
 .side_tap_right_bar {
     width: 30px;
     height: 2px;
-    background-color: #5757574c;
+    background-color: #57575780;
     transition: all 0.2s;
 }
+
+/* 선택된 사이드 탭 우측 바 */
+.select_side_tap_right_bar {
+    width: 40px;
+    height: 4px;
+    background-color: #0190D6;
+    box-shadow:
+        2px 2px 4px #0190D63f,
+        2px 2px 4px #ffffff3f;
+}
+
+/* 사이드 탭 라인 컨테이너 HOVER효과: 사이드 탭 텍스트 */
+.side_tap_lane_wrapper:hover .side_tap_text {
+    font-weight: 700;
+    color: #0190D6;
+}
+
+/* 사이드 탭 라인 컨테이너 HOVER효과: 사이드 탭 우측 바 */
+.side_tap_lane_wrapper:hover .side_tap_right_bar {
+    background-color: #0190D6;
+}
+
+
+/*============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .service_side_tap_container {
+        display: none;
+    }
+}
+
+/* 반영안 */
+/* 서비스 사이드 탭 컨테이너 */
+/* .service_side_tap_wrapper {
+    width: 1170px;
+    margin-top: 60px;
+} */
+
+/* 서비스 사이드 탭 리스트 컨테이너 */
+/* .service_side_tap_list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    user-select: none;
+} */
+
+/* 서비스 사이드 탭 버튼 */
+/* .service_side_tap_button {
+    min-width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    color: #6B6B6B;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #e9e9e9;
+    box-shadow: 4px 4px 4px 0px #0000003f;
+    border-radius: 1000px;
+    padding: 18px 32px;
+    cursor: pointer;
+} */
+
+/* 선택된 서비스 사이드 탭 버튼 */
+/* .select_side_tap_button {
+    min-width: 180px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #0055a7;
+    box-shadow: 4px 4px 4px 0px #0000003f;
+    border-radius: 1000px;
+    padding: 18px 32px;
+} */
+
+
+/*============================================================*/
+/* 반응형 style */
+/* @media screen and (max-width: 1170px) {
+    .service_side_tap_wrapper {
+        width: 94%;
+        margin-top: 30px;
+    }
+    
+    .service_side_tap_list {
+        gap: 8px;
+        justify-content: start;
+    }
+    
+    .service_side_tap_button,
+    .select_side_tap_button {
+        min-width: 80px;
+        height: 30px;
+        font-size: 10px;
+        padding: 4px 10px;
+    }
+} */

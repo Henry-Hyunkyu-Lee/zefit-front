@@ -33,8 +33,6 @@ export default function News() {
     const dataCount = totalCount;
     const division = Math.ceil(dataCount / 10);
 
-    console.log(dropdownValue.value, search);
-
     let pageList: number[] = [1];
 
     for (let i = 2; i <= division; i++) {
@@ -55,7 +53,6 @@ export default function News() {
                     throw error;
                 }
                 setNewsData(data);
-                console.log(data);
             } catch (error) {
                 console.error("Error fetching data from Supabase:", error);
             };
@@ -75,7 +72,6 @@ export default function News() {
                     throw error;
                 }
                 setNewsData(data);
-                console.log(start, end, data)
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
             }
@@ -99,7 +95,7 @@ export default function News() {
 
         fetchData();
         fetchTotalCount();
-    }, []);
+    }, [page]);
 
     return (
         <article>

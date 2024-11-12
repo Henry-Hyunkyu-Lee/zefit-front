@@ -15,12 +15,11 @@ export default function History() {
 
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
-    const pointRefs = useRef<HTMLDivElement[]>([]);
-    const lineRef = useRef<HTMLDivElement>(null);
+    const pointKRRef = useRef<HTMLDivElement[]>([]);
+    const lineKRRef = useRef<HTMLDivElement>(null);
 
     const [, setLoading] = useRecoilState(isLoading);
     const [historyData, setHistoryData] = useState<any[]>([]);
-    // console.log("🚀 ~ History ~ historyData:", historyData);
 
     const date = new Date();
     const year = `${date.getFullYear()}`;
@@ -70,7 +69,6 @@ export default function History() {
     };
 
     const transformedData = transformData(historyData);
-    console.log(transformedData);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -93,34 +91,34 @@ export default function History() {
     }, []);
 
     useEffect(() => {
-        const firstPoint = pointRefs.current[0]?.getBoundingClientRect();
-        const lastPoint = pointRefs.current[pointRefs.current.length - 1]?.getBoundingClientRect();
+        const firstPoint = pointKRRef.current[0]?.getBoundingClientRect();
+        const lastPoint = pointKRRef.current[pointKRRef.current.length - 1]?.getBoundingClientRect();
 
         const top = firstPoint?.top;
         const bottom = lastPoint?.bottom;
 
         const distance = bottom - top;
 
-        if (pointRefs.current.length > 0) {
-            if (lineRef.current) {
-                lineRef.current.style.top = (isMobile) ? `10px` : `23px`;
-                lineRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
+        if (pointKRRef.current.length > 0) {
+            if (lineKRRef.current) {
+                lineKRRef.current.style.top = (isMobile) ? `10px` : `23px`;
+                lineKRRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
             }
         }
 
         const resizeAction = () => {
-            const firstPointM = pointRefs.current[0]?.getBoundingClientRect();
-            const lastPointM = pointRefs.current[pointRefs.current.length - 1]?.getBoundingClientRect();
+            const firstPointM = pointKRRef.current[0]?.getBoundingClientRect();
+            const lastPointM = pointKRRef.current[pointKRRef.current.length - 1]?.getBoundingClientRect();
 
             const top = firstPointM?.top;
             const bottom = lastPointM?.bottom;
 
             const distance = bottom - top;
 
-            if (pointRefs.current.length > 0) {
-                if (lineRef.current) {
-                    lineRef.current.style.top = (isMobile) ? `10px` : `23px`;
-                    lineRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
+            if (pointKRRef.current.length > 0) {
+                if (lineKRRef.current) {
+                    lineKRRef.current.style.top = (isMobile) ? `10px` : `23px`;
+                    lineKRRef.current.style.height = (isMobile) ? `${distance - 4}px` : `${distance}px`;
                 }
             }
         };
@@ -149,7 +147,7 @@ export default function History() {
                         </h3>
                     </div>
                     <ul className='history_wrapper'>
-                        <div ref={lineRef} className='timeline_connected_line' />
+                        <div ref={lineKRRef} className='timeline_connected_line' />
                         {transformedData?.map((item: any, index: number) =>
                             <li
                                 key={index}
@@ -163,12 +161,11 @@ export default function History() {
                                 </div>
                                 <div
                                     ref={(el: HTMLDivElement | null) => {
-                                        if (el) pointRefs.current[index] = el;
+                                        if (el) pointKRRef.current[index] = el;
                                     }}
                                     className='timeline_point'
                                     style={{
-                                        backgroundColor: (item?.created_year === year) ? '#00AEEF' : '#ffffff',
-                                        // marginLeft: (item?.created_year === year) ? '-3px' : '0px'
+                                        backgroundColor: (item?.created_year === year) ? '#00AEEF' : '#ffffff'
                                     }} />
                                 <ul className='timeline_month_list'>
                                     {item?.content.map((mon: any, idx: number) =>

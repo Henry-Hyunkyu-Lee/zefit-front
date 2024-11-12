@@ -18,7 +18,6 @@ export default function AdmHistory() {
 
     const [, setLoading] = useRecoilState(isLoading);
     const [admData, setAdmData] = useState<any>(null);
-    console.log(admData);
 
     const config = contentConfig[content] || { title: '관리자메인' };
     const Component = config.component;
@@ -28,7 +27,8 @@ export default function AdmHistory() {
             try {
                 const { data, error } = await supabase
                     .from(content)
-                    .select('*');
+                    .select('*')
+                    .order('created_at', { ascending: false });
                 if (error) {
                     throw error;
                 }

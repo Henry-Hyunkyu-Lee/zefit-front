@@ -1,0 +1,190 @@
+/* 서비스 페이지 반영안 서비스 세부 탭 컨테이너 css style */
+
+/* 서비스 세부 컨텐츠 외부 박스 */
+.detail_content_out_box {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+/* 서비스 세부 컨텐츠 박스 */
+.detail_content_box {
+    width: 100%;
+    min-height: 400px;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 2px 2px 12px 0px #0000004c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation: service_fade_in 0.5s forwards;
+}
+
+/* 서비스 세부 컨텐츠 박스 이전 */
+.detail_content_box_prev {
+    width: 100%;
+    min-height: 400px;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 2px 2px 12px 0px #0000004c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation: service_fade_out 0.5s forwards;
+}
+
+/* 서비스 세부 컨텐츠 박스 나머지 */
+.detail_content_box_etc {
+    display: none;
+}
+
+/* 서비스 세부 컨텐츠 이미지 컨테이너 */
+.detail_content_image_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* 서비스 세부 컨텐츠 이미지 */
+.detail_content_image {
+    width: 240px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* 서비스 세부 컨텐츠 텍스트 박스 */
+.detail_content_text_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 24px;
+}
+
+/* 서비스 세부 텍스트 라인 박스 */
+.detail_text_lane_box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+
+/* 서비스 세부 텍스트 제목 박스*/
+.detail_text_title_box {
+    gap: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* 서비스 세부 텍스트 제목 */
+.detail_text_title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* 서비스 세부 텍스트 제목 포인트 */
+.detail_text_title_point {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #00AEEF;
+}
+
+/* 서비스 세부 텍스트 컨텐츠 */
+.detail_text_content {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: start;
+    white-space: pre-line;
+    padding-left: 26px;
+}
+
+
+/*==============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .detail_content_box {
+        min-height: 300px;
+        padding: 16px;
+        flex-direction: column;
+        justify-content: start;
+        gap: 32px;
+    }
+    
+    .detail_content_image_wrapper {
+        height: 280px;
+        gap: 8px;
+    }
+    
+    .detail_content_image {
+        width: 120px;
+        height: 100px;
+    }
+    
+    .detail_content_text_wrapper {
+        gap: 12px;
+    }
+    
+    .detail_text_lane_box {
+        gap: 8px;
+    }
+    
+    .detail_text_title_box {
+        gap: 8px;
+    }
+    
+    .detail_text_title {
+        font-size: 12px;
+    }
+    
+    .detail_text_title_point {
+        width: 4px;
+        height: 4px;
+    }
+    
+    .detail_text_content {
+        font-size: 10px;
+        padding-left: 12px;
+    }
+}
+
+
+/*==============================================================*/
+/* keyframes 애니메이션 */
+@keyframes service_fade_in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes service_fade_out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

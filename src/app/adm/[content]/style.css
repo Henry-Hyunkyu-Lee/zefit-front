@@ -1,4 +1,4 @@
-/* 관리자 연혁 페이지 css style */
+/* 관리자 분류 페이지 css style */
 
 /* 게시글 컨테이너 */
 .adm_content_container {
@@ -35,4 +35,21 @@
     right: 70px;
     bottom: 10px;
     z-index: 19; */
+}
+
+
+/*=============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .adm_content_container {
+        gap: 8px;
+    }
+
+    .add_button {
+        width: 60px;
+        height: 24px;
+        margin-bottom: 4px;
+        border-radius: 6px;
+        font-size: 9px;
+    }
 }

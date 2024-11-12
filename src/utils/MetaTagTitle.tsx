@@ -1,6 +1,3 @@
-import { Metadata } from "next";
-import Head from "next/head";
-
 interface MetaTagTitleProps {
   title: string;
   ko?: boolean;

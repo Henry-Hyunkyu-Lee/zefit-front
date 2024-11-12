@@ -4,6 +4,7 @@ import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
 import '../../service/[service]/style.css';
+// import '../../service/[service]/test-style.css'; // 반영안을 보고 싶으면 이 라인을 주석 해제
 import './style.css';
 import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
@@ -18,7 +19,6 @@ export default function Pharmaceuticals() {
     const [, setLoading] = useRecoilState(isLoading);
 
     const [pharmaceuticalsData, setPharmaceuticalsData] = useState<any>(null);
-    console.log("🚀 ~ Pharmaceuticals ~ pharmaceuticalsData:", pharmaceuticalsData)
 
     useEffect(() => {
         fetch('/api/inquiry/pharmaceuticals')
@@ -45,6 +45,8 @@ export default function Pharmaceuticals() {
             <PageTap tap='business' />
             <SideTap tap={developmentData} content='development' />
             <div className='page_layout'>
+
+                {/* 현재안 */}
                 <section className='pharmaceuticals_page_container'>
                     <h2 className='service_page_title'>
                         <div className='service_page_side_bar' />
@@ -68,6 +70,29 @@ export default function Pharmaceuticals() {
                         </div>
                     </div>
                 </section>
+
+                {/* 반영안 */}
+                {/* <section className='service_page_container2'>
+                    <h2 className='service_page_title2'>
+                        <div className='service_page_side_bar2' />
+                        신약개발기술
+                    </h2>
+                    <div className='service_page_info_wrapper2'>
+                        <img
+                            className='service_info_image2'
+                            src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_adult_eeg_system_bg.jpg'
+                            alt='신약개발기술' />
+                        <div className='service_page_info_box2'>
+                            <h3 className='service_page_info_box_title2'>
+                                {pharmaceuticalsData?.title}
+                            </h3>
+                            <p className='service_page_info_box_content2'>
+                                {pharmaceuticalsData?.subtitle}
+                            </p>
+                        </div>
+                    </div>
+                </section> */}
+
                 <section className='bottom_content_container'>
                     <ul className='bottom_content_card_wrapper'>
                         {pharmaceuticalsData?.step?.map((item: any, index: number) =>

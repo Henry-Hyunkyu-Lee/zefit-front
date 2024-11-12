@@ -10,10 +10,9 @@ export default function FloatingButton() {
     const path = usePathname();
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
-    const isEnglish = path?.includes('/en');
+    const viewPort = window.innerHeight;
 
-    const [isScroll, setIsScroll] = useState<string>('stop');
-    const [scrollValue, setScrollValue] = useState<number>(window.scrollY);
+    const isEnglish = path?.includes('/en');
 
     const onClickScrollTopHandler = () => {
         window.scrollTo({
@@ -22,31 +21,26 @@ export default function FloatingButton() {
         });
     };
 
+    const [offset, setOffset] = useState(0);
+
     useEffect(() => {
-        const scrollEvent = (e: any) => {
-            const scrolly = window.scrollY;
-            
-            if (scrolly > scrollValue) {
-                setIsScroll('down');
-            } else if (scrolly < scrollValue) {
-                setIsScroll('up');
-            } else {
-                setIsScroll('stop')
-            }
-            
-            setScrollValue(scrolly);
+        const handleScroll = () => {
+            setOffset(window.scrollY);  // 스크롤 속도 조정
         };
 
-        document.addEventListener('scroll', scrollEvent);
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
-            document.removeEventListener('scroll', scrollEvent);
+            window.removeEventListener('scroll', handleScroll);
         };
-    }, [scrollValue]);
+    }, []);
 
     return (
         <div
             style={{
+                position: 'absolute',
+                top: `${(viewPort - ((isMobile) ? 90 : 150)) + offset}px`,
+                transition: 'top 0.2s ease-out',
                 display: ((path?.includes('/adm'))) ? 'none' : 'flex'
             }}
             className='floating_button_container'>

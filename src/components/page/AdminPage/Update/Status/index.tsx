@@ -3,13 +3,15 @@
 import { useEffect, useState } from 'react';
 import { CorrectProps } from '../History';
 import './style.css';
-import { supabase } from '@/utils/Supabase';
 import { handleImageChange, handleImageDelete } from '@/utils/HandleImage';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 import { onClickAddHandler, uploadFileAndGetUrl } from '@/utils/AddDataHandler';
 import { onClickUpdateHandler } from '@/utils/UpdateDataHandler';
+import { useMediaQuery } from 'react-responsive';
 
 export default function CorrectStatus({ admData, isUpload, setIsUpload }: CorrectProps) {
+
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const id = admData?.id;
 
@@ -22,8 +24,6 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
         title_en: ''
     });
     const { state, title_kr, title_en } = statusInput;
-
-    console.log(admData, isUpload);
 
     const onChangeInputHandler = (e: any) => {
         const { name, value } = e.target;
@@ -80,7 +80,11 @@ export default function CorrectStatus({ admData, isUpload, setIsUpload }: Correc
     return (
         <table className='input_table_container'>
             <tbody className='input_table_body'>
-                <tr style={{ height: '200px' }} className='input_table_body_lane'>
+                <tr
+                    style={{
+                        height: (isMobile) ? '120px' : '600px'
+                    }}
+                    className='input_table_body_lane'>
                     <th className='input_table_body_head'>
                         이미지
                     </th>

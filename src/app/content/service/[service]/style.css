@@ -8,7 +8,7 @@
     justify-content: start;
     align-items: start;
     gap: 40px;
-    padding: 90px 0px;
+    padding: 60px 0px;
 }
 
 /* 서비스 페이지 제목 */
@@ -79,140 +79,8 @@
     z-index: 2;
 }
 
-/* 서비스 세부 내용 전체 컨테이너 */
-.service_page_detail_container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 60px;
-    margin-top: 90px;
-}
 
-/* 서비스 세부 내용 컨테이너 */
-.service_page_detail_wrapper {
-    width: 1170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 24px;
-}
-
-/* 서비스 세부 탭 컨테이너 */
-.detail_tap_wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
-/* 서비스 세부 탭 리스트 */
-.detail_tap_button_list {
-    min-width: 260px;
-    height: 60px;
-}
-
-/* 서비스 세부 탭 */
-.detail_tap_button {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: none;
-    color: #6B6B6B;
-    font-size: 20px;
-    background-color: #e9e9e9;
-    box-shadow: 4px 4px 4px 0px #0000003f;
-    border-radius: 1000px;
-    padding: 18px 32px;
-}
-
-/* 서비스 세부 이미지 컨테이너 */
-.detail_tap_image_wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-}
-
-/* 서비스 세부 이미지 */
-.detail_tap_image {
-    width: 500px;
-    height: 350px;
-    object-fit: contain;
-    object-position: center;
-}
-
-/* 서비스 세부 텍스트 컨테이너 */
-.detail_text_wrapper {
-    width: 100%;
-    min-height: 454px;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    padding: 50px 0px 160px 0px;
-    background-color: #F6F6F6;
-}
-
-/* 서비스 세부 텍스트 박스*/
-.detail_text_box {
-    width: 1170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    padding: 36px 70px;
-    background-color: #ffffff;
-    gap: 32px;
-}
-
-/* 서비스 세부 텍스트 라인 박스 */
-.detail_text_lane_box {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 12px;
-}
-
-/* 서비스 세부 텍스트 제목 박스*/
-.detail_text_title_box {
-    gap: 16px;
-    display: flex;
-    align-items: center;
-}
-
-/* 서비스 세부 텍스트 제목 */
-.detail_text_title {
-    font-size: 26px;
-    font-weight: 700;
-}
-
-/* 서비스 세부 텍스트 제목 포인트 */
-.detail_text_title_point {
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    background-color: #00AEEF;
-}
-
-/* 서비스 세부 텍스트 컨텐츠 */
-.detail_text_content {
-    font-size: 22px;
-    font-weight: 400;
-    text-align: start;
-    white-space: pre-line;
-    padding-left: 26px;
-}
-
-
+/*==============================================================*/
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
     .service_page_container {
@@ -242,7 +110,7 @@
     .service_page_info_box {
         width: 100%;
         min-height: 200px;
-        padding: 16px 120px 16px 16px;
+        padding: 16px 100px 16px 16px;
         gap: 12px;
         position: static;
         align-items: start;
@@ -264,18 +132,5 @@
         top: -40px;
         right: 0;
         z-index: 4;
-    }
-
-    .service_page_detail_container {
-        gap: 30px;
-        margin-top: 40px;
-    }
-
-    .service_page_detail_wrapper {
-        width: 94%;
-    }
-
-    .detail_text_box {
-        width: 94%;
     }
 }

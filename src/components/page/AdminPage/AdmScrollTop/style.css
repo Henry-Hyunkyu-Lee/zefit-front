@@ -19,9 +19,33 @@
     right: 10px;
     z-index: 19;
     text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+/* 관리자 페이지 스크롤 top 버튼 HOVER효과 */
+.adm_scroll_top_button:hover {
+    background-color: #0000008d;
+    color: #dfdfdf;
 }
 
 /* 스크롤 top 화살표 */
 .adm_top_arrow {
     font-size: 8px;
+}
+
+
+/*===========================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .adm_scroll_top_button {
+        width: 30px;
+        height: 30px;
+        padding: 4px 8px;
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .adm_top_arrow {
+        font-size: 6px;
+    }
 }

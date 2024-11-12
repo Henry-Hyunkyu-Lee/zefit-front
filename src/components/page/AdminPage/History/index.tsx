@@ -1,13 +1,11 @@
 'use client';
 
-import { supabase } from '@/utils/Supabase';
 import './style.css';
 import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
 
 export default function History(admData: any) {
 
-    const resultData = admData.admData?.sort((a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
-    console.log(resultData);
+    const resultData = admData.admData;
 
     return (
         <div className='adm_content_container'>

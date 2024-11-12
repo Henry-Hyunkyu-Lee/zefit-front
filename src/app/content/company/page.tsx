@@ -1,24 +1,37 @@
 'use client';
 
-import MainHeader from "@/components/common/MainHeader";
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
 import './style.css';
-import { companyData } from "@/data/companyData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { useMediaQuery } from "react-responsive";
 import { useRecoilState } from "recoil";
 import { isLoading } from "@/modules/loading";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Company() {
 
     const isMobile = useMediaQuery({ maxWidth: 1170 });
     const [, setLoading] = useRecoilState(isLoading);
 
+    const [companyData, setCompanyData] = useState<any>(null);
+
     useEffect(() => {
-        setLoading(false);
+        fetch(`/api/inquiry/company`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then((jsonData) => {
+                setCompanyData(jsonData);
+            })
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (
@@ -68,7 +81,7 @@ export default function Company() {
                                 차별화된 신약개발 플랫폼
                             </h4>
                             <p className='different_develop_sub_title'>
-                                {'현재 제핏은 국내 유수 연구기관과 제약회사에\n화합물 시험 서비스를 제공하고 있습니다.'}
+                                {'현재 제핏은 국내 우수 연구기관과 제약회사에\n화합물 시험 서비스를 제공하고 있습니다.'}
                             </p>
                             <div className='company_center_bar' />
                             <p className='different_develop_introduce'>
@@ -81,7 +94,7 @@ export default function Company() {
                                     ? <li
                                         key={index}
                                         style={{
-                                            backgroundColor: `${item.color}`
+                                            backgroundColor: `${item.color}99`
                                         }}
                                         className='mobile_card_box'>
                                         <div className='hexagon_card_content_container'>
@@ -123,7 +136,7 @@ export default function Company() {
                                             {/* <!-- 육각형을 정의, 배경은 투명, 테두리선 추가 --> */}
                                             <polygon
                                                 points="175,20 315,97.5 315,252.5 175,330 35,252.5 35,97.5"
-                                                style={{ fill: `${item.color}` }} />
+                                                style={{ fill: `${item.color}99` }} />
                                         </svg>
                                         <div className='hexagon_card_content_container'>
                                             <div className='card_content_top_lane'>

@@ -10,15 +10,16 @@ import { supabase } from '@/utils/Supabase';
 import { getLastLoginDateTime } from '@/utils/DateTime';
 import { useRecoilState } from 'recoil';
 import { isLoading } from '@/modules/loading';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Admin() {
 
     const router = useRouter();
 
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
+
     const [, setLoading] = useRecoilState(isLoading);
     const [resultData, setResultData] = useState<any>();
-
-    console.log(resultData);
 
     const dataTitleList = [
         { id: '문의한 글', href: '/adm/inquirys', category: '문의하기' },
@@ -151,10 +152,11 @@ export default function Admin() {
                                                 cloudtree
                                             </td>
                                             <td className='small_table_body'>
-                                                <img
-                                                    className='manager_icon'
-                                                    src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_no_profile.gif'
-                                                    alt='관리자' />
+                                                {(!isMobile)
+                                                    && <img
+                                                        className='manager_icon'
+                                                        src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_no_profile.gif'
+                                                        alt='관리자' />}
                                                 관리자
                                             </td>
                                             <td className='table_body_content_room'>
@@ -178,7 +180,7 @@ export default function Admin() {
                                     <table className='adm_table_container'>
                                         <thead className='adm_table_header_container'>
                                             <tr className='adm_table_header_box'>
-                                                <th className='small_table_header'>
+                                                <th className='medium_table_header'>
                                                     {(index === 0) ? '이름' : '닉네임'}
                                                 </th>
                                                 <th className='small_table_header'>
@@ -204,7 +206,7 @@ export default function Admin() {
                                                         style={{
                                                             color: (index === 0) ? '#333333' : '#64c5b1'
                                                         }}
-                                                        className='small_table_body'>
+                                                        className='medium_table_body'>
                                                         {(index === 0) ? data?.name : 'cloudtree'}
                                                     </td>
                                                     <td
@@ -223,9 +225,6 @@ export default function Admin() {
                                                         </span>
                                                     </td>
                                                     <td
-                                                        style={{
-                                                            fontSize: (index === 0) ? '13px' : '14px'
-                                                        }}
                                                         className='large_table_body'>
                                                         {(index === 0)
                                                             ? getLastLoginDateTime(data?.created_at)

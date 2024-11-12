@@ -45,8 +45,7 @@ export default function Login() {
                 if (error) {
                     throw error;
                 };
-
-                console.log(data);
+                
                 alert('로그인에 성공하였습니다.');
                 // 현재 날짜와 시간을 쿠키에 저장
                 const now = new Date();

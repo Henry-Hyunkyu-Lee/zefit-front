@@ -7,8 +7,6 @@ import MetaTagTitle from "@/utils/MetaTagTitle";
 import { useEffect, useState } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import { supabase } from '@/utils/Supabase';
-import CorrectHistory from '@/components/page/AdminPage/Update/History';
-import CorrectStatus from '@/components/page/AdminPage/Update/Status';
 import { correctContentConfig } from '@/data/contentConfig';
 import AdmScrollTop from '@/components/page/AdminPage/AdmScrollTop';
 import { isLoading } from '@/modules/loading';

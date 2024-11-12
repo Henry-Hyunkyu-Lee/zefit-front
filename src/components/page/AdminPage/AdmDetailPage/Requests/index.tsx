@@ -2,11 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import './style.css';
-import { supabase } from '@/utils/Supabase';
-import { onClickRemoveHandler } from '@/utils/RemoveDataHandler';
-import { onClickAddHandler } from '@/utils/AddDataHandler';
 import { onClickUpdateHandler } from '@/utils/UpdateDataHandler';
 import { getLastLoginDateTime } from '@/utils/DateTime';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export interface CorrectProps {
     admData: any;
@@ -24,20 +22,9 @@ export default function RequestsDetail({ admData }: CorrectProps) {
     const email = admData?.email;
     const title = admData?.title;
     const content = admData?.content;
-    console.log(admData);
 
     const [isCopy, setIsCopy] = useState<boolean>(false);
     const [isAnswer, setIsAnswer] = useState<boolean>(false);
-
-    const onClickCopyHandler = async (e: any) => {
-        if (isCopy) return;
-        try {
-            await navigator.clipboard.writeText(email);
-            setIsCopy(true);
-        } catch (error) {
-            alert("복사에 실패하였습니다.");
-        };
-    };
 
     useEffect(() => {
         if (admData) {
@@ -49,8 +36,6 @@ export default function RequestsDetail({ admData }: CorrectProps) {
         if (isAnswer === status) return;
         onClickUpdateHandler(e, { status: isAnswer }, id, 'inquirys');
     };
-
-    console.log(status, isAnswer);
 
     return (
         <table className='input_table_container'>
@@ -77,23 +62,26 @@ export default function RequestsDetail({ admData }: CorrectProps) {
                     </th>
                     <td className='input_table_body_room'>
                         {email}
-                        <button
-                            style={{
-                                color: (isCopy) ? '#6de290' : '#333333',
-                                cursor: (isCopy) ? 'default' : 'pointer'
-                            }}
-                            onClick={onClickCopyHandler}
-                            className='copy_button'>
-                            {(isCopy)
-                                ? <div className='copy_button_icon'>
-                                    ✔
-                                </div>
-                                : <div className='copy_button_icon'>
-                                    <div className='copy_icon_box' />
-                                    <div className='copy_icon_box' />
-                                </div>}
-                            {(isCopy) ? '복사 완료' : '복사'}
-                        </button>
+                        <CopyToClipboard
+                            text={email}
+                            onCopy={() => setIsCopy(true)}>
+                            <button
+                                style={{
+                                    color: (isCopy) ? '#6de290' : '#333333',
+                                    cursor: (isCopy) ? 'default' : 'pointer'
+                                }}
+                                className='copy_button'>
+                                {(isCopy)
+                                    ? <div className='copy_button_icon'>
+                                        ✔
+                                    </div>
+                                    : <div className='copy_button_icon'>
+                                        <div className='copy_icon_box' />
+                                        <div className='copy_icon_box' />
+                                    </div>}
+                                {(isCopy) ? '복사 완료' : '복사'}
+                            </button>
+                        </CopyToClipboard>
                     </td>
                 </tr>
                 <tr style={{ height: '80px' }} className='input_table_body_lane'>

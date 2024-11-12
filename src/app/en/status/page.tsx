@@ -15,7 +15,6 @@ export default function StatusEN() {
     const [, setLoading] = useRecoilState(isLoading);
     const [partner, setPartner] = useState<any[]>([]);
     const [certification, setCertification] = useState<any[]>([]);
-    console.log("🚀 ~ Status ~ partner:", partner);
 
     useEffect(() => {
         const fetchPartnerData = async () => {

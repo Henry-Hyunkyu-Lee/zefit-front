@@ -1,3 +1,5 @@
+'use client';
+
 import { usePathname } from 'next/navigation';
 import './style.css';
 import { businessNavList } from '@/data/navData';
@@ -10,13 +12,14 @@ interface SideTapProps {
 
 export default function SideTap({ tap, content }: SideTapProps) {
 
+    const viewPort = window.innerHeight;
+
     const path = usePathname();
+    const isEnglish = path?.includes('/en');
 
     const sideTapRef = useRef<HTMLDivElement>(null);
 
-    const isEnglish = path?.includes('/en');
-
-    const [scrolly, setScrolly] = useState<number>(0);
+    const [offset, setOffset] = useState(0);
 
     const linkControl = (item: string) => {
         if (content === 'development') {
@@ -34,18 +37,7 @@ export default function SideTap({ tap, content }: SideTapProps) {
 
     useEffect(() => {
         const scrollEvent = () => {
-            if (!sideTapRef.current) return;
-            const y = window.scrollY;
-            
-            if (y < 400) {
-                sideTapRef.current.style.position = 'absolute';
-                sideTapRef.current.style.bottom = 'auto';
-                sideTapRef.current.style.top = '540px';
-            } else {
-                sideTapRef.current.style.position = 'fixed';
-                sideTapRef.current.style.bottom = 'calc(2% + 180px)';
-                sideTapRef.current.style.top = 'auto';
-            };
+            setOffset(window.scrollY);  // 스크롤 속도 조정
         };
 
         window.addEventListener('scroll', scrollEvent);
@@ -56,7 +48,15 @@ export default function SideTap({ tap, content }: SideTapProps) {
     }, []);
 
     return (
-        <section ref={sideTapRef} className='service_side_tap_container'>
+        // 현재안
+        <section
+            ref={sideTapRef}
+            style={{
+                position: 'absolute',
+                top: `${(viewPort - 360) + offset}px`,
+                transition: 'top 0.2s ease-out',
+            }}
+            className='service_side_tap_container'>
             <ul className='side_tap_list_wrapper'>
                 {tap?.map((item: string, index: number) =>
                     <li key={index}>
@@ -64,29 +64,34 @@ export default function SideTap({ tap, content }: SideTapProps) {
                             href={linkControl(item)}
                             className='side_tap_lane_wrapper'>
                             <p
-                                style={{
-                                    color: (path === linkControl(item)) ? '#0190D6' : '#57575780',
-                                    fontSize: (path === linkControl(item)) ? '18px' : '16px',
-                                    fontWeight: (path === linkControl(item)) ? '700' : '500',
-                                    textShadow: (path === linkControl(item)) ? '2px 2px 4px #0190D63f 2px 2px 4px #ffffff3f' : ''
-                                }}
-                                className='side_tap_text'>
+                                className={(path === linkControl(item)) ? 'select_side_tap_text' : 'side_tap_text'}>
                                 {item}
                             </p>
                             <div className='side_tap_right_bar_wrapper'>
-                                <div
-                                    style={{
-                                        backgroundColor: (path === linkControl(item)) ? '#0190D6' : '#57575780',
-                                        width: (path === linkControl(item)) ? '40px' : '30px',
-                                        height: (path === linkControl(item)) ? '4px' : '2px',
-                                        boxShadow: (path === linkControl(item)) ? '2px 2px 4px 0px #0190D63f' : ''
-                                    }}
-                                    className='side_tap_right_bar' />
+                                <div className={(path === linkControl(item)) ? 'select_side_tap_right_bar' : 'side_tap_right_bar'} />
                             </div>
                         </a>
                     </li>
                 )}
             </ul>
         </section>
+
+        // 반영안
+        // <section className='service_side_tap_wrapper'>
+        //     <ul className='service_side_tap_list'>
+        //         {tap?.map((item: any, index: number) =>
+        //             <li key={index}>
+        //                 <a
+        //                     href={linkControl(item)}
+        //                     className={
+        //                         (path === linkControl(item))
+        //                             ? 'select_side_tap_button'
+        //                             : 'service_side_tap_button'}>
+        //                     {item}
+        //                 </a>
+        //             </li>
+        //         )}
+        //     </ul>
+        // </section>
     )
 };

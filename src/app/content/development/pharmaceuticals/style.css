@@ -197,16 +197,20 @@
     }
 
     .pharmaceuticals_page_top_info_container {
-        height: 260px;
+        height: fit-content;
     }
 
     .top_info_content_wrapper {
         padding: 20px;
+        position: static;
+    }
+
+    .top_info_background_box {
+        display: none;
     }
 
     .top_info_image {
-        width: 80%;
-        height: 70%;
+        display: none;
     }
 
     .top_info_content_box {
@@ -231,7 +235,6 @@
         display: flex;
         justify-content: center;
         align-items: start;
-        background-color: #F6F6F6;
     }
 
     .bottom_content_card_wrapper {

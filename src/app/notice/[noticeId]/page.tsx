@@ -18,7 +18,6 @@ export default function NoticeDetail() {
 
     const [, setLoading] = useRecoilState(isLoading);
     const [noticeData, setNoticeData] = useState<any>(null);
-    console.log(noticeData);
 
     const db_table_name = 'notices';
     const sql_query = '*';

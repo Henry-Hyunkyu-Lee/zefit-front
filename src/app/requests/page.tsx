@@ -4,10 +4,9 @@ import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
 import './style.css';
-import { checkArea } from "@/data/checkArea";
 import { useEffect, useState } from "react";
 import MetaTagTitle from "@/utils/MetaTagTitle";
-import { onClickAddHandler, onClickRequestsHandler } from "@/utils/AddDataHandler";
+import { onClickRequestsHandler } from "@/utils/AddDataHandler";
 import { isLoading } from "@/modules/loading";
 import { useRecoilState } from "recoil";
 
@@ -31,7 +30,6 @@ export default function Requests() {
     });
     const { name, email, company, title, content } = requestsInput;
     const { personal, use } = check;
-    console.log('문의 데이터', requestsInput);
 
     const onClickCheckHandler = (e: any, param: string) => {
         e.preventDefault();

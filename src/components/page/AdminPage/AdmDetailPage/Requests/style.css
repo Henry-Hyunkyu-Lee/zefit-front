@@ -58,3 +58,22 @@
 .answer_button:hover {
     background-color: #e4e4e4;
 }
+
+
+/*=============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .copy_button {
+        font-size: 9px;
+    }
+    
+    .copy_button_icon {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .answer_button {
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+}

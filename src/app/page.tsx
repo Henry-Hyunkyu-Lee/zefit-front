@@ -4,8 +4,6 @@ import ScrollGuide from '@/components/page/LandingPage/ScrollGuide';
 import './style.css';
 import MainHeader from '@/components/common/MainHeader';
 import { useEffect, useRef, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
-import MobileHeader from '@/components/common/MobileHeader';
 import { supabase } from '@/utils/Supabase';
 import { useRecoilState } from 'recoil';
 import { isLoading } from '@/modules/loading';
@@ -16,7 +14,9 @@ export default function Home() {
     const backRef = useRef<HTMLDivElement>(null);
     const backImage = 'https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_3551210086_0f617416_20811665.jpg';
     const img = new Image();
+    const viewPort = window.innerHeight;
     const [, setLoading] = useRecoilState(isLoading);
+    const [opacity, setOpacity] = useState<number>(1);
 
     img.onload = () => {
         if (!backRef.current) return;
@@ -25,9 +25,6 @@ export default function Home() {
     };
 
     img.src = backImage;
-
-    // 뷰포트 반응형
-    const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const [serviceHref, setServiceHref] = useState<any>(null); // 서비스 첫번째 데이터 state
     const [partner, setPartner] = useState<any[]>([]); // 파트너 리스트 state
@@ -57,7 +54,6 @@ export default function Home() {
                     throw error;
                 }
                 setPopupData(data);
-                console.log(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
             };
@@ -74,7 +70,6 @@ export default function Home() {
                     throw error;
                 }
                 setPartner(data);
-                console.log(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
             };
@@ -83,6 +78,20 @@ export default function Home() {
         fetchPopup();
         fetchData();
     }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const newOpacity = Math.max(0, 1 - scrollY / (viewPort - 450));
+            setOpacity(newOpacity);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [viewPort]);
 
     return (
         <article>
@@ -96,7 +105,11 @@ export default function Home() {
             {/* 상단 배너 */}
             <section className='landing_top_banner_container'>
                 <div ref={backRef} className='landing_top_banner' />
-                <div className='top_banner_text_box'>
+                <div
+                    style={{
+                        opacity: `${opacity}`
+                    }}
+                    className='top_banner_text_box'>
                     <h1 className='top_banner_title'>
                         Greater Value For Your Life
                     </h1>

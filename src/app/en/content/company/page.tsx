@@ -5,20 +5,34 @@ import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
 import '../../../content/company/style.css';
-import { companyData } from "@/data/companyData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { useMediaQuery } from "react-responsive";
 import { isLoading } from "@/modules/loading";
 import { useRecoilState } from "recoil";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function CompanyEN() {
 
     const [, setLoading] = useRecoilState(isLoading);
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
+    const [companyData, setCompanyData] = useState<any>(null);
+
     useEffect(() => {
-        setLoading(false);
+        fetch(`/api/inquiry/company`)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then((jsonData) => {
+                setCompanyData(jsonData);
+            })
+            .catch((error) => console.error("Fetch error:", error))
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
     return (
@@ -68,7 +82,7 @@ export default function CompanyEN() {
                                     ? <li
                                         key={index}
                                         style={{
-                                            backgroundColor: `${item.color}`
+                                            backgroundColor: `${item.color}99`
                                         }}
                                         className='mobile_card_box'>
                                         <div className='hexagon_card_content_container'>
@@ -110,13 +124,13 @@ export default function CompanyEN() {
                                             {/* <!-- 육각형을 정의, 배경은 투명, 테두리선 추가 --> */}
                                             <polygon
                                                 points="175,20 315,97.5 315,252.5 175,330 35,252.5 35,97.5"
-                                                style={{ fill: `${item.color}` }} />
+                                                style={{ fill: `${item.color}99` }} />
                                         </svg>
                                         <div className='hexagon_card_content_container'>
                                             <div className='card_content_top_lane'>
                                                 <img
                                                     className='card_content_icon'
-                                                    src={item.icon}
+                                                    src={item?.icon}
                                                     alt={`${item.id} 아이콘`} />
                                                 <strong className='card_content_title_en' style={{ color: item.titlecolor }}>
                                                     {item.title_en}

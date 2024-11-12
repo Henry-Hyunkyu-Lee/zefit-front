@@ -116,6 +116,14 @@ export default function PageHeader() {
                                 KOR
                             </a>
                         </li>
+
+                        {/* 반영안 */}
+                        {/* <a
+                            href={(isEnglish) ? '/en/requests' : '/requests'}
+                            className='requests_button_header'>
+                            Contact
+                        </a> */}
+
                     </ul>
                 </nav>
                 <NavModal
