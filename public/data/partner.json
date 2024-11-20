@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "state": "partner",
+        "title": "중외제약",
+        "src": "http://www.zefit.co.kr/data/file/status/thumb-3034731228_LuJzeRmd_b6d4f5a98e0f9f52f522050be8fc90bf7b9f6dca_500x.jpg"
+    },
+    {
+        "id": 2,
+        "state": "partner",
+        "title": "Ephy",
+        "src": "http://www.zefit.co.kr/data/file/status/thumb-3034731229_W0m8iLMq_7529489ecf53ab5f0762aa6a40108288f071a680_500x.png"
+    },
+    {
+        "id": 3,
+        "state": "partner",
+        "title": "중외제약",
+        "src": "http://www.zefit.co.kr/data/file/status/thumb-3034731228_LuJzeRmd_b6d4f5a98e0f9f52f522050be8fc90bf7b9f6dca_500x.jpg"
+    },
+    {
+        "id": 4,
+        "state": "partner",
+        "title": "Ephy",
+        "src": "http://www.zefit.co.kr/data/file/status/thumb-3034731229_W0m8iLMq_7529489ecf53ab5f0762aa6a40108288f071a680_500x.png"
+    },
+    {
+        "id": 5,
+        "state": "partner",
+        "title": "중외제약",
+        "src": "http://www.zefit.co.kr/data/file/status/thumb-3034731228_LuJzeRmd_b6d4f5a98e0f9f52f522050be8fc90bf7b9f6dca_500x.jpg"
+    },
+    {
+        "id": 6,
+        "state": "certification",
+        "title": "벤처기업",
+        "src": "http://www.zefit.co.kr/data/file/status/1794374094_QpCF5lyW_9a67c0bfcd70ace199007cb5d2a907d925a545da.jpg"
+    },
+    {
+        "id": 7,
+        "state": "certification",
+        "title": "기업부설연구소",
+        "src": "http://www.zefit.co.kr/data/file/status/1794374094_UdzpC3cO_b9a25603fa6dd00f0d6ac437e1325beabdb5527e.jpg"
+    },
+    {
+        "id": 8,
+        "state": "certification",
+        "title": "에이케이인증",
+        "src": "http://www.zefit.co.kr/data/file/status/3034731228_F4TeoVjz_47dabbac2756fc94d5822959594c373e7c8b844b.jpg"
+    },
+    {
+        "id": 9,
+        "state": "certification",
+        "title": "KTC시험결과1",
+        "src": "http://www.zefit.co.kr/data/file/status/1889536348_u97zf2lv_2222d9a23610ea4d8a0516edabc7f5eb7452a485.jpg"
+    },
+    {
+        "id": 10,
+        "state": "certification",
+        "title": "KTC시험결과2",
+        "src": "http://www.zefit.co.kr/data/file/status/1889536348_YywTDeCn_d1d4974b7ada2dc96b91d1d3158a4811ec629acb.jpg"
+    },
+    {
+        "id": 11,
+        "state": "certification",
+        "title": "KTC시험결과3",
+        "src": "http://www.zefit.co.kr/data/file/status/1889536348_UdNZaY1K_d48b6ddc24251e7c167d38124deb05af3a54b1f7.png"
+    }
+]
