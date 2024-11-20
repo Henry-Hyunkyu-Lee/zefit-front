@@ -2,7 +2,7 @@
 
 /* 신약개발기술 페이지 컨테이너 */
 .pharmaceuticals_page_container {
-    width: 767px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -92,7 +92,7 @@
 
 /* 하단 컨텐츠 카드 컨테이너 */
 .bottom_content_card_wrapper {
-    width: 767px;
+    width: 1170px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,7 +189,7 @@
 
 /*==============================================================*/
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
     .pharmaceuticals_page_container {
         width: 94%;
         padding: 40px 0px;

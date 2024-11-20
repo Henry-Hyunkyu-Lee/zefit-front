@@ -2,7 +2,7 @@
 
 /* 모델 페이지 첫번째 컨테이너 */
 .model_page_first_container {
-    width: 767px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -65,7 +65,7 @@
 
 /* 제브라피쉬 모델 설명 컨테이너 */
 .model_intro_wrapper {
-    width: 767px;
+    width: 1170px;
     height: 100%;
     display: flex;
     justify-content: end;
@@ -116,7 +116,7 @@
 
 /* 모델 페이지 발전 설명 컨테이너 */
 .model_development_intro_wrapper {
-    width: 767px;
+    width: 1170px;
     display: flex;
     justify-content: start;
     align-items: start;
@@ -144,7 +144,7 @@
 
 /*===============================================================*/
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
     .model_page_first_container {
         width: 94%;
         padding: 40px 0px;

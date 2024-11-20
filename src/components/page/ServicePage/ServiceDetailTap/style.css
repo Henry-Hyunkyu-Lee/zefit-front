@@ -13,7 +13,7 @@
 
 /* 서비스 세부 내용 컨테이너 */
 .service_page_detail_wrapper {
-    width: 767px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -112,7 +112,7 @@
 
 /* 서비스 세부 텍스트 박스*/
 .detail_text_box {
-    width: 767px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -163,7 +163,7 @@
 
 /*==============================================================*/
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
     .service_page_detail_container {
         gap: 10px;
         margin-top: 20px;

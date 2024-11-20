@@ -39,7 +39,7 @@
     top: 0;
     left: calc(50% - 575px);
     z-index: 1;
-    width: 767px;
+    width: 1170px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -323,7 +323,7 @@
 
 /* 파트너 소개 리스트 */
 .partner_list {
-    width: 767px;
+    width: 1170px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -469,7 +469,7 @@
 
 
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
 
     /* 상단 배너 */
     .landing_top_banner_container {
