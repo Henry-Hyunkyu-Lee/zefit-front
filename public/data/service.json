@@ -322,7 +322,7 @@
         ],
         "content": [
             {
-                "name": "일반적인 안정성시험",
+                "name": "일반적인 안전성시험",
                 "name_en": "General safety test",
                 "image": [
                     "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology2.jpg"
@@ -335,7 +335,7 @@
                 ]
             },
             {
-                "name": "기관 특이적 안정성시험",
+                "name": "기관 특이적 안전성시험",
                 "name_en": "Organ-specific safety test",
                 "image": [
                     "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology3.jpg",
@@ -343,7 +343,7 @@
                 ],
                 "info": [
                     {
-                        "title": "기관 특이적 안정성시험",
+                        "title": "기관 특이적 안전성시험",
                         "text": "특정 장기 세포(뇌,간,신장,심혈관계 등)에 형광단백질을 발현시켜 다양한 장기에 대한 독성 데이터 제공"
                     }
                 ],
