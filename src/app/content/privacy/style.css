@@ -2,7 +2,7 @@
 
 /* 개인정보 처리방침 컨테이너 */
 .provacy_page_container {
-    width: 1170px;
+    width: 767px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -69,7 +69,7 @@
 
 
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .provacy_page_container {
         width: 94%;
         gap: 40px;

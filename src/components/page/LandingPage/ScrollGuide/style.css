@@ -40,7 +40,7 @@
 
 /*=============================================================*/
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .top_banner_scroll_guide {
         width: 60px;
         gap: 24px;

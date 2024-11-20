@@ -97,7 +97,7 @@
 
 /*===========================================================*/
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
   .image_container {
     height: 100px;
     display: flex;

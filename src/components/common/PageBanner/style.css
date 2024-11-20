@@ -29,7 +29,7 @@
     top: 100px;
     left: calc(50% - 575px);
     z-index: 1;
-    width: 1170px;
+    width: 767px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@
 }
 
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .page_top_banner_container {
         height: 260px;
     }

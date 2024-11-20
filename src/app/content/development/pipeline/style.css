@@ -2,7 +2,7 @@
 
 /* 파이프라인 페이지 컨테이너 */
 .pipeline_page_container {
-    width: 1170px;
+    width: 767px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -42,7 +42,7 @@
 
 /* 파이프라인 표 박스 */
 .table_box {
-    width: 1170px;
+    width: 767px;
     height: 340px;
     border-top: 2px solid;
     background-color: white;
@@ -162,7 +162,7 @@
 
 
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .pipeline_page_container {
         width: 94%;
         padding: 40px 0px;
