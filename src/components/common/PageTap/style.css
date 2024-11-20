@@ -12,7 +12,7 @@
 
 /* 페이지 탭 내부 컨테이너 */
 .page_tap_out_wrapper {
-    width: 1170px;
+    width: 767px;
     height: 100%;
     background-color: white;
     display: flex;
@@ -84,7 +84,7 @@
 
 
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .page_tap_container {
         height: 36px;
     }

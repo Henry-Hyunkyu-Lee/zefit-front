@@ -120,7 +120,7 @@
 
 /*==============================================================*/
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .detail_content_box {
         min-height: 300px;
         padding: 16px;

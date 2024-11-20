@@ -48,7 +48,7 @@
 
 /*=============================================================*/
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .floating_button_container {
         width: 40px;
         gap: 6px;

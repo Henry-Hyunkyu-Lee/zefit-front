@@ -2,7 +2,7 @@
 
 /* 오픈 이노베이션 페이지 컨테이너 */
 .open_Innovation_page_container {
-    width: 1170px;
+    width: 767px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -41,7 +41,7 @@
 
 /* 하단 컨텐츠 카드 컨테이너 */
 .bottom_step_card_wrapper {
-    width: 1170px;
+    width: 767px;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -76,7 +76,7 @@
 
 
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .open_Innovation_page_container {
         width: 94%;
         padding: 40px 0px;

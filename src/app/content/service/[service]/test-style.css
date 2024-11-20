@@ -2,7 +2,7 @@
 
 /* 서비스 페이지 컨테이너 */
 .service_page_container2 {
-    width: 1170px;
+    width: 767px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -94,7 +94,7 @@
 
 /* 서비스 세부 내용 컨테이너 */
 .service_page_detail_wrapper {
-    width: 1170px;
+    width: 767px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -157,7 +157,7 @@
 
 /*===========================================================*/
 /* 반응형 style */
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 767px) {
     .service_page_container2 {
         width: 94%;
         padding: 40px 0px;
