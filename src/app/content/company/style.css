@@ -2,7 +2,7 @@
 
 /* 회사 개요 페이지 소개글 컨테이너 */
 .company_introduce_container {
-    width: 767px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -263,7 +263,7 @@
 
 /* 미션 컨텐츠 컨테이너 */
 .mission_content_container {
-    width: 767px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -334,7 +334,7 @@
 
 
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
     .company_introduce_container {
         width: 94%;
         padding: 40px 0px;

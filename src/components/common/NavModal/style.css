@@ -20,7 +20,7 @@
 
 /* 내비게이션 창 내부 컨테이너 */
 .nav_modal_in_container {
-    width: 767px;
+    width: 1170px;
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -138,7 +138,7 @@
 
 
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
     .nav_modal_in_container {
         width: 94%;
     }

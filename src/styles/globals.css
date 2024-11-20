@@ -241,7 +241,7 @@ article {
   -webkit-tap-highlight-color: transparent;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
   .page_left_title, .page_title {
     font-size: 18px;
   }

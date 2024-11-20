@@ -2,7 +2,7 @@
 
 /* 서비스 페이지 컨테이너 */
 .service_page_container {
-    width: 767px;
+    width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -82,7 +82,7 @@
 
 /*==============================================================*/
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
     .service_page_container {
         width: 94%;
         padding: 40px 0px;

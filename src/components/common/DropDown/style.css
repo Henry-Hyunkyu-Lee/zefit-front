@@ -73,7 +73,7 @@
 
 /*=============================================================*/
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
     .dropdown_button {
         min-width: 80px;
         height: 30px;

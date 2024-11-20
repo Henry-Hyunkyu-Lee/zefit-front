@@ -157,7 +157,7 @@
 
 /*===========================================================*/
 /* 반응형 style */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1170px) {
     .notice_table_wrapper {
         padding: 10px;
     }
