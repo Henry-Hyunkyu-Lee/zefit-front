@@ -49,49 +49,49 @@ export default function SideTap({ tap, content }: SideTapProps) {
 
     return (
         // 현재안
-        <section
-            ref={sideTapRef}
-            style={{
-                position: 'absolute',
-                top: `${(viewPort - 360) + offset}px`,
-                transition: 'top 0.2s ease-out',
-            }}
-            className='service_side_tap_container'>
-            <ul className='side_tap_list_wrapper'>
-                {tap?.map((item: string, index: number) =>
-                    <li key={index}>
-                        <a
-                            href={linkControl(item)}
-                            className='side_tap_lane_wrapper'>
-                            <p
-                                className={(path === linkControl(item)) ? 'select_side_tap_text' : 'side_tap_text'}>
-                                {item}
-                            </p>
-                            <div className='side_tap_right_bar_wrapper'>
-                                <div className={(path === linkControl(item)) ? 'select_side_tap_right_bar' : 'side_tap_right_bar'} />
-                            </div>
-                        </a>
-                    </li>
-                )}
-            </ul>
-        </section>
-
-        // 반영안
-        // <section className='service_side_tap_wrapper'>
-        //     <ul className='service_side_tap_list'>
-        //         {tap?.map((item: any, index: number) =>
+        // <section
+        //     ref={sideTapRef}
+        //     style={{
+        //         position: 'absolute',
+        //         top: `${(viewPort - 360) + offset}px`,
+        //         transition: 'top 0.2s ease-out',
+        //     }}
+        //     className='service_side_tap_container'>
+        //     <ul className='side_tap_list_wrapper'>
+        //         {tap?.map((item: string, index: number) =>
         //             <li key={index}>
         //                 <a
         //                     href={linkControl(item)}
-        //                     className={
-        //                         (path === linkControl(item))
-        //                             ? 'select_side_tap_button'
-        //                             : 'service_side_tap_button'}>
-        //                     {item}
+        //                     className='side_tap_lane_wrapper'>
+        //                     <p
+        //                         className={(path === linkControl(item)) ? 'select_side_tap_text' : 'side_tap_text'}>
+        //                         {item}
+        //                     </p>
+        //                     <div className='side_tap_right_bar_wrapper'>
+        //                         <div className={(path === linkControl(item)) ? 'select_side_tap_right_bar' : 'side_tap_right_bar'} />
+        //                     </div>
         //                 </a>
         //             </li>
         //         )}
         //     </ul>
         // </section>
+
+        // 반영안
+        <section className='service_side_tap_wrapper'>
+            <ul className='service_side_tap_list'>
+                {tap?.map((item: any, index: number) =>
+                    <li key={index}>
+                        <a
+                            href={linkControl(item)}
+                            className={
+                                (path === linkControl(item))
+                                    ? 'select_side_tap_button'
+                                    : 'service_side_tap_button'}>
+                            {item}
+                        </a>
+                    </li>
+                )}
+            </ul>
+        </section>
     )
 };

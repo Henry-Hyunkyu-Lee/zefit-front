@@ -14,11 +14,13 @@ export default function CorrectNews({ admData, isUpload, setIsUpload }: CorrectP
     const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const id = admData?.id;
+    const date = admData?.created_at;
 
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
     const [inputImg, setInputImg] = useState<File | null>(null);
     const [newsInput, setNewsInput] = useState<any>({
         image: null,
+        created_at: isUpload ? '' : date,
         link: '',
         title_kr: '',
         title_en: '',
@@ -27,7 +29,7 @@ export default function CorrectNews({ admData, isUpload, setIsUpload }: CorrectP
         writer_kr: '(주)제핏',
         writer_en: 'Zefit Inc.'
     });
-    const { link, title_kr, title_en, content_kr, content_en, writer_kr, writer_en } = newsInput;
+    const { created_at, link, title_kr, title_en, content_kr, content_en, writer_kr, writer_en } = newsInput;
 
     const onChangeInputHandler = (e: any) => {
         const { name, value } = e.target;
@@ -74,6 +76,7 @@ export default function CorrectNews({ admData, isUpload, setIsUpload }: CorrectP
             setPreviewUrl(isUpload ? null : admData?.image);
             setNewsInput({
                 image: isUpload ? null : admData?.image,
+                created_at: isUpload ? '' : admData?.created_at,
                 link: isUpload ? '' : admData?.link,
                 title_kr: isUpload ? '' : admData?.title_kr,
                 title_en: isUpload ? '' : admData?.title_en,
@@ -120,6 +123,22 @@ export default function CorrectNews({ admData, isUpload, setIsUpload }: CorrectP
                                     </div>
                                 </label>}
                         </div>
+                    </td>
+                </tr>
+                <tr style={{ height: '80px' }} className='input_table_body_lane'>
+                    <th className='input_table_body_head'>
+                        날짜
+                    </th>
+                    <td className='input_table_body_room'>
+                        <input
+                            className='table_input'
+                            type='text'
+                            name='created_at'
+                            defaultValue={date}
+                            value={created_at}
+                            autoComplete='off'
+                            placeholder='0000-00-00'
+                            onChange={onChangeInputHandler} />
                     </td>
                 </tr>
                 <tr style={{ height: '100px' }} className='input_table_body_lane'>

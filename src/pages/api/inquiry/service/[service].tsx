@@ -18,7 +18,6 @@ export default async function getServiceApi(req: NextApiRequest, res: NextApiRes
 
         // JSON 데이터를 클라이언트에 반환
         res.status(200).json(parseData);
-        res.send({ message: '성공' });
     } catch (error) {
         console.error("Error reading file:", error);
         res.status(500).json({ message: "Internal server error" });
