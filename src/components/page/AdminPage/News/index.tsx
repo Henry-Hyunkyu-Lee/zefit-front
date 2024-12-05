@@ -50,13 +50,13 @@ export default function News(admData: any) {
                         </div>
                         <div className='notice_table_setting_wrapper'>
                             <a
-                                href={`/adm/notices/${item?.id}`}
+                                href={`/adm/news/${item?.id}`}
                                 className='table_icon_box'>
                                 <i className='icon-pencil'></i>
                             </a>
                             <button
                                 className='table_icon_box'
-                                onClick={(e) => onClickRemoveHandler(e, admData, item?.id, 'notices')}>
+                                onClick={(e) => onClickRemoveHandler(e, admData, item?.id, 'news')}>
                                 <i className='icon-trash'></i>
                             </button>
                         </div>
