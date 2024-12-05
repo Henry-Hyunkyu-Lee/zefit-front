@@ -48,6 +48,7 @@ export default function News() {
                     .from('news')
                     .select('*')
                     .ilike(dropdownValue?.value, `%${search}%`)
+                    .order('created_at', { ascending: false })
                     .range(start, end);
                 if (error) {
                     throw error;
@@ -67,6 +68,7 @@ export default function News() {
                 const { data, error } = await supabase
                     .from('news')
                     .select('*')
+                    .order('created_at', { ascending: false })
                     .range(start, end);
                 if (error) {
                     throw error;
