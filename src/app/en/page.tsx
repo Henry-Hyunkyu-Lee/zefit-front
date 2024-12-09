@@ -240,7 +240,7 @@ export default function HomeEN() {
                     <ul className='partner_list'>
                         {partner?.map((item: any, index: number) =>
                             <li key={index} className='partner_link_box'>
-                                <a href='/adm' className='partner_link'>
+                                <a href='/status' className='partner_link'>
                                     <img
                                         className='partner_link_logo'
                                         src={item.image}
