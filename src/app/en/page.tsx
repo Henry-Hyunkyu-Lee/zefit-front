@@ -59,11 +59,6 @@ export default function HomeEN() {
                 if (error) {
                     throw error;
                 }
-                console.log('Popup data:', {
-                    data,
-                    isEmpty: Array.isArray(data) && data.length === 0,
-                    length: data.length
-                });
                 setPopupData(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
