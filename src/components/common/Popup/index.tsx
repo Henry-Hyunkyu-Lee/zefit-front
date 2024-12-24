@@ -70,7 +70,7 @@ export default function Popup({ popupData }: PopupProps) {
                 <button
                     onClick={onClickPopupSetCookie}
                     className='popup_not_today_button'>
-                    {(isEnglish) ? 'Stop watching today' : '1일 동안 보지 않음'}
+                    {(isEnglish) ? "Don't show again for a day" : "1일 동안 보지 않음"}
                 </button>
                 <button
                     onClick={() => setPopupOpen(false)}
