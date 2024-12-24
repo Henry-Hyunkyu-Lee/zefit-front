@@ -2,8 +2,7 @@
 
 /* 회사 소개 부제목 */
 .company_sub_title_en {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 500;
+    text-align: start;
+    font-size: 18px;
     white-space: pre-line;
 }

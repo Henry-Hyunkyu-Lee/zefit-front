@@ -59,6 +59,11 @@ export default function HomeEN() {
                 if (error) {
                     throw error;
                 }
+                console.log('Popup data:', {
+                    data,
+                    isEmpty: Array.isArray(data) && data.length === 0,
+                    length: data.length
+                });
                 setPopupData(data);
             } catch (error) {
                 console.error("Error fetching paginated data from Supabase:", error);
@@ -102,7 +107,9 @@ export default function HomeEN() {
 
     return (
         <article>
-            <Popup popupData={popupData} />
+            {popupData && popupData.length > 0 && (
+                <Popup popupData={popupData} />
+            )}
             <MetaTagTitle title='' ko={false} />
             <MainHeader />
             <section className='landing_top_banner_container'>
@@ -127,7 +134,8 @@ export default function HomeEN() {
                         ABOUT COMPANY
                     </h2>
                     <h3 style={{ textAlign: 'center' }} className='company_sub_title_en'>
-                        {'Zefit is a nonclinical CRO company that uses\ninnovative diagnostic equipment to help discover\ncandidates in pre-clinical stage.'}
+                    <b className='company_bold_text'>Zefit </b>
+                         is a non-clinical CRO company that uses innovative diagnostic equipment to help discover candidates in pre-clinical stage.
                     </h3>
                     <img
                         className='company_image'

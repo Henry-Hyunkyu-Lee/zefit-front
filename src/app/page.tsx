@@ -97,7 +97,9 @@ export default function Home() {
         <article>
 
             {/* 팝업창 */}
-            <Popup popupData={popupData} />
+            {popupData && popupData.length > 0 && (
+                <Popup popupData={popupData} />
+            )}
 
             {/* 메인 페이지 헤더 */}
             <MainHeader />
@@ -129,9 +131,8 @@ export default function Home() {
                         ABOUT COMPANY
                     </h2>
                     <h3 className='company_sub_title'>
-                        <b className='company_bold_text'>제핏은 제브라피쉬 전문 CRO로 혁신적인 진단장비</b>
-                        {`를 활용하여 전\n임상단계의 신약후보물질의 발굴을 돕는 `}
-                        <b className='company_bold_text'>비임상 CRO 회사입니다.</b>
+                        <b className='company_bold_text'>제핏</b>
+                        은 제브라피쉬 전문 CRO로 혁신적인 진단장비를 활용하여 전임상단계의 신약후보물질의 발굴을 돕는 비임상 CRO 회사입니다.
                     </h3>
                     <img
                         className='company_image'
