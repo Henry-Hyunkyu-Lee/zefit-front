@@ -130,7 +130,7 @@ export default function HomeEN() {
                     </h2>
                     <h3 style={{ textAlign: 'center' }} className='company_sub_title_en'>
                     <b className='company_bold_text'>Zefit </b>
-                         is a non-clinical CRO company that uses innovative diagnostic equipment to help discover candidates in pre-clinical stage.
+                        is an innovative Contract Research Organization (CRO) that minimizes early-stage drug development risks and maximizes clinical success rates by utilizing zebrafish assay data to design and strategize preclinical trials.
                     </h3>
                     <img
                         className='company_image'
