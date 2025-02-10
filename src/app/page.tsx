@@ -132,7 +132,7 @@ export default function Home() {
                     </h2>
                     <h3 className='company_sub_title'>
                         <b className='company_bold_text'>제핏</b>
-                        은 제브라피쉬 전문 CRO로 혁신적인 진단장비를 활용하여 전임상단계의 신약후보물질의 발굴을 돕는 비임상 CRO 회사입니다.
+                        은 제브라피쉬 시험 데이터를 활용하여 전임상 시험 디자인 및 전략을 수립함으로써 신약 개발 초기의 리스크를 최소화하고 임상 성공률을 극대화하는 혁신CRO(Contract Research Organization)입니다.
                     </h3>
                     <img
                         className='company_image'
