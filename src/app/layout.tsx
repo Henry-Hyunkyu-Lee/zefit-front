@@ -27,8 +27,11 @@ export const metadata: Metadata = {
   title: "제핏",
   description: "Using zebrafish, in-vivo model based biotech & pharmaceutical company",
   icons: { icon: "/zefit.png", apple: "/zefit.png" },
+  verification: {
+    google: '5BqvjsTo5B9TZHzhKfNyLJHIr3v779_th9rvyEphT28',
+    bing: 'A36ED9661F6899B09BE7549CED6FFC9C',
+         },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
