@@ -24,8 +24,9 @@ const Loading = dynamic(() => import('../components/common/LoadingSpinner'), { s
 const Footer = dynamic(() => import('../components/common/Footer'), { ssr: false });
 
 export const metadata: Metadata = {
-  title: "제핏",
-  description: "Using zebrafish, in-vivo model based biotech & pharmaceutical company",
+  title: "Preclinical Contract Research for Drug Development",
+  description: "ZEFIT is a contract research organization (CRO) focused on early-stage drug development. It uses zebrafish models to reduce risks and improve clinical outcomes.",
+  keywords: " preclinical testing, preclinical contract research, biopharmaceutical services, biotech research company",
   icons: { icon: "/zefit.png", apple: "/zefit.png" },
   verification: {
     google: '5BqvjsTo5B9TZHzhKfNyLJHIr3v779_th9rvyEphT28',
@@ -46,6 +47,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-FJBYH5L81Y" as="script"/>
       </head>
       <body className={notoSansKr.className}>
         <ClientProvider>
