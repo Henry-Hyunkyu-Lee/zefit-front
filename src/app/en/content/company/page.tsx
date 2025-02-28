@@ -37,7 +37,7 @@ export default function CompanyEN() {
 
     return (
         <article>
-            <MetaTagTitle title='Overview' ko={false} />
+            <MetaTagTitle title='Outsourced Preclinical Research for Drug Discovery' ko={false} />
             <PageHeader />
             <PageBanner pageTitle='OVERVIEW' />
             <PageTap tap='company' />
