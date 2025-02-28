@@ -37,7 +37,11 @@ export default function CompanyEN() {
 
     return (
         <article>
-            <MetaTagTitle title='Overview' ko={false} />
+            <MetaTagTitle title='Outsourced Preclinical Research for Drug Discovery'
+			description="ZEFIT offers preclinical research services to pharmaceutical and biotech companies. It outsources preclinical studies using zebrafish models for drug discovery."
+			keywords={["drug development platform", "outsourced preclinical research", "drug discovery", "drug discovery platform"]}
+			ko={false}
+			/>			
             <PageHeader />
             <PageBanner pageTitle='OVERVIEW' />
             <PageTap tap='company' />
