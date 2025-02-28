@@ -105,7 +105,7 @@ export default function HomeEN() {
             {popupData && popupData.length > 0 && (
                 <Popup popupData={popupData} />
             )}
-            <MetaTagTitle title='' ko={false} />
+            <MetaTagTitle title='Preclinical Contract Research for Drug Development' ko={false} />
             <MainHeader />
             <section className='landing_top_banner_container'>
                 <div ref={backRef} className='landing_top_banner' />
