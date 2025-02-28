@@ -63,8 +63,8 @@ export const businessNavList: navListType = [
                 id: 'CNS_FIT',
                 en: 'CNS_FIT',
                 href: '/content/service/CNS_FIT',
-                href_en: '/en/content/service/CNS_FIT'
-				title: "Advanced Central Nervous System Model Research"
+                href_en: '/en/content/service/CNS_FIT',
+				title: "Advanced Central Nervous System Model Research",
 				description: "ZEFIT provides CNS zebrafish models to study the central nervous system. It enables fast drug discovery, finding compounds to prevent convulsions in two weeks.",
 				keywords: ["central nervous system model", "CNS FIT", "zebrafish"],
             },
@@ -72,9 +72,9 @@ export const businessNavList: navListType = [
                 id: 'Meta_FIT',
                 en: 'Meta_FIT',
                 href: '/content/service/Meta_FIT',
-                href_en: '/en/content/service/Meta_FIT'
-				title: "Metabolic Disease Research for Drug Discovery"
-				description: "ZEFIT's Meta_FIT service uses zebrafish models to study metabolic diseases. It detects liver damage and speeds up drug discovery by reducing fat accumulation."
+                href_en: '/en/content/service/Meta_FIT',
+				title: "Metabolic Disease Research for Drug Discovery",
+				description: "ZEFIT's Meta_FIT service uses zebrafish models to study metabolic diseases. It detects liver damage and speeds up drug discovery by reducing fat accumulation.",
 				keywords: ["metabolic disease research"]				
             },
             {
