@@ -76,14 +76,9 @@
                 "Clinical"
             ],
             "target": [
-                {
-                    "id": "Epilepsy",
-                    "product": "ZT-100",
-                    "percent": "60%"
-                },
-                {
-                    "id": "Epilepsy",
-                    "product": "ZT-101",
+                 {
+                    "id": "Metabolic Disease",
+                    "product": "Joint Research\n with JW Pharmaceutical",
                     "percent": "30%"
                 },
                 {
