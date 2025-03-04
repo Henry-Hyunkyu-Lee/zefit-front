@@ -86,7 +86,7 @@ export default function Pipeline() {
                                 <tr
                                     key={index}
                                     className='table_body_lane'>
-                                    <th rowSpan={2} className='table_body_room_head'>
+                                    <th className='table_body_room_head'>
                                         {(index === 0)
                                             ? <div className='table_body_room_head_text'>
                                                 {item?.id}
@@ -95,14 +95,14 @@ export default function Pipeline() {
                                     </th>
                                     <td
                                         style={{
-                                            borderBottom: (index === pipelineData?.graph.target.length - 1) ? 'none' : ''
+                                            borderBottom: ''
                                         }}
                                         className='table_body_room_sub_head'>
                                         {item?.product}
                                     </td>
                                     <td
                                         style={{
-                                            borderBottom: (index === pipelineData?.graph.target.length - 1) ? 'none' : ''
+                                            borderBottom: ''
                                         }}
                                         className='table_body_room_graph'>
                                         <div className='graph_box'>

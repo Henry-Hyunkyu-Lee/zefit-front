@@ -86,7 +86,7 @@
 /* 표 바디 라인 컨테이너 */
 .table_body_lane {
     width: 100%;
-    height: calc(100% / 3);
+    height: calc(100% / 2);
     display: flex;
     align-items: center;
 }
@@ -102,12 +102,13 @@
     align-items: center;
     font-size: 16px;
     font-weight: 500;
+    border-bottom: 1px solid #cfcfcf;
 }
 
 /* 표 바디칸 헤드 텍스트 */
 .table_body_room_head_text {
     width: 100%;
-    height: 200%;
+    height: 100%;
     font-size: 16px;
     font-weight: 500;
     position: absolute;
@@ -116,7 +117,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #cfcfcf;
+    /* border-bottom: 1px solid #cfcfcf; */
 }
 
 /* 표 바디칸 서브헤드 */
@@ -128,7 +129,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border-bottom: 1px solid #cfcfcf;
+    white-space: pre-line;
 }
 
 /* 표 바디칸 그래프 */
