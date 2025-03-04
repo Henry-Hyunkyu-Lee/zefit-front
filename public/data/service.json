@@ -7,7 +7,7 @@
         "thumbnail": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_CNS_FIT.jpg",
         "introduce": [
             "자동화된 운동 측정, 신경형태에 대한 연구 및 복잡한 인지 기능을 포함하는 일련의 신경학적 표현형을 비용 효율적이고 검증된 방식으로 평가할 수 있습니다. 척추동물 중 CNS는 고도로 보존되어 있으며 zebrafish는 투명성 덕분에 생체 내 및 비침습적 마커를 허용합니다. 또한 자손수가 많기 때문에 대량 분석 데이터를 제공할 수 있습니다.",
-            "제핏은 알츠하이머병, 파킨슨병, 간질과 관련 행동과 전기생리학적 변화에 대한 연구 데이터를 제공합니다. CNS-FITTM 플랫폼은 질병을 안정적으로 모델링하여 화합물에 대한 유효성 검증이 가능하도록합니다."
+            "제핏은 알츠하이머병, 파킨슨병, 뇌전증과 관련 행동과 전기생리학적 변화에 대한 연구 데이터를 제공합니다. CNS-FITTM 플랫폼은 질병을 안정적으로 모델링하여 화합물에 대한 유효성 검증이 가능하도록합니다."
         ],
         "introduce_en": [
             "Neurological phenotypes, including automated locomotion measurements, studies of neural forms, and complex cognitive functions, can be evaluated at an efficient cost and precise data. Among vertebrates, zebrafish is highly conserved in CNS, and allows in-vivo and non-invasive markers due to its transparency. It can also provide analyzed big data because of the large number of offspring.",
@@ -74,7 +74,7 @@
                     },
                     {
                         "title": "뇌전증 모델",
-                        "text": "간질은 뉴런의 과도한 흥분으로 인한 재발성 발작이 특징입니다.\n일반적인 경련제 PTZ에 대한 노출은 제브라피쉬 치어의 경련으로 인한 행동 변화와 전기생리학적 변화가 측정됩니다.\n이 모델을 통해 경련을 방지하는 화합물을 확인할 수 있습니다."
+                        "text": "뇌전증은 뉴런의 과도한 흥분으로 인한 재발성 발작이 특징입니다.\n일반적인 경련제 PTZ에 대한 노출은 제브라피쉬 치어의 경련으로 인한 행동 변화와 전기생리학적 변화가 측정됩니다.\n이 모델을 통해 경련을 방지하는 화합물을 확인할 수 있습니다."
                     }
                 ],
                 "info_en": [

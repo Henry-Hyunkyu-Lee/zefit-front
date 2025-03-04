@@ -60,12 +60,12 @@
         ]
     },
     "pipeline": {
-        "title": "제핏의 신약개발 프로세스 혁신은 효율적인 신약개발이 가능하게 합니다.",
-        "title_en": "Zefit’s innovation in the drug discovery process opens efficient drug development.",
-        "subtitle": "바이오 신호 측정기술, In-vivo 기반 약리효과 빅데이터 등과 같은 고효율 기술을 활용한\n플랫폼을 통해",
-        "subtitle_en": "high efficiency technology platforms such as biosignal acquisition technology,\nBig-data about in-vivo pharmacological effects, etc.",
-        "strongtext": "CNS 신약개발 파이프라인 확보",
-        "strongtext_en": "CNS drug discovery pipeline utilizing",
+        "title": "제핏의 플랫폼 기술은 타겟 발굴 및 Drug disvovery 단계를 1년 내로 단축합니다.",
+        "title_en": "Zefit’s platform technology shortens target identification and drug discovery stages to within a year.",
+        "subtitle": "자동화된 약물 탐색기술, AI 기반 In-vivo 시험 분석 기술을 활용한",
+        "subtitle_en": "Securing a drug development pipeline through collaborative research utilizing",
+        "strongtext": "공동연구로 신약개발 파이프라인 확보",
+        "strongtext_en": "automated drug screening technology and AI-based in vivo analysis.",
         "graph": {
             "category": [
                 "Target Disease",
