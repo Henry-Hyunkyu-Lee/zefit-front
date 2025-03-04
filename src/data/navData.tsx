@@ -137,4 +137,12 @@ export const communityNavList: navListType = [
         href_en: '/en/news',
         list: undefined
     },
+    {
+        id: '문의하기',
+        id_en: 'Contact',
+        criteria: '/requests',
+        href: '/requests',
+        href_en: '/en/requests',
+        list: undefined
+    },
 ];
