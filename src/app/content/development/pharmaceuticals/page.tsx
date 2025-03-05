@@ -3,20 +3,21 @@
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
-import '../../service/[service]/style.css';
-// import '../../service/[service]/test-style.css'; // 반영안을 보고 싶으면 이 라인을 주석 해제
-import './style.css';
+import '../../../../content/service/[service]/style.css';
+// import '../../../../content/service/[service]/test-style.css'; // 반영안을 보고 싶으면 이 라인의 주석을 해제
+import '../../../../content/development/pharmaceuticals/style.css';
 import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import { businessNavList } from "@/data/navData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
-import { useRecoilState } from "recoil";
 import { isLoading } from "@/modules/loading";
+import { useRecoilState } from "recoil";
 
-export default function Pharmaceuticals() {
+export default function PharmaceuticalsEN() {
 
-    const developmentData = businessNavList[2].list?.map((item: any) => item.id);
     const [, setLoading] = useRecoilState(isLoading);
+
+    const developmentData = businessNavList[2].list?.map((item: any) => item.en);
 
     const [pharmaceuticalsData, setPharmaceuticalsData] = useState<any>(null);
 
@@ -39,9 +40,12 @@ export default function Pharmaceuticals() {
 
     return (
         <article>
-            <MetaTagTitle title='신약개발기술' />
+            <MetaTagTitle title='Pharmaceutical Innovation in CNS Drug Development' ko={false}
+            description='CNS drug development focuses on testing treatments for brain and spinal cord disorders, including drug discovery, preclinical testing, and clinical trials.'
+            keywords={['CNS drug development ','pharmaceutical innovation',]}
+            />            
             <PageHeader />
-            <PageBanner pageTitle='신약개발' />
+            <PageBanner pageTitle='Drug discovery' />
             <PageTap tap='business' />
             <SideTap tap={developmentData} content='development' />
             <div className='page_layout'>
@@ -50,7 +54,7 @@ export default function Pharmaceuticals() {
                 <section className='pharmaceuticals_page_container'>
                     <h2 className='service_page_title'>
                         <div className='service_page_side_bar' />
-                        신약개발기술
+                        Technology
                     </h2>
                     <div className='pharmaceuticals_page_top_info_container'>
                         <div className='top_info_background_box' />
@@ -61,10 +65,10 @@ export default function Pharmaceuticals() {
                         <div className='top_info_content_wrapper'>
                             <div className='top_info_content_box'>
                                 <h3 className='top_info_title'>
-                                    {pharmaceuticalsData?.title}
+                                    {pharmaceuticalsData?.title_en}
                                 </h3>
                                 <p className='top_info_content'>
-                                    {pharmaceuticalsData?.subtitle}
+                                    {pharmaceuticalsData?.subtitle_en}
                                 </p>
                             </div>
                         </div>
@@ -75,7 +79,7 @@ export default function Pharmaceuticals() {
                 {/* <section className='service_page_container2'>
                     <h2 className='service_page_title2'>
                         <div className='service_page_side_bar2' />
-                        신약개발기술
+                        Technology
                     </h2>
                     <div className='service_page_info_wrapper2'>
                         <img
@@ -84,10 +88,10 @@ export default function Pharmaceuticals() {
                             alt='신약개발기술' />
                         <div className='service_page_info_box2'>
                             <h3 className='service_page_info_box_title2'>
-                                {pharmaceuticalsData?.title}
+                                {pharmaceuticalsData?.title_en}
                             </h3>
                             <p className='service_page_info_box_content2'>
-                                {pharmaceuticalsData?.subtitle}
+                                {pharmaceuticalsData?.subtitle_en}
                             </p>
                         </div>
                     </div>
@@ -106,17 +110,19 @@ export default function Pharmaceuticals() {
                                 <img
                                     className='card_box_icon'
                                     src={item?.icon}
-                                    alt={`${item?.title} 아이콘`} />
-                                <strong className='card_box_title'>
-                                    {item?.title}
+                                    alt={`${item?.title_en} 아이콘`} />
+                                <strong style={{ fontSize: '15px' }} className='card_box_title'>
+                                    {item?.title_en}
                                 </strong>
                                 <div className='card_text_box'>
-                                    {item?.content.map((text: string, idx: number) =>
+                                    {item?.content_en.map((text: string, idx: number) =>
                                         <div
                                             key={idx}
                                             className='card_text_box_lane'>
-                                            <div className='card_text_box_lane_point' />
-                                            <p className='card_text_box_lane_font'>
+                                            <div className='card_text_box_lane_point_en' />
+                                            <p
+                                                style={{ fontSize: '12px' }}
+                                                className='card_text_box_lane_font'>
                                                 {text}
                                             </p>
                                         </div>
