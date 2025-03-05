@@ -1,19 +1,20 @@
 'use client';
 
+import MainHeader from "@/components/common/MainHeader";
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
-import './style.css';
+import '../../../content/company/style.css';
 import MetaTagTitle from "@/utils/MetaTagTitle";
 import { useMediaQuery } from "react-responsive";
-import { useRecoilState } from "recoil";
 import { isLoading } from "@/modules/loading";
+import { useRecoilState } from "recoil";
 import { useEffect, useState } from "react";
 
-export default function Company() {
+export default function CompanyEN() {
 
-    const isMobile = useMediaQuery({ maxWidth: 1170 });
     const [, setLoading] = useRecoilState(isLoading);
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const [companyData, setCompanyData] = useState<any>(null);
 
@@ -36,9 +37,9 @@ export default function Company() {
 
     return (
         <article>
-            <MetaTagTitle title='회사개요' />
+            <MetaTagTitle title='Outsourced Preclinical Research for Drug Discovery' ko={false} />
             <PageHeader />
-            <PageBanner pageTitle='회사개요' />
+            <PageBanner pageTitle='OVERVIEW' />
             <PageTap tap='company' />
 
             {/* 회사 개요 페이지 레이아웃 */}
@@ -48,27 +49,14 @@ export default function Company() {
                         About Us
                     </h2>
                     <h3 className='company_introduce_sub_title'>
-                        제핏은 early in-vivo testing model인
-                        <br />
                         <b className='sub_title_span'>
-                            제브라피쉬를 활용
-                        </b>하여 새로운 화합물의
-                        <br />
-                        <b className='sub_title_span'>
-                            안전성, 유효성 및 의학적 연관성을 분석
+                            Zefit analyzes and provides safety, efficacy, and medical relevance about new compounds using zebrafish, early in-vivo testing model.
                         </b>
-                        하여 제공하고 있습니다.
                     </h3>
                     <div className='company_center_bar' />
                     <div className='introduce_additional_wrapper'>
                         <p className='introduce_additional'>
-                            제브라피쉬을 통한 의약품개발은 실험동물모델의 사용을 줄이고 대체하는 실험 방법입니다.
-                        </p>
-                        <p className='introduce_additional'>
-                            {'제브라피쉬는 수명주기가 빨라 HTS 접근이 가능하며\n이를 통해 고객사는 연구 의약품의 상용화를 앞당길 수 있습니다.'}
-                        </p>
-                        <p className='introduce_additional'>
-                            {'제핏은 생명과학 전문가와 자동화 기술 전문가가 함께 구축한\n차별화된 신약개발 플랫폼을 보유하고 있습니다.'}
+                            Drug development through zebrafish is an method that reduces and replaces the use of experimental animal models. Zebrafish has a fast life cycle, so we can access HTS. This allows customers to accelerate commercialization of research drugs. Zefit has a differentiated drug development platform built by biologist experts and AI technology experts.
                         </p>
                     </div>
                 </section>
@@ -78,14 +66,14 @@ export default function Company() {
                     <div className='different_develop_content_container'>
                         <div className='different_develop_title_container'>
                             <h4 className='different_develop_title'>
-                                차별화된 신약개발 플랫폼
+                                Differentiated drug development platform
                             </h4>
                             <p className='different_develop_sub_title'>
-                                {'현재 제핏은 국내 우수 연구기관과 제약회사에\n화합물 시험 서비스를 제공하고 있습니다.'}
+                                {'Currently, Zefit provides compound test services to leading domestic research institutes and pharmaceutical companies.'}
                             </p>
                             <div className='company_center_bar' />
-                            <p className='different_develop_introduce'>
-                                {'제브라피쉬 유전자 편집기술을 활용하여 맞춤형 질병 모델을 제작하고,\n자동화된 실험 인프라로 실험기간과 데이터 간 편차를 줄이며\n보유한 실험 데이터를 활용한 신약개발 플랫폼을 구축하고 있습니다.'}
+                            <p className='different_develop_sub_title'>
+                                {'reduce experimental periods and variation between data using AI based experimental infrastructure, and build drug development platforms using experimental data we have.'}
                             </p>
                         </div>
                         <ul className="shape_wrapper">
@@ -142,14 +130,14 @@ export default function Company() {
                                             <div className='card_content_top_lane'>
                                                 <img
                                                     className='card_content_icon'
-                                                    src={item.icon}
+                                                    src={item?.icon}
                                                     alt={`${item.id} 아이콘`} />
-                                                <strong className='card_content_title' style={{ color: item.titlecolor }}>
-                                                    {item.title}
+                                                <strong className='card_content_title_en' style={{ color: item.titlecolor }}>
+                                                    {item.title_en}
                                                 </strong>
                                             </div>
-                                            <p className='card_content_text' style={{ color: item.textcolor }}>
-                                                {item.content}
+                                            <p className='card_content_text_en' style={{ color: item.textcolor }}>
+                                                {item.content_en}
                                             </p>
                                         </div>
                                     </li>
@@ -160,14 +148,14 @@ export default function Company() {
                 <section className='mission_container'>
                     <div className='mission_in_wrapper'>
                         <div className='mission_content_container'>
-                            <h3 className='mission_content_title'>
+                            <h3 className='company_introduce_title'>
                                 Mission
                             </h3>
                             <p className='mission_content_sub_title'>
-                                {'질병 없는 삶을 통한\n인류의 최대가치 실현'}
+                                {'Realizing the greatest value of mankind\nthrough a disease-free life'}
                             </p>
                             <p className='mission_content_text'>
-                                {'우리는 고효율의 신약개발기술을 통해 삶을 더 건강하게 만들고\n더 큰 가치를 실현할 수 있도록 합니다.\n\n신약개발과정을 효율화 하는 제핏의 플랫폼은\n더 나은 미래를 위한 핵심입니다.'}
+                                {"We create values and healthier life through highly efficient new drug development process.\nZefit's platform, which makes the process of developing new drugs highly efficient, is a key to a better future."}
                             </p>
                         </div>
                         <img
