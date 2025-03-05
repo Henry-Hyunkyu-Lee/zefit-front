@@ -5,25 +5,26 @@ import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
 
 // 현재안
-import '../../../../content/service/[service]/style.css';
+import './style.css';
 
 // 반영안
-// import '../../../../content/service/[service]/test-style.css';
+// import './test-style.css';
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import MetaTagTitle from "@/utils/MetaTagTitle";
-import { isLoading } from "@/modules/loading";
 import { useRecoilState } from "recoil";
+import { isLoading } from "@/modules/loading";
 import TestServiceDetailTap from "@/components/page/ServicePage/TestServiceDetailTap";
 import ServiceDetailTap from "@/components/page/ServicePage/ServiceDetailTap";
 
-export default function ServiceEN() {
+export default function Service() {
 
     const { service }: any = useParams();
 
     const [, setLoading] = useRecoilState(isLoading);
+
     const [serviceData, setServiceData] = useState<any>(null);
     const [serviceTap, setServiceTap] = useState<any>(null);
     const [present, setPresent] = useState<number>(0);
@@ -38,6 +39,8 @@ export default function ServiceEN() {
     };
 
     useEffect(() => {
+        setLoading(true);
+
         if (service) {
             fetch(`/api/inquiry/service/${service}`)
                 .then((response) => {
@@ -57,26 +60,12 @@ export default function ServiceEN() {
                 });
         };
     }, [service]);
-console.log(sideTapData)
-const customMetaData =(type)=>{
-        switch(type){
-        case 'CNS_FIT':
-        return  <MetaTagTitle title="Advanced Central Nervous System Model Research" ko={false} description="ZEFIT provides CNS zebrafish models to study the central nervous system. It enables fast drug discovery, finding compounds to prevent convulsions in two weeks." keywords={['central nervous system model']}/>
-        case 'Meta_FIT':
-        return  <MetaTagTitle title="Metabolic Disease Research for Drug Discovery"ko={false} description="ZEFIT's Meta_FIT service uses zebrafish models to study metabolic diseases. It detects liver damage and speeds up drug discovery by reducing fat accumulation." keywords={['metabolic disease research']}/>
-        case 'Onco_FIT':
-        return  <MetaTagTitle title="Preclinical Testing Services for Anticancer Drug development" ko={false} description="ZEFIT works on anticancer drug development using zebrafish CDX models. It accelerates drug discovery by providing tumor growth and metastasis data in five days." keywords={['anticancer drug development','preclinical testing services','anticancer drug discovery']}/>
-        case 'Toxicology':
-         return  <MetaTagTitle title="Toxicity Testing Services for Drug Discovery" ko={false} description="ZEFIT provides advanced toxicity testing services to support early drug development process by assessing drug safety and adverse effects before clinical trials." keywords={['toxicity testing services','drug discovery toxicology']}/> 
-        default :
-        return  <MetaTagTitle title={service} ko={false} description="" keywords={['']}/>   
-    }
-}
+
     return (
-        <article>
-            {customMetaData(service)}
+        <article style={{ position: 'relative' }}>
+            <MetaTagTitle title='서비스' />
             <PageHeader />
-            <PageBanner pageTitle='service' />
+            <PageBanner pageTitle='서비스' />
             <PageTap tap='business' />
             <SideTap tap={sideTapData} content='service' />
 
@@ -90,9 +79,9 @@ const customMetaData =(type)=>{
                     <div className='service_page_info_wrapper'>
                         <div className='service_page_info_box'>
                             <h3 className='service_page_info_box_title'>
-                                {findData?.model_en}
+                                {findData?.model}
                             </h3>
-                            {findData?.introduce_en.map((item: string, index: number) =>
+                            {findData?.introduce.map((item: string, index: number) =>
                                 <p
                                     key={index}
                                     className='service_page_info_box_content'>
@@ -111,8 +100,7 @@ const customMetaData =(type)=>{
                     serviceTap={serviceTap}
                     onClickTapHandler={onClickTapHandler}
                     present={present}
-                    prev={prev}
-                    lang="en" />
+                    prev={prev} />
             </div>
 
             {/* 반영안 */}
@@ -129,9 +117,9 @@ const customMetaData =(type)=>{
                             alt={findData?.service} />
                         <div className='service_page_info_box2'>
                             <h3 className='service_page_info_box_title2'>
-                                {findData?.model_en}
+                                {findData?.model}
                             </h3>
-                            {findData?.introduce_en.map((item: string, index: number) =>
+                            {findData?.introduce.map((item: string, index: number) =>
                                 <p
                                     key={index}
                                     className='service_page_info_box_content2'>
@@ -155,7 +143,7 @@ const customMetaData =(type)=>{
                                                 ? "select_detail_tap_button"
                                                 : "detail_tap_button"
                                         }>
-                                        {item?.name_en}
+                                        {item?.name}
                                     </button>
                                 </li>
                             )}
@@ -163,8 +151,7 @@ const customMetaData =(type)=>{
                         <TestServiceDetailTap
                             serviceTap={serviceTap}
                             present={present}
-                            prev={prev}
-                            lang='en' />
+                            prev={prev} />
                     </div>
                 </section>
             </div> */}
