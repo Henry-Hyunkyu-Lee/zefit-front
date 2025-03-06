@@ -37,6 +37,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  //Dynamically set the canonical Tag
+  //created the middleware.ts file 
+  const headersList = headers();
+  const currentUrl = headersList.get("x-url") || headersList.get("referer") || "";
+  
   return (
     <html lang="ko">
       <head>
