@@ -68,6 +68,16 @@ export default function RootLayout({
             gtag('config', 'G-FJBYH5L81Y');
           `}
         </Script>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16895928340"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16895928340');
+        </script>
+        
       </head>
       <body className={notoSansKr.className}>
         <ClientProvider>
