@@ -40,7 +40,10 @@ export default function PharmaceuticalsEN() {
 
     return (
         <article>
-            <MetaTagTitle title='Technology' ko={false} />
+            <MetaTagTitle title='Pharmaceutical Innovation in CNS Drug Development' ko={false} 
+            description='CNS drug development focuses on testing treatments for brain and spinal cord disorders, including drug discovery, preclinical testing, and clinical trials.'
+            keywords={['CNS drug development ','pharmaceutical innovation',]} 
+            />
             <PageHeader />
             <PageBanner pageTitle='Drug discovery' />
             <PageTap tap='business' />
