@@ -58,6 +58,16 @@ export default function RootLayout({
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img1.jpg" />
         <meta property="og:url" content={currentUrl} />
+        {/* Add Google Analytics script */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-FJBYH5L81Y"></Script>
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FJBYH5L81Y');
+          `}
+        </Script>
       </head>
       <body className={notoSansKr.className}>
         <ClientProvider>
