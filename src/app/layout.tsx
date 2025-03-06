@@ -51,6 +51,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link rel="canonical" href={currentUrl} />
+        <meta name="robots" content="index,follow" />
+        <meta name="msvalidate.01" content="A36ED9661F6899B09BE7549CED6FFC9C" />
+        <meta name="google-site-verification" content="5BqvjsTo5B9TZHzhKfNyLJHIr3v779_th9rvyEphT28" />
+        <meta property="og:site_name" content="Zefit"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img1.jpg" />
+        <meta property="og:url" content={currentUrl} />
       </head>
       <body className={notoSansKr.className}>
         <ClientProvider>
