@@ -26,8 +26,7 @@ const Loading = dynamic(() => import('../components/common/LoadingSpinner'), { s
 const Footer = dynamic(() => import('../components/common/Footer'), { ssr: false });
 
 export const metadata: Metadata = {
-  title: "제핏",
-  description: "Using zebrafish, in-vivo model based biotech & pharmaceutical company",
+
   icons: { icon: "/zefit.png", apple: "/zefit.png" },
 };
 
