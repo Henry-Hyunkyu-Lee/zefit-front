@@ -1,8 +1,10 @@
+import { headers } from "next/headers";
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "../styles/globals.css";
 import ClientProvider from "./clientProvider";
 import dynamic from "next/dynamic";
+import Script from "next/script"; // Import the Script component
 
 const notoSansKr = Noto_Sans_KR({
   // preload: true, 기본값
@@ -35,6 +37,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  //Dynamically set the canonical Tag
+  //created the middleware.ts file 
+  const headersList = headers();
+  const currentUrl = headersList.get("x-url") || headersList.get("referer") || "";
+  
   return (
     <html lang="ko">
       <head>
@@ -43,6 +50,24 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <link rel="canonical" href={currentUrl} />
+        <meta name="robots" content="index,follow" />
+        <meta name="msvalidate.01" content="A36ED9661F6899B09BE7549CED6FFC9C" />
+        <meta name="google-site-verification" content="5BqvjsTo5B9TZHzhKfNyLJHIr3v779_th9rvyEphT28" />
+        <meta property="og:site_name" content="Zefit"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_main_img1.jpg" />
+        <meta property="og:url" content={currentUrl} />
+        {/* Add Google Analytics script */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-FJBYH5L81Y"></Script>
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FJBYH5L81Y');
+          `}
+        </Script>
       </head>
       <body className={notoSansKr.className}>
         <ClientProvider>
