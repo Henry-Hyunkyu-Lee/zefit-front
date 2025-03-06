@@ -57,10 +57,24 @@ export default function ServiceEN() {
                 });
         };
     }, [service]);
-
+    console.log(sideTapData)
+    const customMetaData =(type)=>{
+            switch(type){
+            case 'CNS_FIT':
+            return  <MetaTagTitle title="Advanced Central Nervous System Model Research" ko={false} description="ZEFIT provides CNS zebrafish models to study the central nervous system. It enables fast drug discovery, finding compounds to prevent convulsions in two weeks." keywords={['central nervous system model']}/>
+            case 'Meta_FIT':
+            return  <MetaTagTitle title="Metabolic Disease Research for Drug Discovery"ko={false} description="ZEFIT's Meta_FIT service uses zebrafish models to study metabolic diseases. It detects liver damage and speeds up drug discovery by reducing fat accumulation." keywords={['metabolic disease research']}/>
+            case 'Onco_FIT':
+            return  <MetaTagTitle title="Preclinical Testing Services for Anticancer Drug development" ko={false} description="ZEFIT works on anticancer drug development using zebrafish CDX models. It accelerates drug discovery by providing tumor growth and metastasis data in five days." keywords={['anticancer drug development','preclinical testing services','anticancer drug discovery']}/>
+            case 'Toxicology':
+             return  <MetaTagTitle title="Toxicity Testing Services for Drug Discovery" ko={false} description="ZEFIT provides advanced toxicity testing services to support early drug development process by assessing drug safety and adverse effects before clinical trials." keywords={['toxicity testing services','drug discovery toxicology']}/> 
+            default :
+            return  <MetaTagTitle title={service} ko={false} description="" keywords={['']}/>   
+        }
+    }
     return (
         <article>
-            <MetaTagTitle title='Service' ko={false} />
+            {customMetaData(service)}
             <PageHeader />
             <PageBanner pageTitle='service' />
             <PageTap tap='business' />
