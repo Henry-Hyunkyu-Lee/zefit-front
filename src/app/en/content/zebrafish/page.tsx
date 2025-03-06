@@ -22,7 +22,10 @@ export default function ZebrafishModelEN() {
 
     return (
         <article>
-            <MetaTagTitle title='Zebrafish' ko={false} />
+            <MetaTagTitle title='Zebrafish Models for Drug Development and Research' ko={false} 
+            description='ZEFIT offers zebrafish models for drug development and contract research. It provides insights into disease mechanisms, drug toxicity, and therapeutic efficacy.'
+            keywords={['zebrafish models','zebrafish contract research','zebrafish drug development','disease model',]} 
+            />
             <PageHeader />
             <PageBanner pageTitle='Zebrafish' />
             <PageTap tap='business' />
