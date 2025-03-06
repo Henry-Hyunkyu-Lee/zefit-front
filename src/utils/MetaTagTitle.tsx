@@ -5,8 +5,9 @@ interface MetaTagTitleProps {
   keywords: string[]
 };
 
-export default function MetaTagTitle({ title, description, keywords, ko = true }: MetaTagTitleProps) {
+export default function MetaTagTitle({ title, ko = true, description, keywords}: MetaTagTitleProps) {
   return (
+    <>
     <title>
       {(title?.length > 0)
         ? `${title} | ${(ko) ? '제핏' : 'ZEFIT'}`
