@@ -105,7 +105,10 @@ export default function HomeEN() {
             {popupData && popupData.length > 0 && (
                 <Popup popupData={popupData} />
             )}
-            <MetaTagTitle title='Preclinical Contract Research for Drug Development' ko={false} />
+            <MetaTagTitle title='Preclinical Contract Research for Drug Development' ko={false} 
+            description='ZEFIT is a contract research organization (CRO) focused on early-stage drug development. It uses zebrafish models to reduce risks and improve clinical outcomes.'
+            keywords={['preclinical testing','preclinical contract research','biopharmaceutical services','biotech research company',]}
+            />
             <MainHeader />
             <section className='landing_top_banner_container'>
                 <div ref={backRef} className='landing_top_banner' />
