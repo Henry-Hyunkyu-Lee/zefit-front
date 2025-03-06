@@ -70,12 +70,13 @@ export default function RootLayout({
         </Script>
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16895928340"></script>
-        <script>
+        <script id="google ads">>
+        {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'AW-16895928340');
+        `}
         </script>
         
       </head>
