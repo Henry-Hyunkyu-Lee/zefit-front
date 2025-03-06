@@ -96,6 +96,7 @@ const customMetaData = (type: ServiceType) => {
 };
     return (
         <article>
+            {customMetaData(service)}
             <PageHeader />
             <PageBanner pageTitle='service' />
             <PageTap tap='business' />
