@@ -57,24 +57,45 @@ export default function ServiceEN() {
                 });
         };
     }, [service]);
-    console.log(sideTapData)
-    const customMetaData =(type)=>{
-            switch(type){
-            case 'CNS_FIT':
-            return  <MetaTagTitle title="Advanced Central Nervous System Model Research" ko={false} description="ZEFIT provides CNS zebrafish models to study the central nervous system. It enables fast drug discovery, finding compounds to prevent convulsions in two weeks." keywords={['central nervous system model']}/>
-            case 'Meta_FIT':
-            return  <MetaTagTitle title="Metabolic Disease Research for Drug Discovery"ko={false} description="ZEFIT's Meta_FIT service uses zebrafish models to study metabolic diseases. It detects liver damage and speeds up drug discovery by reducing fat accumulation." keywords={['metabolic disease research']}/>
-            case 'Onco_FIT':
-            return  <MetaTagTitle title="Preclinical Testing Services for Anticancer Drug development" ko={false} description="ZEFIT works on anticancer drug development using zebrafish CDX models. It accelerates drug discovery by providing tumor growth and metastasis data in five days." keywords={['anticancer drug development','preclinical testing services','anticancer drug discovery']}/>
-            case 'Toxicology':
-             return  <MetaTagTitle title="Toxicity Testing Services for Drug Discovery" ko={false} description="ZEFIT provides advanced toxicity testing services to support early drug development process by assessing drug safety and adverse effects before clinical trials." keywords={['toxicity testing services','drug discovery toxicology']}/> 
-            default :
-            return  <MetaTagTitle title={service} ko={false} description="" keywords={['']}/>   
-        }
-    }
+   // TypeScript type definition for service types
+type ServiceType = 'CNS_FIT' | 'Meta_FIT' | 'Onco_FIT' | 'Toxicology' | 'Default';
+
+// Configuration object for metadata
+const metadataConfig: Record<ServiceType, {title: string, description: string, keywords: string[]}> = {
+  'CNS_FIT': {
+    title: "Advanced Central Nervous System Model Research",
+    description: "ZEFIT provides CNS zebrafish models to study the central nervous system. It enables fast drug discovery, finding compounds to prevent convulsions in two weeks.",
+    keywords: ['central nervous system model']
+  },
+  'Meta_FIT': {
+    title: "Metabolic Disease Research for Drug Discovery",
+    description: "ZEFIT's Meta_FIT service uses zebrafish models to study metabolic diseases. It detects liver damage and speeds up drug discovery by reducing fat accumulation.",
+    keywords: ['metabolic disease research']
+  },
+  'Onco_FIT': {
+    title: "Preclinical Testing Services for Anticancer Drug development",
+    description: "ZEFIT works on anticancer drug development using zebrafish CDX models. It accelerates drug discovery by providing tumor growth and metastasis data in five days.",
+    keywords: ['anticancer drug development', 'preclinical testing services', 'anticancer drug discovery']
+  },
+  'Toxicology': {
+    title: "Toxicity Testing Services for Drug Discovery",
+    description: "ZEFIT provides advanced toxicity testing services to support early drug development process by assessing drug safety and adverse effects before clinical trials.",
+    keywords: ['toxicity testing services', 'drug discovery toxicology']
+  },
+  'Default': {
+    title: "Default Service Title or Service Not Found",
+    description: "No specific service selected or service data not available.",
+    keywords: ['default', 'service']
+  }
+};
+
+// Function to retrieve metadata based on service type
+const customMetaData = (type: ServiceType) => {
+  const meta = metadataConfig[type] || metadataConfig['Default'];
+  return <MetaTagTitle title={meta.title} ko={false} description={meta.description} keywords={meta.keywords} />;
+};
     return (
         <article>
-            {customMetaData(service)}
             <PageHeader />
             <PageBanner pageTitle='service' />
             <PageTap tap='business' />
