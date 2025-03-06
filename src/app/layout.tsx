@@ -4,6 +4,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import "../styles/globals.css";
 import ClientProvider from "./clientProvider";
 import dynamic from "next/dynamic";
+import Script from "next/script"; // Import the Script component
 
 const notoSansKr = Noto_Sans_KR({
   // preload: true, 기본값
