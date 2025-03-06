@@ -66,8 +66,10 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-FJBYH5L81Y');
+            gtag('config', 'AW-16895928340');
           `}
         </Script>
+            
       </head>
       <body className={notoSansKr.className}>
         <ClientProvider>
