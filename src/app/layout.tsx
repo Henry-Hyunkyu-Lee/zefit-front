@@ -66,12 +66,9 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-FJBYH5L81Y');
             gtag('config', 'AW-16895928340');
+            gtag('event', 'conversion', {'send_to': 'AW-16895928340/EtNBCIGTmacaEJTQzfg-'});
           `}
         </Script>
-        {/* Event snippet for (en) 문의 페이지 conversion page */}
-        <script>
-          gtag('event', 'conversion', {'send_to': 'AW-16895928340/EtNBCIGTmacaEJTQzfg-'});
-        </script>
             
       </head>
       <body className={notoSansKr.className}>
