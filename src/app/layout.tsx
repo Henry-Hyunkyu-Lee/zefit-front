@@ -66,6 +66,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-FJBYH5L81Y');
             gtag('config', 'AW-16895928340');
+            gtag('event', 'conversion', {'send_to': 'AW-16895928340/EtNBCIGTmacaEJTQzfg-'});
           `}
         </Script>
             
