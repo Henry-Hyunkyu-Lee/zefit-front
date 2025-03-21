@@ -113,10 +113,10 @@ export default function Home() {
                     }}
                     className='top_banner_text_box'>
                     <h1 className='top_banner_title'>
-                        Greater Value For Your Life
+                        Difference makes better life
                     </h1>
                     <p className='top_banner_caption'>
-                        Using zebrafish, in-vivo model based biotech & pharmaceutical company
+                        Zefit, a CRO company innovating the preclinical stage using zebrafish as an alternative animal model.
                     </p>
                 </div>
                 <ScrollGuide />
