@@ -55,10 +55,16 @@ export const businessNavList: navListType = [
     {
         id: '서비스',
         id_en: 'Service',
-        href: '/content/service/CNS_FIT',
-        href_en: '/en/content/service/CNS_FIT',
+        href: '/content/service/Overview',
+        href_en: '/en/content/service/Overview',
         criteria: '/content/service',
         list: [
+            {
+                id: 'Overview',
+                en: 'Overview',
+                href: '/content/service/Overview',
+                href_en: '/en/content/service/Overview'
+            },
             {
                 id: 'CNS_FIT',
                 en: 'CNS_FIT',

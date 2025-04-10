@@ -1,4 +1,300 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
 /* 서비스 페이지 css style */
+
+/* Overview 페이지 헤더 */
+.overview_page_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 0px;
+}
+
+.overview_page_header {
+    width: 100%;
+    background-color: #f2fcff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+.overview_page_title {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    letter-spacing: -0.3rem;
+    font-style: normal;
+    font-size: 4.5rem;
+    color: #020120;
+}
+
+.overview_page_subtitle {
+    font-family: "Pretendard";
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #020120;
+    margin: 1rem 0;
+}
+
+.overview_page_title_image {
+    margin-top: 2rem;
+}
+
+.overview_page_subsubtitle {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    letter-spacing: -0.25rem;
+    font-size: 3.5rem;
+}
+
+.overview_page_partners_box {
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #020120;
+
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.partners_title {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, #f2fcff 100%, #f2fcff 0%);
+}
+
+.partners_logo_container {
+    display: flex;
+    gap: 2rem;
+    animation: scrollLogos 30s linear infinite;
+    position: relative;
+}
+
+.overview_page_partners_logo {
+    height: 4rem;
+    flex-shrink: 0;
+}
+
+.paragraph_center {
+    text-align: center;
+}
+
+.paragraph_small {
+    font-size: 0.7rem;
+}
+
+.nowrap {
+    white-space: nowrap;
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
+}
+
+.overview_page_paragraph {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 500;
+    color: #020120;
+    margin: 1rem 0;
+}
+
+.certificates {
+    margin: 3rem 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.overview_page_certificate_box {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+}  
+
+.overview_page_content_section{
+    margin: 5rem 0;
+    width: 1170px;
+}
+
+.overview_page_content_divider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview_page_content_divider_right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.overview_page_content_box {
+    width: 45%;
+}
+
+.overview_page_content_box_icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.overview_page_content_box_icon_right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.overview_page_content_box_icon img {
+    height: 1.2rem;
+}
+
+.overview_page_content_box_icon_right img {
+    height: 1.2rem;
+}
+
+.overview_page_content_subheader {
+    font-family: "Pretendard";
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #393939;
+}
+
+hr {
+    margin: 3rem 0;
+}
+
+.overview_page_content_image {
+    width: 40%;
+}
+
+.overview_page_content_three {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+}
+
+.overview_page_content_three_icon {
+    height: 3rem;
+}
+
+.overview_page_content_three h4 {
+    font-family: "Pretendard";
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #020120;
+
+    margin: 0.5rem 0;
+}
+
+.overview_page_content_three p {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 400;
+    color: #020120;
+}
+
+.overview_page_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.overview_page_footer_divider {
+    width: 1170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.overview_page_footer_form {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    gap: 1rem;
+}
+
+.overview_page_footer_form label {
+    font-family: "Pretendard";
+    font-size: 1rem;
+    font-weight: 500;
+    color: #020120;
+}
+
+.overview_page_footer_form input {
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid #020120;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+.overview_page_footer_form textarea {
+    width: 100%;
+    height: 10rem;
+    border: 1px solid #020120;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+.overview_page_footer_form button {
+    display: inline-block;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    background-color: #0055A7;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}
+
+.overview_page_footer_paragraph {
+    font-size: 0.8rem;
+    color: #020120;
+}
+
+.overview_page_footer_form button:hover {
+    background-color: #004386;
+}
+
+.overview_page_footer_image {
+    width: 40%;
+    object-fit: cover;
+}
+
 
 /* 서비스 페이지 컨테이너 */
 .service_page_container {
@@ -83,6 +379,142 @@
 /*==============================================================*/
 /* 반응형 style */
 @media screen and (max-width: 1170px) {
+    .overview_page_container {
+        padding: 40px 0px;
+    }
+
+    .overview_page_header {
+        padding: 40px 0px;
+    }
+
+    .overview_page_title {
+        font-size: 2rem;
+        letter-spacing: -0.2rem;
+    }
+
+    .overview_page_subtitle {
+        font-size: 0.7rem;
+    }
+
+    .overview_page_partners_box {
+        font-size: 0.7rem;
+    }
+
+    .partners_title {
+        display: none;
+    }
+
+    .partners_logo_container {
+        gap: 1rem;
+    }
+
+    .overview_page_partners_logo {
+        height: 2rem;
+    }
+
+    .overview_page_paragraph {
+        font-size: 0.7rem;
+    }
+
+    .overview_page_subsubtitle {
+        font-size: 1.5rem;
+        letter-spacing: -0.1rem;
+    }
+
+    .paragraph_center {
+        width: 80%;
+    }
+
+    .overview_page_content_section {
+        margin: 2rem 0;
+        width: 90%;
+    }
+
+    .overview_page_content_divider {
+        flex-direction: column;
+    }
+
+    .overview_page_content_divider_right {
+        flex-direction: column;
+    }
+
+    .overview_page_content_box {
+        width: 100%;
+    }
+
+    .overview_page_content_box_icon {
+        font-size: 0.7rem;
+    }
+
+    .overview_page_content_box_icon_right {
+        font-size: 0.7rem;
+        flex-direction: row-reverse;
+        justify-content: start;
+    }
+
+    .overview_page_content_subheader {
+        font-size: 0.9rem;
+    }
+
+    hr {
+        margin: 1rem 0;
+    }
+
+    .overview_page_content_image {
+        width: 100%;
+    }
+
+    .overview_page_content_three {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .overview_page_content_three_icon {
+        height: 2rem;
+    }
+
+    .overview_page_content_three h4 {
+        font-size: 1rem;
+    }
+
+    .overview_page_content_three p {
+        font-size: 0.7rem;
+    }
+    
+    .overview_page_footer {
+        margin-top: 2rem;
+    }
+
+    .overview_page_footer_divider {
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .overview_page_footer_form {
+        width: 90%;
+    }
+
+    .overview_page_footer_form label {
+        font-size: 0.7rem;
+    }
+
+    .overview_page_footer_form input {
+        font-size: 0.7rem;
+    }
+
+    .overview_page_footer_image {
+        display: none;
+    }
+    
+    .overview_page_footer_paragraph {
+        font-size: 0.7rem;
+    }
+    
+
+
+
+
     .service_page_container {
         width: 94%;
         padding: 40px 0px;
@@ -132,5 +564,14 @@
         top: -40px;
         right: 0;
         z-index: 4;
+    }
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
