@@ -45,7 +45,7 @@ export default function ServiceDetailTap({
         <section className='service_page_detail_container'>
             <div className='service_page_detail_wrapper'>
                 <ul className='detail_tap_wrapper'>
-                    {findData?.content.map((item: any, index: number) =>
+                    {findData?.content && findData.content.map((item: any, index: number) =>
                         <li
                             key={index}
                             className='detail_tap_button_list'>
@@ -63,7 +63,7 @@ export default function ServiceDetailTap({
                     )}
                 </ul>
                 <ul className='detail_tap_image_wrapper'>
-                    {(imageList)
+                    {(imageList && imageList[present])
                         && imageList[present]?.map((item: any, index: number) =>
                             <li key={index}>
                                 <img
