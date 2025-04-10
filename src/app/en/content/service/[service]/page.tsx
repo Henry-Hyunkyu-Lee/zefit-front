@@ -161,7 +161,7 @@ return (
                         <h2 className="overview_page_title">
                             Difference makes better
                         </h2>
-                        <p className="overview_page_subtitle">Accelerate your IND and shorten the preclinical timeline with ZEFIT's services.</p>
+                        <p className="overview_page_subtitle">Accelerate your IND and shorten the preclinical timeline with ZEFIT&rsquo;s services.</p>
                         <picture className="overview_page_title_image">
                             <source srcSet="https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public//main_title_img.png" media="(min-width: 1170px)" />
                             <source srcSet="https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/mobile_img/main_title_mobile_img.png" media="(max-width: 1169px)" />
@@ -173,7 +173,7 @@ return (
                                 {renderPartnerLogos()}
                             </div>
                         </div>
-                        <p className="overview_page_paragraph">Let's talk biotech</p>
+                        <p className="overview_page_paragraph">Let&rsquo;s talk biotech</p>
                         <h3 className="overview_page_subsubtitle">A new era of bio research</h3>
                         <p className="overview_page_paragraph paragraph_center">
                             Bio research has traditionally been complex and challenging. That’s why ZEFIT offers a completely new approach.<br />

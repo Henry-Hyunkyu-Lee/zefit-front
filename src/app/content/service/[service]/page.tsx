@@ -140,7 +140,7 @@ export default function Service() {
                                     {renderPartnerLogos()}
                                 </div>
                             </div>
-                            <p className="overview_page_paragraph">Let's talk biotech</p>
+                            <p className="overview_page_paragraph">Let&rsquo;s talk biotech</p>
                             <h3 className="overview_page_subsubtitle">A new era of bio research</h3>
                             <p className="overview_page_paragraph paragraph_center">
                                 바이오 연구는 전통적으로 복잡하고 까다롭습니다. 그래서 ZEFIT은 완전히 새로운 접근 방식을 제시합니다.<br />
