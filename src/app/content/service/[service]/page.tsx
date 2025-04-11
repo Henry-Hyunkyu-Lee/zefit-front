@@ -126,7 +126,7 @@ export default function Service() {
                     <section className="overview_page_container">
                         <header className="overview_page_header">
                             <h2 className="overview_page_title">
-                                Difference makes better
+                                Difference makes better life
                             </h2>
                             <p className="overview_page_subtitle">제핏의 서비스를 통해 전임상 시험 기간을 단축하고 신속한 IND를 진행해보세요.</p>
                             <picture className="overview_page_title_image">
