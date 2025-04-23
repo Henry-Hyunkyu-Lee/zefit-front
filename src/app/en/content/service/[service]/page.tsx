@@ -147,9 +147,9 @@ const customMetaData = (type: ServiceType) => {
 };
 return (
     <article style={{ position: 'relative' }}>
-        <MetaTagTitle title='서비스' />
+        <MetaTagTitle title='Service' ko={false} />
         <PageHeader />
-        <PageBanner pageTitle='서비스' />
+        <PageBanner pageTitle='service' />
         <PageTap tap='business' />
         <SideTap tap={sideTapData} content='service' />
 
