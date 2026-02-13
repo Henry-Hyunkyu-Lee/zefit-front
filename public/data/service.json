@@ -24,11 +24,13 @@
         ],
         "content": [
             {
-                "name": "검증 바이오마커 및 표현형",
-                "name_en": "verified biomarkers and phenotypes",
+                "name": "알츠하이머 모델 서비스",
+                "name_en": "Alzheimer's Disease Model Service",
                 "image": [
-                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_CNS_FIT2.jpg"
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/CNS_FIT_tap1_001.png"
                 ],
+                "image_info": ["질환모델: Amyloid Beta-induced zebrafish model"],
+                "image_info_en": ["Disease Model: Amyloid beta–induced zebrafish model"],
                 "info": [
                     {
                         "title": "인지능력 및 기억력 분석",
@@ -67,11 +69,11 @@
                 ]
             },
             {
-                "name": "중추신경계 모델 서비스",
-                "name_en": "Central Nervous System Model Service",
-                "image": [
-                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_CNS_FIT3.jpg"
-                ],
+                "name": "파킨슨 모델 서비스",
+                "name_en": "Parkinson's Disease Model Service",
+                "image": ["https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/CNS_FIT_tap2_001.png"],
+                "image_info": ["질환모델: MTPT or 6-OHDA-induced zebrafish model"],
+                "image_info_en": ["Disease Model: MTPT or 6-OHDA-induced zebrafish model"],
                 "info": [
                     {
                         "title": "알츠하이머 모델",
@@ -100,6 +102,64 @@
                         "text": "Epilepsy is characterized by recurrent seizures caused by excessive excitation of neurons.\nExposure to PTZ causes behavioural and electrophysiological changes in zebrafish larvae.\nThis model allows you to identify compounds that prevent convulsions."
                     }
                 ]
+            },
+            {
+                "name": "뇌전증 모델 서비스",
+                "name_en": "Epilepsy Model Service",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/CNS_FIT_tap3_001.png"
+                ],
+                "image_info": ["질환모델: PTZ-induced or gene modified zebrafish model"],
+                "image_info_en": ["Disease Model: PTZ-induced or gene modified zebrafish model"],
+                "info": [
+                    {
+                        "title": "운동성 평가 시험",
+                        "text": "비디오 기반 행동 분석을 통해 이동거리 및 발작 패턴을 평가합니다."
+                    },
+                    {
+                        "title": "EEG 평가 시험",
+                        "text": "뇌에서 발생하는 전기생리학적 신호를 전극으로 측정하여 발작 패턴을 분석합니다."
+                    },
+                    {
+                        "title": "뇌전증 연관 바이오마커 분석",
+                        "text": "qPCR 및 Western Blot 시험을 통해 질병 연관 바이오마커 변화를 평가합니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Motor Activity and Seizure Behavior Assessment",
+                        "text": "Locomotor activity and seizure-related behavioral patterns are evaluated through video-based behavioral analysis."
+                    },
+                    {
+                        "title": "EEG Assessment",
+                        "text": "Seizure patterns are analyzed by recording electrophysiological signals from the brain using electrodes."
+                    },
+                    {
+                        "title": "Epilepsy-Related Biomarker Analysis",
+                        "text": "Changes in disease-associated biomarkers are analyzed using qPCR and Western blot assays."
+                    }
+                ]
+            },
+            {
+                "name": "우울증 및 불안증 모델",
+                "name_en": "Depression and Anxiety Model Service",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/CNS_FIT_tap4_001.png"
+                ],
+                "image_info": ["질환모델: Light-to-darkness transition model"],
+                "image_info_en": ["Disease Model: Light-to-darkness transition model"],
+                "info": [
+                    {
+                        "title": "Thigmotaxis 평가 시험",
+                        "text": "비디오 기반 행동 분석을 통해 Thigmotaxis 행동을 정량적으로 평가합니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "Thigmotaxis Assessment",
+                        "text": "Thigmotaxis behavior is quantitatively evaluated through video-based behavioral analysis."
+                    }
+                ]
             }
         ]
     },
@@ -120,6 +180,43 @@
         ],
         "content": [
             {
+                "name": "비만 모델",
+                "name_en": "Obesity Model Service",
+                "image": [
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/Meta_FIT_tab1_02.png"
+                ],
+                "image_info": ["질환모델: High fat induced Obesity model"],
+                "image_info_en": ["Disease Model: High fat induced Obesity model"],
+                "info": [
+                    {
+                        "title": "BMI 평가 시험",
+                        "text": "BMI 분석을 통해 몸무게 증가를 정량적으로 평가합니다."
+                    },
+                    {
+                        "title": "ORO gray value 평가 시험",
+                        "text": "Oi Red O staining을 통해 전신에 축적된 지방을 정량적으로 평가합니다."
+                    },
+                    {
+                        "title": "비만 연관 바이오마커 분석",
+                        "text": "qPCR 및 Western Blot 시험을 통해 질병 연관 바이오마커 변화를 평가합니다."
+                    }
+                ],
+                "info_en": [
+                    {
+                        "title": "BMI Assessment",
+                        "text": "Weight gain is quantitatively evaluated through BMI analysis."
+                    },
+                    {
+                        "title": "Oil Red O (ORO) Gray Value Analysis",
+                        "text": "Systemic lipid accumulation is quantitatively assessed by analyzing gray values following Oil Red O staining."
+                    },
+                    {
+                        "title": "Obesity-Related Biomarker Analysis",
+                        "text": "Changes in obesity-associated biomarkers are analyzed using qPCR and Western blot assays."
+                    }
+                ]
+            },
+            {
                 "name": "급성 알코올성 간 손상 모델",
                 "name_en": "Acute alcoholic steatohepatitis model",
                 "image": [
@@ -127,16 +224,26 @@
                     "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_figure2.jpg",
                     "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_figure3.jpg"
                 ],
+                "image_info": ["질환모델: Alcohol induced MASLD/MASH model"],
+                "image_info_en": ["Disease Model: Alcohol induced MASLD/MASH model"],
                 "info": [
                     {
-                        "title": "급성 알코올성 간 손상 모델",
-                        "text": "알코올에 노출되면 제브라피쉬에 급격한 간손상이 유도됩니다.\n\n당사의 급성 알코올성 간 손상 모델은 2일 이내에 간 수치의 변화 데이터를 제공하여 간 보호 물질 발견 시간을 단축합니다."
+                        "title": "Liver gray Value 평가 시험",
+                        "text": "Oi Red O staining을 통해 간에 축적된 지방을 정량적으로 평가합니다."
+                    },
+                    {
+                        "title": "간 손상 연관 바이오마커 분석",
+                        "text": "qPCR 및 Western Blot 시험을 통해 질병 연관 바이오마커 변화를 평가합니다."
                     }
                 ],
                 "info_en": [
                     {
-                        "title": "Acute alcoholic steatohepatitis model",
-                        "text": "Alcohol exposure leads to rapid liver damage to zebrafish.\n\nOur model damage provides data on changes in liver levels within two days, accelerating liver protection detection."
+                        "title": "Liver Lipid Accumulation (Gray Value) Analysis",
+                        "text": "Hepatic lipid accumulation is quantitatively assessed by gray value analysis following Oil Red O staining."
+                    },
+                    {
+                        "title": "Liver Injury–Related Biomarker Analysis",
+                        "text": "Changes in liver injury–associated biomarkers are analyzed using qPCR and Western blot assays."
                     }
                 ]
             },
@@ -146,16 +253,26 @@
                 "image": [
                     "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_figure4.jpeg"
                 ],
+                "image_info": ["질환모델: High fat induced MASLD/MASH model"],
+                "image_info_en": ["Disease Model: High fat induced MASLD/MASH model"],
                 "info": [
                     {
-                        "title": "비알콜성 지방간 모델(NAFLD/NASH)",
-                        "text": "NAFLD는 과도한 알코올을 섭취하지 않고 간에 과도한 지방이 축적되는 상태입니다. 지방간은 지방간염 및 간병변으로 진행될 수 있습니다. High fat diet induced NAFLD 모델은 인간에서의 질병 증상을 그대로 재현합니다.\n\n당사의 Meta-FITTM 은 2주 이내에 화합물의 지방 축적 감소 등 효능 데이터를 제공하여 약물 발견 시간을 단축합니다."
+                        "title": "Liver gray Value 평가 시험",
+                        "text": "Oi Red O staining을 통해 간에 축적된 지방을 정량적으로 평가합니다."
+                    },
+                    {
+                        "title": "지방간 연관 바이오마커 분석",
+                        "text": "qPCR 및 Western Blot 시험을 통해 질병 연관 바이오마커 변화를 평가합니다."
                     }
                 ],
                 "info_en": [
                     {
-                        "title": "Non-alcoholic fatty liver disease model(NAFLD/NASH)",
-                        "text": "NAFLD is a condition in which excessive fat accumulates in liver without excessive alcohol. Model's liver can progress to fatty hepatitis and liver lesions. High fat diet induced NAFLD model has disease symptoms in humans.\n\nMeta-FITTM reduces drug discovery time by providing efficacy data such as reducing fat accumulation of compounds within two weeks."
+                        "title": "Hepatic Lipid Accumulation (Gray Value) Analysis",
+                        "text": "Hepatic lipid accumulation is quantitatively assessed by gray value analysis following Oil Red O staining."
+                    },
+                    {
+                        "title": "Fatty Liver Disease–Related Biomarker Analysis",
+                        "text": "Changes in fatty liver disease–associated biomarkers are analyzed using qPCR and Western blot assays."
                     }
                 ]
             }
@@ -183,26 +300,44 @@
                 "name": "제공 데이터",
                 "name_en": "Provided data",
                 "image": [
-                    
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/Onco_FIT_tap1_01.png"
                 ],
+                "image_info": ["질환모델: Cell derived xenografts(CDX/PDX) model"],
+                "image_info_en": ["Disease Model: Cell derived xenografts(CDX/PDX) model"],
                 "info": [
                     {
-                        "title": "종양 억제",
-                        "text": "1.형광 표지 된 종양 세포는 투명 배아에서 시각화되어\n추적 가능합니다.\n\n2.종양크기를 통해 화합물의 종양 억제 효능을 형광 현미경으로 측정 가능합니다."
+                        "title": "Proliferation 평가 시험",
+                        "text": "이식한 암세포를 염색하여 세포의 크기를 측정하여 평가합니다."
                     },
                     {
-                        "title": "전이 억제",
-                        "text": "1.배아의 빠른 발달은 미세종양의 빠른 혈관 형성과 전이를 가능 하게합니다\n\n2.전이성 세포는 1차 부위에서 혈관계를 따라 전파되며 이를 통해 세포의 전이성을 확인할 수 있습니다."
+                        "title": "Metastasis 평가 시험",
+                        "text": "이식한 암 세포를 염색하여 원발 종양 부위 이외의 암 세포 생착 정도를 평가합니다. "
+                    },
+                    {
+                        "title": "Angiogenesis 평가 시험",
+                        "text": "이식함 암 세포 조직에서의 신생 혈관 증가 정도를 평가합니다."
+                    },
+                    {
+                        "title": "암 연관 바이오마커 분석",
+                        "text": "IHC staining을 통해 질병 연관 바이오마커의 변화를 평가합니다."
                     }
                 ],
                 "info_en": [
                     {
-                        "title": "Suppression of Tumor proliferation",
-                        "text": "1.Fluorescently labeled tumor cells are visualized and traceable in transparent embryos.\n\n2.Tumor suppression effect of compounds can be measured with a fluorescence microscope."
+                        "title": "Tumor Cell Proliferation Assessment",
+                        "text": "Proliferation is evaluated by staining transplanted cancer cells and measuring tumor or cell size."
                     },
                     {
-                        "title": "Suppression of Metastasis",
-                        "text": "1.Rapid development of embryos enables angiogenesis and metastasis of microtumors\n\n2.Metastatic cells propagate along vascular system in the primary site, which can confirm cell metastasis."
+                        "title": "Metastasis Assessment",
+                        "text": "Metastatic potential is assessed by staining transplanted cancer cells and evaluating their engraftment at sites outside the primary tumor region."
+                    },
+                    {
+                        "title": "Angiogenesis Assessment",
+                        "text": "Tumor-induced angiogenesis is evaluated by assessing the extent of neovascularization within transplanted cancer cell–derived tissues."
+                    },
+                    {
+                        "title": "Cancer-Related Biomarker Analysis",
+                        "text": "Changes in disease-associated biomarkers are evaluated using immunohistochemistry (IHC) staining."
                     }
                 ]
             },
@@ -315,7 +450,7 @@
 
     {
         "id": 5,
-        "service": "Toxicology",
+        "service": "Tox_FIT",
         "model": "제브라피쉬 독성 반응",
         "model_en": "Zebrafish Toxic Response",
         "thumbnail": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology.jpg",
@@ -337,29 +472,64 @@
                     "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology2.jpg"
                 ],
                 "info": [
-                    
+                    {
+                        "title": "Survival rate 평가 시험",
+                        "text": "물질 투여시 생존율을 측정하여 LC/LD50 값을 확인합니다."
+                    }
                 ],
                 "info_en": [
-                    
+                    {
+                        "title": "Survival Rate Assessment",
+                        "text": "Survival rate is evaluated following compound treatment to determine LC50/LD50 values."
+                    }
                 ]
             },
             {
                 "name": "기관 특이적 안전성시험",
                 "name_en": "Organ-specific safety test",
                 "image": [
-                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology3.jpg",
-                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_Toxicology4.jpg"
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/Tox_FIT_tap2_01.png",
+                    "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/Tox_FIT_tap2_02.png"
                 ],
                 "info": [
                     {
-                        "title": "기관 특이적 안전성시험",
-                        "text": "특정 장기 세포(뇌,간,신장,심혈관계 등)에 형광단백질을 발현시켜 다양한 장기에 대한 독성 데이터 제공"
+                        "title": "Cardiotoxicity",
+                        "text": "Beat frequency, ECG"
+                    },
+                    {
+                        "title": "Nephrotoxicity",
+                        "text": "Renal function"
+                    },
+                    {
+                        "title": "Hepatotoxicity",
+                        "text": "Steatosis, hepatomegaly, liver injury"
+                    },
+                    {
+                        "title": "Neurotoxicity",
+                        "text": "Behavior, EEG"
+                    },
+                    {
+                        "title": "Teratogenicity",
+                        "text": "Developmental defects"
                     }
+
                 ],
                 "info_en": [
                     {
-                        "title": "Organ-specific safety test",
-                        "text": "Fluorescent protein is expressed in zebrafish's specific organ cells(such as brain, liver, kidney, cardiovascular system, etc.) to provide toxicity data for various organs"
+                        "title": "Nephrotoxicity",
+                        "text": "Renal function"
+                    },
+                    {
+                        "title": "Hepatotoxicity",
+                        "text": "Steatosis, hepatomegaly, liver injury"
+                    },
+                    {
+                        "title": "Neurotoxicity",
+                        "text": "Behavior, EEG"
+                    },
+                    {
+                        "title": "Teratogenicity",
+                        "text": "Developmental defects"
                     }
                 ]
             }

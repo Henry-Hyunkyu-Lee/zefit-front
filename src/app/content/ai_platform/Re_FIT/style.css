@@ -1,0 +1,1175 @@
+/* 파이프라인 페이지 css style */
+
+/* 파이프라인 페이지 컨테이너 */
+.pipeline_page_container {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 40px;
+    padding: 90px 0px;
+}
+
+/* 파이프라인 페이지 제목 */
+.pipeline_page_title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Re:FIT Intro */
+.refit_intro_section {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 40px;
+}
+
+/* Re:FIT side tap shadow */
+.service_side_tap_wrapper {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 8px;
+    overflow: visible;
+}
+
+.refit_intro_title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #1f1f1f;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.refit_intro_title_em {
+    color: #1e64c8;
+}
+
+.ai_platform_title_heading {
+    color: #1e64c8;
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.lang-en .refit_intro_title {
+    font-size: 25px;
+}
+
+.lang-en .refit_intro_title .refit_intro_title_em {
+    font-size: 30px;
+}
+
+.refit_intro_label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e64c8;
+    text-align: left;
+}
+
+.refit_simple_section {
+    padding: 120px 0px;
+}
+
+.refit_simple_inner {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.refit_simple_inner .refit_intro_title {
+    text-align: center;
+}
+
+.refit_intro_subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+    text-align: center;
+    white-space: pre-line;
+    max-width: 880px;
+    margin-top: -14px;
+}
+
+.refit_pipeline_wrapper {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 120px 0;
+}
+
+.refit_pipeline_inner {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.refit_pipeline_title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin: 10px 0 6px;
+}
+
+.refit_pipeline_subtitle {
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.6;
+    white-space: pre-line;
+    margin-top: -8px;
+}
+
+/* Re:FIT Features */
+.refit_features_wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 120px 0;
+}
+
+.refit_features_inner {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.refit_features_title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f1f1f;
+    text-align: center;
+}
+
+.refit_features_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.refit_features_card {
+    background-color: #ffffff;
+    border: 1px solid rgba(30, 100, 200, 0.2);
+    border-radius: 18px;
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.refit_features_icon_wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #eef5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refit_features_icon_wrap.is-lucide {
+    background-color: #EEF6FD;
+}
+
+.refit_features_icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.refit_features_icon_svg {
+    width: 30px;
+    height: 30px;
+    stroke: #1e64c8;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.refit_features_card_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f1f1f;
+    text-align: center;
+}
+
+.refit_features_card_text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4b5563;
+    white-space: pre-line;
+    text-align: center;
+}
+
+/* Re:FIT 3 Weeks Section */
+.refit_weeks_wrapper {
+    width: 100%;
+    /* background-color: #f5f5f5; */
+    padding: 120px 0;
+}
+
+.refit_weeks_inner {
+    width: 1170px;
+    margin: 0 auto;
+    background-color: #1e64c8;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr);
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.refit_weeks_content {
+    padding: 48px 50px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.refit_weeks_title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+    white-space: pre-line;
+}
+
+.refit_weeks_text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    white-space: pre-line;
+}
+
+.refit_weeks_badge {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 32px;
+}
+
+.refit_weeks_badge_value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e64c8;
+    letter-spacing: 0.04em;
+}
+
+.refit_weeks_badge_sub {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(30, 100, 200, 0.7);
+    letter-spacing: 0.2em;
+}
+
+.refit_weeks_button {
+    margin-top: 12px;
+    background-color: #1e64c8;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Re:FIT CTA */
+.refit_cta_section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background-color: #F5F5F5;
+    padding: 120px 0px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.refit_cta_inner {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.refit_cta_text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 720px;
+}
+
+.refit_cta_title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.refit_cta_title .refit_intro_title_em {
+    color: #1e64c8;
+}
+
+.refit_cta_subtitle {
+    font-size: 15px;
+    color: #1f1f1f;
+}
+
+.refit_cta_actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.refit_cta_button {
+    background-color: #1e64c8;
+    color: #ffffff;
+    padding: 18px 32px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.refit_cta_wave {
+    width: 100%;
+    height: 33px;
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    z-index: 3;
+    background: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_wave.png');
+    animation: wave 20s linear infinite;
+}
+
+.refit_cta_wave::after {
+    content: '';
+    width: 100%;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    opacity: 0.4;
+    background: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_wave.png');
+    animation: reverse_wave 10s linear infinite;
+}
+
+.refit_label_section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 0px 30px;
+}
+
+/* Re:FIT Flow */
+.refit_flow_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 10px;
+}
+
+.refit_flow_cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.refit_flow_card {
+    background-color: #F5F5F5;
+    border-radius: 16px;
+    padding: 26px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+}
+
+.refit_flow_card.is-highlight {
+    background-color: #1e64c8;
+    border: none;
+    color: #ffffff;
+}
+
+.refit_flow_icon_wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #f1f6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refit_flow_card.is-highlight .refit_flow_icon_wrap {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.refit_flow_icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.refit_flow_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: inherit;
+}
+
+.refit_flow_divider {
+    width: 40px;
+    height: 1px;
+    background-color: #d0d6e0;
+}
+
+.refit_flow_card.is-highlight .refit_flow_divider {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.refit_flow_text {
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+}
+
+.refit_flow_card.is-highlight .refit_flow_text,
+.refit_flow_card.is-highlight .refit_flow_title {
+    color: #ffffff;
+}
+
+/* Re:FIT Pipeline Cards */
+.refit_pipeline_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.refit_pipeline_cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.refit_pipeline_card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 26px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.refit_pipeline_step_label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #1f1f1f;
+}
+
+.refit_pipeline_icon_wrap {
+    width: 100%;
+    /* height: 140px; */
+    border-radius: 12px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refit_pipeline_icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.refit_pipeline_card_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.refit_pipeline_list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+    min-height: calc(1.5em * 5);
+}
+
+.refit_pipeline_bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.refit_pipeline_bullet_point {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #1e64c8;
+    flex: 0 0 6px;
+    margin-top: 6px;
+}
+
+.refit_pipeline_bullet_text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.refit_pipeline_note {
+    margin-top: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.refit_pipeline_note_label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e64c8;
+}
+
+.refit_pipeline_note_text {
+    font-size: 14px;
+    color: #1f1f1f;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.refit_pipeline_note_highlight {
+    color: #1e64c8;
+    font-weight: 600;
+}
+
+.lang-en .refit_pipeline_note_highlight {
+    color: #1f1f1f;
+    font-weight: 500;
+}
+
+/* Re:FIT Stats */
+.refit_stats_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 20px;
+}
+
+.refit_stats_cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.refit_stats_card {
+    padding: 26px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.refit_stats_card:not(:first-child) {
+    border-left: 4px solid #ffffff;
+}
+
+.refit_stats_value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e64c8;
+}
+
+.refit_stats_label {
+    font-size: 13px;
+    color: #1f1f1f;
+    letter-spacing: 0.06em;
+}
+
+/* Re:FIT Bullets */
+.refit_bullets_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.refit_bullets_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* padding: 36px 50px; */
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: none;
+    color: #1f1f1f;
+    line-height: 1.5;
+    list-style: none;
+}
+
+.refit_bullets_item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.refit_bullets_title_box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.refit_bullets_point {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #1e64c8;
+    flex: 0 0 8px;
+}
+
+.refit_bullets_title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Re:FIT Bar */
+.refit_bar_section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.refit_bar_items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+    justify-content: center;
+    column-gap: 10px;
+}
+.refit_content_section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 0;
+}
+.refit_content_inner {
+    width: 1170px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 40px 50px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.refit_content_inner_items{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.refit_content_inner_item1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+    border-bottom: 4px dashed rgba(0, 0, 0, 0.08);
+}
+.refit_content_inner_item2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.refit_bar_item {
+    padding: 18px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 220px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.refit_bar_item:not(:last-child) {
+    border-right: none;
+}
+
+.refit_bar_icon_wrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refit_bar_icon_wrap.is-lucide {
+    background-color: #EEF6FD;
+}
+
+.refit_bar_icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.refit_bar_icon_svg {
+    width: 22px;
+    height: 22px;
+    stroke: #1e64c8;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.refit_bar_title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f1f1f;
+    white-space: pre-line;
+    flex: 1;
+    text-align: center;
+}
+
+/* 파이프라인 표 자료 컨테이너 */
+.pipeline_table_container {
+    width: 100%;
+    height: 700px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 70px;
+    gap: 90px;
+}
+
+/* 파이프라인 표 컨테이너 제목 */
+.pipeline_table_label_title {
+    font-size: 24px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+/* 파이프라인 표 박스 */
+.table_box {
+    width: 1170px;
+    height: 200px;
+    border-top: 2px solid;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+/* 표 헤더 */
+.table_header {
+    width: 100%;
+    height: 60px;
+    min-height: 60px;
+    background-color: #EBEDF3;
+    border-bottom: 2px solid #b8b8b8;
+}
+
+/* 표 헤더 컨테이너 */
+.table_header_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* 표 헤더칸 */
+.table_header_room {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* 표 바디 */
+.table_body {
+    width: 100%;
+    height: 100%;
+}
+
+/* 표 바디 라인 컨테이너 */
+.table_body_lane {
+    width: 100%;
+    height: calc(100% / 1);
+    display: flex;
+    align-items: center;
+}
+
+/* 표 바디칸 헤드 */
+.table_body_room_head {
+    width: calc(100% / 6);
+    height: 100%;
+    border-right: 1px solid #cfcfcf;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+/* 표 바디칸 헤드 텍스트 */
+.table_body_room_head_text {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 1px solid #cfcfcf; */
+}
+
+/* 표 바디칸 서브헤드 */
+.table_body_room_sub_head {
+    width: calc(100% / 6);
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #cfcfcf;
+    white-space: pre-line;
+}
+
+/* 표 바디칸 그래프 */
+.table_body_room_graph {
+    width: calc(100% / 6 * 4);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+/* 표 바디칸 그래프 박스 */
+.graph_box {
+    width: 87%;
+    height: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 그래프 */
+.graph {
+    height: 100%;
+    transition: all 3s ease-in-out;
+    background: linear-gradient(to right, #00AEEF, #006489);
+}
+
+
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .refit_simple_section {
+        padding: 44px 0 80px;
+    }
+
+    .pipeline_page_container {
+        width: 94%;
+        padding: 40px 0px;
+        gap: 24px;
+    }
+
+    .pipeline_page_title {
+        font-size: 14px;
+    }
+
+    .pipeline_table_container {
+        height: 400px;
+        padding-top: 30px;
+        gap: 24px;
+    }
+
+    .pipeline_table_label_title {
+        font-size: 10px;
+    }
+
+    .table_box {
+        width: 94%;
+        height: 150px;
+    }
+
+    .table_header {
+        height: 60px;
+    }
+
+    .table_header_room, .table_body_room_head,
+    .table_body_room_head_text, .table_body_room_sub_head {
+        font-size: 8px;
+    }
+
+    .graph_box {
+        height: 14px;
+    }
+
+    .refit_intro_section,
+    .refit_label_section,
+    .refit_content_section {
+        width: 94%;
+    }
+
+    .refit_pipeline_inner {
+        width: 94%;
+    }
+
+    .refit_pipeline_wrapper {
+        padding: 44px 0;
+    }
+
+    .refit_features_inner {
+        width: 94%;
+    }
+
+    .refit_features_wrapper {
+        padding: 40px 0 50px;
+    }
+
+    .refit_features_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .refit_features_card {
+        padding: 18px 14px;
+        border-radius: 14px;
+    }
+
+    .refit_features_card_title {
+        font-size: 16px;
+    }
+
+    .refit_features_card_text {
+        font-size: 12px;
+        white-space: normal;
+    }
+
+    .refit_weeks_inner {
+        width: 94%;
+        grid-template-columns: 1fr;
+    }
+
+    .refit_weeks_wrapper {
+        padding: 40px 0;
+    }
+
+    .refit_weeks_content {
+        padding: 36px 28px;
+    }
+
+    .refit_weeks_badge {
+        padding: 28px;
+    }
+
+    .refit_bullets_box {
+        padding: 22px 20px;
+    }
+
+    .refit_intro_title {
+        font-size: 18px;
+        white-space: normal;
+    }
+
+    .refit_simple_inner {
+        width: 94%;
+        gap: 14px;
+    }
+
+    .refit_intro_subtitle {
+        font-size: 13px;
+        line-height: 1.45;
+        white-space: normal;
+    }
+
+    .ai_platform_title_heading {
+        font-size: 40px;
+        line-height: 1.05;
+    }
+
+    .refit_intro_label {
+        font-size: 14px;
+    }
+
+    .refit_flow_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .refit_pipeline_cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .refit_pipeline_card {
+        padding: 22px 20px 24px;
+    }
+
+    .refit_pipeline_bullet_text,
+    .refit_pipeline_note_text {
+        white-space: normal;
+    }
+
+    .refit_stats_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .refit_stats_card:not(:first-child) {
+        border-left: none;
+        border-top: 4px solid #ffffff;
+    }
+
+    .refit_bar_items {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    .refit_bar_section {
+        margin-bottom: 10px;
+    }
+
+    .refit_bar_item {
+        width: 100%;
+        max-width: 320px;
+        padding: 16px 14px;
+        gap: 10px;
+    }
+
+    .refit_bar_item:not(:last-child) {
+        border-right: none;
+        border-bottom: 4px solid #ffffff;
+    }
+
+    .refit_cta_section {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 40px 0px 60px 0px;
+    }
+
+    .refit_cta_inner {
+        width: 94%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .refit_cta_text {
+        max-width: none;
+    }
+
+    .refit_cta_title {
+        font-size: 20px;
+    }
+
+    .refit_cta_subtitle {
+        font-size: 12px;
+    }
+
+    .refit_cta_actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .refit_cta_button {
+        font-size: 14px;
+        padding: 14px 22px;
+    }
+
+    .refit_cta_wave {
+        height: 28px;
+        bottom: -28px;
+    }
+}
+
+@media screen and (max-width: 459px) {
+    .refit_pipeline_cards,
+    .refit_features_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CTA wave animation */
+@keyframes wave {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 2061px;
+    }
+}
+
+@keyframes reverse_wave {
+    0% {
+        background-position: 2061px;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}

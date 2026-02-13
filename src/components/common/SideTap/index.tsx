@@ -22,7 +22,7 @@ export default function SideTap({ tap, content }: SideTapProps) {
     const [offset, setOffset] = useState(0);
 
     const linkControl = (item: string) => {
-        if (content === 'development') {
+        if (content === 'ai_platform') {
             const find = (isEnglish)
                 ? businessNavList[2].list?.find((data: any) => data.en === item)
                 : businessNavList[2].list?.find((data: any) => data.id === item);

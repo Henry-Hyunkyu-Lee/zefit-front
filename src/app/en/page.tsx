@@ -219,7 +219,7 @@ export default function HomeEN() {
                             </li>
                             <li className='business_card_out_wrapper'>
                                 <a
-                                    href='/en/content/development/pharmaceuticals'
+                                    href='/en/content/ai_platform/Pro_FIT'
                                     className='business_card_box'>
                                     <div
                                         className='business_card_image'

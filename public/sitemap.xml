@@ -53,17 +53,17 @@
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://zefit.co.kr/en/content/service/Toxicology</loc>
+	<loc>https://zefit.co.kr/en/content/service/Tox_FIT</loc>
 	<lastmod>2025-02-13T09:12:02+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://zefit.co.kr/en/content/development/pharmaceuticals</loc>
+	<loc>https://zefit.co.kr/en/content/development/Pro_FIT_AI</loc>
 	<lastmod>2025-02-13T09:12:02+01:00</lastmod>
 	<priority>0.8</priority>
-</url>
+</url>	
 <url>
-	<loc>https://zefit.co.kr/en/content/development/pipeline</loc>
+	<loc>https://zefit.co.kr/en/content/development/Re_FIT</loc>
 	<lastmod>2025-02-13T09:12:02+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
@@ -148,17 +148,17 @@
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://zefit.co.kr/content/service/Toxicology</loc>
+	<loc>https://zefit.co.kr/content/service/Tox_FIT</loc>
 	<lastmod>2025-02-13T09:12:02+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://zefit.co.kr/content/development/pharmaceuticals</loc>
+	<loc>https://zefit.co.kr/content/development/Pro_FIT_AI</loc>
 	<lastmod>2025-02-13T09:12:02+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://zefit.co.kr/content/development/pipeline</loc>
+	<loc>https://zefit.co.kr/content/development/Re_FIT</loc>
 	<lastmod>2025-02-13T09:12:02+01:00</lastmod>
 	<priority>0.8</priority>
 </url>

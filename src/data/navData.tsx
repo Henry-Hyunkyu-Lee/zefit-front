@@ -53,8 +53,8 @@ export const businessNavList: navListType = [
         list: undefined
     },
     {
-        id: '서비스',
-        id_en: 'Service',
+        id: 'CRO 서비스',
+        id_en: 'CRO Service',
         href: '/content/service/Overview',
         href_en: '/en/content/service/Overview',
         criteria: '/content/service',
@@ -90,38 +90,32 @@ export const businessNavList: navListType = [
                 href_en: '/en/content/service/Gene_FIT'
             },
             {
-                id: 'Toxicology',
-                en: 'Toxicology',
-                href: '/content/service/Toxicology',
-                href_en: '/en/content/service/Toxicology'
+                id: 'Tox_FIT',
+                en: 'Tox_FIT',
+                href: '/content/service/Tox_FIT',
+                href_en: '/en/content/service/Tox_FIT'
             }
         ]
     },
     {
-        id: '신약개발',
-        id_en: 'Drug Discovery',
-        href: '/content/development/pharmaceuticals',
-        href_en: '/en/content/development/pharmaceuticals',
-        criteria: '/content/development',
+        id: 'AI 플랫폼',
+        id_en: 'AI Platform',
+        href: '/content/ai_platform/Pro_FIT',
+        href_en: '/en/content/ai_platform/Pro_FIT',
+        criteria: '/content/ai_platform',
         list: [
             {
-                id: '신약개발기술',
-                en: 'technology',
-                href: '/content/development/pharmaceuticals',
-                href_en: '/en/content/development/pharmaceuticals'
+                id: 'Pro:FIT AI',
+                en: 'Pro:FIT AI',
+                href: '/content/ai_platform/Pro_FIT',
+                href_en: '/en/content/ai_platform/Pro_FIT'
             },
             {
-                id: '파이프라인',
-                en: 'pipeline',
-                href: '/content/development/pipeline',
-                href_en: '/en/content/development/pipeline'
+                id: 'Re:FIT AI',
+                en: 'Re:FIT AI',
+                href: '/content/ai_platform/Re_FIT',
+                href_en: '/en/content/ai_platform/Re_FIT'
             },
-            {
-                id: '오픈 이노베이션',
-                en: 'open_innovation',
-                href: '/content/development/open_innovation',
-                href_en: '/en/content/development/open_innovation'
-            }
         ]
     },
 ];
