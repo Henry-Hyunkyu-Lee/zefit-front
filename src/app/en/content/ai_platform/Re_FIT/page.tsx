@@ -189,45 +189,43 @@ export default function ReFITEN() {
             <SideTap tap={developmentData} content='ai_platform' />
             <div className='page_layout'>
                 {refitSection && refitSection?.section_type === 'refit_all' && (
-                    <section
-                        className='refit_content_section refit_simple_section'
-                        style={refitSection?.background_image ? {
-                            backgroundImage: `url(${refitSection.background_image})`,
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center',
-                        } : undefined}
-                    >
+                    <section className='refit_content_section refit_simple_section refit_main_profit_style'>
                         <div className='refit_simple_inner'>
-                            <h2 className='service_page_title ai_platform_title_heading'>Re:FIT AI</h2>
-                            <h3 className='refit_intro_title'>
-                                {renderTitle(refitSection.title_en, refitSection.title_em_en)}
-                            </h3>
-                            <p className='refit_intro_subtitle'>
-                                Based on the FDA-approved drug library,{'\n'}
-                                we analyze binding scores for patient-variant protein structures
-                                to identify the top 10 candidate drugs.
-                            </p>
-                            {refitSection?.bar_items?.length > 0 && (
-                                <div className='refit_bar_section'>
-                                    <div className='refit_bar_items'>
-                                        {refitSection.bar_items.map((item: any) => {
-                                            const isLucide = ['puzzle', 'file-chart-column', 'truck-electric'].includes(item.icon);
-                                            return (
-                                            <div key={item.id} className='refit_bar_item'>
-                                                <div className={`refit_bar_icon_wrap${isLucide ? ' is-lucide' : ''}`}>
-                                                    {renderBarIcon(item.icon, item.title_en || 'bar item icon')}
+                            <div className='refit_text_box'>
+                                <span className='refit_section_kicker'>Re:FIT AI</span>
+                                <h3 className='refit_intro_title'>
+                                    {renderTitle(refitSection.title_en, refitSection.title_em_en)}
+                                </h3>
+                                <p className='refit_intro_subtitle'>
+                                    {refitSection?.subtitle_en}
+                                </p>
+                                {refitSection?.bar_items?.length > 0 && (
+                                    <div className='refit_bar_section'>
+                                        <div className='refit_bar_items'>
+                                            {refitSection.bar_items.map((item: any) => {
+                                                const isLucide = ['puzzle', 'file-chart-column', 'truck-electric'].includes(item.icon);
+                                                return (
+                                                <div key={item.id} className='refit_bar_item'>
+                                                    <div className={`refit_bar_icon_wrap${isLucide ? ' is-lucide' : ''}`}>
+                                                        {renderBarIcon(item.icon, item.title_en || 'bar item icon')}
+                                                    </div>
+                                                    <span className='refit_bar_title'>{item.title_en}</span>
                                                 </div>
-                                                <span className='refit_bar_title'>{item.title_en}</span>
-                                            </div>
-                                            );
-                                        })}
+                                                );
+                                            })}
+                                        </div>
                                     </div>
+                                )}
+                            </div>
+                            {refitSection?.image && (
+                                <div className='refit_image_wrap'>
+                                    <img
+                                        className='refit_main_image'
+                                        src={refitSection.image}
+                                        alt={refitSection?.title_en || 'Re:FIT AI'}
+                                    />
                                 </div>
                             )}
-                            <a href="/en/requests" className="refit_weeks_button">
-                                Contact Us
-                            </a>
                         </div>
                     </section>
                 )}

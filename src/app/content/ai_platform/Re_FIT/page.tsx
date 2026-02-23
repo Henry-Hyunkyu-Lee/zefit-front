@@ -189,44 +189,43 @@ export default function ReFIT() {
             <SideTap tap={developmentData} content='ai_platform' />
             <div className='page_layout'>
                 {refitSection && refitSection?.section_type === 'refit_all' && (
-                    <section
-                        className='refit_content_section refit_simple_section'
-                        style={refitSection?.background_image ? {
-                            backgroundImage: `url(${refitSection.background_image})`,
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center',
-                        } : undefined}
-                    >
+                    <section className='refit_content_section refit_simple_section refit_main_profit_style'>
                         <div className='refit_simple_inner'>
-                            <h2 className='service_page_title ai_platform_title_heading'>Re:FIT AI</h2>
-                            <h3 className='refit_intro_title'>
-                                {renderTitle(refitSection?.title, refitSection?.title_em)}
-                            </h3>
-                            <p className='refit_intro_subtitle'>
-                                FDA 승인 약물 라이브러리를 기반으로,
-                                {'\n'}환자 돌연변이 단백질 구조에 대한 결합 스코어를 분석해 Top 10 후보 약물을 도출합니다.
-                            </p>
-                            {refitSection?.bar_items?.length > 0 && (
-                                <div className='refit_bar_section'>
-                                    <div className='refit_bar_items'>
-                                        {refitSection.bar_items.map((item: any) => {
-                                            const isLucide = ['puzzle', 'file-chart-column', 'truck-electric'].includes(item.icon);
-                                            return (
-                                            <div key={item.id} className='refit_bar_item'>
-                                                <div className={`refit_bar_icon_wrap${isLucide ? ' is-lucide' : ''}`}>
-                                                    {renderBarIcon(item.icon, item.title || 'bar item icon')}
+                            <div className='refit_text_box'>
+                                <span className='refit_section_kicker'>Re:FIT AI</span>
+                                <h3 className='refit_intro_title'>
+                                    {renderTitle(refitSection?.title, refitSection?.title_em)}
+                                </h3>
+                                <p className='refit_intro_subtitle'>
+                                    {refitSection?.subtitle}
+                                </p>
+                                {refitSection?.bar_items?.length > 0 && (
+                                    <div className='refit_bar_section'>
+                                        <div className='refit_bar_items'>
+                                            {refitSection.bar_items.map((item: any) => {
+                                                const isLucide = ['puzzle', 'file-chart-column', 'truck-electric'].includes(item.icon);
+                                                return (
+                                                <div key={item.id} className='refit_bar_item'>
+                                                    <div className={`refit_bar_icon_wrap${isLucide ? ' is-lucide' : ''}`}>
+                                                        {renderBarIcon(item.icon, item.title || 'bar item icon')}
+                                                    </div>
+                                                    <span className='refit_bar_title'>{item.title}</span>
                                                 </div>
-                                                <span className='refit_bar_title'>{item.title}</span>
-                                            </div>
-                                            );
-                                        })}
+                                                );
+                                            })}
+                                        </div>
                                     </div>
+                                )}
+                            </div>
+                            {refitSection?.image && (
+                                <div className='refit_image_wrap'>
+                                    <img
+                                        className='refit_main_image'
+                                        src={refitSection.image}
+                                        alt={refitSection?.title || 'Re:FIT AI'}
+                                    />
                                 </div>
                             )}
-                            <a href="/requests" className="refit_weeks_button">
-                            문의하기
-                            </a>
                         </div>
                     </section>
                 )}

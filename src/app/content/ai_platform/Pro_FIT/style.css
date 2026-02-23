@@ -1092,7 +1092,7 @@
 
     .ai_platform_section_block--intro .ai_platform_section_inner {
         min-height: auto;
-        padding: 16px 14px 8px;
+        padding: 40px 20px 40px;
         margin: 0;
         border: none;
         box-shadow: none;
@@ -1100,6 +1100,7 @@
 
     .ai_platform_section_block--intro .ai_platform_text_box {
         margin: 0;
+        gap: 18px;
     }
 
     .ai_platform_section_block--intro .ai_platform_image_wrap {

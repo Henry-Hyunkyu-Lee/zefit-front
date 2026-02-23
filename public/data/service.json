@@ -33,38 +33,30 @@
                 "image_info_en": ["Disease Model: Amyloid beta–induced zebrafish model"],
                 "info": [
                     {
-                        "title": "인지능력 및 기억력 분석",
-                        "text": ""
+                        "title": "인지능 장애 분석 시험",
+                        "text": "Red ball 및 T-maze를 활용하여 행동 추적을 통해 인지능을 평가합니다."
                     },
                     {
-                        "title": "운동활동 및 시각적 반응 분석",
-                        "text": "총 이동거리, 움직임 패턴, 명암에 따른 자극 반응 측정합니다."
+                        "title": "베타아밀로이드 분해능 시험",
+                        "text": "형광 태깅된 베타 아밀로이드를 촬영하여 베타 아밀로이드 분해능을 평가합니다."
                     },
                     {
-                        "title": "불안유발 분석",
-                        "text": "웰 플레이트 중앙 또는 주변에서 보낸 시간을 기반으로 치어의 불안상태를 평가합니다."
-                    },
-                    {
-                        "title": "경련성 분석",
-                        "text": "전기생리학적인 신호를 측정하여 seizure 신호를 분석하여 경련성을 분석합니다."
+                        "title": "알츠하이머 및 염증 연관 바이오마커 분석",
+                        "text": "qPCR 및 Western Blot 시험을 통해 질병 연관 바이오마커 변화를 평가합니다."
                     }
                 ],
                 "info_en": [
                     {
-                        "title": "Cognitive and Memory Analysis",
-                        "text": ""
+                        "title": "Cognitive Impairment Assessment",
+                        "text": "Cognitive function is evaluated through behavioral tracking using Red Ball and T-maze assays."
                     },
                     {
-                        "title": "Analysis of behavior activity and visual response",
-                        "text": "Total distance, movement patten and stimulus response according to light and shade."
+                        "title": "Beta-Amyloid Degradation Assay",
+                        "text": "Beta-amyloid degradation is assessed by imaging fluorescently labeled beta-amyloid."
                     },
                     {
-                        "title": "Anxiety-induced analysis",
-                        "text": "Evaluate anxiety of larvae based on the time spent in or around the center of well plates."
-                    },
-                    {
-                        "title": "Convulsion analysis",
-                        "text": "Evaluate the convulsion by measuring electrophysiological signals and analyzing seizure events."
+                        "title": "Alzheimer’s Disease and Inflammation-Related Biomarker Analysis",
+                        "text": "Changes in disease-related biomarkers are analyzed using qPCR and Western blot assays."
                     }
                 ]
             },
@@ -76,30 +68,30 @@
                 "image_info_en": ["Disease Model: MTPT or 6-OHDA-induced zebrafish model"],
                 "info": [
                     {
-                        "title": "알츠하이머 모델",
-                        "text": "인간 Aβ가 뇌실에 주입되면 tau 단백질의 인산화로 인해 AD의 특징적인 증상을 유발합니다.\n당사의 알츠하이머 질병 모델은 후보물질에 의한 행동, 타우 단백질 인산화 변화 데이터를 2주 이내 제공하여 약물 발견 시간을 단축합니다."
+                        "title": "운동성 평가 시험",
+                        "text": "비디오 기반 행동 분석을 통해 이동거리 및 운동성을 평가합니다."
                     },
                     {
-                        "title": "파킨슨병 모델",
-                        "text": "MPTP에 노출되면 제브라피쉬 도파민성 뉴런의 선택적 손실이 유도되어 PD 특징적인 증상을 유발합니다.\n당사의 파킨슨 질병 모델은 후보물질에 의한 행동, dopamine neuron의 변화 데이터를 2주 이내에 제공하여 약물 발견 시간을 단축합니다."
+                        "title": "Dopaminergic neuron 조직 보호 및 재생 평가 시험",
+                        "text": "Dopaminergic neuron을 staining 한 후 이미지로 분석하여 보호 및 재생 능력을 평가합니다."
                     },
                     {
-                        "title": "뇌전증 모델",
-                        "text": "뇌전증은 뉴런의 과도한 흥분으로 인한 재발성 발작이 특징입니다.\n일반적인 경련제 PTZ에 대한 노출은 제브라피쉬 치어의 경련으로 인한 행동 변화와 전기생리학적 변화가 측정됩니다.\n이 모델을 통해 경련을 방지하는 화합물을 확인할 수 있습니다."
+                        "title": "파킨슨 연관 바이오마커 분석",
+                        "text": "qPCR 및 Western Blot 시험을 통해 질병 연관 바이오마커 변화를 평가합니다."
                     }
                 ],
                 "info_en": [
                     {
-                        "title": "Alzheimer's Disease model",
-                        "text": "After human Aβ is injected into ventricle, phosphorylation of the tau protein causes characteristic symptoms of AD.\nOur Alzheimer's disease model reduces drug discovery time within two weeks by providing data on behavior, changes in tau protein phosphorylation."
+                        "title": "Motor Function Assessment",
+                        "text": "Locomotor activity and movement parameters are evaluated through video-based behavioral analysis."
                     },
                     {
-                        "title": "Parkinson's Disease model",
-                        "text": "Exposure to MPTP induces selective loss of zebrafish dopamine neurons, causing PD characteristic symptoms.\nOur Parkinson's disease model reduces drug discovery time within two weeks by providing data on behavior, changes in dopamine neurons."
+                        "title": "Dopaminergic Neuron Protection and Regeneration Assay",
+                        "text": "Neuroprotective and regenerative effects are assessed by staining dopaminergic neurons and analyzing the resulting images."
                     },
                     {
-                        "title": "Epilepsy model",
-                        "text": "Epilepsy is characterized by recurrent seizures caused by excessive excitation of neurons.\nExposure to PTZ causes behavioural and electrophysiological changes in zebrafish larvae.\nThis model allows you to identify compounds that prevent convulsions."
+                        "title": "Parkinson’s Disease–Related Biomarker Analysis",
+                        "text": "Changes in disease-associated biomarkers are analyzed using qPCR and Western blot assays."
                     }
                 ]
             },
