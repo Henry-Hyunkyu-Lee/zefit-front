@@ -12,7 +12,7 @@ import MetaTagTitle from "@/utils/MetaTagTitle";
 import { useRecoilState } from "recoil";
 import { isLoading } from "@/modules/loading";
 
-export default function Pipeline() {
+export default function ReFIT() {
 
     const developmentData = businessNavList[2].list?.map((item: any) => item.id);
 
@@ -45,16 +45,16 @@ export default function Pipeline() {
 
     return (
         <article>
-            <MetaTagTitle title='파이프라인' />
+            <MetaTagTitle title='Re:FIT' />
             <PageHeader />
-            <PageBanner pageTitle='신약개발' />
+            <PageBanner pageTitle='AI 플랫폼' />
             <PageTap tap='business' />
-            <SideTap tap={developmentData} content='development' />
+            <SideTap tap={developmentData} content='ai_platform' />
             <div className='page_layout'>
                 <section className='pipeline_page_container'>
                     <h2 className='service_page_title'>
                         <div className='service_page_side_bar' />
-                        파이프라인
+                        Re:FIT
                     </h2>
                     <h3 className='pipeline_page_title'>
                         {pipelineData?.title}

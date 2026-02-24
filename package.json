@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "set HOST=0 && set PORT=8000 && next dev",
+    "dev:mac": "HOST=0 PORT=8000 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

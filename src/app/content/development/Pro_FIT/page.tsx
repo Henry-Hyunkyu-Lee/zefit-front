@@ -3,21 +3,20 @@
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
-import '../../../../content/service/[service]/style.css';
-// import '../../../../content/service/[service]/test-style.css'; // 반영안을 보고 싶으면 이 라인의 주석을 해제
-import '../../../../content/development/pharmaceuticals/style.css';
+import '../../service/[service]/style.css';
+// import '../../service/[service]/test-style.css'; // 반영안을 보고 싶으면 이 라인을 주석 해제
+import './style.css';
 import { useEffect, useState } from "react";
 import SideTap from "@/components/common/SideTap";
 import { businessNavList } from "@/data/navData";
 import MetaTagTitle from "@/utils/MetaTagTitle";
-import { isLoading } from "@/modules/loading";
 import { useRecoilState } from "recoil";
+import { isLoading } from "@/modules/loading";
 
-export default function PharmaceuticalsEN() {
+export default function ProFIT() {
 
+    const developmentData = businessNavList[2].list?.map((item: any) => item.id);
     const [, setLoading] = useRecoilState(isLoading);
-
-    const developmentData = businessNavList[2].list?.map((item: any) => item.en);
 
     const [pharmaceuticalsData, setPharmaceuticalsData] = useState<any>(null);
 
@@ -40,21 +39,18 @@ export default function PharmaceuticalsEN() {
 
     return (
         <article>
-            <MetaTagTitle title='Pharmaceutical Innovation in CNS Drug Development' ko={false} 
-            description='CNS drug development focuses on testing treatments for brain and spinal cord disorders, including drug discovery, preclinical testing, and clinical trials.'
-            keywords={['CNS drug development ','pharmaceutical innovation',]} 
-            />
+            <MetaTagTitle title='Pro:FIT' />
             <PageHeader />
-            <PageBanner pageTitle='Drug discovery' />
+            <PageBanner pageTitle='AI 플랫폼' />
             <PageTap tap='business' />
-            <SideTap tap={developmentData} content='development' />
+            <SideTap tap={developmentData} content='ai_platform' />
             <div className='page_layout'>
 
                 {/* 현재안 */}
                 <section className='pharmaceuticals_page_container'>
                     <h2 className='service_page_title'>
                         <div className='service_page_side_bar' />
-                        Technology
+                        Pro:FIT
                     </h2>
                     <div className='pharmaceuticals_page_top_info_container'>
                         <div className='top_info_background_box' />
@@ -65,10 +61,10 @@ export default function PharmaceuticalsEN() {
                         <div className='top_info_content_wrapper'>
                             <div className='top_info_content_box'>
                                 <h3 className='top_info_title'>
-                                    {pharmaceuticalsData?.title_en}
+                                    {pharmaceuticalsData?.title}
                                 </h3>
                                 <p className='top_info_content'>
-                                    {pharmaceuticalsData?.subtitle_en}
+                                    {pharmaceuticalsData?.subtitle}
                                 </p>
                             </div>
                         </div>
@@ -79,7 +75,7 @@ export default function PharmaceuticalsEN() {
                 {/* <section className='service_page_container2'>
                     <h2 className='service_page_title2'>
                         <div className='service_page_side_bar2' />
-                        Technology
+                        신약개발기술
                     </h2>
                     <div className='service_page_info_wrapper2'>
                         <img
@@ -88,16 +84,16 @@ export default function PharmaceuticalsEN() {
                             alt='신약개발기술' />
                         <div className='service_page_info_box2'>
                             <h3 className='service_page_info_box_title2'>
-                                {pharmaceuticalsData?.title_en}
+                                {pharmaceuticalsData?.title}
                             </h3>
                             <p className='service_page_info_box_content2'>
-                                {pharmaceuticalsData?.subtitle_en}
+                                {pharmaceuticalsData?.subtitle}
                             </p>
                         </div>
                     </div>
                 </section> */}
 
-                <section className='bottom_content_container'>
+                {/* <section className='bottom_content_container'>
                     <ul className='bottom_content_card_wrapper'>
                         {pharmaceuticalsData?.step?.map((item: any, index: number) =>
                             <li
@@ -110,19 +106,17 @@ export default function PharmaceuticalsEN() {
                                 <img
                                     className='card_box_icon'
                                     src={item?.icon}
-                                    alt={`${item?.title_en} 아이콘`} />
-                                <strong style={{ fontSize: '15px' }} className='card_box_title'>
-                                    {item?.title_en}
+                                    alt={`${item?.title} 아이콘`} />
+                                <strong className='card_box_title'>
+                                    {item?.title}
                                 </strong>
                                 <div className='card_text_box'>
-                                    {item?.content_en.map((text: string, idx: number) =>
+                                    {item?.content.map((text: string, idx: number) =>
                                         <div
                                             key={idx}
                                             className='card_text_box_lane'>
-                                            <div className='card_text_box_lane_point_en' />
-                                            <p
-                                                style={{ fontSize: '12px' }}
-                                                className='card_text_box_lane_font'>
+                                            <div className='card_text_box_lane_point' />
+                                            <p className='card_text_box_lane_font'>
                                                 {text}
                                             </p>
                                         </div>
@@ -131,7 +125,7 @@ export default function PharmaceuticalsEN() {
                             </li>
                         )}
                     </ul>
-                </section>
+                </section> */}
             </div>
         </article>
     )

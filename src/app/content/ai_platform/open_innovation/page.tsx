@@ -3,10 +3,10 @@
 import PageBanner from "@/components/common/PageBanner";
 import PageHeader from "@/components/common/PageHeader";
 import PageTap from "@/components/common/PageTap";
-import '../../../../content/service/[service]/style.css';
-// import '../../../../content/service/[service]/test-style.css'; // 반영안을 보고 싶으면 이 라인의 주석을 해제
-import '../../../../content/development/pharmaceuticals/style.css';
-import '../../../../content/development/open_innovation/style.css';
+import '../../service/[service]/style.css';
+// import '../../service/[service]/test-style.css'; // 반영안을 보고 싶으면 이 라인의 주석을 해제
+import '../Pro_FIT/style.css';
+import './style.css';
 import { useEffect, useState } from "react";
 import { businessNavList } from "@/data/navData";
 import SideTap from "@/components/common/SideTap";
@@ -14,11 +14,11 @@ import MetaTagTitle from "@/utils/MetaTagTitle";
 import { isLoading } from "@/modules/loading";
 import { useRecoilState } from "recoil";
 
-export default function OpenInnovationEN() {
+export default function OpenInnovation() {
 
     const [, setLoading] = useRecoilState(isLoading);
 
-    const developmentData = businessNavList[2].list?.map((item: any) => item.en);
+    const developmentData = businessNavList[2].list?.map((item: any) => item.id);
 
     const [innovationData, setInnovationData] = useState<any>(null);
 
@@ -41,32 +41,32 @@ export default function OpenInnovationEN() {
 
     return (
         <article>
-            <MetaTagTitle title='Open Innovation' ko={false} />
+            <MetaTagTitle title='오픈 이노베이션' />
             <PageHeader />
-            <PageBanner pageTitle='Drug discovery' />
+            <PageBanner pageTitle='신약개발' />
             <PageTap tap='business' />
-            <SideTap tap={developmentData} content='development' />
+            <SideTap tap={developmentData} content='ai_platform' />
             <div className='page_layout'>
 
                 {/* 현재안 */}
                 <section className='open_Innovation_page_container'>
                     <h2 className='service_page_title'>
                         <div className='service_page_side_bar' />
-                        Open Innovation
+                        오픈 이노베이션
                     </h2>
                     <div className='pharmaceuticals_page_top_info_container'>
                         <div className='top_info_background_box' />
                         <img
                             className='top_info_image'
                             src='https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_adult_eeg_system_bg.jpg'
-                            alt='오픈이노베이션' />
+                            alt='신약개발기술' />
                         <div className='top_info_content_wrapper'>
                             <div className='top_info_content_box'>
                                 <h3 className='top_info_title'>
-                                    {innovationData?.title_en}
+                                    {innovationData?.title}
                                 </h3>
                                 <div className='open_Innovation_page_top_info_wrapper'>
-                                    {innovationData?.subtitle_en.map((item: string, index: number) =>
+                                    {innovationData?.subtitle.map((item: string, index: number) =>
                                         <p
                                             key={index}
                                             className='top_info_content'>
@@ -83,7 +83,7 @@ export default function OpenInnovationEN() {
                 {/* <section className='service_page_container2'>
                     <h2 className='service_page_title2'>
                         <div className='service_page_side_bar2' />
-                        Open Innovation
+                        오픈 이노베이션
                     </h2>
                     <div className='service_page_info_wrapper2'>
                         <img
@@ -92,10 +92,10 @@ export default function OpenInnovationEN() {
                             alt='신약개발기술' />
                         <div className='service_page_info_box2'>
                             <h3 className='service_page_info_box_title2'>
-                                {innovationData?.title_en}
+                                {innovationData?.title}
                             </h3>
                             <div className='open_Innovation_page_top_info_wrapper'>
-                                {innovationData?.subtitle_en.map((item: string, index: number) =>
+                                {innovationData?.subtitle.map((item: string, index: number) =>
                                     <p
                                         key={index}
                                         className='service_page_info_box_content2'>
@@ -108,7 +108,7 @@ export default function OpenInnovationEN() {
 
                 <div className='bottom_step_content_container'>
                     <h3 className='bottom_step_title'>
-                        {innovationData?.steptitle_en}
+                        {innovationData?.steptitle}
                     </h3>
 
                     {/* pharmaceuticals 페이지 style 사용 */}
@@ -118,21 +118,21 @@ export default function OpenInnovationEN() {
                                 <div className='card_step_box'>
                                     step {item?.id}
                                 </div>
-                                {(index !== innovationData?.step.length - 1)
+                                {/* {(index !== innovationData?.step.length - 1)
                                     && <div className='card_next_step_arrow'>
                                         <i className='icon-arrow-right' />
-                                    </div>}
+                                    </div>} */}
                                 <img
                                     className='card_box_icon'
                                     src={item?.icon}
-                                    alt={`${item?.title_en} 아이콘`} />
-                                <strong style={{ fontSize: '17px' }} className='card_box_title'>
-                                    {item?.title_en}
+                                    alt={`${item?.title} 아이콘`} />
+                                <strong className='card_box_title'>
+                                    {item?.title}
                                 </strong>
                                 <div className='card_text_box'>
                                     <div className='card_text_box_lane'>
                                         <p className='step_card_text_box_lane_font'>
-                                            {item?.content_en}
+                                            {item?.content}
                                         </p>
                                     </div>
                                 </div>

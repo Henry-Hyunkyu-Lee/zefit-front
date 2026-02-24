@@ -1,0 +1,508 @@
+{
+  "Pro_FIT": {
+    "sections": [
+      {
+        "id": 1,
+        "title": "신약 후보물질,\n완벽한 타겟 및 적용중(FIT)을 찾아드립니다.",
+        "title_em": "완벽한 타겟 및 적용중(FIT)",
+        "title_en": "We Fit your drug candidates to the\n right target.",
+        "title_em_en": "right target",
+        "text": "가장 완벽한 타겟과 적응증을 찾아 후보물질이 가진 가치를 극대화하세요.",
+        "text_en": "Maximize the value of your drug candidates\n by finding the optimal target and indication.",
+        "image": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/ai_platform/profit_sec1_01.png"
+      },
+      {
+        "id": 2,
+        "section_type": "pain_points",
+        "pain_points": [
+          {
+            "id": 1,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/icons/profit_s11.png",
+            "title": "불확실한 타겟 및 적용중",
+            "title_en": "Uncertain Target and Indication",
+            "text": "탁월한 구조를 가졌지만,\n어떤 타겟과 질환에 가장 효과적인지 몰라\n 개발 방향을 잡기 어렵습니다.",
+            "text_en": "Even with a strong molecular structure,\n uncertainty around the optimal target \n and indication can delay critical development decisions."
+          },
+          {
+            "id": 2,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/icons/profit_s12.png",
+            "title": "생체 효능의 불확실성",
+            "title_en": "Uncertain In Vivo Efficacy",
+            "text": "AI 예측 데이터만으로는 실제 생체\n(In-vivo)에서의 효능과 독성을\n 확신하기 어렵습니다.",
+            "text_en": "AI-based predictions alone are not sufficient\n to confidently assess real in vivo\n efficacy and toxicity."
+          },
+          {
+            "id": 3,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/icons/profit_s13.png",
+            "title": "높은 임상 리스크",
+            "title_en": "High Clinical Risk",
+            "text": "임상 진입 전, 실패 리스크를\n 획기적으로 줄이기 위한 확실하고\n 입증된 근거 데이터가 필요합니다.",
+            "text_en": "Before entering clinical trials,\n clear and validated evidence\n is essential to significantly reduce the risk of failure."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "section_type": "profit_steps",
+        "title": "Pro:FIT AI는 데이터로 찾고, 생명으로 증명합니다.",
+        "title_em": "생명으로 증명",
+        "title_en": "Finds answers in data. Proof in biology.",
+        "title_em_en": "Proof in biology",
+        "steps": [
+          {
+            "id": 1,
+            "step": "STEP 01",
+            "icon": "search",
+            "title": "구조유사성 매칭",
+            "title_en": "Structure Similarity Matching",
+            "text": "신규 후보물질의 구조를 분석하여\nFDA 승인 약물 중 구조적으로 가장\n 유사한 약물을 식별하는\n Smart Screening",
+            "text_en": "Smart screening that analyzes\n new drug candidates\n to identify the most structurally similar\n FDA-approved drugs."
+          },
+          {
+            "id": 2,
+            "step": "STEP 02",
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/icons/profit_s22.png",
+            "title": "타겟 도킹 & 검증",
+            "title_en": "Target Docking\n & Validation",
+            "text": "유사 약물의 타겟 정보를 기반으로,\n 실제 결합 여부를 검증하는\n 고정밀 분자 도킹 시뮬레이션",
+            "text_en": "High-precision molecular\n docking simulations that verify\n target binding potential based on\n structurally similar reference drugs."
+          },
+          {
+            "id": 3,
+            "step": "STEP 03",
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/icons/profit_s23.png",
+            "title": "질환 매칭&추천",
+            "title_en": "Indication Matching\n & Recommendation",
+            "text": "검증된 타겟-물질 결합 정보를\n 바탕으로 치료 효과가 기대되는\n 최적의 적응증 리포트 제공",
+            "text_en": "We identify optimal disease indications\n based on validated target–compound\n interactions, with reports on expected\n therapeutic potential."
+          },
+          {
+            "id": 4,
+            "step": "STEP 04",
+            "icon": "fish-symbol",
+            "optional_label": "(Optional)",
+            "optional_label_en": "(Optional)",
+            "title": "제브라피쉬 생체 검증",
+            "title_en": "Zebrafish In Vivo Validation",
+            "text": "유전적 상동성이 높은 제브라피쉬\n 모델로 실제 생체 내 효능과 독성을\n 빠르게 검증",
+            "text_en": "Using zebrafish models with high genetic homology, we rapidly validate in vivo efficacy and toxicity to confirm biological relevance."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "section_type": "profit_features",
+        "title": "핵심기능 및 알고리즘",
+        "title_en": "Core Features & Algorithms",
+        "cards": [
+          {
+            "id": 1,
+            "icon": "blocks",
+            "title": "Boltz-2",
+            "title_en": "Boltz-2",
+            "text": "MIT 연구진의 최신 Boltz-2 알고리즘을 적용해\n약물-단백질 결합 포즈와 결합 스코어를 예측합니다.",
+            "text_en": "Latest Boltz-2 algorithm by MIT researchers\n for drug–protein binding pose and score prediction"
+          },
+          {
+            "id": 2,
+            "icon": "clock",
+            "title": "3주 이내",
+            "title_en": "≤ 3 Weeks Turnaround",
+            "text": "AI 및 제브라피쉬에서 약물 반응성을 검증하고,\n 통상 3주이내 연구자를 위한 리포트를 제공합니다.",
+            "text_en": "AI- and zebrafish-based validation\nwith researcher-ready reports in ≤ 3 weeks"
+          },
+          {
+            "id": 3,
+            "icon": "flask-conical",
+            "title": "FDA 승인",
+            "title_en": "FDA-Approved Drug Library",
+            "text": "이미 안전성이 검증된 FDA 승인 약물 라이브러리를\n 기반으로 선별하여 빠른 임상 전환을 지원합니다.",
+            "text_en": "Clinically validated drug candidates\nFaster clinical translation"
+          },
+          {
+            "id": 4,
+            "icon": "shield-check",
+            "title": "데이터 암호화",
+            "title_en": "Secure Data Encryption",
+            "text": "의뢰하신 물질 정보와 구조 모델링 결과는\n강력한 암호화 프로토콜로 안전하게 보호합니다.",
+            "text_en": "Submitted compound data\n and modeling results are securely protected\n by robust encryption protocols"
+          },
+          {
+            "id": 5,
+            "icon": "chart-column",
+            "title": "멀티 모달",
+            "title_en": "Multimodal Binding Analysis",
+            "text": "단순 도킹 점수로만 예측하지 않고\n환자 맞춤 생체 모델에서 약물 반응성을 검증하여\n예측 정확도를 높입니다.",
+            "text_en": "Beyond simple docking scores,\npatient-specific biological models\n for validating drug responsiveness\n and improving predictive accuracy"
+          },
+          {
+            "id": 6,
+            "icon": "clipboard-pen",
+            "title": "전문 리포트",
+            "title_en": "Expert Report",
+            "text": "분석 결과의 근거를 포함한\n 고신뢰 전문가용 리포트를 제공합니다.",
+            "text_en": "High-confidence, expert-ready reports \nwith clear supporting evidence"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "section_type": "profit_compare",
+        "title": "Why Pro:FIT AI?",
+        "subtitle": "단순 예측을 넘어선 Bio-Intelligence, Pro:FIT AI만의 확실한 차이",
+        "title_en": "Why Pro:FIT AI?",
+        "subtitle_en": "Beyond simple prediction—Bio-Intelligence that delivers proven confidence.",
+        "table_header": {
+          "label": "구분",
+          "label_en": "Category",
+          "conventional": "일반 AI 신약 서비스",
+          "conventional_en": "Conventional AI Drug Discovery Services",
+          "profit": "Pro:FIT AI",
+          "profit_en": "Pro:FIT AI"
+        },
+        "rows": [
+          {
+            "id": 1,
+            "label": "접근 방식",
+            "label_en": "Approach",
+            "conventional": "텍스트 / 데이터 마이닝 위주",
+            "conventional_en": "Text- and data-mining–driven",
+            "profit": "구조 (Structure-based) 도킹",
+            "profit_en": "Structure-based docking"
+          },
+          {
+            "id": 2,
+            "label": "결과물 신뢰도",
+            "label_en": "Result Reliability",
+            "conventional": "시뮬레이션 예측값 (가상)",
+            "conventional_en": "Simulation-based predictions (virtual)",
+            "profit": "In-vivo 실험 데이터 (실제 생체)",
+            "profit_en": "In vivo experimental data (real biology)"
+          },
+          {
+            "id": 3,
+            "label": "검증 속도",
+            "label_en": "Validation Speed",
+            "conventional": "별도 실험 위탁 필요 (수개월)",
+            "conventional_en": "Requires additional experimental validation (several months)",
+            "profit": "자체 제브라피쉬 시험 플랫폼 (3주 내)",
+            "profit_en": "In-house zebrafish testing platform (≤ 3 weeks)"
+          },
+          {
+            "id": 4,
+            "label": "핵심 가치",
+            "label_en": "Core Value",
+            "conventional": "가능성 제안 (Suggestion)",
+            "conventional_en": "Suggestion",
+            "profit": "검증된 확신 (Validation)",
+            "profit_en": "Validated confidence"
+          }
+        ],
+        "cards": [
+          {
+            "id": 1,
+            "title": "Progressive",
+            "title_en": "Progressive",
+            "text": "기존의 방식보다 진보된(Progressive)\n 기술로 신약 개발의 패러다임을 변화",
+            "text_en": "A new paradigm in drug discovery,\n enabled by progressive technology"
+          },
+          {
+            "id": 2,
+            "title": "Fit",
+            "title_en": "Fit",
+            "text": "후보물질과 타겟 질환의\n 가장 완벽한 결합 제시",
+            "text_en": "Rapid and precise indication discovery\n—reducing costs and increasing value."
+          },
+          {
+            "id": 3,
+            "title": "Profit",
+            "title_en": "Profit",
+            "text": "빠르고 정확한 적응증 발굴로\n 비용 절감 및 가치 상승",
+            "text_en": "Rapid and accurate identification\n of mechanisms of action\n to reduce cost and increase asset value."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "section_type": "use_cases",
+        "title": "Use Cases",
+        "subtitle": "다양한 목적에 맞춰 Pro:FIT AI을 활용해보세요.",
+        "title_en": "Use Cases",
+        "subtitle_en": "Find the right fit for your goals with Pro:FIT AI",
+        "cards": [
+          {
+            "id": 1,
+            "icon": "trending-up",
+            "title": "Drug Repositioning",
+            "title_en": "Drug Repositioning",
+            "text": "개발 중단 약물이나 기존 약물의 새로운\n적응증(New Fit)을 발굴하여\n 기존 자산의 가치를 높입니다.",
+            "text_en": "Discover new indications (New Fit)\n for existing or previously shelved\n drug candidates,\n unlocking additional value\n from existing assets."
+          },
+          {
+            "id": 2,
+            "icon": "timer",
+            "title": "Early Stage Screening",
+            "title_en": "Early Stage Screening",
+            "text": "다수의 초기 후보물질 중, \n상용화 가능성이 가장 높은 물질을 \n빠르고 저렴하게 선별합니다.",
+            "text_en": "Rapid and cost-effective screening\nto identify the most commercially\nviable candidates from a large pool of early-stage compounds."
+          },
+          {
+            "id": 3,
+            "icon": "layers-plus",
+            "title": "Pipeline Expansion",
+            "title_en": "Pipeline Expansion",
+            "text": "단일 파이프라인을 다양한 질환군으로\n 확장하여 기업의 포트폴리오 가치를\n 극대화합니다.",
+            "text_en": "Expand a single pipeline\ninto multiple disease indications\nto maximize portfolio value."
+          },
+          {
+            "id": 4,
+            "icon": "search",
+            "title": "Target Identification",
+            "title_en": "Pipeline Expansion",
+            "text": "약물성이 우수한 물질에 대해\n정확한 타겟 및 적응증을 찾아드립니다.",
+            "text_en": "Optimal target–indication matching\nfor drug-like compounds."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "section_type": "cta",
+        "title": "신약개발의 성공확률, Pro:FIT AI로 높이세요.",
+        "title_em": "Pro:FIT AI",
+        "subtitle": "물질 구조식만으로 시작되는 가장 빠르고 확실한 적응증 탐색 솔루션",
+        "title_en": "Make more confident decisions in drug development—with Pro:FIT AI",
+        "title_em_en": "Pro:FIT AI",
+        "subtitle_en": "The fastest path to validated indication discovery—requiring only structure data to get started.",
+        "button_text": "무료 상담 신청하기",
+        "button_text_en": "Get a Free Consultation",
+        "button_link": "/requests",
+        "button_link_en": "/en/requests",
+        "image": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_adult_eeg_system_bg.jpg"
+      }
+    ]
+  },
+  "Re_FIT": {
+    "sections": [
+      {
+        "id": 1,
+        "section_type": "refit_all",
+        "title": "환자 변이 구조를 기반으로\n최적의 FDA 승인 약물을 찾아드립니다.",
+        "title_en": "Structure-based patient variant analysis\n Top 10 FDA-approved drug recommendations",
+        "title_em": "최적의 FDA 승인 약물을",
+        "title_em_en": "Top 10 FDA-approved drug recommendations",
+        "subtitle": "가장 적합한 FDA 승인 약물 TOP10을 통해 가능성 높은 약물을 빠르게 선별하세요.",
+        "subtitle_en": "Quickly identify high-potential drugs through the most suitable FDA-approved drug TOP10.",
+        "pipeline_label": "",
+        "pipeline_label_en": "Re:FIT Analysis Pipeline",
+        "image": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/ai_platform/refit_sec1_01.png",
+        "flow_cards": [
+          {
+            "id": 1,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/ai_platform/re_fit_sec02_002.png",
+            "title": "Variant Data Input",
+            "title_en": "Variant Data Input",
+            "text": "Processing",
+            "text_en": "Processing",
+            "highlight": false
+          },
+          {
+            "id": 2,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/ai_platform/re_fit_sec02_003.png",
+            "title": "Structure Scoring",
+            "title_en": "Structure Scoring",
+            "text": "DIFFDOCK APPLIED",
+            "text_en": "DIFFDOCK APPLIED",
+            "highlight": true
+          },
+          {
+            "id": 3,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/icons/icon_04.png",
+            "title": "In-Vivo Validation",
+            "title_en": "In-Vivo Validation",
+            "text": "≤ 3 weeks",
+            "text_en": "≤ 3 weeks",
+            "highlight": false
+          }
+        ],
+        "stats": [
+          {
+            "id": 1,
+            "value": "99.8%",
+            "label": "PREDICTION ACCURACY"
+          },
+          {
+            "id": 2,
+            "value": "3 Weeks",
+            "label": "FAST-TRACK DELIVERY"
+          }
+        ],
+        "bullets": [
+          "FDA 승인 약물 라이브러리를 기반으로 결합 스코어를 산출하여 Top 10 후보를 도출합니다.",
+          "AI 결합 예측에는 MIT 연구진의 DiffDock 알고리즘을 적용하여 제브라피쉬 모델 검증으로 신뢰도를 높입니다."
+        ],
+        "bullets_en": [
+          "Based on an FDA-approved drug library, we calculate binding scores against proteins affected by patient-specific variants to identify the top 10 candidate drugs.",
+          "We use MIT’s DiffDock for structure-based binding prediction. To go beyond prediction, we can additionally validate drug responsiveness in a patient-derived zebrafish model, improving confidence in the results."
+        ],
+        "bar_items": [
+          {
+            "id": 1,
+            "icon": "puzzle",
+            "title": "Boltz-2 기반\n3D결합 예측",
+            "title_en": "3D structure-based\n binding prediction"
+          },
+          {
+            "id": 2,
+            "icon": "file-chart-column",
+            "title": "Top 10\n 근거 리포트 제공",
+            "title_en": "Top 10\n candidate report"
+          },
+          {
+            "id": 3,
+            "icon": "truck-electric",
+            "title": "AI+생체 검증 결과 \n3주 이내 전달",
+            "title_en": "AI + in vivo validation results\n in ≤ 3 weeks"
+          }
+        ],
+        "cta": {
+          "button_text": "문의하기",
+          "button_text_en": "Contact Us",
+          "button_link": "/requests",
+          "button_link_en": "/en/requests"
+        }
+      },
+      {
+        "id": 2,
+        "section_type": "refit_pipeline",
+        "pipeline_title": "Re:FIT AI 3-Step Workflow",
+        "pipeline_title_en": "Re:FIT AI 3-Step Workflow",
+        "pipeline_label": "Re:FIT Analysis Pipeline",
+        "pipeline_label_en": "Re:FIT Analysis Pipeline",
+        "pipeline_subtitle": "유전자 변이 데이터 입력부터 실제 생체 검증까지, 체계적이고 신속한 3단계 프로세스",
+        "pipeline_subtitle_en": "From patient variant input to in vivo validation— a structured and efficient three-step process.",
+        "pipeline_steps": [
+          {
+            "id": 1,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/ai_platform/re_fit_sec02_001.png",
+            "title": "Step 1: Variant Input",
+            "title_en": "Step 1: Variant Input",
+            "bullets": ["VCF/변이 리스트 업로드 또는 유전자·변이 지정"],
+            "bullets_en": [
+              "Upload a VCF or variant list,\n or specify target genes or variants"
+            ]
+          },
+          {
+            "id": 2,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/ai_platform/re_fit_sec02_002.png",
+            "title": "Step 2: Structure Scoring",
+            "title_en": "Step 2: Structure Scoring",
+            "bullets": [
+              "돌연변이 단백질 구조 모델링 및 Boltz-2 기반\n 결합 포즈/스코어 예측",
+              "최소 300종 이상 선별된 FDA 승인 약물 대상,\n 후보 약물 Top10 랭킹 + 근거 패키징"
+            ],
+            "bullets_en": [
+              "Mutant protein structure modeling and \nBoltz-2–based binding pose/score prediction",
+              "Top 10 candidate ranking with evidence \nfrom 300+ curated FDA-approved drugs"
+            ]
+          },
+          {
+            "id": 3,
+            "icon": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/ai_platform/re_fit_sec02_003.png",
+            "title": "Step 3: In-Vivo Validation",
+            "title_en": "Step 3: In-Vivo Validation",
+            "bullets": [
+              "환자 변이 유전자 도입 제브라피쉬 모델에서\n 반응성 검증"
+            ],
+            "bullets_en": [
+              "In vivo validation in a patient-derived zebrafish model"
+            ],
+            "highlight_label": "납기 핵심",
+            "highlight_label_en": "Delivery Timeline",
+            "highlight_text": "AI 및 In-vivo 통합 시험 결과를\n의뢰 시점 기준 3주 이내에 전달",
+            "highlight_text_en": "Integrated AI and\nin vivo results delivered within 3 weeks"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "section_type": "refit_features",
+        "title": "핵심기능 및 알고리즘",
+        "title_en": "Core Features & Algorithms",
+        "cards": [
+          {
+            "id": 1,
+            "icon": "blocks",
+            "title": "Boltz-2",
+            "title_en": "Boltz-2",
+            "text": "MIT 연구진의 최신 Boltz-2 알고리즘을 적용해\n약물-단백질 결합 포즈와 결합 스코어를 예측합니다",
+            "text_en": "Latest Boltz-2 algorithm by MIT researchers\n for drug-protein binding pose and score prediction"
+          },
+          {
+            "id": 2,
+            "icon": "clock",
+            "title": "3주 이내",
+            "title_en": "≤ 3 Weeks Turnaround",
+            "text": "AI 및 제브라피쉬에서 약물 반응성을 검증하고\n통상 3주이내 임상의를 위한 리포트를 제공합니다.",
+            "text_en": "AI- and zebrafish-based validation\nwith clinician-ready reports in ≤ 3 weeks"
+          },
+          {
+            "id": 3,
+            "icon": "flask-conical",
+            "title": "FDA 승인",
+            "title_en": "FDA-Approved Drug Library",
+            "text": "이미 안전성이 검증된 FDA 승인 약물 라이브러리를\n 기반으로 선별하여 빠른 임상 전환을 지원합니다.",
+            "text_en": "Clinically validated drug candidates\nFaster clinical translation"
+          },
+          {
+            "id": 4,
+            "icon": "shield-check",
+            "title": "데이터 암호화",
+            "title_en": "Structure Data Encryption",
+            "text": "의뢰하신 환자 데이터와 구조 모델링 결과는\n 강력한 암호화 프로토콜로 안전하게 보호합니다.",
+            "text_en": "Secure protection of patient data\nand structure modeling results"
+          },
+          {
+            "id": 5,
+            "icon": "chart-column",
+            "title": "멀티 모달",
+            "title_en": "Multimodal Binding Analysis",
+            "text": "단순 도킹 점수로만 예측하지 않고\n환자 맞춤 생체 모델에서 약물 반응성을 검증하여\n예측 정확도를 높입니다.",
+            "text_en": "Beyond simple docking scores,\npatient-specific biological models for validating\n drug responsiveness and improving predictive accuracy"
+          },
+          {
+            "id": 6,
+            "icon": "clipboard-pen",
+            "title": "전문 리포트",
+            "title_en": "Expert Report",
+            "text": "분석 결과의 근거를 포함한\n고신뢰 전문가용 리포트를 제공합니다.",
+            "text_en": "High-confidence, expert-ready reports\nwith clear supporting evidence"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "section_type": "refit_weeks",
+        "title": "구조 기반의 추천을 3주 내, in vivo 검증으로 확인합니다.",
+        "title_en": "Structure-based recommendations,\nvalidated in vivo within ≤ 3 weeks",
+        "text": "구조 기반 결합 스코어는 후보 탐색을 빠르게 하지만, 실제 생체 반응 확인이 필요합니다.\n Re:FIT AI 는 제브라피쉬 환자 변이 모델 검증을 통해 추천의 신뢰도를 강화하며,\n 결과는 통상 3주 이내 제공됩니다.",
+        "text_en": "Structure-based binding scores enable rapid candidate identification,\nbut confirmation in a real biological system is essential.\nRe:FIT validates recommendations using patient-derived zebrafish models,\nwith results delivered within ≤ 3 weeks.",
+        "badge": "3 WEEKS",
+        "badge_sub": "TURNAROUND TIME"
+      },
+      {
+        "id": 5,
+        "section_type": "cta",
+        "title": "신약개발의 성공확률, Re:FIT AI로 높이세요.",
+        "title_em": "Re:FIT AI",
+        "subtitle": "유전자 시퀀스만으로 시작되는 가장 빠르고 확실한 적응증 탐색 솔루션",
+        "title_en": "Make more confident decisions in drug development—with Re:FIT AI",
+        "title_em_en": "Re:FIT AI",
+        "subtitle_en": "The fastest path to validated indication discovery—requiring only structure data to get started.",
+        "button_text": "무료 상담 신청하기",
+        "button_text_en": "Get a Free Consultation",
+        "button_link": "/requests",
+        "button_link_en": "/en/requests"
+      }
+    ]
+  }
+}

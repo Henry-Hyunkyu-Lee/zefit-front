@@ -1,0 +1,1610 @@
+/* 신약개발기술 페이지 css style */
+
+/* AI 플랫폼 섹션 */
+.ai_platform_title_section {
+    width: 1170px;
+    padding: 20px 0px 0px 0px;
+}
+
+.ai_platform_section {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px 0px 120px 0px;
+}
+
+.ai_platform_section_inner {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+    padding: 120px 0px;
+}
+
+
+.ai_platform_text_box {
+    flex: 0 0 580px;
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 580px;
+    align-self: center;
+}
+
+.ai_platform_section_kicker {
+    font-size: 70px;
+    font-weight: 800;
+    color: #1e64c8;
+    margin-bottom: 12px;
+}
+
+.ai_platform_title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1f1f1f;
+    max-width: 580px;
+    word-break: keep-all;
+    white-space: pre-line;
+}
+
+.ai_platform_title_em {
+    color: #1e64c8;
+}
+
+.ai_platform_text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555555;
+    white-space: pre-line;
+}
+
+.ai_platform_image_wrap {
+    flex: 0 0 calc(100% - 550px);
+    width: calc(100% - 550px);
+    max-width: none;
+    position: relative;
+    overflow: visible;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ai_platform_image_wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 12%,
+        rgba(255, 255, 255, 0.65) 30%,
+        rgba(255, 255, 255, 0) 55%
+    );
+}
+
+.ai_platform_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* AI 플랫폼 Pain Points */
+.ai_platform_pain_section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background-color: #F6F6F6;
+    padding: 120px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.ai_platform_pain_header {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.ai_platform_pain_title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.ai_platform_pain_subtitle {
+    font-size: 16px;
+    color: #555555;
+}
+
+.ai_platform_pain_cards {
+    width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.ai_platform_pain_card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.ai_platform_pain_icon_wrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #EEF6FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai_platform_pain_icon_wrap.is-lucide {
+    background-color: #EEF6FD;
+}
+
+.ai_platform_pain_icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.ai_platform_pain_icon_svg {
+    width: 40px;
+    height: 40px;
+    stroke: #1e64c8;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ai_platform_pain_icon_svg.is-first {
+    width: 44px;
+    height: 44px;
+}
+
+.ai_platform_pain_icon_wrap.is-first .ai_platform_pain_icon_svg {
+    width: 46px;
+    height: 44px;
+}
+
+.ai_platform_pain_icon_wrap.is-first .ai_platform_pain_icon {
+    width: 50px;
+    height: 50px;
+}
+
+.ai_platform_pain_card_title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.ai_platform_pain_card_text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555555;
+    white-space: pre-line;
+    text-align: center;
+}
+
+/* ProFIT Steps Section */
+.ai_platform_steps_section {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 120px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.ai_platform_steps_header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.ai_platform_steps_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.ai_platform_title_heading {
+    color: #1e64c8;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.ai_platform_steps_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.ai_platform_step_card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(30, 100, 200, 0.2);
+    padding: 22px 18px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.ai_platform_step_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.ai_platform_step_label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1f1f1f;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai_platform_step_optional {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1e64c8;
+    line-height: 1;
+    min-height: 12px;
+}
+
+.ai_platform_step_icon_wrap {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEF6FD;
+    border-radius: 50%;
+}
+
+.ai_platform_step_icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.ai_platform_step_icon_svg {
+    width: 40px;
+    height: 40px;
+    stroke: #1e64c8;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ai_platform_step_icon_svg.ai_platform_step_icon_svg--thick {
+    stroke-width: 3;
+}
+
+.ai_platform_step_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.ai_platform_step_text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555555;
+    white-space: pre-line;
+    text-align: left;
+    min-height: calc(1.6em * 4);
+}
+
+.ai_platform_step_text.is-center {
+    text-align: center;
+}
+
+.ai_platform_steps_grid .ai_platform_step_card:nth-child(3) .ai_platform_step_text,
+.ai_platform_steps_grid .ai_platform_step_card:nth-child(4) .ai_platform_step_text {
+    text-align: center;
+}
+
+/* ProFIT Compare Section */
+.ai_platform_compare_section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    padding: 120px 0px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.ai_platform_compare_header {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ai_platform_compare_title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.ai_platform_compare_subtitle {
+    font-size: 16px;
+    color: #7a8087;
+}
+
+.ai_platform_compare_table {
+    width: 1170px;
+    max-width: 1170px;
+    display: grid;
+    gap: 12px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.ai_platform_compare_row {
+    display: grid;
+    grid-template-columns: 0.9fr 1.55fr 1.55fr;
+    gap: 12px;
+}
+
+.ai_platform_compare_cell {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: none;
+    padding: 18px 16px;
+    font-size: 15px;
+    color: #2f2f2f;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.ai_platform_compare_row > .ai_platform_compare_cell:nth-child(2),
+.ai_platform_compare_row > .ai_platform_compare_cell:nth-child(3) {
+    border-left: none;
+}
+
+.ai_platform_compare_head .ai_platform_compare_cell {
+    font-weight: 700;
+}
+
+.ai_platform_compare_label {
+    background-color: #ffffff;
+    color: #1f1f1f;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.ai_platform_compare_label_cell {
+    background-color: #EAF3FF;
+    font-weight: 600;
+    color: #1f1f1f;
+    border: none;
+}
+
+.ai_platform_compare_conventional_head {
+    background-color: #F2F2F2;
+    color: #1f1f1f;
+}
+
+.ai_platform_compare_profit_head {
+    background-color: #1e64c8;
+    color: #ffffff;
+}
+
+.ai_platform_compare_profit_cell {
+    color: #1e64c8;
+    font-weight: 600;
+    background-color: rgba(30, 100, 200, 0.08);
+}
+
+/* Profit column: row 2-3 light gray + black text */
+.ai_platform_compare_table .ai_platform_compare_row:nth-child(2) .ai_platform_compare_profit_cell,
+.ai_platform_compare_table .ai_platform_compare_row:nth-child(3) .ai_platform_compare_profit_cell {
+    background-color: #f5f5f5;
+    color: #1f1f1f;
+}
+
+.ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(2) {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.ai_platform_compare_cards {
+    width: 1170px;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ai_platform_compare_cards::before,
+.ai_platform_compare_cards::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f1f1f;
+    background: transparent;
+}
+
+.ai_platform_compare_cards::before {
+    content: '+';
+    left: calc(33.333% + 6px);
+}
+
+.ai_platform_compare_cards::after {
+    content: '=';
+    left: calc(66.666% + 12px);
+}
+
+.ai_platform_compare_card {
+    padding: 26px 24px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.ai_platform_compare_card:not(:first-child) {
+    border-left: none;
+}
+
+.ai_platform_compare_card_title {
+    font-size: 27px;
+    font-weight: 800;
+    color: #1e64c8;
+}
+
+.ai_platform_compare_card_text {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555555;
+    white-space: pre-line;
+}
+
+/* ProFIT Use Cases */
+.ai_platform_use_section {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 120px 0px;
+    background-color: #f5f5f5;
+}
+
+.ai_platform_section_block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ai_platform_section_block--features {
+    background-color: #f5f5f5;
+}
+
+.ai_platform_section_block--features .ai_platform_features_section {
+    background-color: #f5f5f5;
+}
+
+.ai_platform_section_block--use-cases {
+    background-color: #f5f5f5;
+}
+
+.ai_platform_use_header {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.ai_platform_use_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.ai_platform_use_subtitle {
+    font-size: 16px;
+    color: #7a8087;
+}
+
+.ai_platform_use_cards {
+    width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.ai_platform_use_card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    border: 1px solid rgba(30, 100, 200, 0.2);
+    padding: 28px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.ai_platform_use_icon_wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #EEF6FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai_platform_use_icon {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.ai_platform_use_icon_svg {
+    width: 38px;
+    height: 38px;
+    stroke: #1e64c8;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ai_platform_use_card_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f1f1f;
+    text-align: inherit;
+}
+
+.ai_platform_use_card_text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666666;
+    white-space: pre-line;
+    text-align: inherit;
+    min-height: calc(1.6em * 5);
+}
+
+.ai_platform_features_section {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 120px 0px;
+    background-color: #ffffff;
+}
+
+.ai_platform_features_title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f1f1f;
+    text-align: center;
+}
+
+.ai_platform_features_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ai_platform_features_card {
+    background-color: #ffffff;
+    border: 1px solid rgba(30, 100, 200, 0.2);
+    border-radius: 18px;
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    text-align: center;
+}
+
+.ai_platform_features_icon_wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #EEF6FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai_platform_features_icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.ai_platform_features_icon_svg {
+    width: 30px;
+    height: 30px;
+    stroke: #1e64c8;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ai_platform_features_card_title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f1f1f;
+    text-align: center;
+}
+
+.ai_platform_features_card_text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4b5563;
+    white-space: pre-line;
+    text-align: center;
+}
+
+.lang-en .ai_platform_use_card {
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* ProFIT CTA */
+.ai_platform_cta_section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 30%, #f5f5f5 100%);
+    padding: 120px 0px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.ai_platform_cta_inner {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.ai_platform_cta_text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 720px;
+}
+
+.ai_platform_cta_title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.ai_platform_cta_title .ai_platform_title_em {
+    color: #1e64c8;
+}
+
+.ai_platform_cta_subtitle {
+    font-size: 15px;
+    color: #1f1f1f;
+    padding-left: 5px;
+}
+
+.ai_platform_cta_actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ai_platform_cta_button {
+    background-color: #1e64c8;
+    color: #ffffff;
+    padding: 18px 32px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ai_platform_cta_media {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ai_platform_cta_image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.ai_platform_cta_wave {
+    width: 100%;
+    height: 33px;
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+    z-index: 3;
+    background: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_wave.png');
+    animation: wave 20s linear infinite;
+}
+
+.ai_platform_cta_wave::after {
+    content: '';
+    width: 100%;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    opacity: 0.4;
+    background: url('https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/static_wave.png');
+    animation: reverse_wave 10s linear infinite;
+}
+
+/* 신약개발기술 페이지 컨테이너 */
+.pharmaceuticals_page_container {
+    width: 1170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 40px;
+    padding: 90px 0px;
+}
+
+/* 신약개발기술 페이지 상단 설명글 컨테이너 */
+.pharmaceuticals_page_top_info_container {
+    width: 100%;
+    height: 590px;
+    position: relative;
+}
+
+/* 상단 설명글 컨텐츠 컨테이너 */
+.top_info_content_wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 48px 0px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+/* 상단 설명글 컨텐츠 박스 */
+.top_info_content_box {
+    width: 77%;
+    height: fit-content;
+    padding: 80px 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    box-shadow: 1px 1px 8px 0px #00000080;
+}
+
+/* 상단 설명글 제목 */
+.top_info_title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* 상단 설명글 컨텐츠 */
+.top_info_content {
+    font-size: 18px;
+    text-align: center;
+    white-space: pre-line;
+}
+
+/* 상단 설명글 백그라운드 박스 */
+.top_info_background_box {
+    width: 63%;
+    height: 65%;
+    background-color: #0055A7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* 상단 설명글 이미지 */
+.top_info_image {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* 하단 컨텐츠 컨테이너 */
+.bottom_content_container {
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 30%, #f5f5f5 100%);
+}
+
+.page_layout > section.ai_platform_section_block:nth-of-type(4) {
+    background-color: #f5f5f5;
+}
+
+.page_layout > section.ai_platform_section_block:nth-of-type(5) {
+    background-color: #ffffff;
+}
+
+.page_layout > section.ai_platform_section_block:nth-of-type(6) {
+    background-color: #f5f5f5;
+}
+
+/* 하단 컨텐츠 카드 컨테이너 */
+.bottom_content_card_wrapper {
+    width: 1170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* 하단 컨텐츠 카드 박스 */
+.card_box {
+    max-width: 380px;
+    width: 100%;
+    height: 352px;
+    border-radius: 12px;
+    padding: 30px 12px;
+    background-color: white;
+    border: 1px solid #78B0E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+/* 하단 컨텐츠 카드 아이콘 */
+.card_box_icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* 하단 컨텐츠 카드 제목 */
+.card_box_title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* 하단 컨텐츠 카드 텍스트 박스 */
+.card_text_box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+}
+
+/* 하단 컨텐츠 카드 텍스트 박스 라인 */
+.card_text_box_lane {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #555555;
+    gap: 7px;
+}
+
+/* 카드 텍스트 박스 라인 포인트 */
+.card_text_box_lane_point {
+    min-width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 1px solid;
+}
+
+/* 카드 텍스트 박스 라인 포인트(영문) */
+.card_text_box_lane_point_en {
+    min-width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    border: 1px solid;
+}
+
+/* 카드 텍스트 박스 라인 글씨 */
+.card_text_box_lane_font {
+    font-size: 13px;
+    text-align: start;
+}
+
+/* 다음 스텝 화살표 */
+.card_next_step_arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #78B0E5;
+    position: absolute;
+    top: 146px;
+    right: -37px;
+    z-index: 2;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/*==============================================================*/
+/* 반응형 style */
+@media screen and (max-width: 1170px) {
+    .ai_platform_section_kicker {
+        font-size: 40px;
+        margin-bottom: 8px;
+        line-height: 1.05;
+    }
+
+    .ai_platform_title_section {
+        width: 94%;
+        padding: 20px 0px 0px 0px;
+    }
+
+    .ai_platform_section {
+        width: 94%;
+        padding: 30px 0px 10px 0px;
+        gap: 24px;
+    }
+
+    .ai_platform_section_inner {
+        max-width: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+        overflow: hidden;
+        min-height: 180px;
+        padding: 20px 16px 8px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        margin: auto 0 4px;
+    }
+
+    .ai_platform_title {
+        font-size: 20px;
+        white-space: normal;
+        max-width: none;
+        text-align: left;
+    }
+
+    .ai_platform_text {
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .ai_platform_image_wrap {
+        width: 100%;
+        max-width: none;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        opacity: 0.25;
+    }
+
+    .ai_platform_text_box {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: none;
+        align-self: center;
+        position: relative;
+        z-index: 1;
+        text-align: left;
+        margin: auto 0;
+        gap: 12px;
+    }
+
+    .ai_platform_section_block--intro .ai_platform_section_inner {
+        min-height: auto;
+        padding: 40px 20px 40px;
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .ai_platform_section_block--intro .ai_platform_text_box {
+        margin: 0;
+        gap: 18px;
+    }
+
+    .ai_platform_section_block--intro .ai_platform_image_wrap {
+        display: none;
+    }
+
+    .ai_platform_pain_section {
+        padding: 50px 0px 60px 0px;
+        gap: 24px;
+    }
+
+    .ai_platform_pain_header {
+        width: 94%;
+    }
+
+    .ai_platform_pain_title {
+        font-size: 18px;
+    }
+
+    .ai_platform_pain_subtitle {
+        font-size: 12px;
+    }
+
+    .ai_platform_pain_cards {
+        width: 94%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .ai_platform_pain_card {
+        padding: 20px 18px;
+        gap: 12px;
+    }
+
+    .ai_platform_pain_card_text {
+        white-space: normal;
+    }
+
+    .ai_platform_pain_icon_wrap {
+        width: 52px;
+        height: 52px;
+    }
+
+    .ai_platform_pain_icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ai_platform_pain_card_title {
+        font-size: 16px;
+    }
+
+    .ai_platform_pain_card_text {
+        font-size: 12px;
+    }
+
+    .ai_platform_steps_section {
+        max-width: none;
+        padding: 36px 0px 40px 0px;
+        gap: 20px;
+    }
+
+    .ai_platform_steps_title {
+        font-size: 18px;
+    }
+
+    .ai_platform_steps_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        width: 94%;
+        margin: 0 auto;
+    }
+
+    .ai_platform_step_card {
+        padding: 18px 16px 20px;
+        gap: 10px;
+        border-radius: 14px;
+    }
+
+    .ai_platform_step_label {
+        font-size: 12px;
+    }
+
+    .ai_platform_step_icon_wrap {
+        width: 56px;
+        height: 56px;
+    }
+
+    .ai_platform_step_icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .ai_platform_step_title {
+        font-size: 16px;
+    }
+
+    .ai_platform_step_text {
+        font-size: 12px;
+        white-space: normal;
+    }
+
+    .ai_platform_compare_section {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 30px 0px 50px 0px;
+        gap: 40px;
+    }
+
+    .ai_platform_compare_header,
+    .ai_platform_compare_table,
+    .ai_platform_compare_cards {
+        width: 94%;
+        max-width: none;
+    }
+
+    .ai_platform_compare_title {
+        font-size: 22px;
+    }
+
+    .ai_platform_compare_subtitle {
+        font-size: 12px;
+    }
+
+    .ai_platform_compare_table {
+        gap: 10px;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .ai_platform_compare_row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        background-color: #ffffff;
+        border: 1px solid rgba(30, 100, 200, 0.18);
+        border-radius: 12px;
+        padding: 10px;
+    }
+
+    .ai_platform_compare_row.ai_platform_compare_head {
+        display: none;
+    }
+
+    .ai_platform_compare_cell {
+        font-size: 13px;
+        padding: 14px 12px;
+        justify-content: flex-start;
+        text-align: left;
+        border-radius: 10px;
+        white-space: normal;
+    }
+
+    .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell::before {
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        color: #6b7280;
+        margin-right: 8px;
+        min-width: 64px;
+        flex: 0 0 64px;
+    }
+
+    .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(1)::before {
+        content: '구분';
+    }
+
+    .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(2)::before {
+        content: '일반 서비스';
+    }
+
+    .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(3)::before {
+        content: 'Pro:FIT';
+    }
+
+    .lang-en .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(1)::before {
+        content: 'Category';
+    }
+
+    .lang-en .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(2)::before {
+        content: 'Conventional';
+    }
+
+    .lang-en .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(3)::before {
+        content: 'Pro:FIT';
+    }
+
+    .lang-en .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(2) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .lang-en .ai_platform_compare_row:not(.ai_platform_compare_head) .ai_platform_compare_cell:nth-child(2)::before {
+        margin-right: 0;
+        min-width: 0;
+        flex: 0 0 auto;
+    }
+
+    .ai_platform_compare_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .ai_platform_compare_card {
+        padding: 20px 18px;
+        position: relative;
+    }
+
+    .ai_platform_compare_card:not(:first-child) {
+        border-left: none;
+        border-top: none;
+    }
+
+    .ai_platform_compare_cards::before,
+    .ai_platform_compare_cards::after {
+        display: none;
+    }
+
+    .ai_platform_compare_card:nth-child(2)::before,
+    .ai_platform_compare_card:nth-child(3)::before {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+        font-weight: 700;
+        color: #1f1f1f;
+        line-height: 1;
+    }
+
+    .ai_platform_compare_card:nth-child(2)::before {
+        content: '+';
+    }
+
+    .ai_platform_compare_card:nth-child(3)::before {
+        content: '=';
+    }
+
+    .ai_platform_compare_card_title {
+        font-size: 24px;
+    }
+
+    .ai_platform_compare_card_text {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .ai_platform_use_section {
+        max-width: none;
+        padding: 10px 0px 50px 0px;
+        gap: 18px;
+    }
+
+    .ai_platform_use_header {
+        width: 94%;
+    }
+
+    .ai_platform_use_title {
+        font-size: 20px;
+    }
+
+    .ai_platform_use_subtitle {
+        font-size: 12px;
+    }
+
+    .ai_platform_use_cards {
+        width: 94%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .ai_platform_use_card {
+        padding: 22px 18px 24px;
+        gap: 12px;
+    }
+
+    .ai_platform_use_icon_wrap {
+        width: 46px;
+        height: 46px;
+    }
+
+    .ai_platform_use_icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ai_platform_use_card_title {
+        font-size: 16px;
+    }
+
+    .ai_platform_use_card_text {
+        font-size: 12px;
+        white-space: normal;
+    }
+
+    .ai_platform_features_section {
+        width: 94%;
+        max-width: none;
+        margin: 0 auto;
+        padding: 20px 0px 40px 0px;
+    }
+
+    .ai_platform_features_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .ai_platform_features_card {
+        padding: 18px 14px;
+        border-radius: 14px;
+    }
+
+    .ai_platform_features_card_title {
+        font-size: 16px;
+    }
+
+    .ai_platform_features_card_text {
+        font-size: 12px;
+        white-space: normal;
+    }
+
+    .ai_platform_cta_section {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 40px 0px 60px 0px;
+    }
+
+    .ai_platform_cta_inner {
+        width: 94%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .ai_platform_cta_text {
+        max-width: none;
+    }
+
+    .ai_platform_cta_title {
+        font-size: 20px;
+    }
+
+    .ai_platform_cta_subtitle {
+        font-size: 12px;
+    }
+
+    .ai_platform_cta_actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .ai_platform_cta_button {
+        font-size: 14px;
+        padding: 14px 22px;
+    }
+
+    .ai_platform_cta_media {
+        width: 200px;
+        opacity: 0.5;
+    }
+
+    .ai_platform_cta_wave {
+        height: 28px;
+        bottom: -28px;
+    }
+
+    .ai_platform_cta_wave::after {
+        height: 28px;
+    }
+
+    .pharmaceuticals_page_container {
+        width: 94%;
+        padding: 40px 0px;
+        gap: 24px;
+    }
+
+    .pharmaceuticals_page_top_info_container {
+        height: fit-content;
+    }
+
+    .top_info_content_wrapper {
+        padding: 20px;
+        position: static;
+    }
+
+    .top_info_background_box {
+        display: none;
+    }
+
+    .top_info_image {
+        display: none;
+    }
+
+    .top_info_content_box {
+        width: 100%;
+        height: fit-content;
+        padding: 20px 30px;
+        background-color: white;
+        gap: 16px;
+    }
+
+    .top_info_title {
+        font-size: 16px;
+    }
+
+    .top_info_content {
+        font-size: 12px;
+    }
+
+    .bottom_content_container {
+        height: auto;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .bottom_content_card_wrapper {
+        width: 94%;
+        gap: 12px;
+    }
+
+    .card_box {
+        max-width: 100%;
+        padding: 12px 6px;
+        gap: 30px;
+        height: 300px;
+        justify-content: center;
+    }
+
+    .card_next_step_arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        top: auto;
+        bottom: -26px;
+        right: auto;
+        left: calc(50% - 20px);
+        transform: rotate(90deg);
+    }
+
+    .card_box_icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card_box_title {
+        font-size: 18px;
+    }
+
+    .card_text_box {
+        gap: 4px;
+    }
+
+    .card_text_box_lane {
+        gap: 3px;
+    }
+
+    .card_text_box_lane_point {
+        min-width: 2px;
+        height: 2px;
+    }
+
+    .card_text_box_lane_font {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 459px) {
+    .ai_platform_pain_cards,
+    .ai_platform_steps_grid,
+    .ai_platform_use_cards,
+    .ai_platform_features_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CTA wave animation */
+@keyframes wave {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 2061px;
+    }
+}
+
+@keyframes reverse_wave {
+    0% {
+        background-position: 2061px;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}

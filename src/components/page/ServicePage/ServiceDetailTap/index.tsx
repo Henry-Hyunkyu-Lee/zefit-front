@@ -62,6 +62,16 @@ export default function ServiceDetailTap({
                         </li>
                     )}
                 </ul>
+                {((lang === 'en') ? serviceTap?.[present]?.image_info_en : serviceTap?.[present]?.image_info)?.length > 0 && (
+                    <div className='detail_tap_image_info'>
+                        {((lang === 'en') ? serviceTap?.[present]?.image_info_en : serviceTap?.[present]?.image_info)
+                            .map((info: string, idx: number) => (
+                                <p key={idx} className='detail_text_content' style={{ marginTop: '100px', marginBottom: '20px', fontWeight: '700' }}>
+                                    📌 {info}
+                                </p>
+                            ))}
+                    </div>
+                )}
                 <ul className='detail_tap_image_wrapper'>
                     {(imageList && imageList[present])
                         && imageList[present]?.map((item: any, index: number) =>
@@ -69,7 +79,8 @@ export default function ServiceDetailTap({
                                 <img
                                     style={{
                                         width: imageSizeChanger('width'),
-                                        height: imageSizeChanger('height')
+                                        maxHeight: imageSizeChanger('height'),
+                                        height: 'auto'
                                     }}
                                     className='detail_tap_image'
                                     src={item}
