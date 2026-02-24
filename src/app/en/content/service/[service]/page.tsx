@@ -159,7 +159,7 @@ return (
                 <section className="overview_page_container">
                     <header className="overview_page_header">
                         <h2 className="overview_page_title">
-                            Difference makes better
+                            Difference makes better life
                         </h2>
                         <p className="overview_page_subtitle">Accelerate your IND and shorten the preclinical timeline with ZEFIT&rsquo;s services.</p>
                         <picture className="overview_page_title_image">
@@ -371,7 +371,7 @@ return (
                                 <p className="overview_page_footer_paragraph">
                                     <span style={{ color: 'red' }}>*</span>
                                     Zefit collects only the minimum personal information necessary to provide accurate and sincere responses to your inquiries.
-                                    (<a href="/requests" style={{ color: 'blue' }}>Learn more..</a>)
+                                    (<a href="/en/requests" style={{ color: 'blue' }}>Learn more..</a>)
                                 </p>
                                 <button type="submit">SEND</button>
                             </form>
