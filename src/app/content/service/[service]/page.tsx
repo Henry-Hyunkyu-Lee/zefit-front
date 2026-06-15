@@ -183,6 +183,37 @@ export default function Service() {
                                 </div>
                             </div>
                         </header>
+                        <section className="overview_page_content_section overview_why_section">
+                            <div className="overview_why_head">
+                                <p className="overview_why_eyebrow">Why Zebrafish</p>
+                                <h3 className="overview_why_title">글로벌이 검증한 신약개발 모델</h3>
+                                <p className="overview_why_subtitle">제브라피쉬는 신약개발 초기 단계의 비용과 시간을 줄이는 효율적인 비임상 연구 플랫폼입니다.</p>
+                            </div>
+                            <div className="overview_page_content_divider overview_why_divider">
+                                <div className="overview_why_image">
+                                    <img src="https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/overview_01.png" alt="제브라피쉬 신약개발 모델" loading="lazy" />
+                                </div>
+                                <div className="overview_why_text">
+                                    <span className="overview_why_line" />
+                                    <h4 className="overview_why_text_title">실제 도입으로 입증된<br />연구 효율</h4>
+                                    <p className="overview_why_paragraph">
+                                        FDA 보고서에 따르면 글로벌 제약회사인 <b>노바티스, 화이자</b> 등은 제브라피쉬를 활용해 연간 <b>1,000억 원 이상</b>의 R&amp;D 비용을 절감하고 있습니다. 또한 제브라피쉬 단독 연구 데이터로 <b>FDA 임상계획승인(IND)</b>이 보고되며, 기존 실험동물을 보완·대체할 수 있는 대표적인 <b>시험모델</b>로 자리잡고 있습니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="overview_page_content_divider overview_why_divider overview_why_model">
+                                <div className="overview_why_model_label">
+                                    <p className="overview_why_model_eyebrow">Model</p>
+                                    <h4 className="overview_why_model_title">질병 별 치료전략<br />확보에 강점</h4>
+                                </div>
+                                <div className="overview_why_model_text">
+                                    <p className="overview_why_paragraph">제브라피쉬는 인간과 유사한 유전적 특성을 기반으로, 질병별 치료전략 수립에 강점을 가지는 신약개발 모델입니다.</p>
+                                    <p className="overview_why_paragraph">과거에는 약물 전달 방식의 한계로 실험 편차가 발생할 수 있었으나, 최근에는 구강투여·정맥주사 등 다양한 약물전달 방법이 개발되며 보다 정밀한 약물 연구가 가능해졌습니다.</p>
+                                    <p className="overview_why_paragraph">ZEFIT은 제브라피쉬 질병모델을 통해 질병 연관 핵심 타깃을 규명하고, 치료전략의 Proof-of-Concept(PoC) 데이터를 신속하게 확보합니다.</p>
+                                </div>
+                            </div>
+                            <hr />
+                        </section>
                         <section className="overview_page_content_section">
                             <div className="overview_page_content_divider">
                                 <div className="overview_page_content_box">

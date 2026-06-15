@@ -118,6 +118,14 @@ export const businessNavList: navListType = [
             },
         ]
     },
+    {
+        id: 'Lab-DX',
+        id_en: 'Lab-DX',
+        href: '/content/lab_dx',
+        href_en: '/en/content/lab_dx',
+        criteria: '/content/lab_dx',
+        list: undefined
+    },
 ];
 
 export const communityNavList: navListType = [
