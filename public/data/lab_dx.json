@@ -32,8 +32,8 @@
             {
                 "title": "비전 기반 마이크로인젝터",
                 "title_en": "Vision-Guided Closed-Loop Automation",
-                "desc": "18μm 분해능의 로봇 암 제어로 인간 숙련도 편차 없이 표준 프로토콜 처리",
-                "desc_en": "18 μm-resolution robotic arm control ensures standardized protocol execution independent of operator skill."
+                "desc": "18μm 분해능의 로봇 제어로 인간 숙련도 편차 없이 표준 프로토콜 처리",
+                "desc_en": "18 μm-resolution robotic control ensures standardized protocol execution independent of operator skill."
             },
             {
                 "title": "유체관 기반 고속 이송 시스템",
@@ -42,8 +42,8 @@
                 "desc_en": "Floating samples are transported through tube-based fluidic channels, enabling fast and stable sample transfer between culture, imaging, compound treatment, and recovery steps."
             },
             {
-                "title": "6축 미세제어 로봇 암 + 광학계 통합",
-                "title_en": "6-Axis Precision Robotic Arm & Integrated Vision System",
+                "title": "6축 미세제어 로봇 + 광학계 통합",
+                "title_en": "6-Axis Precision Robotic & Integrated Vision System",
                 "desc": "물리적·소프트웨어적 통합 제어로 파편화된 장비를 하나의 시스템으로",
                 "desc_en": "Robotics, optics, and AI-powered vision are integrated into one system, unifying processes once handled by multiple standalone instruments."
             }
@@ -110,10 +110,10 @@
                 "alt_en": "Z-INJECTION module",
                 "title": "비전 기반 정밀 인젝션 모듈",
                 "title_en": "Vision-Guided Precision Injection Module",
-                "desc": "컴퓨터 비전으로 부유 샘플의 위치를 실시간 추적하여 18μm 분해능의 정밀도로 약물을\n주입합니다. 6축 미세제어 로봇 암과 정밀 광학계가 통합되어 인간 숙련도에 의존하지 않는 표준화된 인젝션을 구현합니다.",
+                "desc": "컴퓨터 비전으로 부유 샘플의 위치를 실시간 추적하여 18μm 분해능의 정밀도로 약물을\n주입합니다. 6축 미세제어 로봇과 정밀 광학계가 통합되어 인간 숙련도에 의존하지 않는 표준화된 인젝션을 구현합니다.",
                 "desc_en": "Computer vision tracks floating samples in real time and enables injection\nwith 18 μm positioning resolution. Integrated precision robotics and optics deliver\nstandardized injections independent of operator skill.",
-                "specs": ["비전 기반 마이크로인젝터", "6축 미세제어 로봇 암", "18μm 분해능", "다중 파장 광원"],
-                "specs_en": ["Vision-Guided Microinjector", "6-Axis Precision Robotic Arm", "18 μm Positioning Resolution", "Multi-Wavelength Optics"]
+                "specs": ["비전 기반 마이크로인젝터", "6축 미세제어 로봇", "18μm 분해능", "다중 파장 광원"],
+                "specs_en": ["Vision-Guided Microinjector", "6-Axis Precision Robotic", "18 μm Positioning Resolution", "Multi-Wavelength Optics"]
             },
             {
                 "eyebrow": "MODULE 02 · Z-SCAN",
@@ -122,7 +122,7 @@
                 "alt_en": "Z-SCAN module",
                 "title": "풀스택 자동화 인클로저",
                 "title_en": "Full-Stack Automation Enclosure",
-                "desc": "배양기·로봇 암·유체 제어·이미징을 단일 인클로저로 통합한 무인 자동화 시스템입니다.\n밀폐형 환경에서 24/7 무인 가동하며, 통합 디스플레이로 실험 상태를 실시간 모니터링합니다.",
+                "desc": "배양기·로봇·유체 제어·이미징을 단일 인클로저로 통합한 무인 자동화 시스템입니다.\n밀폐형 환경에서 24/7 무인 가동하며, 통합 디스플레이로 실험 상태를 실시간 모니터링합니다.",
                 "desc_en": "An unattended automation system that integrates incubation, robotics, fluidic control, and imaging into a single enclosure.\nIt operates 24/7 in a sealed environment,\nwith an integrated display for real-time experiment monitoring.",
                 "specs": ["밀폐형 인클로저", "유체관 기반 이송", "24/7 무인 가동", "통합 디스플레이"],
                 "specs_en": ["Sealed Enclosure", "Fluidic Transport System", "24/7 Unattended Operation", "Unified Display"]
@@ -143,10 +143,10 @@
                 "badge": "LAYER 01",
                 "title": "하드웨어 제어 레이어",
                 "title_en": "Hardware Control Layer",
-                "desc": "정밀 광학계와 유체 제어 밸브, 6축 로봇 암,\n초정밀 인젝터를 고속 통합 제어하여 인프라 가동률을\n극대화합니다.",
-                "desc_en": "Precision optics, fluidic control valves,\na 6-axis robotic arm, and a vision-guided\nmicroinjector are integrated into a unified\ncontrol system to maximize\noperational efficiency.",
-                "items": ["정밀 스테이지·다중 파장 광원", "오토포커싱 모듈", "6축 미세제어 로봇 암", "비전 기반 마이크로인젝터"],
-                "items_en": ["Precision Stage & Multi-Wavelength Light Source", "Autofocus Module", "6-Axis Precision Robotic Arm", "Vision-Guided Microinjector"]
+                "desc": "정밀 광학계와 유체 제어 밸브, 6축 로봇,\n초정밀 인젝터를 고속 통합 제어하여 인프라 가동률을\n극대화합니다.",
+                "desc_en": "Precision optics, fluidic control valves,\na 6-axis robotic, and a vision-guided\nmicroinjector are integrated into a unified\ncontrol system to maximize\noperational efficiency.",
+                "items": ["정밀 스테이지·다중 파장 광원", "오토포커싱 모듈", "6축 미세제어 로봇", "비전 기반 마이크로인젝터"],
+                "items_en": ["Precision Stage & Multi-Wavelength Light Source", "Autofocus Module", "6-Axis Precision Robotic", "Vision-Guided Microinjector"]
             },
             {
                 "badge": "LAYER 02",
@@ -161,7 +161,7 @@
                 "badge": "LAYER 03",
                 "title": "데이터 / 클라우드 레이어",
                 "title_en": "Data & Cloud Layer",
-                "desc": "분석된 데이터를 시각화 대시보드로 제공하고,\n원격 모니터링과 글로벌 협업을 지원하는\nSaaS 플랫폼입니다.",
+                "desc": "분석된 데이터를 시각화 대시보드로 제공하고,\n원격 모니터링과 글로벌 협업을 지원하는\nSaaS 플랫폼을 기관내 구축해드립니다.",
                 "desc_en": "A SaaS platform that delivers analyzed data through visualization dashboards and supports remote monitoring and global collaboration.",
                 "items": ["실시간 시각화 대시보드", "모바일·PC 원격 모니터링", "글로벌 연구원 공유 워크스페이스", "오픈 API 기반 통합"],
                 "items_en": ["Real-Time Analytics Dashboard", "Mobile & PC Remote Monitoring", "Shared Workspace for Global Researchers", "Open API Integration"]
@@ -260,8 +260,8 @@
             "microscope_en": "Microscope",
             "liquid_handler": "리퀴드 핸들러",
             "liquid_handler_en": "Liquid Handler",
-            "robot_arm": "로봇 암",
-            "robot_arm_en": "Robotic Arm",
+            "robot_arm": "로봇",
+            "robot_arm_en": "Robotic",
             "center_sub": "Orchestrator",
             "center_sub_en": "Orchestrator"
         }
