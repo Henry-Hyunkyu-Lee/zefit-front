@@ -265,7 +265,7 @@
 }
 .lab_dx_page .module-card:hover { transform: translateY(-6px); }
 .lab_dx_page .module-media { aspect-ratio: 16 / 10; background: #000; position: relative; overflow: hidden; }
-.lab_dx_page .module-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.lab_dx_page .module-media img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 .lab_dx_page .module-body { padding: 32px 28px; }
 .lab_dx_page .module-eyebrow {
     display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .12em;
