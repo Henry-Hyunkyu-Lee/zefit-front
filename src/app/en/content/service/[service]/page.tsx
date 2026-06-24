@@ -217,6 +217,37 @@ return (
                             </div>
                         </div>
                     </header>
+                    <section className="overview_page_content_section overview_why_section">
+                        <div className="overview_why_head">
+                            <p className="overview_why_eyebrow">Why Zebrafish</p>
+                            <h3 className="overview_why_title">Globally Validated Drug Discovery Model</h3>
+                            <p className="overview_why_subtitle">A faster, cost-efficient preclinical model for early-stage drug development.</p>
+                        </div>
+                        <div className="overview_page_content_divider overview_why_divider">
+                            <div className="overview_why_image">
+                                <img src="https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/overview_01.png" alt="Globally validated zebrafish drug discovery model" loading="lazy" />
+                            </div>
+                            <div className="overview_why_text">
+                                <span className="overview_why_line" />
+                                <h4 className="overview_why_text_title">Research Efficiency Proven in Practice</h4>
+                                <p className="overview_why_paragraph">
+                                    According to FDA reports, global pharmaceutical companies such as <b>Novartis and Pfizer</b> have utilized zebrafish models to reduce annual R&amp;D costs by more than <b>USD 70 million</b>. In addition, zebrafish-based research data have been incorporated into <b>FDA IND-related submissions</b>, highlighting the growing role of zebrafish as a representative <b>preclinical model</b> that complements and, in certain applications, may replace conventional animal models.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="overview_page_content_divider overview_why_divider overview_why_model">
+                            <div className="overview_why_model_label">
+                                <p className="overview_why_model_eyebrow">Model</p>
+                                <h4 className="overview_why_model_title">Disease-Specific<br />Therapeutic Strategies</h4>
+                            </div>
+                            <div className="overview_why_model_text">
+                                <p className="overview_why_paragraph">Zebrafish are a powerful drug discovery model for developing disease-specific therapeutic strategies, supported by their genetic and biological similarities to humans.</p>
+                                <p className="overview_why_paragraph">Advances in drug delivery methods, including oral administration and intravenous injection, have enabled more precise and reproducible pharmacological research.</p>
+                                <p className="overview_why_paragraph">ZEFIT leverages zebrafish disease models to identify disease-associated targets and rapidly generate Proof-of-Concept (PoC) data.</p>
+                            </div>
+                        </div>
+                        <hr />
+                    </section>
                     <section className="overview_page_content_section">
                         <div className="overview_page_content_divider">
                             <div className="overview_page_content_box">

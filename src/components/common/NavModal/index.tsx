@@ -69,18 +69,6 @@ export default function NavModal({ path, position, navOpen, setNavOpen }: NavMod
                                     className='nav_modal_button'>
                                     {(isEnglish) ? item.id_en : item.id}
                                 </a>
-                                {item.list?.map((list: any, idx: number) =>
-                                    <a
-                                        key={idx}
-                                        href={(isEnglish) ? list.href_en : list.href}
-                                        style={{
-                                            marginTop:(idx === 0) ? '6px' : ''
-                                        }}
-                                        className='nav_modal_detail_button'>
-                                        <div className='nav_modal_detail_button_point' />
-                                        {(isEnglish) ? list.en : list.id}
-                                    </a>
-                                )}
                             </div>
                         )}
                     </li>

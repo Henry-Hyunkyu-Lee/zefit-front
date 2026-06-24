@@ -1,0 +1,279 @@
+{
+    "hero": {
+        "eyebrow": "Lab-DX · Scope-FIT",
+        "eyebrow_en": "Lab-DX · Scope-FIT",
+        "title_line1": "현미경 기반 실험을 풀스택으로",
+        "title_line1_en": "Fully Unattended End-to-End Automation",
+        "title_line2": "완전 무인 자동화합니다.",
+        "title_line2_en": "for Microscopy-Based Research",
+        "lead": "Scope-FIT은 부유세포·오가노이드·제브라피쉬 등 그동안 현미경 분석이 까다로웠던\n부유 샘플의 배양부터 이미징, 약물 처리, 회수, AI 분석까지 전 과정을\n단일 워크플로우로 통합 제어하는 End-to-End 풀스택 자동화 솔루션입니다.",
+        "lead_en": "Scope-FIT automates microscopy workflows for hard-to-analyze floating samples—\nsuspension cells, organoids, zebrafish—from culture and imaging\nto treatment, recovery, and AI analysis.",
+        "slogan": "Make Researchers’ Time More Valuable.",
+        "slogan_en": "Make Researchers’ Time More Valuable.",
+        "cta_primary": "도입 상담 신청",
+        "cta_primary_en": "Request a Consultation",
+        "meta": [
+            { "num": "5×", "label": "시간당 스크리닝 처리량", "label_en": "Higher Screening Throughput" },
+            { "num": "24/7", "label": "무인 가동·연속 시계열 데이터", "label_en": "Unattended Continuous Operation" },
+            { "num": "18μm", "label": "정밀 로봇 제어 분해능", "label_en": "Precision Robotic Positioning" },
+            { "num": "6", "label": "단계 워크플로우 통합", "label_en": "Integrated Workflow Stages" }
+        ]
+    },
+    "intro": {
+        "tag": "What is Scope-FIT",
+        "tag_en": "What is Scope-FIT",
+        "title_line1": "부유 샘플 전용,",
+        "title_line1_en": "Built for Floating Samples",
+        "title_em": "End-to-End 풀스택 자동화 솔루션",
+        "title_em_en": "End-to-End\nAutomation",
+        "lead": "유체 제어와 비전 로보틱스 기술의 결합. 기존 현미경 분석이 까다로웠던 부유 샘플의 시험 전 과정을 선순환 피드백 구조로 완전 무인화합니다. 독자 개발한 비전 기반\n마이크로인젝터와 유체관 기반 고속 이송 시스템을 코어로, 배양기 내 추출부터\n이송·촬영·약물 처리·회수까지 단일 워크플로우로 통합 제어합니다.",
+        "lead_en": "Fluidic control meets vision-guided robotics.\nScope-FIT fully automates workflows for hard-to-analyze\nFloating samples through closed-loop feedback.\nBuilt around a proprietary vision-guided microinjector and a high-speed fluidic transport system, it unifies sample extraction, transport, imaging, compound treatment, and recovery into a single workflow.",
+        "features": [
+            {
+                "title": "비전 기반 마이크로인젝터",
+                "title_en": "Vision-Guided Closed-Loop Automation",
+                "desc": "18μm 분해능의 로봇 제어로 인간 숙련도 편차 없이 표준 프로토콜 처리",
+                "desc_en": "18 μm-resolution robotic control ensures standardized protocol execution independent of operator skill."
+            },
+            {
+                "title": "유체관 기반 고속 이송 시스템",
+                "title_en": "Fluidic High-Speed Transport System",
+                "desc": "부유 샘플을 ‘흡입–이송–촬영–배출’하여 코팅 플레이트 없이 High-Throughput 환경 구축",
+                "desc_en": "Floating samples are transported through tube-based fluidic channels, enabling fast and stable sample transfer between culture, imaging, compound treatment, and recovery steps."
+            },
+            {
+                "title": "6축 미세제어 로봇 + 광학계 통합",
+                "title_en": "6-Axis Precision Robotic & Integrated Vision System",
+                "desc": "물리적·소프트웨어적 통합 제어로 파편화된 장비를 하나의 시스템으로",
+                "desc_en": "Robotics, optics, and AI-powered vision are integrated into one system, unifying processes once handled by multiple standalone instruments."
+            }
+        ]
+    },
+    "workflow": {
+        "tag": "End-to-End Workflow",
+        "tag_en": "End-to-End Workflow",
+        "title": "6단계 공정을 공백 없이 연결합니다",
+        "title_en": "Six Stages, Seamlessly Connected",
+        "desc": "수동 작업과 장비 파편화로 인한 바이오 연구의 고질적인 병목을 단일 워크플로우로 해결합니다.",
+        "desc_en": "A single workflow eliminates the bottlenecks\ncaused by manual handling and disconnected instruments.",
+        "steps": [
+            {
+                "title": "샘플 배양·유지",
+                "title_en": "Sample Culture & Maintenance",
+                "desc": "밀폐형 배양기 내\n부유 샘플 안정 유지.\n환경 변화·오염 원천 차단.",
+                "desc_en": "Floating samples\nare maintained in\na closed culture environment\nto minimize contamination risks\nand environmental fluctuations."
+            },
+            {
+                "title": "자동 로딩·이송",
+                "title_en": "Automated Loading & Transport",
+                "desc": "유체관 흡입–이송\n시스템으로 배양 샘플을\n광학계까지 고속 운반.",
+                "desc_en": "Tube-based fluidic transport rapidly moves samples between workflow stages without\nmanual handling."
+            },
+            {
+                "title": "이미징",
+                "title_en": "Imaging",
+                "desc": "정밀 스테이지·다중 파장·오토포커싱 모듈을\n통합 고속 제어하여 촬영.",
+                "desc_en": "Integrated precision stages, multi-focal imaging, and autofocus enable high-quality\nimage acquisition."
+            },
+            {
+                "title": "약물 처리",
+                "title_en": "Compound Treatment",
+                "desc": "비전 기반 마이크로인젝터로 18μm 분해능의 정밀 디스펜싱·인젝션.",
+                "desc_en": "Vision-guided microinjection enables precise dispensing and injection with\n18 μm positioning resolution."
+            },
+            {
+                "title": "자동 회수·재배양",
+                "title_en": "Automated Recovery &\nRe-culture",
+                "desc": "유체관 리버스 제어로\n샘플을 배양기로 회수.\n장기 타임랩스 구현.",
+                "desc_en": "Samples are automatically recovered and returned to culture,\nenabling long-term\ntime-lapse studies."
+            },
+            {
+                "title": "AI 정량 분석",
+                "title_en": "AI Quantitative Analysis",
+                "desc": "딥러닝 알고리즘 기반\n실시간 인식·추적·정량화\n및 통계 해석.",
+                "desc_en": "Deep learning algorithms enable\nautomated detection, tracking, quantification, and\nstatistical analysis."
+            }
+        ]
+    },
+    "modules": {
+        "tag": "Product Modules",
+        "tag_en": "Product Modules",
+        "title": "두 개의 핵심 모듈, 하나의 통합 시스템",
+        "title_en": "Two Core Modules,\nOne Integrated System",
+        "desc": "비전 기반 정밀 주입 모듈과 통합 자동화 인클로저가 Scope-FIT 워크플로우를 완성합니다.",
+        "desc_en": "A vision-guided precision injection module and a fully automated enclosure\ncomplete the Scope-FIT workflow.",
+        "cards": [
+            {
+                "eyebrow": "MODULE 01 · Z-INJECTION",
+                "image": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/lab_dx/01.png",
+                "alt": "Z-INJECTION 모듈",
+                "alt_en": "Z-INJECTION module",
+                "title": "비전 기반 정밀 인젝션 모듈",
+                "title_en": "Vision-Guided Precision Injection Module",
+                "desc": "컴퓨터 비전으로 부유 샘플의 위치를 실시간 추적하여 18μm 분해능의 정밀도로 약물을\n주입합니다. 6축 미세제어 로봇과 정밀 광학계가 통합되어 인간 숙련도에 의존하지 않는 표준화된 인젝션을 구현합니다.",
+                "desc_en": "Computer vision tracks floating samples in real time and enables injection\nwith 18 μm positioning resolution. Integrated precision robotics and optics deliver\nstandardized injections independent of operator skill.",
+                "specs": ["비전 기반 마이크로인젝터", "6축 미세제어 로봇", "18μm 분해능", "다중 파장 광원"],
+                "specs_en": ["Vision-Guided Microinjector", "6-Axis Precision Robotic", "18 μm Positioning Resolution", "Multi-Wavelength Optics"]
+            },
+            {
+                "eyebrow": "MODULE 02 · Z-SCAN",
+                "image": "https://ifvlnreaxggdzpirozcu.supabase.co/storage/v1/object/public/zefit_public/lab_dx/02.png",
+                "alt": "Z-SCAN 모듈",
+                "alt_en": "Z-SCAN module",
+                "title": "풀스택 자동화 인클로저",
+                "title_en": "Full-Stack Automation Enclosure",
+                "desc": "배양기·로봇·유체 제어·이미징을 단일 인클로저로 통합한 무인 자동화 시스템입니다.\n밀폐형 환경에서 24/7 무인 가동하며, 통합 디스플레이로 실험 상태를 실시간 모니터링합니다.",
+                "desc_en": "An unattended automation system that integrates incubation, robotics, fluidic control, and imaging into a single enclosure.\nIt operates 24/7 in a sealed environment,\nwith an integrated display for real-time experiment monitoring.",
+                "specs": ["밀폐형 인클로저", "유체관 기반 이송", "24/7 무인 가동", "통합 디스플레이"],
+                "specs_en": ["Sealed Enclosure", "Fluidic Transport System", "24/7 Unattended Operation", "Unified Display"]
+            }
+        ]
+    },
+    "arch": {
+        "tag": "3-Layer Integrated Architecture",
+        "tag_en": "3-Layer Integrated Architecture",
+        "title_line1": "하드웨어·AI·클라우드가",
+        "title_line1_en": "Hardware, AI, and Cloud",
+        "title_line2": "유기적으로 맞물린 통합 아키텍처",
+        "title_line2_en": "Unified in a Three-Layer Architecture",
+        "desc": "코어 하드웨어부터 분석 SaaS까지, 폐쇄형 시장의 한계를 넘는 풀스택 통합 제어 구조.",
+        "desc_en": "A full-stack architecture connecting hardware control, AI analysis, and cloud collaboration.",
+        "layers": [
+            {
+                "badge": "LAYER 01",
+                "title": "하드웨어 제어 레이어",
+                "title_en": "Hardware Control Layer",
+                "desc": "정밀 광학계와 유체 제어 밸브, 6축 로봇,\n초정밀 인젝터를 고속 통합 제어하여 인프라 가동률을\n극대화합니다.",
+                "desc_en": "Precision optics, fluidic control valves,\na 6-axis robotic, and a vision-guided\nmicroinjector are integrated into a unified\ncontrol system to maximize\noperational efficiency.",
+                "items": ["정밀 스테이지·다중 파장 광원", "오토포커싱 모듈", "6축 미세제어 로봇", "비전 기반 마이크로인젝터"],
+                "items_en": ["Precision Stage & Multi-Wavelength Light Source", "Autofocus Module", "6-Axis Precision Robotic", "Vision-Guided Microinjector"]
+            },
+            {
+                "badge": "LAYER 02",
+                "title": "소프트웨어 / AI 레이어",
+                "title_en": "Software & AI Layer",
+                "desc": "컴퓨터 비전과 딥러닝으로 흐르는 유체 내의 부유 세포·조직을 실시간 인식·추적·정량화합니다.",
+                "desc_en": "Computer vision and deep learning identify, track, and quantify floating cells and tissues\nin real time.",
+                "items": ["실시간 세포·조직 인식 모델", "표준 분석 알고리즘 (재현성 확보)", "액티브 피드백 제어 엔진", "장기 타임랩스 시계열 분석"],
+                "items_en": ["Real-Time Cell & Tissue Recognition", "Standardized Analysis Algorithms", "Active Feedback Control Engine", "Long-Term Time-Lapse Analysis"]
+            },
+            {
+                "badge": "LAYER 03",
+                "title": "데이터 / 클라우드 레이어",
+                "title_en": "Data & Cloud Layer",
+                "desc": "분석된 데이터를 시각화 대시보드로 제공하고,\n원격 모니터링과 글로벌 협업을 지원하는\nSaaS 플랫폼을 기관내 구축해드립니다.",
+                "desc_en": "A SaaS platform that delivers analyzed data through visualization dashboards and supports remote monitoring and global collaboration.",
+                "items": ["실시간 시각화 대시보드", "모바일·PC 원격 모니터링", "글로벌 연구원 공유 워크스페이스", "오픈 API 기반 통합"],
+                "items_en": ["Real-Time Analytics Dashboard", "Mobile & PC Remote Monitoring", "Shared Workspace for Global Researchers", "Open API Integration"]
+            }
+        ]
+    },
+    "advantage": {
+        "tag": "Quantitative Impact",
+        "tag_en": "Quantitative Impact",
+        "title": "기존 기술 대비 명확한 차이",
+        "title_en": "Measurable Advantages Over Conventional Workflows",
+        "desc": "코팅 플레이트, 수동 작업, 단회성 촬영에 의존하던 기존 워크플로우를 정량적 지표로 개선합니다.",
+        "desc_en": "Improving conventional workflows that rely on coated plates,\nmanual handling, and endpoint imaging through measurable performance gains.",
+        "cards": [
+            {
+                "num": "5×",
+                "title": "시간당 처리량",
+                "title_en": "Throughput",
+                "desc": "유체관 ‘흡입–이송–촬영–배출’ 구조로\n코팅 플레이트 없이 부유 샘플\nHigh-Throughput 스크리닝 구현.",
+                "desc_en": "A fluidic aspiration–transport–\nimaging–dispensing workflow\nenables high-throughput\nscreening of floating samples\nwithout coated plates."
+            },
+            {
+                "num": "24/7",
+                "title": "무인 가동",
+                "title_en": "Unattended Operation",
+                "desc": "야간·주말 등 공백기에도 자율 가동.\n전 과정 밀폐형 밀착 수송으로\n오염과 세포 데미지 최소화.",
+                "desc_en": "Operates autonomously day\nand night, minimizing contamination\nand sample loss through a sealed\ntransport environment."
+            },
+            {
+                "num": "18μm",
+                "title": "정밀 분해능",
+                "title_en": "Positioning Resolution",
+                "desc": "비전 로봇 제어로 마이크로인젝션\n오차와 초점 불량을 배제하고\n표준 프로토콜을 일관 적용.",
+                "desc_en": "Vision-guided robotic control\neliminates injection variability\nand focus errors, ensuring\nconsistent protocol execution."
+            },
+            {
+                "num": "100%",
+                "title": "재현성·표준화",
+                "title_en": "Reproducibility & Standardization",
+                "desc": "연구원 컨디션에 영향 받지 않는\nAI 표준 분석으로 논문·보고서 데이터\n신뢰도 극대화.",
+                "desc_en": "AI-driven standardized analysis minimizes operator-dependent variability and maximizes data reliability."
+            }
+        ]
+    },
+    "diff": {
+        "tag": "Technological Differentiation",
+        "tag_en": "Technological Differentiation",
+        "title": "독보적 기술 장벽",
+        "title_en": "Technological Differentiation",
+        "desc": "세계 최초 ‘부유 샘플 전용 양방향 유체 셔틀 및 반응형 제어’ 기술을 중심으로 한 차별화 포인트.",
+        "desc_en": "Differentiated by proprietary bidirectional fluidic transport\nand adaptive control technologies designed for floating samples.",
+        "cards": [
+            {
+                "label": "FEEDBACK LOOP",
+                "title": "샘플 자동 회수 피드백 루프",
+                "title_en": "Automated Sample Recovery Feedback Loop",
+                "desc": "단회성 촬영에 그치는 기존 장비와 달리, 유체관 리버스 제어로\n이미징이 끝난 샘플을 배양기로 돌려보냅니다. 수일~수주 지속되는\n장기 타임랩스 시계열 데이터를 완벽히 확보합니다.",
+                "desc_en": "Unlike conventional systems limited to endpoint imaging,\nsamples are automatically returned to culture after imaging\nthrough fluidic reverse transport. This enables continuous\nlong-term time-lapse studies over days or weeks."
+            },
+            {
+                "label": "ACTIVE CONTROL",
+                "title": "실시간 반응형 실험 제어",
+                "title_en": "Real-Time Adaptive Experiment Control",
+                "desc": "실험 종료 후 분석하는 사후 방식이 아니라, 유체 이송·촬영과 동시에\n딥러닝 분석이 상호작용하는 액티브 피드백 시스템.\n실험 도중 즉각적 조건 조정이 가능합니다.",
+                "desc_en": "Rather than analyzing results only after experiments are completed, imaging, transport, and AI analysis interact through an active feedback system, enabling real-time adjustment of experimental conditions."
+            },
+            {
+                "label": "3-LAYER ARCHITECTURE",
+                "title": "3대 레이어 통합 아키텍처",
+                "title_en": "Integrated 3-Layer Architecture",
+                "desc": "하드웨어 제어부터 고도화된 AI, 클라우드 SaaS까지 유기적으로 맞물린\n통합 아키텍처. 분석 결과는 시각화 대시보드로 즉시 제공되어\n연구원이 원격에서 실험 흐름을 모니터링·공유할 수 있습니다.",
+                "desc_en": "Hardware, AI, and cloud analytics are seamlessly connected within a unified architecture. Experimental data is instantly visualized and shared for remote monitoring and collaboration."
+            },
+            {
+                "label": "ORCHESTRATOR",
+                "title": "오픈 API 기반 오케스트레이터",
+                "title_en": "Open API-Based Orchestrator",
+                "desc": "특정 글로벌 메이커 장비에 종속되는 폐쇄성에서 벗어나,\n연구실이 보유한 다양한 브랜드의 배양기·현미경·리퀴드 핸들러를\n오픈 API 기반으로 통합 제어합니다.",
+                "desc_en": "Integrates and coordinates incubators, microscopes, and liquid\nhandlers through open APIs, enabling unified control across\nlaboratory equipment."
+            }
+        ]
+    },
+    "orch": {
+        "tag": "Smart Lab",
+        "tag_en": "Smart Lab",
+        "title_line1": "이기종 장비를 하나의 시스템으로,",
+        "title_line1_en": "Unify Heterogeneous Instruments Into One System—",
+        "title_line2": "연구원 개입 없는 스마트 랩",
+        "title_line2_en": "A Smart Lab Without Manual Intervention",
+        "desc": "Scope-FIT은 폐쇄적인 기존 현미경 시장을 혁신하는 오케스트레이터입니다.\n연구실에 이미 도입된 다양한 브랜드의 장비를 그대로 활용하면서, 단일 워크플로우로 통합 자동화하세요.",
+        "desc_en": "Scope-FIT is an orchestrator that transforms the traditionally closed microscopy market.\nKeep using the multi-brand instruments already in your lab while unifying them into a single automated workflow.",
+        "nodes": {
+            "incubator": "배양기",
+            "incubator_en": "Incubator",
+            "microscope": "현미경",
+            "microscope_en": "Microscope",
+            "liquid_handler": "리퀴드 핸들러",
+            "liquid_handler_en": "Liquid Handler",
+            "robot_arm": "로봇",
+            "robot_arm_en": "Robotic",
+            "center_sub": "Orchestrator",
+            "center_sub_en": "Orchestrator"
+        }
+    },
+    "cta": {
+        "title_line1": "스마트 랩의 시작,",
+        "title_line1_en": "Start Your Smart Lab— Talk",
+        "title_line2": "Scope-FIT 도입을 상담하세요.",
+        "title_line2_en": "to Us About Scope-FIT.",
+        "desc": "연구실 환경과 보유 장비를 진단하고, 맞춤형 자동화 워크플로우를 설계해 드립니다.",
+        "desc_en": "We assess your lab environment and existing instruments,\nthen design a customized automation workflow for you.",
+        "cta_primary": "도입 상담 신청",
+        "cta_primary_en": "Request a Consultation"
+    }
+}
