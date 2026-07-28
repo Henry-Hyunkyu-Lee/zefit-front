@@ -160,6 +160,11 @@
     border-bottom: 2px solid #E2E2E2;
 }
 
+/* 공지사항 게시글 행 높이 */
+.notice_list_page .table_body_lane_wrapper {
+    height: 90px;
+}
+
 /* 특별 공지 */
 .special_notice {
     width: 64px;
@@ -324,6 +329,10 @@
     }
 
     .table_body_lane_wrapper {
+        height: 70px;
+    }
+
+    .notice_list_page .table_body_lane_wrapper {
         height: 70px;
     }
 

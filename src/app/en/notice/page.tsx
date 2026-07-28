@@ -28,6 +28,7 @@ export default function NoticeEN() {
     const [page, setPage] = useState<number>(1);
     const [search, setSearch] = useState<string>('');
     const [totalCount, setTotalCount] = useState<any>(0);
+    const normalNoticeCount = totalCount - (specialNotice?.length ?? 0);
 
     const start = (page - 1) * 10;
     const end = start + 10 - 1;
@@ -73,7 +74,9 @@ export default function NoticeEN() {
                             key={index}
                             className='table_body_lane_wrapper'>
                             <th className='table_header_category_room'>
-                                {index + 1}
+                                {(item?.is_special)
+                                    ? 'Pinned'
+                                    : index + 1}
                             </th>
                             <td className='table_body_special_title_room'>
                                 <a
@@ -101,7 +104,7 @@ export default function NoticeEN() {
                             className='table_body_lane_wrapper'>
                             <th className='table_header_category_room'>
                                 <div className='special_notice'>
-                                    Notice
+                                    Pinned
                                 </div>
                             </th>
                             <td className='table_body_special_title_room'>
@@ -124,7 +127,7 @@ export default function NoticeEN() {
                             key={index}
                             className='table_body_lane_wrapper'>
                             <th className='table_header_category_room'>
-                                {index + 1}
+                                {normalNoticeCount - start - index}
                             </th>
                             <td className='table_body_special_title_room'>
                                 <a
@@ -173,7 +176,7 @@ export default function NoticeEN() {
     }, [page]);
 
     return (
-        <article>
+        <article className='notice_list_page'>
             <MetaTagTitle title='Notice' ko={false} />
             <PageHeader />
             <PageBanner pageTitle='Notice' />
@@ -207,7 +210,7 @@ export default function NoticeEN() {
                             <thead className='notice_table_header_wrapper'>
                                 <tr className='notice_table_header'>
                                     <th className='table_header_category_room'>
-                                        Category
+                                        No.
                                     </th>
                                     <th className='table_header_title_room'>
                                         Title
