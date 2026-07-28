@@ -116,12 +116,11 @@ export default function ContactMap() {
                             <ul className='location_info_wrapper'>
                                 <li className='location_info_lane_wrapper'>
                                     <strong className='location_info_category'>
-                                        <div className='category_under_bar' />
-                                        Address
+                                        Addr.
                                     </strong>
                                     <div className='location_info_content_wrapper'>
                                         <span className='info_sub_title'>
-                                            사무실.
+                                            본사
                                         </span>
                                         <p className='info_text'>
                                             대구광역시 서구 와룡로 307 디센터1976 지식산업센터 422호
@@ -129,17 +128,24 @@ export default function ContactMap() {
                                         <span
                                             style={{ marginTop: (isMobile) ? '10px' : '24px' }}
                                             className='info_sub_title'>
-                                            기업부설연구소.
+                                            기업부설연구소
                                         </span>
                                         <p className='info_text'>
                                             대구광역시 서구 와룡로 307 디센터1976 지식산업센터 424호
+                                        </p>
+                                        <span
+                                            style={{ marginTop: (isMobile) ? '10px' : '24px' }}
+                                            className='info_sub_title'>
+                                            기업부설연구소 전북지점
+                                        </span>
+                                        <p className='info_text'>
+                                            전북특별자치도 익산시 함열읍 익산대로 78길 13-6, 의료융합동 209호
                                         </p>
                                     </div>
                                 </li>
                                 <li className='location_info_lane_wrapper'>
                                     <strong className='location_info_category'>
-                                        <div className='category_under_bar' />
-                                        Call Number
+                                        Tel.
                                     </strong>
                                     <p className='info_text'>
                                         053-716-0816
@@ -147,11 +153,10 @@ export default function ContactMap() {
                                 </li>
                                 <li className='location_info_lane_wrapper'>
                                     <strong className='location_info_category'>
-                                        <div className='category_under_bar' />
-                                        E-mail
+                                        Fax
                                     </strong>
                                     <p className='info_text'>
-                                        info@zefit.co.kr
+                                        053-719-0654
                                     </p>
                                 </li>
                             </ul>

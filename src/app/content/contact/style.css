@@ -93,7 +93,10 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 42px;
+    align-self: stretch;
+    justify-content: space-between;
+    gap: 0;
+    padding: 12px 0 40px;
 }
 
 /* 주소 정보 라인 컨테이너 */
@@ -101,12 +104,17 @@
     width: 100%;
     display: flex;
     align-items: start;
-    gap: 18px;
+    gap: 10px;
+}
+
+/* Tel.과 Fax 사이 간격 */
+.location_info_lane_wrapper:last-child {
+    margin-top: 0;
 }
 
 /* 주소 정보 라인 분류 제목 */
 .location_info_category {
-    min-width: 112px;
+    min-width: 72px;
     font-size: 18px;
     font-weight: 700;
     color: #EB9A28;
@@ -142,7 +150,7 @@
 
 /* 주소 정보 */
 .info_text {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
 }
 
@@ -236,7 +244,14 @@
     }
 
     .location_info_wrapper {
+        align-self: auto;
+        justify-content: flex-start;
         gap: 16px;
+        padding: 0;
+    }
+
+    .location_info_lane_wrapper:last-child {
+        margin-top: -1px;
     }
 
     .location_info_lane_wrapper {
