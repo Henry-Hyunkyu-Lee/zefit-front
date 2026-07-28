@@ -24,6 +24,7 @@
     width: 100%;
     height: 100%;
     padding: 30px 0px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +80,73 @@
 /* 자세히 보기 버튼 HOVER효과 */
 .popup_more_button:hover {
     color: white;
+    background-color: #0055A7;
+}
+
+/* 팝업 공지 이전/다음 버튼 */
+.popup_navigation_button {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #0055A7;
+    background-color: #ffffffd9;
+    font-size: 38px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.popup_navigation_button:hover {
+    color: white;
+    background-color: #0055A7;
+}
+
+.popup_previous_button {
+    left: 12px;
+}
+
+.popup_next_button {
+    right: 12px;
+}
+
+/* 팝업 공지 페이지 점 */
+.popup_page_indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.popup_page_dot {
+    width: 24px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+}
+
+.popup_page_dot::before {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #0055A7;
+    border-radius: 50%;
+    background-color: white;
+    content: '';
+    transform: translate(-50%, -50%);
+}
+
+.popup_page_dot_active::before {
     background-color: #0055A7;
 }
 
@@ -154,6 +222,29 @@
         width: 110px;
         height: 36px;
         font-size: 14px;
+    }
+
+    .popup_navigation_button {
+        width: 48px;
+        height: 48px;
+        font-size: 36px;
+    }
+
+    .popup_previous_button {
+        left: 0;
+    }
+
+    .popup_next_button {
+        right: 0;
+    }
+
+    .popup_page_indicator {
+        bottom: 2px;
+    }
+
+    .popup_page_dot {
+        width: 32px;
+        height: 40px;
     }
 
     .popup_button_wrapper {

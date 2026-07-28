@@ -50,6 +50,7 @@ export default function Notice() {
                     .from('notices')
                     .select('*')
                     .ilike(dropdownValue?.value, `%${search}%`)
+                    .order('created_at', { ascending: false })
                     .range(start, end);
                 if (error) {
                     throw error;
@@ -149,8 +150,8 @@ export default function Notice() {
         const fetchData = async () => {
             try {
                 const [special, normal, total] = await Promise.all([
-                    supabase.from('notices').select('*').eq('is_special', true),
-                    supabase.from('notices').select('*').eq('is_special', false).range(start, end),
+                    supabase.from('notices').select('*').eq('is_special', true).order('created_at', { ascending: false }),
+                    supabase.from('notices').select('*').eq('is_special', false).order('created_at', { ascending: false }).range(start, end),
                     supabase.from('notices').select('*', { count: 'exact' })
                 ]);
 

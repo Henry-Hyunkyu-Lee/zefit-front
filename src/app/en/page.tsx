@@ -55,7 +55,7 @@ export default function HomeEN() {
                     .select('*')
                     .eq('is_special', true)
                     .order('created_at', { ascending: false })
-                    .limit(1);
+                    .limit(3);
                 if (error) {
                     throw error;
                 }
