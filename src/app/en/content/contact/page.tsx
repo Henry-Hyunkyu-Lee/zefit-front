@@ -9,11 +9,13 @@ import MetaTagTitle from '@/utils/MetaTagTitle';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { isLoading } from '@/modules/loading';
 import { useRecoilState } from 'recoil';
+import { useMediaQuery } from 'react-responsive';
 
 export default function ContactMap() {
 
     const [, setLoading] = useRecoilState(isLoading);
     const googleAppKey = process.env.NEXT_PUBLIC_GOOGLE_API_KEY || '';
+    const isMobile = useMediaQuery({ maxWidth: 1170 });
 
     const [location, setLocation] = useState<any>({
         lat: 0,
@@ -48,7 +50,7 @@ export default function ContactMap() {
     }, [address]);
 
     return (
-        <article>
+        <article className='english_contact_page'>
             <MetaTagTitle title='Location' ko={false} />
             <PageHeader />
             <PageBanner pageTitle='Location' />
@@ -77,42 +79,47 @@ export default function ContactMap() {
                             <ul className='location_info_wrapper'>
                                 <li className='location_info_lane_wrapper'>
                                     <strong className='location_info_category'>
-                                        <div className='category_under_bar' />
-                                        Address
+                                        Addr.
                                     </strong>
                                     <div className='location_info_content_wrapper'>
                                         <span className='info_sub_title'>
-                                            Office.
+                                            Headquarters
                                         </span>
-                                        <p className='info_text'>
-                                            #422, 307, Waryong-ro, Seo-gu, Daegu, Republic of Korea
+                                        <p className='info_text compact_address'>
+                                            #422, D-center1976, 307 Waryong-ro, Seo-gu, Daegu, <span className='address_no_wrap'>Republic of Korea</span>
                                         </p>
                                         <span
-                                            style={{ marginTop: '24px' }}
+                                            style={{ marginTop: (isMobile) ? '10px' : '24px' }}
                                             className='info_sub_title'>
-                                            Research Institute.
+                                            Corporate Research Institute
+                                        </span>
+                                        <p className='info_text compact_address'>
+                                            #424, D-center1976, 307 Waryong-ro, Seo-gu, Daegu, <span className='address_no_wrap'>Republic of Korea</span>
+                                        </p>
+                                        <span
+                                            style={{ marginTop: (isMobile) ? '10px' : '24px' }}
+                                            className='info_sub_title'>
+                                            Corporate Research Institute&nbsp;&nbsp;– Jeonbuk
                                         </span>
                                         <p className='info_text'>
-                                            #424, 307, Waryong-ro, Seo-gu, Daegu, Republic of Korea
+                                            #209, 13-6 Iksan-daero 78-gil, Hamyeol-eup, Iksan-si, <span className='address_no_wrap'>Jeonbuk-do</span>, <span className='address_no_wrap'>Republic of Korea</span>
                                         </p>
                                     </div>
                                 </li>
                                 <li className='location_info_lane_wrapper'>
                                     <strong className='location_info_category'>
-                                        <div className='category_under_bar' />
-                                        Call Number
+                                        Tel.
                                     </strong>
                                     <p className='info_text'>
-                                        053-716-0816
+                                        +82-53-716-0816
                                     </p>
                                 </li>
                                 <li className='location_info_lane_wrapper'>
                                     <strong className='location_info_category'>
-                                        <div className='category_under_bar' />
-                                        E-mail
+                                        Fax
                                     </strong>
                                     <p className='info_text'>
-                                        info@zefit.co.kr
+                                        +82-53-719-0654
                                     </p>
                                 </li>
                             </ul>

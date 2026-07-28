@@ -154,6 +154,37 @@
     font-weight: 500;
 }
 
+/* 영문 주소 단어 단위 줄바꿈 */
+.english_contact_page .location_info_content_wrapper .info_text {
+    font-size: 16px;
+    letter-spacing: -0.1px;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+.address_no_wrap {
+    white-space: nowrap;
+}
+
+.english_contact_page .compact_address {
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+}
+
+/* 영문 Contact 정보 간격 */
+.english_contact_page .location_info_wrapper {
+    justify-content: flex-start;
+}
+
+.english_contact_page .location_info_lane_wrapper:nth-child(2) {
+    margin-top: 40px;
+}
+
+.english_contact_page .location_info_lane_wrapper:nth-child(3) {
+    margin-top: 15px;
+}
+
 /* 오시는 방법 컨테이너 */
 .come_way_wrapper {
     width: 100%;
@@ -258,6 +289,12 @@
         flex-direction: column;
     }
 
+    .english_contact_page .location_info_lane_wrapper:nth-child(2),
+    .english_contact_page .location_info_lane_wrapper:nth-child(3) {
+        margin-top: 0;
+        transform: none;
+    }
+
     .location_info_content_wrapper {
         gap: 2px;
     }
@@ -270,6 +307,13 @@
     .info_sub_title,
     .info_text {
         font-size: 13px;
+    }
+
+    .english_contact_page .location_info_content_wrapper .info_text,
+    .english_contact_page .compact_address {
+        font-size: 13px;
+        letter-spacing: normal;
+        white-space: normal;
     }
 
     .come_way_wrapper {

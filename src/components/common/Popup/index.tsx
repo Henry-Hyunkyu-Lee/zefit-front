@@ -1,11 +1,10 @@
 'use client';
 
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 import './style.css';
 import { isPopup } from '@/modules/popupModal';
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { isLoading } from '@/modules/loading';
 
 interface PopupProps {
     popupData: any;
@@ -15,9 +14,19 @@ export default function Popup({ popupData }: PopupProps) {
 
     const path = usePathname() as string;
     const isEnglish = path?.includes('/en');
-    const popupValue = (popupData) ? popupData[0] : null;
+    const popupCount = Array.isArray(popupData) ? popupData.length : 0;
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const popupValue = popupData?.[currentIndex] ?? null;
     const popupRef = useRef<HTMLDivElement>(null);
     const [popupOpen, setPopupOpen] = useRecoilState(isPopup);
+
+    const onClickPrevious = () => {
+        setCurrentIndex((current) => (current - 1 + popupCount) % popupCount);
+    };
+
+    const onClickNext = () => {
+        setCurrentIndex((current) => (current + 1) % popupCount);
+    };
 
     const onClickPopupSetCookie = () => {
         const now = new Date();
@@ -25,6 +34,10 @@ export default function Popup({ popupData }: PopupProps) {
         document.cookie = `zf-pov=${now.toISOString()}; expires=${expirationDate.toUTCString()}; path=/`;
         setPopupOpen(false);
     };
+
+    useEffect(() => {
+        setCurrentIndex(0);
+    }, [popupData]);
 
     useEffect(() => {
         if (!popupRef.current) return;
@@ -65,6 +78,40 @@ export default function Popup({ popupData }: PopupProps) {
                     className='popup_more_button'>
                     {(isEnglish) ? 'More' : '자세히 보기'}
                 </a>
+                {popupCount > 1 && (
+                    <>
+                        <button
+                            type='button'
+                            onClick={onClickPrevious}
+                            className='popup_navigation_button popup_previous_button'
+                            aria-label={(isEnglish) ? 'Previous notice' : '이전 공지'}>
+                            ‹
+                        </button>
+                        <button
+                            type='button'
+                            onClick={onClickNext}
+                            className='popup_navigation_button popup_next_button'
+                            aria-label={(isEnglish) ? 'Next notice' : '다음 공지'}>
+                            ›
+                        </button>
+                        <div
+                            className='popup_page_indicator'
+                            aria-label={`${currentIndex + 1} / ${popupCount}`}>
+                            {popupData.map((item: any, index: number) => (
+                                <button
+                                    key={item?.id ?? index}
+                                    type='button'
+                                    onClick={() => setCurrentIndex(index)}
+                                    className={`popup_page_dot${index === currentIndex ? ' popup_page_dot_active' : ''}`}
+                                    aria-label={(isEnglish)
+                                        ? `Go to notice ${index + 1}`
+                                        : `${index + 1}번째 공지로 이동`}
+                                    aria-current={(index === currentIndex) ? 'true' : undefined}
+                                />
+                            ))}
+                        </div>
+                    </>
+                )}
             </div>
             <div className='popup_button_wrapper'>
                 <button
