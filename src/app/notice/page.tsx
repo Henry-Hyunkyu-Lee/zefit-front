@@ -28,6 +28,7 @@ export default function Notice() {
     const [page, setPage] = useState<number>(1);
     const [search, setSearch] = useState<string>('');
     const [totalCount, setTotalCount] = useState<any>(0);
+    const normalNoticeCount = totalCount - (specialNotice?.length ?? 0);
 
     const start = (page - 1) * 10;
     const end = start + 10 - 1;
@@ -73,7 +74,9 @@ export default function Notice() {
                             key={index}
                             className='table_body_lane_wrapper'>
                             <th className='table_header_category_room'>
-                                {index + 1}
+                                {(item?.is_special)
+                                    ? '중요'
+                                    : index + 1}
                             </th>
                             <td className='table_body_special_title_room'>
                                 <a
@@ -101,7 +104,7 @@ export default function Notice() {
                             className='table_body_lane_wrapper'>
                             <th className='table_header_category_room'>
                                 <div className='special_notice'>
-                                    공지
+                                    중요
                                 </div>
                             </th>
                             <td className='table_body_special_title_room'>
@@ -124,7 +127,7 @@ export default function Notice() {
                             key={index}
                             className='table_body_lane_wrapper'>
                             <th className='table_header_category_room'>
-                                {index + 1}
+                                {normalNoticeCount - start - index}
                             </th>
                             <td className='table_body_special_title_room'>
                                 <a
@@ -173,7 +176,7 @@ export default function Notice() {
     }, [page]);
 
     return (
-        <article>
+        <article className='notice_list_page'>
             <MetaTagTitle title='공지사항' />
             <PageHeader />
             <PageBanner pageTitle='공지사항' />
@@ -206,7 +209,7 @@ export default function Notice() {
                             <thead className='notice_table_header_wrapper'>
                                 <tr className='notice_table_header'>
                                     <th className='table_header_category_room'>
-                                        분류
+                                        번호
                                     </th>
                                     <th className='table_header_title_room'>
                                         제목
