@@ -26,8 +26,13 @@ const Loading = dynamic(() => import('../components/common/LoadingSpinner'), { s
 const Footer = dynamic(() => import('../components/common/Footer'), { ssr: false });
 
 export const metadata: Metadata = {
-  
-  icons: { icon: "/zefit.png", apple: "/zefit.png" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "80x80" },
+      { url: "/zefit.png", type: "image/png", sizes: "80x80" },
+    ],
+    apple: { url: "/zefit.png", type: "image/png", sizes: "80x80" },
+  },
 };
 
 export default function RootLayout({

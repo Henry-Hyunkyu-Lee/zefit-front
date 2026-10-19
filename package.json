@@ -2,6 +2,9 @@
   "name": "zefit-front-end",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "set HOST=0 && set PORT=8000 && next dev",
     "dev:mac": "HOST=0 PORT=3100 next dev",
